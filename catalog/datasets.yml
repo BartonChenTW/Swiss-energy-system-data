@@ -17,8 +17,8 @@ datasets:
     status: official
 
   - id: buildings/heating_energy_source
-    title: Main heating energy source of residential buildings
-    description: Share of existing residential buildings by the energy source of their main heating system, among buildings where the source is recorded. Air, ground and water sources indicate heat pumps.
+    title: Main heating energy source of residential buildings (share of number of buildings)
+    description: Share of the number of existing residential buildings (one count per building, EGID, regardless of size or number of dwellings) by the energy source of their main heating system. Only buildings with a recorded source are included. Air, ground and water sources indicate heat pumps.
     source: bfs_gwr
     chart: hbar
     status: official

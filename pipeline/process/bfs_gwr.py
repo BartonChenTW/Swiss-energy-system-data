@@ -3,7 +3,8 @@
 Input : data/raw/bfs_gwr/ch.zip
         gebaeude_batiment_edificio.csv (tab-separated, one row per building)
         kodes_codes_codici.csv (code labels, used to check the mappings below)
-Output: buildings/heating_energy_source            (% of residential buildings with a recorded source)
+Output: buildings/heating_energy_source            (% of the number of residential buildings with a
+                                                     recorded source; each EGID counts once, unweighted)
         buildings/buildings_by_construction_period  (thousand residential buildings)
 
 Filters: GSTAT 1004 (existing), GKAT 1020/1030/1040 (residential).
@@ -79,7 +80,7 @@ def run() -> None:
     shares = heating.value_counts(normalize=True) * 100  # largest first
     shares = pd.concat([shares.drop("Other", errors="ignore"), shares.filter(["Other"])])  # "Other" last
     write_tidy(pd.DataFrame({"year": snapshot_year, "category": shares.index,
-                             "value": shares.round(1).values, "unit": "%"}),
+                             "value": shares.round(1).values, "unit": "% of buildings"}),
                "buildings/heating_energy_source", [path], __name__,
                notes=f"{len(heating):,} of {len(res):,} existing residential buildings have a recorded heating source.")
 
