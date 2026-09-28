@@ -1,0 +1,21 @@
+{
+  "dataset": "buildings/luzern_geak_envelope_class",
+  "processor": "pipeline.process.lu_geak",
+  "generated": "2026-09-28T13:41:29+00:00",
+  "rows": 49,
+  "years": [
+    2019,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/lu_geak/geak_luzern.json",
+      "url": "https://public.geo.lu.ch/ogd/rest/services/managed/GEAKPUBX_DS_V2_MP/MapServer/56/query?where=1%3D1&outFields=GEAK_NR,EGID,BEW_HUELLE,BEW_GESAMT,BEW_EMISS,GEB_KAT,GEAK_TYP,DATEOFCREA&returnGeometry=false&f=json",
+      "retrieved": "2026-09-28T13:34:55+00:00",
+      "last_modified": null,
+      "sha256": "84b60850980adcb0284cdf00d33256acf68251647f0d04fc8f54c3bf5b512c83",
+      "bytes": 861847
+    }
+  ],
+  "notes": "3,411 certificates for existing buildings; 1,679 new-building certificates excluded."
+}

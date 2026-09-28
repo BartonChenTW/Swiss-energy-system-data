@@ -57,7 +57,210 @@ references:
     description: Official net-zero 2050 scenarios for the Swiss energy system. Link is a publication search; TODO replace with a stable page.
     checked: 2026-09-28
 
+  - id: bfe_renovation_rates_2024
+    type: report
+    title: Energetische Erneuerungsraten im Gebäudebereich 2010–2020
+    publisher: SFOE / TEP Energy (Jakob et al.)
+    year: 2024
+    url: https://pubdb.bfe.admin.ch/de/publication/download/11867
+    themes: [buildings]
+    language: de
+    description: Reference estimate of energy renovation rates of envelopes (about 1.5 %/yr, 2011–2020) and heating systems. No machine-readable series is published.
+    checked: 2026-09-28
+
+  - id: bfe_renovation_rates_2014
+    type: report
+    title: Energetische Erneuerungsraten im Gebäudepark
+    publisher: SFOE / TEP Energy
+    year: 2014
+    url: https://pubdb.bfe.admin.ch/de/publication/download/7387
+    themes: [buildings]
+    language: de
+    description: Earlier baseline synthesis of renovation rates.
+    checked: 2026-09-28
+
+  - id: bfe_renovation_barriers
+    type: report
+    title: Hemmnisse für energetische Gebäudesanierungen
+    publisher: SFOE / Interface
+    year: 2022
+    url: https://pubdb.bfe.admin.ch/de/publication/download/10800
+    themes: [buildings]
+    language: de
+    description: Why owners do or don't renovate; barriers and levers.
+    checked: 2026-09-28
+
+  - id: gebaeudeprogramm_report_2025
+    type: report
+    title: Das Gebäudeprogramm – Jahresbericht 2025
+    publisher: SFOE / EnDK
+    year: 2026
+    url: https://www.dasgebaeudeprogramm.ch/media/filer_public/2d/a5/2da55c98-1412-4d44-8457-47ff6d0d893f/311105026002_bfe_jahresbericht_2025_de.pdf
+    themes: [buildings]
+    language: de
+    description: Narrative and tables behind the Building Programme datasets; the Excel table collection on the programme website reaches 2025.
+    related_sources: [bfe_gebaeudeprogramm, bfe_gebaeudeprogramm_projects]
+    checked: 2026-09-28
+
+  - id: bafu_cantonal_buildings_report_2024
+    type: report
+    title: Wirkung der Klima- und Energiepolitik in den Kantonen 2016–2022, Sektor Gebäude
+    publisher: FOEN / SFOE
+    year: 2024
+    url: https://www.bafu.admin.ch/dam/de/sd-web/h8jnsVjFGXUY/BAFU-Bericht-Wirkung_der_Klima_und_Energiepolitik_2016_2022-DE.pdf
+    themes: [buildings, emissions]
+    language: de
+    description: Report behind the cantonal building-stock energy and CO2 data (harmonised standard method by TEP Energy).
+    related_sources: [bafu_cantonal_buildings_report]
+    checked: 2026-09-28
+
+  - id: geak_normierung
+    type: report
+    title: GEAK Normierung v2.2.0
+    publisher: Verein GEAK/CECB
+    year: 2024
+    url: https://www.geak.ch/media/normierung_240318_geak.pdf
+    themes: [buildings]
+    language: de
+    description: How GEAK efficiency classes A–G for envelope, overall energy and CO2 are defined.
+    related_sources: [lu_geak]
+    checked: 2026-09-28
+
+  - id: kbob_bilanzierungsregeln
+    type: report
+    title: KBOB Bilanzierungsregeln Baustoffe v9.0
+    publisher: KBOB / ecobau / IPB
+    year: 2026
+    url: https://www.kbob.admin.ch/dam/de/sd-web/2F8oM9Rvsj83/Plattform_OeDB_Bilanzierungsregeln_Baustoffe_v9.0.pdf
+    themes: [buildings, emissions]
+    language: de
+    description: Accounting rules behind the KBOB LCA data (system boundaries, background data UVEK DQRv2:2022).
+    related_sources: [kbob_lca]
+    checked: 2026-09-28
+
+  - id: kbob_2009_1_2014
+    type: report
+    title: KBOB Empfehlung 2009/1:2014 Ökobilanzdaten im Baubereich
+    publisher: KBOB
+    year: 2014
+    url: https://www.kbob.admin.ch/dam/de/sd-web/OZsSRSOWOSuY/20141024_2009_1_2014_Empfehlung_Oekobilanzdaten_im_Baubereich_DE.pdf
+    themes: [buildings, emissions]
+    language: de
+    description: The 2014 edition of the KBOB LCA list, used for embodied emissions in CESAR-P.
+    related_sources: [kbob_lca]
+    checked: 2026-09-28
+
+  # ---------- standards ----------
+  - id: sia_2024
+    type: standard
+    title: SIA 2024:2021 Raumnutzungsdaten für Energie- und Gebäudetechnik
+    publisher: SIA
+    year: 2021
+    url: https://shop.sia.ch/normenwerk/architekt/sia%202024/d/2021/D/Product
+    themes: [buildings]
+    language: de/fr
+    description: Standard occupancy, internal-gain and set-point profiles by room use. Paid norm; CESAR-P ships only pre-generated profiles because the data cannot be published openly.
+    checked: 2026-09-28
+
+  - id: sia_380_1
+    type: standard
+    title: SIA 380/1:2016 Heizwärmebedarf
+    publisher: SIA
+    year: 2016
+    url: https://shop.sia.ch/normenwerk/architekt/sia%20380-1/d/2016/D/Product
+    themes: [buildings]
+    language: de/fr
+    description: Space heating demand calculation; basis of the FOEN per-building CO2 estimate. Paid norm.
+    related_sources: [bafu_co2_buildings]
+    checked: 2026-09-28
+
+  - id: sia_2032
+    type: standard
+    title: SIA 2032:2020 Graue Energie – Ökobilanzierung für die Erstellung von Gebäuden
+    publisher: SIA
+    year: 2020
+    url: https://shop.sia.ch/normenwerk/architekt/sia%202032/d/2020/D/Product
+    themes: [buildings, emissions]
+    language: de/fr
+    description: Method for embodied energy and emissions of buildings, using KBOB data. Paid norm.
+    checked: 2026-09-28
+
+  - id: sia_2040
+    type: standard
+    title: SIA 2040:2017 SIA-Effizienzpfad Energie
+    publisher: SIA
+    year: 2017
+    url: https://shop.sia.ch/normenwerk/architekt/sia%202040/d/2017/D/Product
+    themes: [buildings]
+    language: de/fr
+    description: Target values for construction, operation and mobility of buildings. Paid norm.
+    checked: 2026-09-28
+
+  - id: sia_390_1
+    type: standard
+    title: SIA 390/1:2025 Klimapfad – Treibhausgasbilanz über den Lebenszyklus von Gebäuden
+    publisher: SIA
+    year: 2025
+    url: https://shop.sia.ch/normenwerk/architekt/sia%20390-1/d/2025/D/Product
+    themes: [buildings, emissions]
+    language: de/fr
+    description: Whole-life greenhouse gas targets for buildings. Paid norm.
+    checked: 2026-09-28
+
   # ---------- dashboards & websites ----------
+  - id: geak_statistik
+    type: website
+    title: GEAK Statistik
+    publisher: Verein GEAK/CECB
+    url: https://www.geak.ch/der-geak/statistik/
+    themes: [buildings]
+    language: de/fr/it
+    description: National certificate counts (about 207,000 buildings certified; 20,971 new GEAK in 2025). Class distributions are published as images only, with no open microdata.
+    checked: 2026-09-28
+
+  - id: minergie_in_zahlen
+    type: website
+    title: Minergie in Zahlen (Geschäftsbericht 2025)
+    publisher: Verein Minergie
+    url: https://geschaeftsbericht2025.minergie.ch/zahlen-und-fakten/minergie-in-zahlen/
+    themes: [buildings]
+    language: de
+    description: Official totals (about 60,500 certified buildings, 73 million m² ERA), larger than the open per-municipality dataset.
+    related_sources: [minergie_buildings]
+    checked: 2026-09-28
+
+  - id: ecobau_oekobilanzen
+    type: website
+    title: ecobau – Ökobilanzen
+    publisher: ecobau
+    url: https://www.ecobau.ch/de/instrumente/oekobilanzen
+    themes: [buildings]
+    language: de/fr
+    description: Co-publisher of the KBOB LCA list; guidance on using it.
+    related_sources: [kbob_lca]
+    checked: 2026-09-28
+
+  - id: muken_2025
+    type: website
+    title: MuKEn 2025 – Mustervorschriften der Kantone im Energiebereich
+    publisher: EnDK
+    url: https://energiehub-gebaeude.ch/energiepolitik-der-kantone/muken-2025/
+    themes: [buildings]
+    language: de/fr
+    description: Model cantonal building energy regulations (heating replacement rules, standards for new builds).
+    checked: 2026-09-28
+
+  - id: empa_ues_software
+    type: website
+    title: Empa Urban Energy Systems Lab – software tools
+    publisher: Empa
+    url: https://www.empa.ch/web/s313/software-tools
+    themes: [buildings, scenarios]
+    language: en
+    description: Context for CESAR-P and related urban energy modelling tools.
+    checked: 2026-09-28
+
+  # ---------- dashboards & websites (general) ----------
   - id: energiedashboard
     type: dashboard
     title: Energie-Dashboard
@@ -132,6 +335,27 @@ references:
     description: Roof-by-roof solar PV and solar-thermal potential for every building in Switzerland.
     checked: 2026-09-28
 
+  - id: bafu_co2_calculator
+    type: tool
+    title: CO2-Rechner Gebäude
+    publisher: Federal Office for the Environment (FOEN / BAFU)
+    url: https://www.bafu.admin.ch/de/co2-rechner-gebaeude
+    themes: [buildings, emissions]
+    language: de/fr/it
+    description: Per-building CO2 estimate with a what-if calculator for renovations and heating replacement.
+    related_sources: [bafu_co2_buildings]
+    checked: 2026-09-28
+
+  - id: bauteilkatalog
+    type: tool
+    title: Bauteilkatalog
+    publisher: SFOE / EnergieSchweiz
+    url: https://www.bauteilkatalog.ch/
+    themes: [buildings]
+    language: de/fr
+    description: Catalogue of construction elements with U-values and grey energy; one of CESAR-P's sources for construction archetypes.
+    checked: 2026-09-28
+
   # ---------- data portals ----------
   - id: opendata_swiss_bfe
     type: portal
@@ -151,7 +375,53 @@ references:
     description: SPARQL endpoint with many federal statistics (including SFOE cubes) as linked data.
     checked: 2026-09-28
 
+  - id: lcadata_ch
+    type: portal
+    title: CH LCA data (UVEK DQRv2)
+    publisher: FOEN / UVEK
+    url: https://www.lcadata.ch/
+    themes: [buildings, emissions, general]
+    description: Swiss background LCA database used for the KBOB list.
+    checked: 2026-09-28
+
   # ---------- models ----------
+  - id: cesar_p
+    type: model
+    title: CESAR-P – City Energy Simulation And Retrofit Platform
+    publisher: Empa Urban Energy Systems Lab (Orehounig et al.)
+    year: 2022
+    url: https://github.com/uesl-empa/cesar-p-core
+    themes: [buildings, scenarios]
+    language: en
+    description: >-
+      Python tool (AGPL-3.0) for dynamic building-stock energy simulation with EnergyPlus,
+      including retrofit scenarios with costs and embodied emissions. Paper:
+      https://doi.org/10.21105/joss.04261 · docs: https://cesar-p-core.readthedocs.io
+    related_sources: [bfs_gwr, kbob_lca]
+    checked: 2026-09-28
+
+  - id: rbsm
+    type: model
+    title: Residential Building Stock Model (Switzerland)
+    publisher: Empa / NTNU (Roca-Puigròs et al.)
+    year: 2020
+    url: https://doi.org/10.5281/zenodo.3984758
+    themes: [buildings, emissions, scenarios]
+    language: en
+    description: Dynamic stock model of Swiss residential buildings with embodied-carbon pathways; includes an input data workbook.
+    checked: 2026-09-28
+
+  - id: ped_archetypes_ch
+    type: model
+    title: Swiss residential positive-energy-district archetypes
+    publisher: University of Geneva (Michellod et al.)
+    year: 2025
+    url: https://doi.org/10.1016/j.scs.2025.106486
+    themes: [buildings, scenarios]
+    language: en
+    description: 11,200 residential archetypes; data on Zenodo (record 21790698, CC-BY-4.0).
+    checked: 2026-09-28
+
   - id: nexus_e
     type: model
     title: Nexus-e integrated energy systems modelling platform

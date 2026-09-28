@@ -4,6 +4,7 @@
     python -m pipeline.fetch --source bfs_gwr
     python -m pipeline.fetch --force         # re-download existing files
 
+A download may carry a `post:` JSON body, sent as a POST instead of a GET.
 Each download is recorded (url, retrieved, Last-Modified, sha256, bytes) in
 data/raw/<source>/_manifest.json, which processors turn into provenance.
 """
@@ -15,12 +16,14 @@ import requests
 from .common import RAW_DIR, load_catalog, now_utc, read_manifest, write_manifest
 
 
-def download(url: str, dest) -> dict:
+def download(url: str, dest, post: dict | None = None) -> dict:
+    """GET `url` (or POST the JSON body `post`, for query APIs such as PXWeb) into `dest`."""
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(dest.suffix + ".part")
     h = hashlib.sha256()
     size = 0
-    with requests.get(url, stream=True, timeout=60) as r:
+    request = requests.post(url, json=post, stream=True, timeout=300) if post else requests.get(url, stream=True, timeout=60)
+    with request as r:
         r.raise_for_status()
         with open(tmp, "wb") as f:
             for chunk in r.iter_content(chunk_size=1 << 20):
@@ -29,7 +32,10 @@ def download(url: str, dest) -> dict:
                 size += len(chunk)
         last_modified = r.headers.get("Last-Modified")
     tmp.replace(dest)
-    return {"url": url, "retrieved": now_utc(), "last_modified": last_modified, "sha256": h.hexdigest(), "bytes": size}
+    record = {"url": url, "retrieved": now_utc(), "last_modified": last_modified, "sha256": h.hexdigest(), "bytes": size}
+    if post:
+        record["post"] = post
+    return record
 
 
 def main() -> None:
@@ -52,7 +58,7 @@ def main() -> None:
                 print(f"[{sid}] {item['filename']} exists, skipping (use --force)")
                 continue
             print(f"[{sid}] downloading {item['url']}")
-            manifest[item["filename"]] = download(item["url"], dest)
+            manifest[item["filename"]] = download(item["url"], dest, item.get("post"))
             write_manifest(source_dir, manifest)
 
 

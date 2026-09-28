@@ -19,8 +19,9 @@ MANIFEST_NAME = "_manifest.json"
 # Controlled vocabulary, documented in catalog/README.md
 THEMES = {"national", "buildings", "electricity", "renewables", "heat", "mobility",
           "emissions", "prices", "scenarios", "general"}
-REFERENCE_TYPES = {"report", "website", "dashboard", "tool", "model", "portal"}
+REFERENCE_TYPES = {"report", "standard", "website", "dashboard", "tool", "model", "portal"}
 CHART_TYPES = {"line", "stacked-area", "stacked-bar", "hbar"}
+PALETTES = {"sequential"}  # optional; default is the categorical palette
 STATUSES = {"official", "sample"}
 
 REQUIRED = {
@@ -74,6 +75,8 @@ def catalog_errors(sources: list, datasets: list, references: list) -> list[str]
             errors.append(f"datasets[{d['id']}]: unknown chart {d.get('chart')!r}")
         if d.get("status") not in STATUSES:
             errors.append(f"datasets[{d['id']}]: unknown status {d.get('status')!r}")
+        if d.get("palette") not in (None, *PALETTES):
+            errors.append(f"datasets[{d['id']}]: unknown palette {d.get('palette')!r}")
         if d.get("id", "").split("/")[0] not in THEMES:
             errors.append(f"datasets[{d['id']}]: id must start with a theme folder")
     for r in references:
@@ -170,7 +173,7 @@ def write_tidy(df: pd.DataFrame, dataset_id: str, inputs: list[Path], processor:
             print(f"  unchanged {path.relative_to(ROOT)}")
             return path
 
-    path.write_text(csv_text, encoding="utf-8")
+    path.write_text(csv_text, encoding="utf-8", newline="\n")
     meta = {
         "dataset": dataset_id,
         "processor": processor,
@@ -181,6 +184,6 @@ def write_tidy(df: pd.DataFrame, dataset_id: str, inputs: list[Path], processor:
     }
     if notes:
         meta["notes"] = notes
-    meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"  wrote {path.relative_to(ROOT)} ({len(df)} rows, {meta['years'][0]}–{meta['years'][1]})")
+    meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+    print(f"  wrote {path.relative_to(ROOT)} ({len(df)} rows, {meta['years'][0]}â€“{meta['years'][1]})")
     return path

@@ -45,7 +45,11 @@ def check_links(sources: dict, references: list) -> list[str]:
         urls[r["url"]] = f"references[{r['id']}]"
 
     errors = []
-    headers = {"User-Agent": "Mozilla/5.0 (swiss-energy-system-data link check)"}
+    headers = {  # some sites (e.g. empa.ch) reject non-browser user agents
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,*/*",
+        "Accept-Language": "en",
+    }
     for url, where in urls.items():
         try:
             r = requests.head(url, timeout=30, allow_redirects=True, headers=headers)

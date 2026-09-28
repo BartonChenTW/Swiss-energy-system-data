@@ -1,0 +1,29 @@
+{
+  "dataset": "buildings/minergie_per_1000_buildings",
+  "processor": "pipeline.process.minergie_buildings",
+  "generated": "2026-09-28T13:41:38+00:00",
+  "rows": 26,
+  "years": [
+    2026,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/minergie_buildings/ogd91_minergiegebaeude_pro_gemeinde.csv",
+      "url": "https://data.geo.admin.ch/ch.bfe.minergiegebaeude/ogd/ogd91_minergiegebaeude_pro_gemeinde.csv",
+      "retrieved": "2026-09-28T13:34:55+00:00",
+      "last_modified": "Wed, 09 Sep 2026 02:38:54 GMT",
+      "sha256": "086a324e24d6c3eb7585bb23626eddd5545b09daebd07501f34062ae2c764cce",
+      "bytes": 61811
+    },
+    {
+      "file": "data/raw/bfs_gwr/ch.zip",
+      "url": "https://public.madd.bfs.admin.ch/ch.zip",
+      "retrieved": "2026-09-28T12:21:21+00:00",
+      "last_modified": "Mon, 28 Sep 2026 03:42:41 GMT",
+      "sha256": "9d26f819ff97eac06d6fe27848a95c6eb2ad1b97b1b5149c4ffdaf98768b0100",
+      "bytes": 947045673
+    }
+  ],
+  "notes": "32,940 Minergie buildings in the dataset (47 in 39 municipality numbers not in the current GWR). Minergie itself reports ~60,500 certified buildings, so the dataset is incomplete."
+}

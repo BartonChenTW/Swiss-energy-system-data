@@ -1,0 +1,20 @@
+{
+  "dataset": "buildings/stock_co2_intensity",
+  "processor": "pipeline.process.bafu_cantonal_buildings_report",
+  "generated": "2026-09-28T13:41:10+00:00",
+  "rows": 7,
+  "years": [
+    2016,
+    2022
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bafu_cantonal_buildings_report/daten-kantonale-berichterstattung-co2-gebaeude.xlsx",
+      "url": "https://www.bafu.admin.ch/dam/de/sd-web/284lFZuyXO2I/daten-kantonale-berichterstattung-co2-gebaeude-2016-2020.xlsx",
+      "retrieved": "2026-09-28T13:34:54+00:00",
+      "last_modified": "Tue, 30 Sep 2025 13:19:04 GMT",
+      "sha256": "86c9d8f2a7e8357245a4b50855eeafe8d32fc804e08f461f0a96f12008b1bf8d",
+      "bytes": 163464
+    }
+  ]
+}

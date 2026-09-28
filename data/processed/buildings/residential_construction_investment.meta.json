@@ -1,0 +1,64 @@
+{
+  "dataset": "buildings/residential_construction_investment",
+  "processor": "pipeline.process.bfs_construction_investment",
+  "generated": "2026-09-28T13:41:06+00:00",
+  "rows": 62,
+  "years": [
+    1994,
+    2024
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfs_construction_investment/px-x-0904010000_205_wohnen_ch.csv",
+      "url": "https://www.pxweb.bfs.admin.ch/api/v1/de/px-x-0904010000_205/px-x-0904010000_205.px",
+      "retrieved": "2026-09-28T13:34:52+00:00",
+      "last_modified": null,
+      "sha256": "67c9e6479b1f70467c1136c04a0ccc5f2d2643350632cab95980d07458b9b378",
+      "bytes": 988,
+      "post": {
+        "query": [
+          {
+            "code": "Grossregion (<<) / Kanton (-) / Gemeinde (......)",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "CH"
+              ]
+            }
+          },
+          {
+            "code": "Art der Arbeiten",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "1",
+                "2"
+              ]
+            }
+          },
+          {
+            "code": "Kategorie der Bauwerke",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "900"
+              ]
+            }
+          },
+          {
+            "code": "Beobachtungseinheit",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "kost_j"
+              ]
+            }
+          }
+        ],
+        "response": {
+          "format": "csv"
+        }
+      }
+    }
+  ]
+}

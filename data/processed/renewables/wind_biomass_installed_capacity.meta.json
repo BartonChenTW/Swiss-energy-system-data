@@ -1,0 +1,21 @@
+{
+  "dataset": "renewables/wind_biomass_installed_capacity",
+  "processor": "pipeline.process.bfe_production_plants",
+  "generated": "2026-09-28T13:13:13+00:00",
+  "rows": 52,
+  "years": [
+    2000,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_production_plants/ch.bfe.elektrizitaetsproduktionsanlagen.zip",
+      "url": "https://data.geo.admin.ch/ch.bfe.elektrizitaetsproduktionsanlagen/csv/2056/ch.bfe.elektrizitaetsproduktionsanlagen.zip",
+      "retrieved": "2026-09-28T12:27:04+00:00",
+      "last_modified": "Mon, 14 Sep 2026 11:42:19 GMT",
+      "sha256": "8f207b57a5df548a78c587ba1e6a732549b1b16525d9b07db2f2a1d63c1cb2c6",
+      "bytes": 19195387
+    }
+  ],
+  "notes": "64 wind and 434 biomass plants in the register."
+}

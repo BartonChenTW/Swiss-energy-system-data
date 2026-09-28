@@ -65,13 +65,20 @@ docs/               the website (plain HTML + Chart.js, no build step)
 
 ## Current datasets
 
-| Dataset | Source | Coverage |
+26 datasets from 17 sources; the full list with descriptions is in `catalog/datasets.yml`.
+
+| Page | Datasets | Main sources |
 |---|---|---|
-| Final energy consumption by carrier / sector | SFOE Overall Energy Statistics (OGD 115) | 1980–2025, PJ |
-| Electricity production by technology | SFOE Electricity Statistics (OGD 32) | 1990–2025, TWh |
-| Installed solar PV capacity | SFOE register of production plants | 2005–2025, MW |
-| Main heating energy source of residential buildings | FSO building register (GWR) | current snapshot, % |
-| Residential buildings by construction period | FSO building register (GWR) | current snapshot |
+| National | Final energy by carrier and sector, 1980–2025 | SFOE energy balance |
+| Electricity | Production by technology, 1990–2025 | SFOE electricity statistics |
+| Renewables | Renewable production by source; new-renewable electricity; PV, wind and biomass capacity; wind generation | SFOE renewables balance, plant register |
+| Buildings: stock | Heating source, construction period, final energy by carrier | FSO GWR, cantonal reporting (FOEN/SFOE) |
+| Buildings: performance | kWh/m² and kg CO2/m² of the stock; modelled CO2 class per building; Geneva measured IDC; Lucerne GEAK classes; Minergie by canton | FOEN, cantonal reporting, Geneva OCEN, Lucerne, SFOE/Minergie |
+| Buildings: retrofit | Subsidised heating replacements (old/new system), insulated area, payouts, ongoing savings; residential investment new vs Umbau | Das Gebäudeprogramm (SFOE/EnDK), FSO |
+| Buildings: life-cycle | Embodied GHG of structural and insulation materials | KBOB/ecobau/IPB v9.0 |
+
+The Buildings page also maps the inputs of [CESAR-P](https://github.com/uesl-empa/cesar-p-core)
+to their open counterparts and lists what is not openly available.
 
 ## Adding something
 

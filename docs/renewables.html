@@ -10,9 +10,23 @@
   <header id="site-header"></header>
   <main class="wrap">
     <h1>Renewables</h1>
-    <p class="lede">Growth of renewable energy in Switzerland, starting with solar PV.</p>
+    <p class="lede">Hydropower still provides most of Switzerland's renewable energy. Growth now comes
+      from solar PV, ambient heat used by heat pumps, and wood. Wind remains small.</p>
+
+    <div class="grid">
+      <div class="chart" data-dataset="renewables/production_by_source"></div>
+      <div class="chart" data-dataset="renewables/new_renewable_electricity"></div>
+    </div>
+
+    <h2>Solar PV</h2>
     <div class="grid">
       <div class="chart" data-dataset="renewables/pv_installed_capacity"></div>
+    </div>
+
+    <h2>Wind and biomass</h2>
+    <div class="grid">
+      <div class="chart" data-dataset="renewables/wind_electricity"></div>
+      <div class="chart" data-dataset="renewables/wind_biomass_installed_capacity"></div>
     </div>
   </main>
   <footer id="site-footer"></footer>

@@ -1,0 +1,289 @@
+year,category,value,unit
+1990,Hydropower,110.43,PJ
+1990,Wood,28.42,PJ
+1990,Solar (PV and thermal),0.111,PJ
+1990,Ambient heat (heat pumps),2.871,PJ
+1990,Renewable share of waste,15.254,PJ
+1990,Biogas,1.604,PJ
+1990,Liquid biofuels,0.0,PJ
+1990,Wind,0.0,PJ
+1991,Hydropower,119.095,PJ
+1991,Wood,31.574,PJ
+1991,Solar (PV and thermal),0.144,PJ
+1991,Ambient heat (heat pumps),3.326,PJ
+1991,Renewable share of waste,15.4,PJ
+1991,Biogas,1.669,PJ
+1991,Liquid biofuels,0.0,PJ
+1991,Wind,0.0,PJ
+1992,Hydropower,121.41,PJ
+1992,Wood,30.551,PJ
+1992,Solar (PV and thermal),0.18,PJ
+1992,Ambient heat (heat pumps),3.272,PJ
+1992,Renewable share of waste,15.19,PJ
+1992,Biogas,1.819,PJ
+1992,Liquid biofuels,0.0,PJ
+1992,Wind,0.0,PJ
+1993,Hydropower,130.511,PJ
+1993,Wood,30.548,PJ
+1993,Solar (PV and thermal),0.22,PJ
+1993,Ambient heat (heat pumps),3.387,PJ
+1993,Renewable share of waste,14.83,PJ
+1993,Biogas,2.009,PJ
+1993,Liquid biofuels,0.0,PJ
+1993,Wind,0.0,PJ
+1994,Hydropower,142.402,PJ
+1994,Wood,28.617,PJ
+1994,Solar (PV and thermal),0.267,PJ
+1994,Ambient heat (heat pumps),3.295,PJ
+1994,Renewable share of waste,15.09,PJ
+1994,Biogas,2.167,PJ
+1994,Liquid biofuels,0.0,PJ
+1994,Wind,0.0,PJ
+1995,Hydropower,128.149,PJ
+1995,Wood,30.472,PJ
+1995,Solar (PV and thermal),0.32,PJ
+1995,Ambient heat (heat pumps),3.669,PJ
+1995,Renewable share of waste,15.369,PJ
+1995,Biogas,2.171,PJ
+1995,Liquid biofuels,0.0,PJ
+1995,Wind,0.001,PJ
+1996,Hydropower,106.913,PJ
+1996,Wood,33.594,PJ
+1996,Solar (PV and thermal),0.376,PJ
+1996,Ambient heat (heat pumps),4.073,PJ
+1996,Renewable share of waste,15.224,PJ
+1996,Biogas,2.222,PJ
+1996,Liquid biofuels,0.0,PJ
+1996,Wind,0.002,PJ
+1997,Hydropower,125.258,PJ
+1997,Wood,29.509,PJ
+1997,Solar (PV and thermal),0.428,PJ
+1997,Ambient heat (heat pumps),3.885,PJ
+1997,Renewable share of waste,16.225,PJ
+1997,Biogas,2.249,PJ
+1997,Liquid biofuels,0.06,PJ
+1997,Wind,0.007,PJ
+1998,Hydropower,123.462,PJ
+1998,Wood,30.007,PJ
+1998,Solar (PV and thermal),0.487,PJ
+1998,Ambient heat (heat pumps),4.186,PJ
+1998,Renewable share of waste,17.093,PJ
+1998,Biogas,2.343,PJ
+1998,Liquid biofuels,0.054,PJ
+1998,Wind,0.01,PJ
+1999,Hydropower,146.218,PJ
+1999,Wood,29.981,PJ
+1999,Solar (PV and thermal),0.545,PJ
+1999,Ambient heat (heat pumps),4.334,PJ
+1999,Renewable share of waste,18.34,PJ
+1999,Biogas,2.413,PJ
+1999,Liquid biofuels,0.051,PJ
+1999,Wind,0.012,PJ
+2000,Hydropower,136.264,PJ
+2000,Wood,28.387,PJ
+2000,Solar (PV and thermal),0.596,PJ
+2000,Ambient heat (heat pumps),4.311,PJ
+2000,Renewable share of waste,19.753,PJ
+2000,Biogas,2.458,PJ
+2000,Liquid biofuels,0.06,PJ
+2000,Wind,0.011,PJ
+2001,Hydropower,152.14,PJ
+2001,Wood,30.159,PJ
+2001,Solar (PV and thermal),0.646,PJ
+2001,Ambient heat (heat pumps),4.672,PJ
+2001,Renewable share of waste,21.564,PJ
+2001,Biogas,2.528,PJ
+2001,Liquid biofuels,0.064,PJ
+2001,Wind,0.014,PJ
+2002,Hydropower,131.447,PJ
+2002,Wood,28.996,PJ
+2002,Solar (PV and thermal),0.694,PJ
+2002,Ambient heat (heat pumps),4.789,PJ
+2002,Renewable share of waste,22.75,PJ
+2002,Biogas,2.44,PJ
+2002,Liquid biofuels,0.06,PJ
+2002,Wind,0.019,PJ
+2003,Hydropower,131.202,PJ
+2003,Wood,31.222,PJ
+2003,Solar (PV and thermal),0.744,PJ
+2003,Ambient heat (heat pumps),5.244,PJ
+2003,Renewable share of waste,22.736,PJ
+2003,Biogas,2.431,PJ
+2003,Liquid biofuels,0.081,PJ
+2003,Wind,0.019,PJ
+2004,Hydropower,126.421,PJ
+2004,Wood,31.203,PJ
+2004,Solar (PV and thermal),0.787,PJ
+2004,Ambient heat (heat pumps),5.507,PJ
+2004,Renewable share of waste,23.196,PJ
+2004,Biogas,2.358,PJ
+2004,Liquid biofuels,0.114,PJ
+2004,Wind,0.023,PJ
+2005,Hydropower,117.932,PJ
+2005,Wood,32.489,PJ
+2005,Solar (PV and thermal),0.848,PJ
+2005,Ambient heat (heat pumps),6.092,PJ
+2005,Renewable share of waste,24.028,PJ
+2005,Biogas,2.348,PJ
+2005,Liquid biofuels,0.239,PJ
+2005,Wind,0.03,PJ
+2006,Hydropower,117.205,PJ
+2006,Wood,33.223,PJ
+2006,Solar (PV and thermal),0.926,PJ
+2006,Ambient heat (heat pumps),6.326,PJ
+2006,Renewable share of waste,25.974,PJ
+2006,Biogas,2.431,PJ
+2006,Liquid biofuels,0.336,PJ
+2006,Wind,0.055,PJ
+2007,Hydropower,130.943,PJ
+2007,Wood,32.159,PJ
+2007,Solar (PV and thermal),1.025,PJ
+2007,Ambient heat (heat pumps),6.839,PJ
+2007,Renewable share of waste,25.834,PJ
+2007,Biogas,2.578,PJ
+2007,Liquid biofuels,0.45,PJ
+2007,Wind,0.058,PJ
+2008,Hydropower,135.212,PJ
+2008,Wood,37.026,PJ
+2008,Solar (PV and thermal),1.179,PJ
+2008,Ambient heat (heat pumps),8.149,PJ
+2008,Renewable share of waste,24.305,PJ
+2008,Biogas,2.717,PJ
+2008,Liquid biofuels,0.488,PJ
+2008,Wind,0.067,PJ
+2009,Hydropower,133.69,PJ
+2009,Wood,38.748,PJ
+2009,Solar (PV and thermal),1.432,PJ
+2009,Ambient heat (heat pumps),8.955,PJ
+2009,Renewable share of waste,24.118,PJ
+2009,Biogas,2.836,PJ
+2009,Liquid biofuels,0.251,PJ
+2009,Wind,0.081,PJ
+2010,Hydropower,134.82,PJ
+2010,Wood,42.144,PJ
+2010,Solar (PV and thermal),1.788,PJ
+2010,Ambient heat (heat pumps),10.847,PJ
+2010,Renewable share of waste,24.828,PJ
+2010,Biogas,3.108,PJ
+2010,Liquid biofuels,0.257,PJ
+2010,Wind,0.132,PJ
+2011,Hydropower,121.662,PJ
+2011,Wood,37.183,PJ
+2011,Solar (PV and thermal),2.26,PJ
+2011,Ambient heat (heat pumps),10.418,PJ
+2011,Renewable share of waste,25.119,PJ
+2011,Biogas,3.418,PJ
+2011,Liquid biofuels,0.256,PJ
+2011,Wind,0.252,PJ
+2012,Hydropower,143.662,PJ
+2012,Wood,42.042,PJ
+2012,Solar (PV and thermal),2.931,PJ
+2012,Ambient heat (heat pumps),12.19,PJ
+2012,Renewable share of waste,25.456,PJ
+2012,Biogas,3.73,PJ
+2012,Liquid biofuels,0.272,PJ
+2012,Wind,0.317,PJ
+2013,Hydropower,142.459,PJ
+2013,Wood,45.405,PJ
+2013,Solar (PV and thermal),3.844,PJ
+2013,Ambient heat (heat pumps),13.628,PJ
+2013,Renewable share of waste,24.425,PJ
+2013,Biogas,4.002,PJ
+2013,Liquid biofuels,0.194,PJ
+2013,Wind,0.322,PJ
+2014,Hydropower,141.509,PJ
+2014,Wood,39.11,PJ
+2014,Solar (PV and thermal),5.241,PJ
+2014,Ambient heat (heat pumps),12.616,PJ
+2014,Renewable share of waste,24.769,PJ
+2014,Biogas,4.311,PJ
+2014,Liquid biofuels,0.2,PJ
+2014,Wind,0.363,PJ
+2015,Hydropower,142.15,PJ
+2015,Wood,40.257,PJ
+2015,Solar (PV and thermal),6.385,PJ
+2015,Ambient heat (heat pumps),14.397,PJ
+2015,Renewable share of waste,23.053,PJ
+2015,Biogas,4.554,PJ
+2015,Liquid biofuels,0.229,PJ
+2015,Wind,0.396,PJ
+2016,Hydropower,130.774,PJ
+2016,Wood,44.087,PJ
+2016,Solar (PV and thermal),7.26,PJ
+2016,Ambient heat (heat pumps),15.929,PJ
+2016,Renewable share of waste,23.635,PJ
+2016,Biogas,4.86,PJ
+2016,Liquid biofuels,0.267,PJ
+2016,Wind,0.391,PJ
+2017,Hydropower,131.998,PJ
+2017,Wood,44.625,PJ
+2017,Solar (PV and thermal),8.593,PJ
+2017,Ambient heat (heat pumps),16.651,PJ
+2017,Renewable share of waste,23.831,PJ
+2017,Biogas,5.061,PJ
+2017,Liquid biofuels,0.283,PJ
+2017,Wind,0.477,PJ
+2018,Hydropower,134.741,PJ
+2018,Wood,42.144,PJ
+2018,Solar (PV and thermal),9.604,PJ
+2018,Ambient heat (heat pumps),16.353,PJ
+2018,Renewable share of waste,23.875,PJ
+2018,Biogas,5.234,PJ
+2018,Liquid biofuels,0.368,PJ
+2018,Wind,0.438,PJ
+2019,Hydropower,146.002,PJ
+2019,Wood,44.385,PJ
+2019,Solar (PV and thermal),10.482,PJ
+2019,Ambient heat (heat pumps),18.017,PJ
+2019,Renewable share of waste,24.02,PJ
+2019,Biogas,5.556,PJ
+2019,Liquid biofuels,0.427,PJ
+2019,Wind,0.525,PJ
+2020,Hydropower,146.218,PJ
+2020,Wood,43.648,PJ
+2020,Solar (PV and thermal),12.351,PJ
+2020,Ambient heat (heat pumps),18.671,PJ
+2020,Renewable share of waste,24.148,PJ
+2020,Biogas,6.032,PJ
+2020,Liquid biofuels,0.448,PJ
+2020,Wind,0.524,PJ
+2021,Hydropower,142.2,PJ
+2021,Wood,51.297,PJ
+2021,Solar (PV and thermal),13.333,PJ
+2021,Ambient heat (heat pumps),21.968,PJ
+2021,Renewable share of waste,24.105,PJ
+2021,Biogas,6.179,PJ
+2021,Liquid biofuels,0.325,PJ
+2021,Wind,0.522,PJ
+2022,Hydropower,120.604,PJ
+2022,Wood,45.818,PJ
+2022,Solar (PV and thermal),17.293,PJ
+2022,Ambient heat (heat pumps),20.951,PJ
+2022,Renewable share of waste,23.148,PJ
+2022,Biogas,6.416,PJ
+2022,Liquid biofuels,0.504,PJ
+2022,Wind,0.539,PJ
+2023,Hydropower,146.808,PJ
+2023,Wood,48.507,PJ
+2023,Solar (PV and thermal),20.319,PJ
+2023,Ambient heat (heat pumps),22.968,PJ
+2023,Renewable share of waste,23.537,PJ
+2023,Biogas,6.551,PJ
+2023,Liquid biofuels,0.601,PJ
+2023,Wind,0.607,PJ
+2024,Hydropower,174.013,PJ
+2024,Wood,48.948,PJ
+2024,Solar (PV and thermal),24.053,PJ
+2024,Ambient heat (heat pumps),24.501,PJ
+2024,Renewable share of waste,23.871,PJ
+2024,Biogas,6.704,PJ
+2024,Liquid biofuels,0.584,PJ
+2024,Wind,0.614,PJ
+2025,Hydropower,134.946,PJ
+2025,Wood,48.774,PJ
+2025,Solar (PV and thermal),31.159,PJ
+2025,Ambient heat (heat pumps),26.573,PJ
+2025,Renewable share of waste,24.626,PJ
+2025,Biogas,6.891,PJ
+2025,Liquid biofuels,0.512,PJ
+2025,Wind,0.578,PJ

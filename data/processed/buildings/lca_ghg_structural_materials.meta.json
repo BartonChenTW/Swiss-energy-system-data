@@ -1,0 +1,20 @@
+{
+  "dataset": "buildings/lca_ghg_structural_materials",
+  "processor": "pipeline.process.kbob_lca",
+  "generated": "2026-09-28T13:41:38+00:00",
+  "rows": 12,
+  "years": [
+    2026,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/kbob_lca/Oekobilanzdaten_im_Baubereich_V9.0.xlsx",
+      "url": "https://www.kbob.admin.ch/dam/de/sd-web/GUOl1trUNEVH/%C3%96kobilanzdaten_im_Baubereich_V9.0.xlsx",
+      "retrieved": "2026-09-28T13:34:56+00:00",
+      "last_modified": "Tue, 14 Jul 2026 13:59:16 GMT",
+      "sha256": "9ae2dfecbbc188fa9ed839ddfd1dc62d4ef254e8e5457aa08c42730c78277a5b",
+      "bytes": 605134
+    }
+  ]
+}

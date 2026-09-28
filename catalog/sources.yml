@@ -69,6 +69,154 @@ sources:
       ~950 MB zip with buildings, entrances and dwellings (tab-separated) plus a code
       table (kodes_codes_codici.csv). Heating fields are often missing or undetermined.
 
+  # ---------- buildings: retrofit, energy performance, life-cycle data ----------
+  - id: bfe_gebaeudeprogramm
+    name: "Das Gebäudeprogramm: Jahresbericht und Jahresstatistik"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE) and cantons (EnDK)
+    theme: buildings
+    url: https://opendata.swiss/de/dataset/gebaudeprogramm-jahresbericht-und-jahresstatistik
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: annual
+    downloads:
+      - url: https://www.uvek-gis.admin.ch/BFE/ogd/18/ogd18_gebaeudeprogramm_auszahlungen.csv
+        filename: ogd18_gebaeudeprogramm_auszahlungen.csv
+      - url: https://www.uvek-gis.admin.ch/BFE/ogd/18/ogd18_gebaeudeprogramm_energiewirkung.csv
+        filename: ogd18_gebaeudeprogramm_energiewirkung.csv
+      - url: https://www.uvek-gis.admin.ch/BFE/ogd/18/ogd18_gebaeudeprogramm_co2wirkung.csv
+        filename: ogd18_gebaeudeprogramm_co2wirkung.csv
+    notes: >-
+      National subsidy programme for building envelope insulation, heating replacement,
+      system renovation and new builds. Payouts by canton from 2017; energy and CO2
+      effects (Switzerland only) from 2010, as effects over the lifetime of the measures.
+      Only subsidised projects are covered.
+
+  - id: bfe_gebaeudeprogramm_projects
+    name: "Das Gebäudeprogramm: Quelldaten der Kantone für direkte Massnahmen"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE) and cantons (EnDK)
+    theme: buildings
+    url: https://opendata.swiss/de/dataset/das-gebaudeprogramm-quelldaten-der-kantone-fur-direkte-massnahmen
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: annual
+    downloads:
+      - url: https://www.bfe-ogd.ch/ogd128_GebPrograme_rohdaten_Kanton_direktmassnahmen.csv
+        filename: ogd128_GebPrograme_rohdaten_Kanton_direktmassnahmen.csv
+    notes: Anonymised project-level records (~250k) with measure code, heating system before/after, ERA and insulated areas.
+
+  - id: bfs_construction_investment
+    name: Bauinvestitionen nach Art der Arbeiten und Kategorie der Bauwerke
+    publisher: Federal Statistical Office (FSO / BFS)
+    theme: buildings
+    url: https://opendata.swiss/de/dataset/bauinvestitionen-und-arbeitsvorrat-investitionen-nach-grossregion-kanton-gemeinde-art-der-arbei1
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: annual
+    downloads:
+      - url: https://www.pxweb.bfs.admin.ch/api/v1/de/px-x-0904010000_205/px-x-0904010000_205.px
+        filename: px-x-0904010000_205_wohnen_ch.csv
+        post:
+          query:
+            - code: "Grossregion (<<) / Kanton (-) / Gemeinde (......)"
+              selection: {filter: item, values: ["CH"]}
+            - code: Art der Arbeiten
+              selection: {filter: item, values: ["1", "2"]}
+            - code: Kategorie der Bauwerke
+              selection: {filter: item, values: ["900"]}
+            - code: Beobachtungseinheit
+              selection: {filter: item, values: ["kost_j"]}
+          response: {format: csv}
+    notes: >-
+      PXWeb API query: Switzerland, residential buildings (Wohnen), new construction vs
+      Umbau (conversion, extension, renovation, refurbishment and demolition), in 1000 CHF
+      at current prices. Renovation is not reported separately from other conversion work.
+
+  - id: bafu_co2_buildings
+    name: Schätzung der direkten CO2-Emissionen aufgrund des Wärmebedarfs gemäss SIA 380/1
+    publisher: Federal Office for the Environment (FOEN / BAFU)
+    theme: buildings
+    url: https://opendata.swiss/de/dataset/schatzung-der-direkten-co-emissionen-aufgrund-des-warmebedarfs-gemass-sia-norm-380-1-2016
+    terms: "opendata.swiss: Open use."
+    frequency: daily
+    downloads:
+      - url: https://data.geo.admin.ch/ch.bafu.klima-co2_ausstoss_gebaeude/klima-co2_ausstoss_gebaeude/klima-co2_ausstoss_gebaeude_2056.csv.zip
+        filename: klima-co2_ausstoss_gebaeude_2056.csv.zip
+    notes: >-
+      Modelled (not measured) direct CO2 emissions per building with a residential use,
+      from GWR attributes and SIA 380/1 heat demand, in classes. Used by the FOEN CO2
+      calculator for buildings.
+
+  - id: bafu_cantonal_buildings_report
+    name: Kantonale Berichterstattung CO2-Emissionen Gebäude (Daten)
+    publisher: Federal Office for the Environment (FOEN / BAFU) and SFOE
+    theme: buildings
+    url: https://www.bafu.admin.ch/de/berichterstattung-gebaeude
+    terms: "No licence stated on the publisher's page. Federal publication; cite FOEN/SFOE."
+    frequency: irregular
+    downloads:
+      - url: https://www.bafu.admin.ch/dam/de/sd-web/284lFZuyXO2I/daten-kantonale-berichterstattung-co2-gebaeude-2016-2020.xlsx
+        filename: daten-kantonale-berichterstattung-co2-gebaeude.xlsx
+    notes: >-
+      Cantonal reporting under the CO2 Act with the harmonised standard method: final
+      energy, CO2 and energy reference area of the building stock, 2016–2022 (file name
+      says 2016–2020; status December 2024).
+
+  - id: ge_idc
+    name: Indice de dépense de chaleur (IDC) des bâtiments – moyenne sur 2 ou 3 ans
+    publisher: Canton de Genève, Office cantonal de l'énergie (OCEN), via SITG
+    theme: buildings
+    url: https://opendata.swiss/fr/dataset/indice-de-depense-de-chaleur-idc-des-batiments-moyenne-sur-2-ou-3-ans
+    terms: "opendata.swiss: Open use."
+    frequency: daily
+    downloads:
+      - url: https://ge.ch/sitg/geodata/SITG/OPENDATA/SCANE_INDICE_MOYENNES_3_ANS-CSV.zip
+        filename: SCANE_INDICE_MOYENNES_3_ANS-CSV.zip
+    notes: >-
+      Measured heating (and hot water) energy per heated floor area (SRE) for buildings
+      that must report under Geneva law, in MJ/m²·a, per building and year. Geneva only.
+
+  - id: lu_geak
+    name: Gebäudeenergieausweis der Kantone (GEAK) öffentlich – Kanton Luzern
+    publisher: Kanton Luzern, Umwelt und Energie (uwe)
+    theme: buildings
+    url: https://opendata.swiss/de/dataset/gebaudeenergieausweis-der-kantone-geak-offentlich
+    terms: "opendata.swiss: Open use."
+    frequency: quarterly
+    downloads:
+      - url: "https://public.geo.lu.ch/ogd/rest/services/managed/GEAKPUBX_DS_V2_MP/MapServer/56/query?where=1%3D1&outFields=GEAK_NR,EGID,BEW_HUELLE,BEW_GESAMT,BEW_EMISS,GEB_KAT,GEAK_TYP,DATEOFCREA&returnGeometry=false&f=json"
+        filename: geak_luzern.json
+    notes: >-
+      Published energy performance certificates (GEAK) of buildings in Lucerne issued
+      since 2019, with envelope, overall and CO2 class (A–G). The only canton publishing
+      GEAK results as open data at this level; not representative of Switzerland.
+
+  - id: minergie_buildings
+    name: Anzahl Minergie-Gebäude in Gemeinden
+    publisher: Swiss Federal Office of Energy (SFOE / BFE), data from Minergie
+    theme: buildings
+    url: https://opendata.swiss/de/dataset/anzahl-minergie-gebaude-in-gemeinden
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: irregular
+    downloads:
+      - url: https://data.geo.admin.ch/ch.bfe.minergiegebaeude/ogd/ogd91_minergiegebaeude_pro_gemeinde.csv
+        filename: ogd91_minergiegebaeude_pro_gemeinde.csv
+    notes: >-
+      Current snapshot of Minergie-certified buildings per municipality by label. Sums to
+      ~33k buildings, while Minergie reports ~60k certified buildings (annual report 2025);
+      the difference is not explained in the dataset.
+
+  - id: kbob_lca
+    name: KBOB/ecobau/IPB-Liste Ökobilanzdaten im Baubereich (v9.0)
+    publisher: KBOB, ecobau, IPB
+    theme: buildings
+    url: https://www.kbob.admin.ch/de/oekobilanzdaten-im-baubereich
+    terms: "Provided free of charge (kostenlos); no explicit licence stated. Cite KBOB/ecobau/IPB."
+    frequency: irregular
+    downloads:
+      - url: https://www.kbob.admin.ch/dam/de/sd-web/GUOl1trUNEVH/%C3%96kobilanzdaten_im_Baubereich_V9.0.xlsx
+        filename: Oekobilanzdaten_im_Baubereich_V9.0.xlsx
+    notes: >-
+      Swiss reference LCA data for building materials, building services, energy,
+      transport and disposal: UBP'21, primary energy (grey energy) and GHG emissions per
+      functional unit. Version 9.0 published July 2026. CESAR-P uses the 2014 edition.
+
   - id: bfe_swissgrid_production
     name: "energiedashboard.ch: Stromproduktion Swissgrid"
     publisher: Swiss Federal Office of Energy (SFOE / BFE)

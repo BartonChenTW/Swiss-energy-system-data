@@ -13,6 +13,9 @@
   --badge-text: #7a5200;
   --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
   --series-5: #e87ba4; --series-6: #008300; --series-7: #4a3aa7; --series-8: #e34948;
+  /* sequential blue ramp for ordered classes (A best ... G worst = darkest) */
+  --seq-1: #86b6ef; --seq-2: #6da7ec; --seq-3: #5598e7; --seq-4: #2a78d6;
+  --seq-5: #256abf; --seq-6: #184f95; --seq-7: #0d366b;
   --font: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
@@ -24,6 +27,8 @@
     --accent: #3987e5; --badge-bg: #3a2c0a; --badge-text: #f5cf7a;
     --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
     --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
+    --seq-1: #184f95; --seq-2: #1c5cab; --seq-3: #2a78d6; --seq-4: #3987e5;
+    --seq-5: #6da7ec; --seq-6: #9ec5f4; --seq-7: #cde2fb;
   }
 }
 :root[data-theme="dark"] {
@@ -34,6 +39,8 @@
   --accent: #3987e5; --badge-bg: #3a2c0a; --badge-text: #f5cf7a;
   --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
   --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
+  --seq-1: #184f95; --seq-2: #1c5cab; --seq-3: #2a78d6; --seq-4: #3987e5;
+  --seq-5: #6da7ec; --seq-6: #9ec5f4; --seq-7: #cde2fb;
 }
 
 * { box-sizing: border-box; }
@@ -111,5 +118,15 @@ th { color: var(--text-secondary); font-weight: 600; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .tags span:not(.muted) { font-size: 12px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-secondary); }
 .tags .muted { font-size: 12px; margin-left: auto; }
+
+/* Long pages */
+.toc { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; margin: -8px 0 8px; }
+.toc a { color: var(--text-secondary); }
+.section-note { color: var(--text-secondary); max-width: 80ch; margin: -4px 0 16px; font-size: 15px; }
+.prose { max-width: 100%; font-size: 15px; }
+.prose p:first-child { margin-top: 0; }
+.prose ul { margin: 0; padding-left: 20px; }
+.prose li + li { margin-top: 6px; }
+h2[id] { scroll-margin-top: 16px; }
 
 footer { border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; padding-block: 20px; }

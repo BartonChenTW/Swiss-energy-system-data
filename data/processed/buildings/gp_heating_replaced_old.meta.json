@@ -1,0 +1,21 @@
+{
+  "dataset": "buildings/gp_heating_replaced_old",
+  "processor": "pipeline.process.bfe_gebaeudeprogramm_projects",
+  "generated": "2026-09-28T13:41:06+00:00",
+  "rows": 63,
+  "years": [
+    2017,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_gebaeudeprogramm_projects/ogd128_GebPrograme_rohdaten_Kanton_direktmassnahmen.csv",
+      "url": "https://www.bfe-ogd.ch/ogd128_GebPrograme_rohdaten_Kanton_direktmassnahmen.csv",
+      "retrieved": "2026-09-28T13:34:51+00:00",
+      "last_modified": "Thu, 27 Aug 2026 08:47:32 GMT",
+      "sha256": "43bc7c6a738deef80e02caf0300c1c7399a4e01a5f8eaaf6cbedf12d49fedf7d",
+      "bytes": 53787919
+    }
+  ],
+  "notes": "172,717 subsidised heating replacements 2017–2025; 26,526 records in 2025 are provisional."
+}

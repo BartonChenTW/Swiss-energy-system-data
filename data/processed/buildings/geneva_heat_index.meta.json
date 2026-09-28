@@ -1,0 +1,21 @@
+{
+  "dataset": "buildings/geneva_heat_index",
+  "processor": "pipeline.process.ge_idc",
+  "generated": "2026-09-28T13:47:58+00:00",
+  "rows": 30,
+  "years": [
+    2011,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/ge_idc/SCANE_INDICE_MOYENNES_3_ANS-CSV.zip",
+      "url": "https://ge.ch/sitg/geodata/SITG/OPENDATA/SCANE_INDICE_MOYENNES_3_ANS-CSV.zip",
+      "retrieved": "2026-09-28T13:34:55+00:00",
+      "last_modified": "Sun, 27 Sep 2026 06:55:08 GMT",
+      "sha256": "8f22730350f9a775516d19ff172f59d6127eddb83b48edfb3038d27c389e4dd7",
+      "bytes": 8474081
+    }
+  ],
+  "notes": "~16,078 buildings report per year."
+}

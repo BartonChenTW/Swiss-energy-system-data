@@ -18,8 +18,9 @@ reads or uses it, it goes in `references.yml`.
 Used across all three files. `pipeline.check` rejects anything else.
 
 - **theme**: `national`, `buildings`, `electricity`, `renewables`, `heat`, `mobility`, `emissions`, `prices`, `scenarios`, `general`
-- **reference type**: `report`, `website`, `dashboard`, `tool`, `model`, `portal`
+- **reference type**: `report`, `standard` (norms such as SIA, often paid), `website`, `dashboard`, `tool`, `model`, `portal`
 - **dataset chart**: `line`, `stacked-area`, `stacked-bar`, `hbar`
+- **dataset palette** (optional): `sequential` for ordered classes such as A–G labels; default is categorical
 - **dataset status**: `official` (processed from the source), `sample` (placeholder values)
 
 ## `sources.yml`
@@ -45,6 +46,7 @@ Used across all three files. `pipeline.check` rejects anything else.
 | `source` | yes | a `sources.yml` id |
 | `chart` | yes | from the vocabulary |
 | `status` | yes | `official` or `sample` |
+| `palette` | no | `sequential` for ordered categories |
 
 ## `references.yml`
 

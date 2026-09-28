@@ -1,0 +1,20 @@
+{
+  "dataset": "buildings/gp_energy_savings",
+  "processor": "pipeline.process.bfe_gebaeudeprogramm",
+  "generated": "2026-09-28T13:41:05+00:00",
+  "rows": 75,
+  "years": [
+    2010,
+    2024
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_gebaeudeprogramm/ogd18_gebaeudeprogramm_energiewirkung.csv",
+      "url": "https://www.uvek-gis.admin.ch/BFE/ogd/18/ogd18_gebaeudeprogramm_energiewirkung.csv",
+      "retrieved": "2026-09-28T13:34:50+00:00",
+      "last_modified": "Tue, 26 Aug 2025 06:40:08 GMT",
+      "sha256": "27dc40bccec8d0940407ab9aa4830ce5d56a9ebe34721bc53cbf1c3e81741ac6",
+      "bytes": 2361
+    }
+  ]
+}

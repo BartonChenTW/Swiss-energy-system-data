@@ -30,11 +30,155 @@ datasets:
     chart: hbar
     status: official
 
+  # ---------- buildings: energy performance ----------
+  - id: buildings/stock_energy_intensity
+    title: Energy use per m² of the building stock
+    description: Final energy for space heating and hot water in households and services, per m² of energy reference area (ERA), Switzerland. Includes the influence of weather (2021 was cold).
+    source: bafu_cantonal_buildings_report
+    chart: line
+    status: official
+
+  - id: buildings/stock_co2_intensity
+    title: Direct CO2 emissions per m² of the building stock
+    description: Direct CO2 emissions from space heating and hot water in households and services, per m² of energy reference area, Switzerland.
+    source: bafu_cantonal_buildings_report
+    chart: line
+    status: official
+
+  - id: buildings/stock_final_energy_by_carrier
+    title: Final energy for heating and hot water by carrier
+    description: Buildings of households and services, space heating and hot water, sum of cantonal reporting.
+    source: bafu_cantonal_buildings_report
+    chart: stacked-area
+    status: official
+
+  - id: buildings/co2_class_distribution
+    title: Estimated direct CO2 emissions of residential buildings (share of number of buildings)
+    description: Share of the number of residential buildings by estimated direct CO2 emissions in kg CO2 per m² heated floor area and year. Modelled by FOEN for standard conditions (SIA 380/1) from GWR data, not measured; renovations are largely not captured.
+    source: bafu_co2_buildings
+    chart: hbar
+    status: official
+
+  - id: buildings/geneva_heat_index
+    title: Measured heat demand of buildings in Geneva (IDC)
+    description: Floor-area-weighted mean heat energy index (space heating and hot water) of buildings that report under Geneva law, per m² heated floor area (SRE). Converted from MJ/m² (3.6 MJ = 1 kWh). Geneva only.
+    source: ge_idc
+    chart: line
+    status: official
+
+  - id: buildings/luzern_geak_envelope_class
+    title: GEAK certificates in Lucerne by envelope class
+    description: Energy performance certificates (GEAK) issued for existing buildings in the canton of Lucerne, by efficiency class of the building envelope (A best, G worst) and year issued. Certificates are voluntary or triggered by subsidies, so this is not a representative sample of the stock.
+    source: lu_geak
+    chart: stacked-bar
+    palette: sequential
+    status: official
+
+  - id: buildings/minergie_per_1000_buildings
+    title: Minergie-certified buildings per 1,000 buildings, by canton
+    description: Buildings with any Minergie label in the open dataset per 1,000 existing buildings (GWR). The open dataset holds about 33,000 buildings while Minergie reports about 60,500, so absolute levels are understated.
+    source: minergie_buildings
+    chart: hbar
+    status: official
+
+  # ---------- buildings: retrofit ----------
+  - id: buildings/gp_payouts_by_area
+    title: Building Programme payouts by area
+    description: Subsidies paid out by Das Gebäudeprogramm (federal and cantonal), by area of measure, sum of cantons.
+    source: bfe_gebaeudeprogramm
+    chart: stacked-bar
+    status: official
+
+  - id: buildings/gp_energy_savings
+    title: Ongoing energy savings from the Building Programme
+    description: Annual energy savings in each year from all measures funded since 2010 that are still in effect, by area of measure (HFM 2015 method).
+    source: bfe_gebaeudeprogramm
+    chart: stacked-area
+    status: official
+
+  - id: buildings/gp_co2_savings
+    title: Ongoing CO2 reduction from the Building Programme
+    description: Annual CO2 reduction in each year from all measures funded since 2010 that are still in effect, by area of measure.
+    source: bfe_gebaeudeprogramm
+    chart: stacked-area
+    status: official
+
+  - id: buildings/gp_heating_replaced_old
+    title: Subsidised heating replacements, by system removed
+    description: Building Programme projects in which the main heating system changed, by the system before the measure and year of funding commitment.
+    source: bfe_gebaeudeprogramm_projects
+    chart: stacked-bar
+    status: official
+
+  - id: buildings/gp_heating_replaced_new
+    title: Subsidised heating replacements, by system installed
+    description: The same projects, by the new main heating system. Air, ground and water heat pumps are grouped.
+    source: bfe_gebaeudeprogramm_projects
+    chart: stacked-bar
+    status: official
+
+  - id: buildings/gp_insulated_area
+    title: Envelope area insulated with Building Programme funding
+    description: Insulated roof, facade and wall/floor area of subsidised projects, by year of funding commitment.
+    source: bfe_gebaeudeprogramm_projects
+    chart: stacked-bar
+    status: official
+
+  - id: buildings/residential_construction_investment
+    title: Investment in residential buildings, new vs conversion & renovation
+    description: Construction investment in residential buildings at current prices. "Umbau" covers conversion, extension, renovation, refurbishment and demolition, so energy retrofits are included but cannot be separated.
+    source: bfs_construction_investment
+    chart: stacked-bar
+    status: official
+
+  # ---------- buildings: life-cycle data ----------
+  - id: buildings/lca_ghg_structural_materials
+    title: Embodied GHG of structural and envelope materials (per kg)
+    description: Greenhouse gas emissions for manufacture and disposal per kg of material (KBOB v9.0 generic entries). Per kg is not a like-for-like comparison of building elements, which also depends on the amount of material needed. Biogenic carbon stored in wood is not subtracted.
+    source: kbob_lca
+    chart: hbar
+    status: official
+
+  - id: buildings/lca_ghg_insulation_materials
+    title: Embodied GHG of insulation materials (per kg)
+    description: Greenhouse gas emissions for manufacture and disposal per kg (KBOB v9.0 generic entries). Densities differ strongly (per KBOB, EPS 15–40 kg/m³, wood fibre board 148 kg/m³, straw bale 215 kg/m³), so compare per m² at equal U-value before choosing a material.
+    source: kbob_lca
+    chart: hbar
+    status: official
+
   - id: electricity/production_by_technology
     title: Electricity production by technology
     description: Domestic gross electricity production, before subtracting the consumption of pumped-storage pumps.
     source: bfe_electricity_statistics
     chart: stacked-bar
+    status: official
+
+  - id: renewables/production_by_source
+    title: Domestic renewable energy production by source
+    description: Primary production of renewable energy in Switzerland. Solar covers PV and solar thermal. Ambient heat is the environmental heat used by heat pumps (their electricity input is not included).
+    source: bfe_renewable_statistics
+    chart: stacked-area
+    status: official
+
+  - id: renewables/new_renewable_electricity
+    title: Electricity from new renewables
+    description: Gross electricity production from renewables other than hydropower.
+    source: bfe_electricity_statistics
+    chart: stacked-bar
+    status: official
+
+  - id: renewables/wind_electricity
+    title: Wind electricity production
+    description: Gross electricity production from wind turbines.
+    source: bfe_electricity_statistics
+    chart: line
+    status: official
+
+  - id: renewables/wind_biomass_installed_capacity
+    title: Installed wind and biomass capacity
+    description: Cumulative electrical capacity of wind and biomass plants in the register, by year of commissioning. Only plants still in operation are counted, at their current power, so earlier years are slightly understated.
+    source: bfe_production_plants
+    chart: line
     status: official
 
   - id: renewables/pv_installed_capacity

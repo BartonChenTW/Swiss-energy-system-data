@@ -10,11 +10,92 @@
   <header id="site-header"></header>
   <main class="wrap">
     <h1>Buildings</h1>
-    <p class="lede">The Swiss building stock and how it is heated, based on the Federal Register of
-      Buildings and Dwellings (GWR).</p>
+    <p class="lede">The Swiss building stock: what it is made of, how it is heated, how efficient it is,
+      how fast it is being renovated, and the life-cycle impact of the materials used. The data
+      overlaps with the inputs of building-stock models such as <a href="#cesar-p">CESAR-P</a>.</p>
+    <nav class="toc" aria-label="On this page">
+      <a href="#stock">Stock</a><a href="#performance">Energy performance</a><a href="#retrofit">Retrofit</a>
+      <a href="#lca">Life-cycle</a><a href="#cesar-p">CESAR-P</a><a href="#gaps">Data gaps</a>
+    </nav>
+
+    <h2 id="stock">Building stock</h2>
     <div class="grid">
       <div class="chart" data-dataset="buildings/heating_energy_source"></div>
       <div class="chart" data-dataset="buildings/buildings_by_construction_period"></div>
+      <div class="chart" data-dataset="buildings/stock_final_energy_by_carrier"></div>
+    </div>
+
+    <h2 id="performance">Energy performance</h2>
+    <p class="section-note">National intensities come from the cantons' harmonised reporting.
+      Per-building values are either <strong>modelled</strong> (FOEN, all residential buildings) or
+      <strong>measured / certified</strong> in individual cantons (Geneva IDC, Lucerne GEAK).
+      There is no open national dataset of energy performance certificates.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="buildings/stock_energy_intensity"></div>
+      <div class="chart" data-dataset="buildings/stock_co2_intensity"></div>
+      <div class="chart" data-dataset="buildings/co2_class_distribution"></div>
+      <div class="chart" data-dataset="buildings/geneva_heat_index"></div>
+      <div class="chart" data-dataset="buildings/luzern_geak_envelope_class"></div>
+      <div class="chart" data-dataset="buildings/minergie_per_1000_buildings"></div>
+    </div>
+
+    <h2 id="retrofit">Retrofit and heating replacement</h2>
+    <p class="section-note">There is no official annual renovation-rate series. The SFOE/TEP Energy
+      study estimates envelope renovation at about 1.5 % of the stock per year (2011–2020, see
+      <a href="library.html">Library</a>). The charts below show what can be measured: projects
+      subsidised by <em>Das Gebäudeprogramm</em>, and investment in conversion and renovation.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="buildings/gp_heating_replaced_old"></div>
+      <div class="chart" data-dataset="buildings/gp_heating_replaced_new"></div>
+      <div class="chart" data-dataset="buildings/gp_insulated_area"></div>
+      <div class="chart" data-dataset="buildings/gp_payouts_by_area"></div>
+      <div class="chart" data-dataset="buildings/gp_energy_savings"></div>
+      <div class="chart" data-dataset="buildings/gp_co2_savings"></div>
+      <div class="chart" data-dataset="buildings/residential_construction_investment"></div>
+    </div>
+
+    <h2 id="lca">Life-cycle impact of building materials</h2>
+    <p class="section-note">The KBOB/ecobau/IPB list is the Swiss reference for embodied impacts
+      (grey energy, greenhouse gases, UBP) and is used by SIA 2032, SIA 390/1 and CESAR-P.
+      Values here are per kg. For construction methods, compare whole elements per m² with the same
+      function, for example with the <a href="https://www.bauteilkatalog.ch/">Bauteilkatalog</a>.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="buildings/lca_ghg_structural_materials"></div>
+      <div class="chart" data-dataset="buildings/lca_ghg_insulation_materials"></div>
+    </div>
+
+    <h2 id="cesar-p">Link to CESAR-P</h2>
+    <div class="card prose">
+      <p><a href="https://github.com/uesl-empa/cesar-p-core">CESAR-P</a> (City Energy Simulation And
+        Retrofit Platform, Empa, AGPL-3.0, <a href="https://doi.org/10.21105/joss.04261">Orehounig et al. 2022</a>)
+        simulates the hourly energy demand of building stocks with EnergyPlus and evaluates retrofit
+        scenarios with costs and embodied emissions. Its inputs and their open counterparts:</p>
+      <div class="table-scroll"><table class="sources">
+        <thead><tr><th>CESAR-P input</th><th>Source used by CESAR-P</th><th>Open data here</th></tr></thead>
+        <tbody>
+          <tr><td>Footprint, height, age, use</td><td>GWR (BFS), swissBUILDINGS3D (swisstopo)</td><td>GWR public extract: <a href="sources.html">bfs_gwr</a> (stock charts above)</td></tr>
+          <tr><td>Heating system and energy carrier</td><td>GWR</td><td>GWR <code>GENH1</code>/<code>GWAERZH1</code>, heating chart above</td></tr>
+          <tr><td>Construction archetypes by age (U-values, layers)</td><td>Bauteilkatalog, SIA 380/1, literature; bundled in CESAR-P</td><td>Bundled in CESAR-P (open); Bauteilkatalog is a web tool</td></tr>
+          <tr><td>Occupancy and usage profiles</td><td>SIA 2024 (paid)</td><td>Not open. CESAR-P ships pre-generated profiles only</td></tr>
+          <tr><td>Retrofit rates</td><td>Energieperspektiven 2012, SIA 2040; bundled CSV</td><td>No official series. Proxies: Building Programme and FSO investment (above)</td></tr>
+          <tr><td>Retrofit costs</td><td>GEAK 2014 cost data (not public); derived values bundled</td><td>Building Programme payouts (subsidies, not full costs)</td></tr>
+          <tr><td>Embodied emissions of materials</td><td>KBOB 2014</td><td>KBOB v9.0: <a href="sources.html">kbob_lca</a> (charts above)</td></tr>
+          <tr><td>Weather</td><td>Meteonorm TMY files (commercial), bundled</td><td>MeteoSwiss open data (not in EPW format)</td></tr>
+          <tr><td>Validation: measured demand</td><td>–</td><td>Geneva IDC per building; national intensities from cantonal reporting</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <h2 id="gaps">What is not openly available</h2>
+    <div class="card prose">
+      <ul>
+        <li><strong>Energy performance certificates:</strong> no national open GEAK/CECB data. About 207,000 buildings are certified (GEAK), but only Lucerne (since 2019) and Jura (91 public buildings) publish results.</li>
+        <li><strong>Renovation rate:</strong> no annual series. The GWR has no renovation year (the variable was last collected in the 2000 census). The Building Programme only covers subsidised projects, and FSO "Umbau" investment is not energy-specific.</li>
+        <li><strong>Measured energy use per building:</strong> open only in Geneva. The FOEN per-building CO2 values are modelled from GWR data that is often outdated.</li>
+        <li><strong>Embodied emissions of the stock:</strong> no official dataset. KBOB gives per-material factors; stock totals exist only in research models (see <a href="library.html">Library → Models</a>).</li>
+        <li><strong>Norms:</strong> SIA 2024, 380/1, 2032, 2040 and 390/1 are paid standards.</li>
+        <li><strong>Minergie:</strong> the open dataset (~33,000 buildings) is a snapshot and smaller than Minergie's own total (~60,500).</li>
+      </ul>
     </div>
   </main>
   <footer id="site-footer"></footer>

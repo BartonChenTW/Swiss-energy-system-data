@@ -1,0 +1,20 @@
+{
+  "dataset": "buildings/gp_co2_savings",
+  "processor": "pipeline.process.bfe_gebaeudeprogramm",
+  "generated": "2026-09-28T13:41:05+00:00",
+  "rows": 75,
+  "years": [
+    2010,
+    2024
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_gebaeudeprogramm/ogd18_gebaeudeprogramm_co2wirkung.csv",
+      "url": "https://www.uvek-gis.admin.ch/BFE/ogd/18/ogd18_gebaeudeprogramm_co2wirkung.csv",
+      "retrieved": "2026-09-28T13:34:50+00:00",
+      "last_modified": "Thu, 14 Aug 2025 08:54:42 GMT",
+      "sha256": "e424e150022f22a21ab2e7f547f23f275be2fda3ef8e8df5face7c3e1bf3ebf4",
+      "bytes": 2333
+    }
+  ]
+}

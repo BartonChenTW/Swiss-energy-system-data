@@ -1,0 +1,21 @@
+{
+  "dataset": "buildings/co2_class_distribution",
+  "processor": "pipeline.process.bafu_co2_buildings",
+  "generated": "2026-09-28T13:41:09+00:00",
+  "rows": 7,
+  "years": [
+    2026,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bafu_co2_buildings/klima-co2_ausstoss_gebaeude_2056.csv.zip",
+      "url": "https://data.geo.admin.ch/ch.bafu.klima-co2_ausstoss_gebaeude/klima-co2_ausstoss_gebaeude/klima-co2_ausstoss_gebaeude_2056.csv.zip",
+      "retrieved": "2026-09-28T13:34:53+00:00",
+      "last_modified": "Mon, 28 Sep 2026 02:18:59 GMT",
+      "sha256": "479cba1878608d40b49fe3b16d02dc2c1d9e8fbc6fb2a734c2bcae28ae48ad1f",
+      "bytes": 56499578
+    }
+  ],
+  "notes": "1,747,878 of 1,808,678 residential buildings have an estimate; for 32% the heating information is more than 20 years old."
+}

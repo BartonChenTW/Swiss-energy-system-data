@@ -1,0 +1,21 @@
+{
+  "dataset": "buildings/gp_payouts_by_area",
+  "processor": "pipeline.process.bfe_gebaeudeprogramm",
+  "generated": "2026-09-28T13:41:05+00:00",
+  "rows": 48,
+  "years": [
+    2017,
+    2024
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_gebaeudeprogramm/ogd18_gebaeudeprogramm_auszahlungen.csv",
+      "url": "https://www.uvek-gis.admin.ch/BFE/ogd/18/ogd18_gebaeudeprogramm_auszahlungen.csv",
+      "retrieved": "2026-09-28T13:34:50+00:00",
+      "last_modified": "Tue, 12 Aug 2025 12:26:53 GMT",
+      "sha256": "1c7870996a81a8f9dc1d2590989d772ed68f525ba0fc59276d1af86cefc535a5",
+      "bytes": 48297
+    }
+  ],
+  "notes": "Switzerland = sum of the 26 cantons."
+}

@@ -12,7 +12,7 @@ const PAGES = [
   ["library.html", "Library"],
 ];
 
-const REFERENCE_TYPES = { report: "Reports", dashboard: "Dashboards", website: "Websites", tool: "Tools", model: "Models", portal: "Data portals" };
+const REFERENCE_TYPES = { report: "Reports", standard: "Standards & norms", dashboard: "Dashboards", website: "Websites", tool: "Tools", model: "Models", portal: "Data portals" };
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -49,7 +49,9 @@ function loadJSON(path) {
 // ---------- chart configs ----------
 
 function chartConfig(ds, type) {
-  const palette = Array.from({ length: 8 }, (_, i) => css(`--series-${i + 1}`));
+  const palette = ds.palette === "sequential"
+    ? Array.from({ length: ds.series.length }, (_, i) => css(`--seq-${Math.min(7, i + 1)}`))
+    : Array.from({ length: 8 }, (_, i) => css(`--series-${i + 1}`));
   const surface = css("--surface");
   const muted = css("--text-muted");
   const grid = css("--grid");
@@ -140,6 +142,7 @@ async function renderCard(el) {
         ${ds.provenance?.retrieved ? `Retrieved ${fmtDate(ds.provenance.retrieved)}.` : ""}
         ${ds.provenance?.notes ? `<br>${esc(ds.provenance.notes)}` : ""}</p>`;
     const canvas = el.querySelector("canvas");
+    if (type === "hbar") el.querySelector(".canvas-box").style.height = `${Math.max(300, ds.series.length * 30 + 70)}px`;
     charts.push({ canvas, ds, type, chart: new Chart(canvas, chartConfig(ds, type)) });
   } catch (err) {
     el.innerHTML = `<p class="error">Could not load <code>${esc(id)}</code> (${esc(err.message)}). Run <code>python -m pipeline.build_site</code> first.</p>`;
