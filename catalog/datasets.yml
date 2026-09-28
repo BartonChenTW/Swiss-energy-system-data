@@ -8,6 +8,7 @@ datasets:
     source: bfe_energy_statistics
     chart: stacked-area
     status: official
+    coverage: national
 
   - id: national/final_energy_by_sector
     title: Final energy consumption by sector
@@ -15,6 +16,7 @@ datasets:
     source: bfe_energy_statistics
     chart: stacked-bar
     status: official
+    coverage: national
 
   - id: buildings/heating_energy_source
     title: Main heating energy source of residential buildings (share of number of buildings)
@@ -22,6 +24,7 @@ datasets:
     source: bfs_gwr
     chart: hbar
     status: official
+    coverage: national
 
   - id: buildings/buildings_by_construction_period
     title: Residential buildings by construction period
@@ -29,6 +32,7 @@ datasets:
     source: bfs_gwr
     chart: hbar
     status: official
+    coverage: national
 
   # ---------- buildings: energy performance ----------
   - id: buildings/stock_energy_intensity
@@ -37,6 +41,7 @@ datasets:
     source: bafu_cantonal_buildings_report
     chart: line
     status: official
+    coverage: national
 
   - id: buildings/stock_co2_intensity
     title: Direct CO2 emissions per m² of the building stock
@@ -44,6 +49,7 @@ datasets:
     source: bafu_cantonal_buildings_report
     chart: line
     status: official
+    coverage: national
 
   - id: buildings/stock_final_energy_by_carrier
     title: Final energy for heating and hot water by carrier
@@ -51,6 +57,7 @@ datasets:
     source: bafu_cantonal_buildings_report
     chart: stacked-area
     status: official
+    coverage: national
 
   - id: buildings/co2_class_distribution
     title: Estimated direct CO2 emissions of residential buildings (share of number of buildings)
@@ -58,6 +65,7 @@ datasets:
     source: bafu_co2_buildings
     chart: hbar
     status: official
+    coverage: national
 
   - id: buildings/geneva_heat_index
     title: Measured heat demand of buildings in Geneva (IDC)
@@ -65,6 +73,8 @@ datasets:
     source: ge_idc
     chart: line
     status: official
+    coverage: regional
+    region: Canton of Geneva
 
   - id: buildings/luzern_geak_envelope_class
     title: GEAK certificates in Lucerne by envelope class
@@ -73,6 +83,8 @@ datasets:
     chart: stacked-bar
     palette: sequential
     status: official
+    coverage: regional
+    region: Canton of Lucerne
 
   - id: buildings/minergie_per_1000_buildings
     title: Minergie-certified buildings per 1,000 buildings, by canton
@@ -80,6 +92,7 @@ datasets:
     source: minergie_buildings
     chart: hbar
     status: official
+    coverage: national
 
   # ---------- buildings: retrofit ----------
   - id: buildings/gp_payouts_by_area
@@ -88,6 +101,7 @@ datasets:
     source: bfe_gebaeudeprogramm
     chart: stacked-bar
     status: official
+    coverage: national
 
   - id: buildings/gp_energy_savings
     title: Ongoing energy savings from the Building Programme
@@ -95,6 +109,7 @@ datasets:
     source: bfe_gebaeudeprogramm
     chart: stacked-area
     status: official
+    coverage: national
 
   - id: buildings/gp_co2_savings
     title: Ongoing CO2 reduction from the Building Programme
@@ -102,6 +117,7 @@ datasets:
     source: bfe_gebaeudeprogramm
     chart: stacked-area
     status: official
+    coverage: national
 
   - id: buildings/gp_heating_replaced_old
     title: Subsidised heating replacements, by system removed
@@ -109,6 +125,7 @@ datasets:
     source: bfe_gebaeudeprogramm_projects
     chart: stacked-bar
     status: official
+    coverage: national
 
   - id: buildings/gp_heating_replaced_new
     title: Subsidised heating replacements, by system installed
@@ -116,6 +133,7 @@ datasets:
     source: bfe_gebaeudeprogramm_projects
     chart: stacked-bar
     status: official
+    coverage: national
 
   - id: buildings/gp_insulated_area
     title: Envelope area insulated with Building Programme funding
@@ -123,6 +141,7 @@ datasets:
     source: bfe_gebaeudeprogramm_projects
     chart: stacked-bar
     status: official
+    coverage: national
 
   - id: buildings/residential_construction_investment
     title: Investment in residential buildings, new vs conversion & renovation
@@ -130,6 +149,7 @@ datasets:
     source: bfs_construction_investment
     chart: stacked-bar
     status: official
+    coverage: national
 
   # ---------- buildings: life-cycle data ----------
   - id: buildings/lca_ghg_structural_materials
@@ -138,6 +158,7 @@ datasets:
     source: kbob_lca
     chart: hbar
     status: official
+    coverage: national
 
   - id: buildings/lca_ghg_insulation_materials
     title: Embodied GHG of insulation materials (per kg)
@@ -145,6 +166,7 @@ datasets:
     source: kbob_lca
     chart: hbar
     status: official
+    coverage: national
 
   - id: electricity/production_by_technology
     title: Electricity production by technology
@@ -152,6 +174,7 @@ datasets:
     source: bfe_electricity_statistics
     chart: stacked-bar
     status: official
+    coverage: national
 
   - id: renewables/production_by_source
     title: Domestic renewable energy production by source
@@ -159,6 +182,7 @@ datasets:
     source: bfe_renewable_statistics
     chart: stacked-area
     status: official
+    coverage: national
 
   - id: renewables/new_renewable_electricity
     title: Electricity from new renewables
@@ -166,6 +190,7 @@ datasets:
     source: bfe_electricity_statistics
     chart: stacked-bar
     status: official
+    coverage: national
 
   - id: renewables/wind_electricity
     title: Wind electricity production
@@ -173,6 +198,7 @@ datasets:
     source: bfe_electricity_statistics
     chart: line
     status: official
+    coverage: national
 
   - id: renewables/wind_biomass_installed_capacity
     title: Installed wind and biomass capacity
@@ -180,6 +206,7 @@ datasets:
     source: bfe_production_plants
     chart: line
     status: official
+    coverage: national
 
   - id: renewables/pv_installed_capacity
     title: Installed solar PV capacity
@@ -187,3 +214,4 @@ datasets:
     source: bfe_production_plants
     chart: line
     status: official
+    coverage: national

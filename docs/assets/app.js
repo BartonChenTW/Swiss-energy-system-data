@@ -125,6 +125,13 @@ function dataTable(ds) {
 
 // ---------- rendering ----------
 
+function coverageTag(ds) {
+  if (ds.coverage === "regional") {
+    return `<span class="tag tag-regional" title="Covers only ${esc(ds.region)}, not all of Switzerland">Regional · ${esc(ds.region)}</span>`;
+  }
+  return ds.coverage === "national" ? '<span class="tag tag-national" title="Covers all of Switzerland">National</span>' : "";
+}
+
 const charts = [];
 
 async function renderCard(el) {
@@ -134,7 +141,7 @@ async function renderCard(el) {
     const ds = await loadJSON(`data/${id}.json`);
     const type = el.dataset.chart || ds.chart || "line";
     el.innerHTML = `
-      <div class="card-head"><h3>${esc(ds.title)}</h3>${ds.status === "sample" ? '<span class="badge" title="Placeholder values — not official statistics">Sample data</span>' : ""}</div>
+      <div class="card-head"><h3>${esc(ds.title)}</h3><span class="tags-head">${coverageTag(ds)}${ds.status === "sample" ? '<span class="badge" title="Placeholder values — not official statistics">Sample data</span>' : ""}</span></div>
       <p class="card-sub">${esc(ds.description)} <span>(${esc(ds.unit)})</span></p>
       <div class="canvas-box"><canvas role="img" aria-label="${esc(ds.title)}, ${esc(ds.unit)}"></canvas></div>
       <details><summary>Data table</summary>${dataTable(ds)}</details>

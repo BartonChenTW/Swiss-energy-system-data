@@ -23,10 +23,11 @@ REFERENCE_TYPES = {"report", "standard", "website", "dashboard", "tool", "model"
 CHART_TYPES = {"line", "stacked-area", "stacked-bar", "hbar"}
 PALETTES = {"sequential"}  # optional; default is the categorical palette
 STATUSES = {"official", "sample"}
+COVERAGES = {"national", "regional"}  # regional datasets also name their `region`
 
 REQUIRED = {
     "sources": ["id", "name", "publisher", "theme", "url", "terms"],
-    "datasets": ["id", "title", "description", "source", "chart", "status"],
+    "datasets": ["id", "title", "description", "source", "chart", "status", "coverage"],
     "references": ["id", "type", "title", "publisher", "url", "themes", "checked"],
 }
 
@@ -75,6 +76,10 @@ def catalog_errors(sources: list, datasets: list, references: list) -> list[str]
             errors.append(f"datasets[{d['id']}]: unknown chart {d.get('chart')!r}")
         if d.get("status") not in STATUSES:
             errors.append(f"datasets[{d['id']}]: unknown status {d.get('status')!r}")
+        if d.get("coverage") not in COVERAGES:
+            errors.append(f"datasets[{d['id']}]: unknown coverage {d.get('coverage')!r}")
+        if (d.get("coverage") == "regional") != bool(d.get("region")):
+            errors.append(f"datasets[{d['id']}]: 'region' is required for regional coverage and only then")
         if d.get("palette") not in (None, *PALETTES):
             errors.append(f"datasets[{d['id']}]: unknown palette {d.get('palette')!r}")
         if d.get("id", "").split("/")[0] not in THEMES:
