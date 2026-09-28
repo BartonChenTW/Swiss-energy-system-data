@@ -1,0 +1,20 @@
+{
+  "dataset": "electricity/production_by_technology",
+  "processor": "pipeline.process.bfe_electricity_statistics",
+  "generated": "2026-09-28T12:27:45+00:00",
+  "rows": 288,
+  "years": [
+    1990,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_electricity_statistics/ogd32_elektrizitaetbilanz_jahreswerte.csv",
+      "url": "https://www.uvek-gis.admin.ch/BFE/ogd/32/ogd32_elektrizitaetbilanz_jahreswerte.csv",
+      "retrieved": "2026-09-28T12:27:02+00:00",
+      "last_modified": "Thu, 09 Jul 2026 12:37:33 GMT",
+      "sha256": "3c57a9d73637ed7b826f0400de48f7973d0fe70c3b29ec55c4f5573eaacfacf2",
+      "bytes": 6145
+    }
+  ]
+}

@@ -1,99 +1,116 @@
-# Data sources. Each dataset in datasets.yml refers to one of these ids.
+# Machine-readable data sources. Schema and vocabulary: catalog/README.md
 #
-#   id:         short snake_case id, also the folder name under data/raw/
-#   downloads:  optional list of {url, filename} fetched by `python -m pipeline.fetch`
-#
-# URLs are starting points — verify them (and the terms of use) before relying on them.
+# Convention: id == data/raw/<id>/ == pipeline/process/<id>.py
 
 sources:
   - id: bfe_energy_statistics
-    name: Overall Energy Statistics (Gesamtenergiestatistik)
+    name: "Schweizerische Gesamtenergiestatistik: Energiebilanz der Schweiz"
     publisher: Swiss Federal Office of Energy (SFOE / BFE)
     theme: national
-    url: https://www.bfe.admin.ch/bfe/en/home/supply/statistics-and-geodata/energy-statistics/overall-energy-statistics.html
+    url: https://opendata.swiss/en/dataset/energiebilanz-der-schweiz
+    terms: "opendata.swiss: Open use. Must provide the source."
     frequency: annual
-    terms: TBD
-    downloads: []   # TODO: add the OGD CSV links from opendata.swiss
+    downloads:
+      - url: https://www.uvek-gis.admin.ch/BFE/ogd/115/ogd115_gest_bilanz.csv
+        filename: ogd115_gest_bilanz.csv
+    notes: Full national energy balance in TJ from 1980, by balance item (Rubrik) and energy carrier.
 
   - id: bfe_electricity_statistics
-    name: Swiss Electricity Statistics (Elektrizitätsstatistik)
+    name: "Schweizerische Elektrizitätsstatistik: Elektrizitätsbilanz – Jahreswerte"
     publisher: Swiss Federal Office of Energy (SFOE / BFE)
     theme: electricity
-    url: https://www.bfe.admin.ch/bfe/en/home/supply/statistics-and-geodata/energy-statistics/electricity-statistics.html
+    url: https://opendata.swiss/en/dataset/schweizerische-elektrizitatsbilanz-jahreswerte
+    terms: "opendata.swiss: Open use. Must provide the source."
     frequency: annual
-    terms: TBD
-    downloads: []
+    downloads:
+      - url: https://www.uvek-gis.admin.ch/BFE/ogd/32/ogd32_elektrizitaetbilanz_jahreswerte.csv
+        filename: ogd32_elektrizitaetbilanz_jahreswerte.csv
+    notes: >-
+      Annual electricity balance in GWh from 1960. Breakdown of thermal and new
+      renewables starts in 1990. Production columns are gross of pumped-storage consumption.
 
   - id: bfe_renewable_statistics
-    name: Swiss Renewable Energy Statistics / Solar Energy Statistics
+    name: "Schweizerische Gesamtenergiestatistik: Energiebilanz der erneuerbaren Energien"
     publisher: Swiss Federal Office of Energy (SFOE / BFE)
     theme: renewables
-    url: https://www.bfe.admin.ch/bfe/en/home/supply/statistics-and-geodata/energy-statistics.html
+    url: https://opendata.swiss/en/dataset/schweizerische-gesamtenergiestatistik-energiebilanz-der-erneuerbaren-energien-der-schweiz
+    terms: "opendata.swiss: Open use. Must provide the source."
     frequency: annual
-    terms: TBD
-    downloads: []
+    downloads:
+      - url: https://www.uvek-gis.admin.ch/BFE/ogd/123/ogd123_Energiebilanz_erneuerbareEnergien.csv
+        filename: ogd123_Energiebilanz_erneuerbareEnergien.csv
+    notes: Energy balance of renewables in TJ from 1990 (hydro, solar, wind, wood, biogas, ambient heat, ...).
 
   - id: bfe_production_plants
-    name: Electricity production plants in Switzerland
+    name: Elektrizitätsproduktionsanlagen
     publisher: Swiss Federal Office of Energy (SFOE / BFE)
     theme: renewables
-    url: https://opendata.swiss/en/organization/bundesamt-fur-energie-bfe
-    frequency: continuous
-    terms: TBD
-    downloads: []
+    url: https://opendata.swiss/en/dataset/elektrizitatsproduktionsanlagen
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: monthly
+    downloads:
+      - url: https://data.geo.admin.ch/ch.bfe.elektrizitaetsproduktionsanlagen/csv/2056/ch.bfe.elektrizitaetsproduktionsanlagen.zip
+        filename: ch.bfe.elektrizitaetsproduktionsanlagen.zip
+    notes: >-
+      Register of plants in operation (from the guarantee-of-origin system), with
+      commissioning date and current power in kW. Decommissioned plants are not included.
 
   - id: bfs_gwr
     name: Federal Register of Buildings and Dwellings (GWR / RegBL)
     publisher: Federal Statistical Office (FSO / BFS)
     theme: buildings
     url: https://www.housing-stat.ch/
-    frequency: continuous
-    terms: TBD
+    terms: "Free use, commercial and non-commercial. Source must be cited: Bundesamt für Statistik; Eidg. Gebäude- und Wohnungsregister (license.pdf in the download)."
+    frequency: daily
     downloads:
       - url: https://public.madd.bfs.admin.ch/ch.zip
         filename: ch.zip
+    notes: >-
+      ~950 MB zip with buildings, entrances and dwellings (tab-separated) plus a code
+      table (kodes_codes_codici.csv). Heating fields are often missing or undetermined.
 
-  - id: swissgrid
-    name: Swissgrid energy overview (grid data)
-    publisher: Swissgrid
+  - id: bfe_swissgrid_production
+    name: "energiedashboard.ch: Stromproduktion Swissgrid"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
     theme: electricity
-    url: https://www.swissgrid.ch/en/home/operation/grid-data.html
-    frequency: 15-minute / monthly
-    terms: TBD
-    downloads: []
+    url: https://opendata.swiss/en/dataset/energiedashboard-ch-stromproduktion-swissgrid
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: daily
+    downloads:
+      - url: https://www.bfe-ogd.ch/ogd104_stromproduktion_swissgrid.csv
+        filename: ogd104_stromproduktion_swissgrid.csv
+
+  - id: bfe_swissgrid_consumption
+    name: "energiedashboard.ch: Landesverbrauch und Endverbrauch"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    theme: electricity
+    url: https://opendata.swiss/en/dataset/energiedashboard-ch-landesverbrauch-und-endverbrauch
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: daily
+    downloads:
+      - url: https://www.bfe-ogd.ch/ogd103_stromverbrauch_swissgrid_lv_und_endv.csv
+        filename: ogd103_stromverbrauch_swissgrid_lv_und_endv.csv
 
   - id: elcom_tariffs
     name: Electricity tariffs by municipality
     publisher: Federal Electricity Commission (ElCom)
-    theme: electricity
+    theme: prices
     url: https://www.strompreis.elcom.admin.ch/
+    terms: TBD
     frequency: annual
-    terms: TBD
-    downloads: []
-
-  - id: sonnendach
-    name: Solar potential of Swiss roofs (sonnendach.ch)
-    publisher: Swiss Federal Office of Energy (SFOE / BFE)
-    theme: renewables
-    url: https://www.sonnendach.ch/
-    frequency: irregular
-    terms: TBD
-    downloads: []
 
   - id: foen_ghg_inventory
     name: Switzerland's Greenhouse Gas Inventory
     publisher: Federal Office for the Environment (FOEN / BAFU)
     theme: emissions
-    url: https://www.bafu.admin.ch/bafu/en/home/topics/climate/state/data/climate-reporting/greenhouse-gas-inventory.html
-    frequency: annual
+    url: https://www.bafu.admin.ch/en/climate
     terms: TBD
-    downloads: []
+    frequency: annual
 
   - id: bfs_vehicles
     name: Road vehicle stock
     publisher: Federal Statistical Office (FSO / BFS)
     theme: mobility
     url: https://www.bfs.admin.ch/bfs/en/home/statistics/mobility-transport.html
-    frequency: annual
     terms: TBD
-    downloads: []
+    frequency: annual

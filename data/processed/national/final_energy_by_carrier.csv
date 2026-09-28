@@ -1,36 +1,323 @@
 year,category,value,unit
-2019,Oil products,360,PJ
-2019,Electricity,205,PJ
-2019,Natural gas,110,PJ
-2019,Wood,40,PJ
-2019,District heating,19,PJ
-2019,Other renewables,22,PJ
-2019,Other,24,PJ
-2020,Oil products,310,PJ
-2020,Electricity,198,PJ
-2020,Natural gas,105,PJ
-2020,Wood,39,PJ
-2020,District heating,19,PJ
-2020,Other renewables,23,PJ
-2020,Other,22,PJ
-2021,Oil products,320,PJ
-2021,Electricity,206,PJ
-2021,Natural gas,112,PJ
-2021,Wood,43,PJ
-2021,District heating,21,PJ
-2021,Other renewables,25,PJ
-2021,Other,23,PJ
-2022,Oil products,315,PJ
-2022,Electricity,200,PJ
-2022,Natural gas,98,PJ
-2022,Wood,40,PJ
-2022,District heating,20,PJ
-2022,Other renewables,26,PJ
-2022,Other,22,PJ
-2023,Oil products,305,PJ
-2023,Electricity,196,PJ
-2023,Natural gas,92,PJ
-2023,Wood,40,PJ
-2023,District heating,20,PJ
-2023,Other renewables,27,PJ
-2023,Other,21,PJ
+1980,Oil products,489.48,PJ
+1980,Electricity,126.91,PJ
+1980,Natural gas,30.37,PJ
+1980,Wood,26.28,PJ
+1980,District heating,7.92,PJ
+1980,Other renewables,0.0,PJ
+1980,Coal & waste,17.33,PJ
+1981,Oil products,465.71,PJ
+1981,Electricity,130.3,PJ
+1981,Natural gas,33.37,PJ
+1981,Wood,25.48,PJ
+1981,District heating,8.32,PJ
+1981,Other renewables,0.0,PJ
+1981,Coal & waste,24.71,PJ
+1982,Oil products,448.66,PJ
+1982,Electricity,132.23,PJ
+1982,Natural gas,35.83,PJ
+1982,Wood,24.93,PJ
+1982,District heating,8.43,PJ
+1982,Other renewables,0.0,PJ
+1982,Coal & waste,22.67,PJ
+1983,Oil products,460.19,PJ
+1983,Electricity,136.69,PJ
+1983,Natural gas,39.92,PJ
+1983,Wood,25.34,PJ
+1983,District heating,8.61,PJ
+1983,Other renewables,0.0,PJ
+1983,Coal & waste,20.5,PJ
+1984,Oil products,471.24,PJ
+1984,Electricity,142.79,PJ
+1984,Natural gas,45.41,PJ
+1984,Wood,26.56,PJ
+1984,District heating,9.21,PJ
+1984,Other renewables,0.0,PJ
+1984,Coal & waste,26.05,PJ
+1985,Oil products,471.83,PJ
+1985,Electricity,148.76,PJ
+1985,Natural gas,47.66,PJ
+1985,Wood,27.03,PJ
+1985,District heating,9.43,PJ
+1985,Other renewables,0.0,PJ
+1985,Coal & waste,26.19,PJ
+1986,Oil products,484.57,PJ
+1986,Electricity,152.45,PJ
+1986,Natural gas,48.98,PJ
+1986,Wood,26.29,PJ
+1986,District heating,9.86,PJ
+1986,Other renewables,0.0,PJ
+1986,Coal & waste,23.73,PJ
+1987,Oil products,485.32,PJ
+1987,Electricity,156.93,PJ
+1987,Natural gas,52.82,PJ
+1987,Wood,26.38,PJ
+1987,District heating,11.25,PJ
+1987,Other renewables,0.0,PJ
+1987,Coal & waste,22.98,PJ
+1988,Oil products,489.06,PJ
+1988,Electricity,159.58,PJ
+1988,Natural gas,53.8,PJ
+1988,Wood,25.01,PJ
+1988,District heating,10.72,PJ
+1988,Other renewables,0.0,PJ
+1988,Coal & waste,20.62,PJ
+1989,Oil products,483.03,PJ
+1989,Electricity,163.81,PJ
+1989,Natural gas,58.83,PJ
+1989,Wood,24.87,PJ
+1989,District heating,10.78,PJ
+1989,Other renewables,0.0,PJ
+1989,Coal & waste,20.65,PJ
+1990,Oil products,496.81,PJ
+1990,Electricity,167.68,PJ
+1990,Natural gas,64.16,PJ
+1990,Wood,28.66,PJ
+1990,District heating,10.42,PJ
+1990,Other renewables,4.09,PJ
+1990,Coal & waste,23.04,PJ
+1991,Oil products,520.59,PJ
+1991,Electricity,171.31,PJ
+1991,Natural gas,72.01,PJ
+1991,Wood,31.58,PJ
+1991,District heating,12.09,PJ
+1991,Other renewables,4.59,PJ
+1991,Coal & waste,23.28,PJ
+1992,Oil products,523.76,PJ
+1992,Electricity,172.32,PJ
+1992,Natural gas,75.96,PJ
+1992,Wood,30.6,PJ
+1992,District heating,11.97,PJ
+1992,Other renewables,4.62,PJ
+1992,Coal & waste,19.38,PJ
+1993,Oil products,499.0,PJ
+1993,Electricity,170.06,PJ
+1993,Natural gas,79.93,PJ
+1993,Wood,30.7,PJ
+1993,District heating,11.31,PJ
+1993,Other renewables,4.82,PJ
+1993,Coal & waste,19.24,PJ
+1994,Oil products,485.95,PJ
+1994,Electricity,168.83,PJ
+1994,Natural gas,78.67,PJ
+1994,Wood,28.65,PJ
+1994,District heating,11.28,PJ
+1994,Other renewables,4.79,PJ
+1994,Coal & waste,17.46,PJ
+1995,Oil products,494.04,PJ
+1995,Electricity,172.38,PJ
+1995,Natural gas,86.6,PJ
+1995,Wood,30.6,PJ
+1995,District heating,11.97,PJ
+1995,Other renewables,5.24,PJ
+1995,Coal & waste,18.36,PJ
+1996,Oil products,502.62,PJ
+1996,Electricity,175.29,PJ
+1996,Natural gas,92.91,PJ
+1996,Wood,33.66,PJ
+1996,District heating,12.48,PJ
+1996,Other renewables,5.74,PJ
+1996,Coal & waste,17.07,PJ
+1997,Oil products,496.99,PJ
+1997,Electricity,175.0,PJ
+1997,Natural gas,89.11,PJ
+1997,Wood,29.61,PJ
+1997,District heating,12.98,PJ
+1997,Other renewables,5.67,PJ
+1997,Coal & waste,14.68,PJ
+1998,Oil products,514.21,PJ
+1998,Electricity,178.63,PJ
+1998,Natural gas,92.06,PJ
+1998,Wood,30.14,PJ
+1998,District heating,13.25,PJ
+1998,Other renewables,6.05,PJ
+1998,Coal & waste,14.13,PJ
+1999,Oil products,514.6,PJ
+1999,Electricity,184.37,PJ
+1999,Natural gas,93.31,PJ
+1999,Wood,29.81,PJ
+1999,District heating,13.21,PJ
+1999,Other renewables,6.3,PJ
+1999,Coal & waste,12.89,PJ
+2000,Oil products,501.8,PJ
+2000,Electricity,188.54,PJ
+2000,Natural gas,93.6,PJ
+2000,Wood,28.13,PJ
+2000,District heating,13.18,PJ
+2000,Other renewables,6.33,PJ
+2000,Coal & waste,16.21,PJ
+2001,Oil products,512.62,PJ
+2001,Electricity,193.5,PJ
+2001,Natural gas,97.42,PJ
+2001,Wood,29.95,PJ
+2001,District heating,13.9,PJ
+2001,Other renewables,6.78,PJ
+2001,Coal & waste,16.48,PJ
+2002,Oil products,488.05,PJ
+2002,Electricity,194.5,PJ
+2002,Natural gas,95.24,PJ
+2002,Wood,28.74,PJ
+2002,District heating,14.02,PJ
+2002,Other renewables,6.93,PJ
+2002,Coal & waste,15.75,PJ
+2003,Oil products,495.07,PJ
+2003,Electricity,198.44,PJ
+2003,Natural gas,100.34,PJ
+2003,Wood,30.77,PJ
+2003,District heating,14.59,PJ
+2003,Other renewables,7.43,PJ
+2003,Coal & waste,16.77,PJ
+2004,Oil products,490.88,PJ
+2004,Electricity,202.22,PJ
+2004,Natural gas,103.76,PJ
+2004,Wood,30.61,PJ
+2004,District heating,14.77,PJ
+2004,Other renewables,7.79,PJ
+2004,Coal & waste,16.4,PJ
+2005,Oil products,493.21,PJ
+2005,Electricity,206.39,PJ
+2005,Natural gas,106.78,PJ
+2005,Wood,31.92,PJ
+2005,District heating,15.24,PJ
+2005,Other renewables,8.53,PJ
+2005,Coal & waste,16.92,PJ
+2006,Oil products,488.98,PJ
+2006,Electricity,208.02,PJ
+2006,Natural gas,104.71,PJ
+2006,Wood,32.63,PJ
+2006,District heating,15.72,PJ
+2006,Other renewables,8.97,PJ
+2006,Coal & waste,17.51,PJ
+2007,Oil products,470.06,PJ
+2007,Electricity,206.76,PJ
+2007,Natural gas,102.47,PJ
+2007,Wood,31.75,PJ
+2007,District heating,14.67,PJ
+2007,Other renewables,9.71,PJ
+2007,Coal & waste,17.9,PJ
+2008,Oil products,486.65,PJ
+2008,Electricity,211.42,PJ
+2008,Natural gas,109.16,PJ
+2008,Wood,35.95,PJ
+2008,District heating,15.26,PJ
+2008,Other renewables,11.2,PJ
+2008,Coal & waste,17.67,PJ
+2009,Oil products,475.53,PJ
+2009,Electricity,206.98,PJ
+2009,Natural gas,104.8,PJ
+2009,Wood,37.21,PJ
+2009,District heating,15.12,PJ
+2009,Other renewables,12.05,PJ
+2009,Coal & waste,15.65,PJ
+2010,Oil products,485.48,PJ
+2010,Electricity,215.23,PJ
+2010,Natural gas,116.2,PJ
+2010,Wood,40.99,PJ
+2010,District heating,17.03,PJ
+2010,Other renewables,14.3,PJ
+2010,Coal & waste,16.4,PJ
+2011,Oil products,447.44,PJ
+2011,Electricity,210.96,PJ
+2011,Natural gas,104.47,PJ
+2011,Wood,35.67,PJ
+2011,District heating,15.66,PJ
+2011,Other renewables,14.2,PJ
+2011,Coal & waste,16.46,PJ
+2012,Oil products,460.98,PJ
+2012,Electricity,212.3,PJ
+2012,Natural gas,114.58,PJ
+2012,Wood,39.47,PJ
+2012,District heating,16.65,PJ
+2012,Other renewables,16.31,PJ
+2012,Coal & waste,16.05,PJ
+2013,Oil products,468.23,PJ
+2013,Electricity,213.56,PJ
+2013,Natural gas,121.03,PJ
+2013,Wood,43.5,PJ
+2013,District heating,17.58,PJ
+2013,Other renewables,17.89,PJ
+2013,Coal & waste,16.59,PJ
+2014,Oil products,425.81,PJ
+2014,Electricity,206.88,PJ
+2014,Natural gas,107.36,PJ
+2014,Wood,36.74,PJ
+2014,District heating,15.98,PJ
+2014,Other renewables,17.44,PJ
+2014,Coal & waste,18.35,PJ
+2015,Oil products,424.42,PJ
+2015,Electricity,209.69,PJ
+2015,Natural gas,113.16,PJ
+2015,Wood,39.17,PJ
+2015,District heating,18.14,PJ
+2015,Other renewables,20.56,PJ
+2015,Coal & waste,16.14,PJ
+2016,Oil products,428.17,PJ
+2016,Electricity,209.66,PJ
+2016,Natural gas,117.47,PJ
+2016,Wood,42.34,PJ
+2016,District heating,19.35,PJ
+2016,Other renewables,23.69,PJ
+2016,Coal & waste,16.3,PJ
+2017,Oil products,418.02,PJ
+2017,Electricity,210.54,PJ
+2017,Natural gas,119.13,PJ
+2017,Wood,42.74,PJ
+2017,District heating,19.79,PJ
+2017,Other renewables,26.44,PJ
+2017,Coal & waste,16.15,PJ
+2018,Oil products,409.93,PJ
+2018,Electricity,207.53,PJ
+2018,Natural gas,112.54,PJ
+2018,Wood,40.45,PJ
+2018,District heating,19.36,PJ
+2018,Other renewables,28.31,PJ
+2018,Coal & waste,15.67,PJ
+2019,Oil products,406.67,PJ
+2019,Electricity,205.91,PJ
+2019,Natural gas,115.44,PJ
+2019,Wood,41.11,PJ
+2019,District heating,21.53,PJ
+2019,Other renewables,30.35,PJ
+2019,Coal & waste,15.81,PJ
+2020,Oil products,327.83,PJ
+2020,Electricity,201.95,PJ
+2020,Natural gas,112.32,PJ
+2020,Wood,39.71,PJ
+2020,District heating,21.02,PJ
+2020,Other renewables,30.58,PJ
+2020,Coal & waste,15.37,PJ
+2021,Oil products,344.92,PJ
+2021,Electricity,211.69,PJ
+2021,Natural gas,121.87,PJ
+2021,Wood,45.95,PJ
+2021,District heating,23.07,PJ
+2021,Other renewables,33.26,PJ
+2021,Coal & waste,15.59,PJ
+2022,Oil products,347.09,PJ
+2022,Electricity,208.71,PJ
+2022,Natural gas,101.15,PJ
+2022,Wood,40.63,PJ
+2022,District heating,21.33,PJ
+2022,Other renewables,32.35,PJ
+2022,Coal & waste,15.4,PJ
+2023,Oil products,356.57,PJ
+2023,Electricity,204.16,PJ
+2023,Natural gas,93.91,PJ
+2023,Wood,42.23,PJ
+2023,District heating,22.03,PJ
+2023,Other renewables,35.06,PJ
+2023,Coal & waste,14.28,PJ
+2024,Oil products,354.81,PJ
+2024,Electricity,207.04,PJ
+2024,Natural gas,95.45,PJ
+2024,Wood,42.0,PJ
+2024,District heating,24.06,PJ
+2024,Other renewables,38.39,PJ
+2024,Coal & waste,14.46,PJ
+2025,Oil products,351.64,PJ
+2025,Electricity,208.69,PJ
+2025,Natural gas,94.39,PJ
+2025,Wood,41.81,PJ
+2025,District heating,25.62,PJ
+2025,Other renewables,41.3,PJ
+2025,Coal & waste,14.42,PJ

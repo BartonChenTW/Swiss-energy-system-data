@@ -1,8 +1,8 @@
 year,category,value,unit
-2023,Heating oil,34,%
-2023,Heat pump (ambient heat),26,%
-2023,Natural gas,17,%
-2023,Wood,11,%
-2023,Electricity (direct),5,%
-2023,District heating,4,%
-2023,Other / unknown,3,%
+2026,Heating oil,37.0,%
+2026,Gas,19.8,%
+2026,"Heat pump (air, ground, water)",15.6,%
+2026,Wood,13.5,%
+2026,Electricity (direct),7.4,%
+2026,District heating,5.9,%
+2026,Other,0.8,%

@@ -1,31 +1,289 @@
 year,category,value,unit
-2019,Run-of-river hydro,17.5,TWh
-2019,Storage hydro,20.7,TWh
-2019,Nuclear,25.4,TWh
-2019,Solar PV,2.2,TWh
-2019,Thermal & other,3.9,TWh
-2019,Wind,0.15,TWh
-2020,Run-of-river hydro,17.9,TWh
-2020,Storage hydro,22.1,TWh
-2020,Nuclear,23.0,TWh
-2020,Solar PV,2.6,TWh
-2020,Thermal & other,3.8,TWh
-2020,Wind,0.14,TWh
-2021,Run-of-river hydro,18.0,TWh
-2021,Storage hydro,21.6,TWh
-2021,Nuclear,18.5,TWh
-2021,Solar PV,2.8,TWh
-2021,Thermal & other,3.9,TWh
-2021,Wind,0.14,TWh
-2022,Run-of-river hydro,15.9,TWh
-2022,Storage hydro,17.8,TWh
-2022,Nuclear,23.1,TWh
-2022,Solar PV,3.9,TWh
-2022,Thermal & other,3.7,TWh
+1990,Run-of-river hydro,13.561,TWh
+1990,Storage hydro,17.114,TWh
+1990,Nuclear,22.298,TWh
+1990,Fossil thermal,0.661,TWh
+1990,Waste (renewable share),0.352,TWh
+1990,Wood & biogas,0.086,TWh
+1990,Solar PV,0.001,TWh
+1990,Wind,0.0,TWh
+1991,Run-of-river hydro,13.898,TWh
+1991,Storage hydro,19.184,TWh
+1991,Nuclear,21.654,TWh
+1991,Fossil thermal,0.904,TWh
+1991,Waste (renewable share),0.343,TWh
+1991,Wood & biogas,0.093,TWh
+1991,Solar PV,0.002,TWh
+1991,Wind,0.0,TWh
+1992,Run-of-river hydro,15.219,TWh
+1992,Storage hydro,18.506,TWh
+1992,Nuclear,22.121,TWh
+1992,Fossil thermal,1.014,TWh
+1992,Waste (renewable share),0.379,TWh
+1992,Wood & biogas,0.106,TWh
+1992,Solar PV,0.003,TWh
+1992,Wind,0.0,TWh
+1993,Run-of-river hydro,15.451,TWh
+1993,Storage hydro,20.802,TWh
+1993,Nuclear,22.029,TWh
+1993,Fossil thermal,0.536,TWh
+1993,Waste (renewable share),0.377,TWh
+1993,Wood & biogas,0.114,TWh
+1993,Solar PV,0.004,TWh
+1993,Wind,0.0,TWh
+1994,Run-of-river hydro,16.59,TWh
+1994,Storage hydro,22.966,TWh
+1994,Nuclear,22.984,TWh
+1994,Fossil thermal,0.565,TWh
+1994,Waste (renewable share),0.423,TWh
+1994,Wood & biogas,0.127,TWh
+1994,Solar PV,0.005,TWh
+1994,Wind,0.0,TWh
+1995,Run-of-river hydro,16.148,TWh
+1995,Storage hydro,19.449,TWh
+1995,Nuclear,23.486,TWh
+1995,Fossil thermal,0.694,TWh
+1995,Waste (renewable share),0.443,TWh
+1995,Wood & biogas,0.131,TWh
+1995,Solar PV,0.006,TWh
+1995,Wind,0.0,TWh
+1996,Run-of-river hydro,13.669,TWh
+1996,Storage hydro,16.029,TWh
+1996,Nuclear,23.719,TWh
+1996,Fossil thermal,1.082,TWh
+1996,Waste (renewable share),0.474,TWh
+1996,Wood & biogas,0.14,TWh
+1996,Solar PV,0.007,TWh
+1996,Wind,0.001,TWh
+1997,Run-of-river hydro,14.695,TWh
+1997,Storage hydro,20.099,TWh
+1997,Nuclear,23.971,TWh
+1997,Fossil thermal,1.167,TWh
+1997,Waste (renewable share),0.519,TWh
+1997,Wood & biogas,0.139,TWh
+1997,Solar PV,0.007,TWh
+1997,Wind,0.002,TWh
+1998,Run-of-river hydro,14.966,TWh
+1998,Storage hydro,19.329,TWh
+1998,Nuclear,24.368,TWh
+1998,Fossil thermal,1.585,TWh
+1998,Waste (renewable share),0.539,TWh
+1998,Wood & biogas,0.15,TWh
+1998,Solar PV,0.008,TWh
+1998,Wind,0.003,TWh
+1999,Run-of-river hydro,16.64,TWh
+1999,Storage hydro,23.976,TWh
+1999,Nuclear,23.523,TWh
+1999,Fossil thermal,1.792,TWh
+1999,Waste (renewable share),0.594,TWh
+1999,Wood & biogas,0.155,TWh
+1999,Solar PV,0.01,TWh
+1999,Wind,0.003,TWh
+2000,Run-of-river hydro,17.566,TWh
+2000,Storage hydro,20.285,TWh
+2000,Nuclear,24.949,TWh
+2000,Fossil thermal,1.702,TWh
+2000,Waste (renewable share),0.67,TWh
+2000,Wood & biogas,0.163,TWh
+2000,Solar PV,0.011,TWh
+2000,Wind,0.003,TWh
+2001,Run-of-river hydro,17.751,TWh
+2001,Storage hydro,24.51,TWh
+2001,Nuclear,25.293,TWh
+2001,Fossil thermal,1.728,TWh
+2001,Waste (renewable share),0.705,TWh
+2001,Wood & biogas,0.171,TWh
+2001,Solar PV,0.013,TWh
+2001,Wind,0.004,TWh
+2002,Run-of-river hydro,17.625,TWh
+2002,Storage hydro,18.888,TWh
+2002,Nuclear,25.692,TWh
+2002,Fossil thermal,1.877,TWh
+2002,Waste (renewable share),0.735,TWh
+2002,Wood & biogas,0.174,TWh
+2002,Solar PV,0.015,TWh
+2002,Wind,0.005,TWh
+2003,Run-of-river hydro,15.398,TWh
+2003,Storage hydro,21.047,TWh
+2003,Nuclear,25.931,TWh
+2003,Fossil thermal,1.937,TWh
+2003,Waste (renewable share),0.752,TWh
+2003,Wood & biogas,0.178,TWh
+2003,Solar PV,0.018,TWh
+2003,Wind,0.005,TWh
+2004,Run-of-river hydro,16.039,TWh
+2004,Storage hydro,19.078,TWh
+2004,Nuclear,25.432,TWh
+2004,Fossil thermal,1.979,TWh
+2004,Waste (renewable share),0.797,TWh
+2004,Wood & biogas,0.173,TWh
+2004,Solar PV,0.018,TWh
+2004,Wind,0.006,TWh
+2005,Run-of-river hydro,14.998,TWh
+2005,Storage hydro,17.761,TWh
+2005,Nuclear,22.02,TWh
+2005,Fossil thermal,2.094,TWh
+2005,Waste (renewable share),0.838,TWh
+2005,Wood & biogas,0.178,TWh
+2005,Solar PV,0.021,TWh
+2005,Wind,0.008,TWh
+2006,Run-of-river hydro,15.819,TWh
+2006,Storage hydro,16.738,TWh
+2006,Nuclear,26.244,TWh
+2006,Fossil thermal,2.166,TWh
+2006,Waste (renewable share),0.937,TWh
+2006,Wood & biogas,0.198,TWh
+2006,Solar PV,0.024,TWh
+2006,Wind,0.015,TWh
+2007,Run-of-river hydro,16.547,TWh
+2007,Storage hydro,19.826,TWh
+2007,Nuclear,26.344,TWh
+2007,Fossil thermal,1.975,TWh
+2007,Waste (renewable share),0.919,TWh
+2007,Wood & biogas,0.26,TWh
+2007,Solar PV,0.029,TWh
+2007,Wind,0.016,TWh
+2008,Run-of-river hydro,16.686,TWh
+2008,Storage hydro,20.873,TWh
+2008,Nuclear,26.132,TWh
+2008,Fossil thermal,1.992,TWh
+2008,Waste (renewable share),0.921,TWh
+2008,Wood & biogas,0.308,TWh
+2008,Solar PV,0.037,TWh
+2008,Wind,0.019,TWh
+2009,Run-of-river hydro,16.11,TWh
+2009,Storage hydro,21.026,TWh
+2009,Nuclear,26.119,TWh
+2009,Fossil thermal,1.933,TWh
+2009,Waste (renewable share),0.884,TWh
+2009,Wood & biogas,0.345,TWh
+2009,Solar PV,0.054,TWh
+2009,Wind,0.023,TWh
+2010,Run-of-river hydro,16.03,TWh
+2010,Storage hydro,21.42,TWh
+2010,Nuclear,25.205,TWh
+2010,Fossil thermal,2.195,TWh
+2010,Waste (renewable share),0.928,TWh
+2010,Wood & biogas,0.344,TWh
+2010,Solar PV,0.094,TWh
+2010,Wind,0.037,TWh
+2011,Run-of-river hydro,14.733,TWh
+2011,Storage hydro,19.062,TWh
+2011,Nuclear,25.56,TWh
+2011,Fossil thermal,1.903,TWh
+2011,Waste (renewable share),0.963,TWh
+2011,Wood & biogas,0.422,TWh
+2011,Solar PV,0.168,TWh
+2011,Wind,0.07,TWh
+2012,Run-of-river hydro,17.832,TWh
+2012,Storage hydro,22.074,TWh
+2012,Nuclear,24.345,TWh
+2012,Fossil thermal,1.854,TWh
+2012,Waste (renewable share),1.015,TWh
+2012,Wood & biogas,0.512,TWh
+2012,Solar PV,0.299,TWh
+2012,Wind,0.088,TWh
+2013,Run-of-river hydro,17.759,TWh
+2013,Storage hydro,21.813,TWh
+2013,Nuclear,24.871,TWh
+2013,Fossil thermal,1.672,TWh
+2013,Waste (renewable share),1.05,TWh
+2013,Wood & biogas,0.557,TWh
+2013,Solar PV,0.5,TWh
+2013,Wind,0.09,TWh
+2014,Run-of-river hydro,17.243,TWh
+2014,Storage hydro,22.065,TWh
+2014,Nuclear,26.37,TWh
+2014,Fossil thermal,1.341,TWh
+2014,Waste (renewable share),1.108,TWh
+2014,Wood & biogas,0.563,TWh
+2014,Solar PV,0.842,TWh
+2014,Wind,0.101,TWh
+2015,Run-of-river hydro,16.595,TWh
+2015,Storage hydro,22.891,TWh
+2015,Nuclear,22.095,TWh
+2015,Fossil thermal,1.546,TWh
+2015,Waste (renewable share),1.115,TWh
+2015,Wood & biogas,0.487,TWh
+2015,Solar PV,1.119,TWh
+2015,Wind,0.11,TWh
+2016,Run-of-river hydro,16.574,TWh
+2016,Storage hydro,19.752,TWh
+2016,Nuclear,20.235,TWh
+2016,Fossil thermal,1.887,TWh
+2016,Waste (renewable share),1.182,TWh
+2016,Wood & biogas,0.544,TWh
+2016,Solar PV,1.334,TWh
+2016,Wind,0.109,TWh
+2017,Run-of-river hydro,15.946,TWh
+2017,Storage hydro,20.72,TWh
+2017,Nuclear,19.499,TWh
+2017,Fossil thermal,1.669,TWh
+2017,Waste (renewable share),1.182,TWh
+2017,Wood & biogas,0.656,TWh
+2017,Solar PV,1.683,TWh
+2017,Wind,0.133,TWh
+2018,Run-of-river hydro,16.908,TWh
+2018,Storage hydro,20.52,TWh
+2018,Nuclear,24.414,TWh
+2018,Fossil thermal,1.839,TWh
+2018,Waste (renewable share),1.169,TWh
+2018,Wood & biogas,0.641,TWh
+2018,Solar PV,1.945,TWh
+2018,Wind,0.122,TWh
+2019,Run-of-river hydro,17.7,TWh
+2019,Storage hydro,22.856,TWh
+2019,Nuclear,25.28,TWh
+2019,Fossil thermal,1.873,TWh
+2019,Waste (renewable share),1.177,TWh
+2019,Wood & biogas,0.684,TWh
+2019,Solar PV,2.178,TWh
+2019,Wind,0.146,TWh
+2020,Run-of-river hydro,17.648,TWh
+2020,Storage hydro,22.968,TWh
+2020,Nuclear,22.99,TWh
+2020,Fossil thermal,1.862,TWh
+2020,Waste (renewable share),1.184,TWh
+2020,Wood & biogas,0.842,TWh
+2020,Solar PV,2.692,TWh
+2020,Wind,0.145,TWh
+2021,Run-of-river hydro,16.962,TWh
+2021,Storage hydro,22.538,TWh
+2021,Nuclear,18.53,TWh
+2021,Fossil thermal,1.734,TWh
+2021,Waste (renewable share),1.115,TWh
+2021,Wood & biogas,0.97,TWh
+2021,Solar PV,2.964,TWh
+2021,Wind,0.145,TWh
+2022,Run-of-river hydro,15.49,TWh
+2022,Storage hydro,18.011,TWh
+2022,Nuclear,23.113,TWh
+2022,Fossil thermal,1.592,TWh
+2022,Waste (renewable share),1.094,TWh
+2022,Wood & biogas,1.003,TWh
+2022,Solar PV,4.067,TWh
 2022,Wind,0.15,TWh
-2023,Run-of-river hydro,17.8,TWh
-2023,Storage hydro,21.3,TWh
-2023,Nuclear,23.3,TWh
-2023,Solar PV,4.6,TWh
-2023,Thermal & other,3.9,TWh
-2023,Wind,0.17,TWh
+2023,Run-of-river hydro,17.491,TWh
+2023,Storage hydro,23.289,TWh
+2023,Nuclear,23.334,TWh
+2023,Fossil thermal,1.443,TWh
+2023,Waste (renewable share),1.051,TWh
+2023,Wood & biogas,1.053,TWh
+2023,Solar PV,4.914,TWh
+2023,Wind,0.169,TWh
+2024,Run-of-river hydro,19.403,TWh
+2024,Storage hydro,28.934,TWh
+2024,Nuclear,22.983,TWh
+2024,Fossil thermal,1.433,TWh
+2024,Waste (renewable share),1.097,TWh
+2024,Wood & biogas,1.072,TWh
+2024,Solar PV,5.961,TWh
+2024,Wind,0.171,TWh
+2025,Run-of-river hydro,16.326,TWh
+2025,Storage hydro,21.159,TWh
+2025,Nuclear,18.379,TWh
+2025,Fossil thermal,1.367,TWh
+2025,Waste (renewable share),1.102,TWh
+2025,Wood & biogas,1.08,TWh
+2025,Solar PV,7.948,TWh
+2025,Wind,0.161,TWh

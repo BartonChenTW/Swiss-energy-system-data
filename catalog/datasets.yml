@@ -1,47 +1,45 @@
-# Datasets published to the site. `id` = path under data/processed/ without .csv.
-#
-#   chart:   line | stacked-area | stacked-bar | hbar   (hbar = categories of the latest year)
-#   status:  sample (placeholder values, badged on the site) | official (processed from the source)
+# Datasets published on the site. Schema and vocabulary: catalog/README.md
+# `id` = path under data/processed/ without .csv
 
 datasets:
   - id: national/final_energy_by_carrier
     title: Final energy consumption by carrier
-    description: Energy delivered to end users, by energy carrier.
+    description: Energy delivered to end users, by energy carrier. "Other renewables" includes ambient heat, solar thermal, biogas and biofuels.
     source: bfe_energy_statistics
     chart: stacked-area
-    status: sample
+    status: official
 
   - id: national/final_energy_by_sector
     title: Final energy consumption by sector
-    description: Energy delivered to end users, by consuming sector.
+    description: Energy delivered to end users, by consuming sector. Agriculture is reported together with the statistical difference.
     source: bfe_energy_statistics
     chart: stacked-bar
-    status: sample
+    status: official
 
   - id: buildings/heating_energy_source
-    title: Main heating energy source of buildings
-    description: Share of residential buildings by main heating energy source.
+    title: Main heating energy source of residential buildings
+    description: Share of existing residential buildings by the energy source of their main heating system, among buildings where the source is recorded. Air, ground and water sources indicate heat pumps.
     source: bfs_gwr
     chart: hbar
-    status: sample
+    status: official
 
   - id: buildings/buildings_by_construction_period
-    title: Buildings by construction period
-    description: Number of residential buildings by period of construction.
+    title: Residential buildings by construction period
+    description: Number of existing residential buildings by period of construction, where recorded.
     source: bfs_gwr
     chart: hbar
-    status: sample
+    status: official
 
   - id: electricity/production_by_technology
     title: Electricity production by technology
-    description: Domestic net electricity generation.
+    description: Domestic gross electricity production, before subtracting the consumption of pumped-storage pumps.
     source: bfe_electricity_statistics
     chart: stacked-bar
-    status: sample
+    status: official
 
   - id: renewables/pv_installed_capacity
     title: Installed solar PV capacity
-    description: Cumulative installed photovoltaic capacity at year end.
-    source: bfe_renewable_statistics
+    description: Cumulative capacity of PV plants in the register, by year of commissioning. Only plants still in operation are counted, at their current power, so earlier years are slightly understated.
+    source: bfe_production_plants
     chart: line
-    status: sample
+    status: official

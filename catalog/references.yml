@@ -1,0 +1,173 @@
+# Reports, websites, dashboards, tools and models. Schema and vocabulary: catalog/README.md
+# `checked` = date the link was last opened and confirmed to show the described content.
+
+references:
+  # ---------- reports ----------
+  - id: bfe_gest_report
+    type: report
+    title: Schweizerische Gesamtenergiestatistik (annual report)
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://pubdb.bfe.admin.ch/de/suche?keywords=402
+    themes: [national]
+    language: de/fr
+    description: Annual publication behind the national energy balance, with definitions and methodology notes.
+    related_sources: [bfe_energy_statistics, bfe_renewable_statistics]
+    checked: 2026-09-28
+
+  - id: bfe_end_use_analysis
+    type: report
+    title: Analyse des schweizerischen Energieverbrauchs nach Verwendungszwecken
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://pubdb.bfe.admin.ch/de/suche?keywords=380
+    themes: [national, buildings, heat]
+    language: de
+    description: Breaks final energy consumption down by end use (space heating, hot water, process heat, mobility, ...).
+    related_sources: [bfe_energy_statistics]
+    checked: 2026-09-28
+
+  - id: bfe_ex_post_analysis
+    type: report
+    title: Ex-Post-Analyse des schweizerischen Energieverbrauchs nach Bestimmungsfaktoren
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://pubdb.bfe.admin.ch/de/suche?keywords=388
+    themes: [national]
+    language: de
+    description: Decomposes year-on-year changes in consumption into weather, population, economy, policy and technology effects.
+    related_sources: [bfe_energy_statistics]
+    checked: 2026-09-28
+
+  - id: bfe_ex_post_households
+    type: report
+    title: Ex-Post-Analyse des Energieverbrauchs der schweizerischen Haushalte
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://pubdb.bfe.admin.ch/de/suche?keywords=387
+    themes: [buildings, heat]
+    language: de
+    description: Household energy use by determining factor and end use.
+    checked: 2026-09-28
+
+  - id: bfe_energy_perspectives_2050
+    type: report
+    title: Energieperspektiven 2050+
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    year: 2020
+    url: https://pubdb.bfe.admin.ch/de/suche?keywords=&q=Energieperspektiven+2050%2B
+    themes: [scenarios, national]
+    language: de/fr
+    description: Official net-zero 2050 scenarios for the Swiss energy system. Link is a publication search; TODO replace with a stable page.
+    checked: 2026-09-28
+
+  # ---------- dashboards & websites ----------
+  - id: energiedashboard
+    type: dashboard
+    title: Energie-Dashboard
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://www.energiedashboard.admin.ch/
+    themes: [electricity, national, prices]
+    language: de/fr/it
+    description: Near-real-time electricity, gas and storage indicators. Its data is published as OGD CSVs.
+    related_sources: [bfe_swissgrid_production, bfe_swissgrid_consumption]
+    checked: 2026-09-28
+
+  - id: housing_stat
+    type: website
+    title: housing-stat.ch – Federal Register of Buildings and Dwellings
+    publisher: Federal Statistical Office (FSO / BFS)
+    url: https://www.housing-stat.ch/
+    themes: [buildings]
+    language: de/fr/it
+    description: Documentation of the GWR, including the feature catalogue that defines every variable and code.
+    related_sources: [bfs_gwr]
+    checked: 2026-09-28
+
+  - id: elcom_strompreis
+    type: website
+    title: Strompreise Schweiz
+    publisher: Federal Electricity Commission (ElCom)
+    url: https://www.strompreis.elcom.admin.ch/
+    themes: [prices, electricity]
+    language: de/fr/it
+    description: Electricity tariffs of every grid operator and municipality.
+    related_sources: [elcom_tariffs]
+    checked: 2026-09-28
+
+  - id: swissgrid
+    type: website
+    title: Swissgrid
+    publisher: Swissgrid AG
+    url: https://www.swissgrid.ch/en/home.html
+    themes: [electricity]
+    language: en/de/fr/it
+    description: Transmission system operator. Publishes grid data (energy overview, cross-border flows).
+    checked: 2026-09-28
+
+  - id: bafu_climate
+    type: website
+    title: Topic Climate (incl. greenhouse gas inventory)
+    publisher: Federal Office for the Environment (FOEN / BAFU)
+    url: https://www.bafu.admin.ch/en/climate
+    themes: [emissions]
+    language: en/de/fr/it
+    related_sources: [foen_ghg_inventory]
+    checked: 2026-09-28
+
+  # ---------- tools ----------
+  - id: map_geo_admin_energy
+    type: tool
+    title: map.geo.admin.ch – Energy topic
+    publisher: Federal Office of Topography (swisstopo)
+    url: https://map.geo.admin.ch/?topic=energie
+    themes: [renewables, electricity, buildings, heat]
+    description: Federal map viewer with energy layers (production plants, solar potential, district heating, ...).
+    related_sources: [bfe_production_plants]
+    checked: 2026-09-28
+
+  - id: sonnendach
+    type: tool
+    title: sonnendach.ch – solar potential of roofs
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://www.sonnendach.ch/
+    themes: [renewables, buildings]
+    language: de/fr/it
+    description: Roof-by-roof solar PV and solar-thermal potential for every building in Switzerland.
+    checked: 2026-09-28
+
+  # ---------- data portals ----------
+  - id: opendata_swiss_bfe
+    type: portal
+    title: SFOE datasets on opendata.swiss
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://opendata.swiss/en/organization/bundesamt-fur-energie-bfe
+    themes: [general]
+    description: Entry point for SFOE open data. Most sources in this repo are listed here.
+    checked: 2026-09-28
+
+  - id: lindas
+    type: portal
+    title: LINDAS – Linked Data Service
+    publisher: Swiss Federal Archives
+    url: https://lindas.admin.ch/
+    themes: [general]
+    description: SPARQL endpoint with many federal statistics (including SFOE cubes) as linked data.
+    checked: 2026-09-28
+
+  # ---------- models ----------
+  - id: nexus_e
+    type: model
+    title: Nexus-e integrated energy systems modelling platform
+    publisher: ETH Zurich
+    url: https://nexus-e.org/
+    themes: [scenarios, electricity]
+    language: en
+    description: Coupled models of the Swiss electricity system (investment, dispatch, grid, markets).
+    checked: 2026-09-28
+
+  - id: energyscope
+    type: model
+    title: EnergyScope
+    publisher: EPFL / UCLouvain
+    url: https://energyscope.ch/
+    themes: [scenarios, national]
+    language: fr/en
+    description: Open-source whole-energy-system model with a Swiss case study and an online calculator.
+    checked: 2026-09-28

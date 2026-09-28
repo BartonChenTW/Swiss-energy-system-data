@@ -1,0 +1,21 @@
+{
+  "dataset": "buildings/buildings_by_construction_period",
+  "processor": "pipeline.process.bfs_gwr",
+  "generated": "2026-09-28T12:27:57+00:00",
+  "rows": 7,
+  "years": [
+    2026,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfs_gwr/ch.zip",
+      "url": "https://public.madd.bfs.admin.ch/ch.zip",
+      "retrieved": "2026-09-28T12:21:21+00:00",
+      "last_modified": "Mon, 28 Sep 2026 03:42:41 GMT",
+      "sha256": "9d26f819ff97eac06d6fe27848a95c6eb2ad1b97b1b5149c4ffdaf98768b0100",
+      "bytes": 947045673
+    }
+  ],
+  "notes": "1,808,452 of 1,808,679 existing residential buildings have a recorded construction period."
+}

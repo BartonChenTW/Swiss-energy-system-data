@@ -2,10 +2,12 @@
 
     python -m pipeline.build_site
 
-Writes docs/data/<dataset id>.json for every dataset in catalog/datasets.yml,
-plus docs/data/catalog.json listing all sources and datasets.
+Writes docs/data/<dataset id>.json for every dataset in catalog/datasets.yml
+(values + catalog metadata + provenance), plus docs/data/catalog.json with all
+sources, datasets and references for the Sources and Library pages.
 """
 import json
+from datetime import date
 
 import pandas as pd
 
@@ -24,14 +26,28 @@ def to_series(df: pd.DataFrame) -> tuple[list[int], list[dict]]:
     return years, series
 
 
+def provenance(csv) -> dict | None:
+    meta = csv.with_suffix(".meta.json")
+    if not meta.exists():
+        return None
+    m = json.loads(meta.read_text(encoding="utf-8"))
+    retrieved = [i.get("retrieved") for i in m.get("inputs", []) if i.get("retrieved")]
+    return {
+        "generated": m.get("generated"),
+        "retrieved": min(retrieved) if retrieved else None,
+        "inputs": [{k: i.get(k) for k in ("url", "retrieved", "last_modified")} for i in m.get("inputs", [])],
+        "notes": m.get("notes"),
+    }
+
+
 def write_json(obj, path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, separators=(",", ":"))
+        json.dump(obj, f, ensure_ascii=False, separators=(",", ":"), default=str)
 
 
 def main() -> None:
-    sources, datasets = load_catalog()
+    sources, datasets, references = load_catalog()
     built = []
     for ds in datasets:
         csv = PROCESSED_DIR / f"{ds['id']}.csv"
@@ -45,7 +61,8 @@ def main() -> None:
         write_json({
             **ds,
             "unit": df["unit"].iloc[0],
-            "source": {k: src[k] for k in ("id", "name", "publisher", "url")},
+            "source": {k: src.get(k) for k in ("id", "name", "publisher", "url", "terms")},
+            "provenance": provenance(csv),
             "years": years,
             "series": series,
         }, SITE_DATA_DIR / f"{ds['id']}.json")
@@ -53,8 +70,10 @@ def main() -> None:
         print(f"  built {ds['id']}")
 
     write_json({
+        "built": date.today().isoformat(),
         "sources": [{k: v for k, v in s.items() if k != "downloads"} for s in sources.values()],
         "datasets": [ds for ds in datasets if ds["id"] in built],
+        "references": references,
     }, SITE_DATA_DIR / "catalog.json")
     print(f"{len(built)} datasets -> {SITE_DATA_DIR.relative_to(ROOT)}")
 

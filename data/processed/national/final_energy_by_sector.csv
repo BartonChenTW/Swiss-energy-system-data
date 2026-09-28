@@ -1,21 +1,231 @@
 year,category,value,unit
-2019,Households,225,PJ
-2019,Industry,150,PJ
-2019,Services,135,PJ
-2019,Transport,270,PJ
-2020,Households,230,PJ
-2020,Industry,145,PJ
-2020,Services,125,PJ
-2020,Transport,215,PJ
-2021,Households,245,PJ
-2021,Industry,150,PJ
-2021,Services,135,PJ
-2021,Transport,230,PJ
-2022,Households,215,PJ
-2022,Industry,145,PJ
-2022,Services,130,PJ
-2022,Transport,235,PJ
-2023,Households,210,PJ
-2023,Industry,140,PJ
-2023,Services,128,PJ
-2023,Transport,240,PJ
+1980,Households,242.31,PJ
+1980,Services,117.7,PJ
+1980,Industry,144.2,PJ
+1980,Transport,186.7,PJ
+1980,Agriculture & statistical difference,7.38,PJ
+1981,Households,229.45,PJ
+1981,Services,120.37,PJ
+1981,Industry,141.74,PJ
+1981,Transport,189.57,PJ
+1981,Agriculture & statistical difference,6.76,PJ
+1982,Households,222.25,PJ
+1982,Services,116.06,PJ
+1982,Industry,135.74,PJ
+1982,Transport,191.64,PJ
+1982,Agriculture & statistical difference,7.06,PJ
+1983,Households,232.47,PJ
+1983,Services,119.55,PJ
+1983,Industry,132.16,PJ
+1983,Transport,199.79,PJ
+1983,Agriculture & statistical difference,7.28,PJ
+1984,Households,242.03,PJ
+1984,Services,126.32,PJ
+1984,Industry,136.94,PJ
+1984,Transport,207.06,PJ
+1984,Agriculture & statistical difference,8.91,PJ
+1985,Households,243.0,PJ
+1985,Services,129.41,PJ
+1985,Industry,140.79,PJ
+1985,Transport,209.35,PJ
+1985,Agriculture & statistical difference,8.35,PJ
+1986,Households,248.13,PJ
+1986,Services,126.64,PJ
+1986,Industry,144.06,PJ
+1986,Transport,218.65,PJ
+1986,Agriculture & statistical difference,8.4,PJ
+1987,Households,243.43,PJ
+1987,Services,129.17,PJ
+1987,Industry,149.04,PJ
+1987,Transport,225.6,PJ
+1987,Agriculture & statistical difference,8.44,PJ
+1988,Households,239.08,PJ
+1988,Services,123.08,PJ
+1988,Industry,153.54,PJ
+1988,Transport,236.52,PJ
+1988,Agriculture & statistical difference,6.57,PJ
+1989,Households,233.01,PJ
+1989,Services,121.31,PJ
+1989,Industry,155.97,PJ
+1989,Transport,245.45,PJ
+1989,Agriculture & statistical difference,6.23,PJ
+1990,Households,239.37,PJ
+1990,Services,128.94,PJ
+1990,Industry,157.27,PJ
+1990,Transport,263.05,PJ
+1990,Agriculture & statistical difference,6.23,PJ
+1991,Households,254.51,PJ
+1991,Services,137.61,PJ
+1991,Industry,164.78,PJ
+1991,Transport,268.49,PJ
+1991,Agriculture & statistical difference,10.06,PJ
+1992,Households,254.95,PJ
+1992,Services,138.76,PJ
+1992,Industry,158.64,PJ
+1992,Transport,275.52,PJ
+1992,Agriculture & statistical difference,10.74,PJ
+1993,Households,245.5,PJ
+1993,Services,137.64,PJ
+1993,Industry,155.83,PJ
+1993,Transport,262.85,PJ
+1993,Agriculture & statistical difference,13.24,PJ
+1994,Households,234.15,PJ
+1994,Services,131.77,PJ
+1994,Industry,152.5,PJ
+1994,Transport,266.64,PJ
+1994,Agriculture & statistical difference,10.57,PJ
+1995,Households,250.09,PJ
+1995,Services,135.27,PJ
+1995,Industry,156.17,PJ
+1995,Transport,265.43,PJ
+1995,Agriculture & statistical difference,12.23,PJ
+1996,Households,260.46,PJ
+1996,Services,142.66,PJ
+1996,Industry,154.8,PJ
+1996,Transport,268.04,PJ
+1996,Agriculture & statistical difference,13.81,PJ
+1997,Households,244.8,PJ
+1997,Services,138.98,PJ
+1997,Industry,153.14,PJ
+1997,Transport,277.96,PJ
+1997,Agriculture & statistical difference,9.16,PJ
+1998,Households,252.21,PJ
+1998,Services,142.62,PJ
+1998,Industry,157.16,PJ
+1998,Transport,283.71,PJ
+1998,Agriculture & statistical difference,12.77,PJ
+1999,Households,250.41,PJ
+1999,Services,143.31,PJ
+1999,Industry,157.53,PJ
+1999,Transport,296.45,PJ
+1999,Agriculture & statistical difference,6.79,PJ
+2000,Households,236.41,PJ
+2000,Services,137.17,PJ
+2000,Industry,160.77,PJ
+2000,Transport,304.21,PJ
+2000,Agriculture & statistical difference,9.23,PJ
+2001,Households,247.39,PJ
+2001,Services,143.91,PJ
+2001,Industry,166.26,PJ
+2001,Transport,296.94,PJ
+2001,Agriculture & statistical difference,16.15,PJ
+2002,Households,241.97,PJ
+2002,Services,138.73,PJ
+2002,Industry,158.82,PJ
+2002,Transport,292.09,PJ
+2002,Agriculture & statistical difference,11.62,PJ
+2003,Households,253.63,PJ
+2003,Services,144.81,PJ
+2003,Industry,162.54,PJ
+2003,Transport,289.54,PJ
+2003,Agriculture & statistical difference,12.89,PJ
+2004,Households,255.63,PJ
+2004,Services,144.24,PJ
+2004,Industry,165.0,PJ
+2004,Transport,288.29,PJ
+2004,Agriculture & statistical difference,13.27,PJ
+2005,Households,261.26,PJ
+2005,Services,148.73,PJ
+2005,Industry,166.92,PJ
+2005,Transport,290.58,PJ
+2005,Agriculture & statistical difference,11.5,PJ
+2006,Households,254.96,PJ
+2006,Services,145.66,PJ
+2006,Industry,170.53,PJ
+2006,Transport,295.52,PJ
+2006,Agriculture & statistical difference,9.87,PJ
+2007,Households,234.37,PJ
+2007,Services,137.39,PJ
+2007,Industry,168.58,PJ
+2007,Transport,303.54,PJ
+2007,Agriculture & statistical difference,9.44,PJ
+2008,Households,248.91,PJ
+2008,Services,144.59,PJ
+2008,Industry,171.31,PJ
+2008,Transport,313.09,PJ
+2008,Agriculture & statistical difference,9.41,PJ
+2009,Households,246.72,PJ
+2009,Services,142.78,PJ
+2009,Industry,161.21,PJ
+2009,Transport,307.31,PJ
+2009,Agriculture & statistical difference,9.32,PJ
+2010,Households,266.25,PJ
+2010,Services,152.16,PJ
+2010,Industry,168.92,PJ
+2010,Transport,309.37,PJ
+2010,Agriculture & statistical difference,8.93,PJ
+2011,Households,226.63,PJ
+2011,Services,135.66,PJ
+2011,Industry,162.61,PJ
+2011,Transport,310.55,PJ
+2011,Agriculture & statistical difference,9.41,PJ
+2012,Households,245.12,PJ
+2012,Services,143.66,PJ
+2012,Industry,164.27,PJ
+2012,Transport,313.96,PJ
+2012,Agriculture & statistical difference,9.33,PJ
+2013,Households,260.16,PJ
+2013,Services,150.25,PJ
+2013,Industry,165.22,PJ
+2013,Transport,313.66,PJ
+2013,Agriculture & statistical difference,9.09,PJ
+2014,Households,219.63,PJ
+2014,Services,131.13,PJ
+2014,Industry,157.65,PJ
+2014,Transport,312.7,PJ
+2014,Agriculture & statistical difference,7.45,PJ
+2015,Households,233.45,PJ
+2015,Services,138.51,PJ
+2015,Industry,155.09,PJ
+2015,Transport,306.34,PJ
+2015,Agriculture & statistical difference,7.89,PJ
+2016,Households,241.91,PJ
+2016,Services,142.45,PJ
+2016,Industry,155.41,PJ
+2016,Transport,308.95,PJ
+2016,Agriculture & statistical difference,8.26,PJ
+2017,Households,237.22,PJ
+2017,Services,140.39,PJ
+2017,Industry,156.35,PJ
+2017,Transport,309.17,PJ
+2017,Agriculture & statistical difference,9.68,PJ
+2018,Households,224.5,PJ
+2018,Services,134.32,PJ
+2018,Industry,150.89,PJ
+2018,Transport,315.26,PJ
+2018,Agriculture & statistical difference,8.82,PJ
+2019,Households,227.37,PJ
+2019,Services,134.88,PJ
+2019,Industry,150.55,PJ
+2019,Transport,315.64,PJ
+2019,Agriculture & statistical difference,8.38,PJ
+2020,Households,219.98,PJ
+2020,Services,128.13,PJ
+2020,Industry,145.73,PJ
+2020,Transport,246.67,PJ
+2020,Agriculture & statistical difference,8.27,PJ
+2021,Households,242.56,PJ
+2021,Services,136.59,PJ
+2021,Industry,154.02,PJ
+2021,Transport,253.03,PJ
+2021,Agriculture & statistical difference,10.15,PJ
+2022,Households,212.69,PJ
+2022,Services,122.65,PJ
+2022,Industry,145.23,PJ
+2022,Transport,277.34,PJ
+2022,Agriculture & statistical difference,8.75,PJ
+2023,Households,211.14,PJ
+2023,Services,121.3,PJ
+2023,Industry,136.34,PJ
+2023,Transport,290.31,PJ
+2023,Agriculture & statistical difference,9.15,PJ
+2024,Households,212.62,PJ
+2024,Services,122.03,PJ
+2024,Industry,137.19,PJ
+2024,Transport,295.37,PJ
+2024,Agriculture & statistical difference,9.0,PJ
+2025,Households,213.89,PJ
+2025,Services,120.83,PJ
+2025,Industry,136.09,PJ
+2025,Transport,298.19,PJ
+2025,Agriculture & statistical difference,8.87,PJ

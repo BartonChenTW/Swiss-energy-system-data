@@ -95,7 +95,21 @@ th:first-child, td:first-child { text-align: left; }
 th { color: var(--text-secondary); font-weight: 600; }
 .error { color: var(--text-secondary); font-size: 14px; }
 
-/* Sources page */
-.sources td, .sources th { white-space: normal; text-align: left; vertical-align: top; }
+/* Sources & Library pages */
+.muted { color: var(--text-muted); }
+.sources td, .sources th { white-space: normal; text-align: left; vertical-align: top; padding-block: 8px; }
+.sources td { min-width: 110px; }
+.sources td:first-child { min-width: 240px; }
+.filters { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 8px; font-size: 14px; color: var(--text-secondary); }
+.filters select {
+  margin-left: 6px; font: inherit; color: var(--text-primary); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px;
+}
+.refs { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.ref h3 { margin: 0 0 2px; font-size: 16px; }
+.ref p { margin: 6px 0 0; font-size: 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.tags span:not(.muted) { font-size: 12px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-secondary); }
+.tags .muted { font-size: 12px; margin-left: auto; }
 
 footer { border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; padding-block: 20px; }

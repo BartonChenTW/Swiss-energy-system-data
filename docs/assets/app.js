@@ -9,11 +9,15 @@ const PAGES = [
   ["electricity.html", "Electricity"],
   ["renewables.html", "Renewables"],
   ["sources.html", "Sources"],
+  ["library.html", "Library"],
 ];
+
+const REFERENCE_TYPES = { report: "Reports", dashboard: "Dashboards", website: "Websites", tool: "Tools", model: "Models", portal: "Data portals" };
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const fmt = (v) => (v == null ? "–" : v.toLocaleString("en-CH", { maximumFractionDigits: 2 }));
+const fmtDate = (iso) => (iso ? new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "");
 
 function renderChrome() {
   const here = location.pathname.split("/").pop() || "index.html";
@@ -26,8 +30,8 @@ function renderChrome() {
   }
   const footer = document.getElementById("site-footer");
   if (footer) {
-    footer.innerHTML = `<div class="wrap">Data from Swiss federal offices and other publishers — see <a href="sources.html">Sources</a>.
-      Charts marked <em>Sample data</em> show placeholder values.</div>`;
+    footer.innerHTML = `<div class="wrap">Data from Swiss federal offices and other publishers, used under their terms —
+      see <a href="sources.html">Sources</a>. Built from the <a href="https://github.com/BartonChenTW/Swiss-energy-system-data">open pipeline on GitHub</a>.</div>`;
   }
 }
 
@@ -132,7 +136,9 @@ async function renderCard(el) {
       <p class="card-sub">${esc(ds.description)} <span>(${esc(ds.unit)})</span></p>
       <div class="canvas-box"><canvas role="img" aria-label="${esc(ds.title)}, ${esc(ds.unit)}"></canvas></div>
       <details><summary>Data table</summary>${dataTable(ds)}</details>
-      <p class="card-foot">Source: <a href="${esc(ds.source.url)}">${esc(ds.source.name)}</a>, ${esc(ds.source.publisher)}</p>`;
+      <p class="card-foot">Source: <a href="${esc(ds.source.url)}">${esc(ds.source.name)}</a>, ${esc(ds.source.publisher)}.
+        ${ds.provenance?.retrieved ? `Retrieved ${fmtDate(ds.provenance.retrieved)}.` : ""}
+        ${ds.provenance?.notes ? `<br>${esc(ds.provenance.notes)}` : ""}</p>`;
     const canvas = el.querySelector("canvas");
     charts.push({ canvas, ds, type, chart: new Chart(canvas, chartConfig(ds, type)) });
   } catch (err) {
@@ -145,11 +151,46 @@ async function renderSources(el) {
     const { sources, datasets } = await loadJSON("data/catalog.json");
     const rows = sources.map((s) => {
       const used = datasets.filter((d) => d.source === s.id).map((d) => esc(d.title)).join("<br>") || "<em>planned</em>";
-      return `<tr><td><a href="${esc(s.url)}">${esc(s.name)}</a></td><td>${esc(s.publisher)}</td><td>${esc(s.theme)}</td><td>${esc(s.frequency)}</td><td>${used}</td></tr>`;
+      return `<tr><td><a href="${esc(s.url)}">${esc(s.name)}</a><div class="muted">${esc(s.publisher)}</div></td>
+        <td>${esc(s.theme)}</td><td>${esc(s.frequency)}</td><td>${esc(s.terms)}</td><td>${used}</td></tr>`;
     }).join("");
     el.innerHTML = `<div class="table-scroll"><table class="sources">
-      <thead><tr><th>Source</th><th>Publisher</th><th>Theme</th><th>Frequency</th><th>Datasets on this site</th></tr></thead>
+      <thead><tr><th>Source</th><th>Theme</th><th>Frequency</th><th>Terms of use</th><th>Datasets on this site</th></tr></thead>
       <tbody>${rows}</tbody></table></div>`;
+  } catch (err) {
+    el.innerHTML = `<p class="error">Could not load the catalog (${esc(err.message)}).</p>`;
+  }
+}
+
+async function renderLibrary(el) {
+  try {
+    const { references } = await loadJSON("data/catalog.json");
+    const themes = [...new Set(references.flatMap((r) => r.themes))].sort();
+    el.innerHTML = `
+      <div class="filters">
+        <label>Theme <select data-filter="theme"><option value="">All</option>${themes.map((t) => `<option>${esc(t)}</option>`).join("")}</select></label>
+        <label>Type <select data-filter="type"><option value="">All</option>${Object.entries(REFERENCE_TYPES).map(([k, v]) => `<option value="${k}">${v}</option>`).join("")}</select></label>
+      </div>
+      <div data-list></div>`;
+    const list = el.querySelector("[data-list]");
+    const draw = () => {
+      const theme = el.querySelector('[data-filter="theme"]').value;
+      const type = el.querySelector('[data-filter="type"]').value;
+      const shown = references.filter((r) => (!theme || r.themes.includes(theme)) && (!type || r.type === type));
+      list.innerHTML = Object.entries(REFERENCE_TYPES).map(([key, label]) => {
+        const group = shown.filter((r) => r.type === key);
+        if (!group.length) return "";
+        return `<h2>${label}</h2><div class="refs">${group.map((r) => `
+          <article class="card ref">
+            <h3><a href="${esc(r.url)}">${esc(r.title)}</a></h3>
+            <p class="muted">${esc(r.publisher)}${r.year ? `, ${r.year}` : ""}${r.language ? ` · ${esc(r.language)}` : ""}</p>
+            ${r.description ? `<p>${esc(r.description)}</p>` : ""}
+            <p class="tags">${r.themes.map((t) => `<span>${esc(t)}</span>`).join("")}<span class="muted">checked ${esc(r.checked)}</span></p>
+          </article>`).join("")}</div>`;
+      }).join("") || `<p class="muted">Nothing matches these filters.</p>`;
+    };
+    el.querySelectorAll("select").forEach((s) => s.addEventListener("change", draw));
+    draw();
   } catch (err) {
     el.innerHTML = `<p class="error">Could not load the catalog (${esc(err.message)}).</p>`;
   }
@@ -173,3 +214,4 @@ renderChrome();
 applyChartDefaults();
 document.querySelectorAll(".chart[data-dataset]").forEach(renderCard);
 document.querySelectorAll("[data-catalog]").forEach(renderSources);
+document.querySelectorAll("[data-library]").forEach(renderLibrary);

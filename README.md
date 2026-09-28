@@ -1,96 +1,103 @@
 # Swiss Energy System Data
 
 A curated, reproducible summary of open data on the Swiss energy system — national
-energy balance, buildings, electricity, renewables and more — visualised as a
-static website on GitHub Pages.
+energy balance, buildings, electricity, renewables and more — visualised on
+**[GitHub Pages](https://bartonchentw.github.io/Swiss-energy-system-data/)**.
 
-> **Status:** scaffold. The CSVs in `data/processed/` are **sample values** (flagged
-> `status: sample` in `catalog/datasets.yml` and badged on the site) until each
-> processor is implemented and run against the official source.
+Every chart is built from an official source by a script in this repo, and records
+where its data came from and when it was retrieved.
 
-## How it fits together
+## How information is organised
+
+Everything the project knows about lives in **three catalogue files** under `catalog/`:
+
+| File | What goes in it | Shown on |
+|---|---|---|
+| `catalog/sources.yml` | Machine-readable **data sources** the pipeline downloads (CSV, zip, API) | Sources page |
+| `catalog/datasets.yml` | **Datasets on the site**: title, unit, source, chart type, status | Every chart card |
+| `catalog/references.yml` | **Reports, websites, dashboards, tools, models** we cite but don't process | Library page |
+
+The rule: if the pipeline downloads it, it goes in `sources.yml`. If a person reads or
+uses it, it goes in `references.yml`. Field definitions and the controlled vocabulary
+(themes, types) are in [catalog/README.md](catalog/README.md), and
+`python -m pipeline.check` enforces them.
+
+**Naming convention:** a source id such as `bfs_gwr` is also its raw-data folder
+`data/raw/bfs_gwr/` and its processor `pipeline/process/bfs_gwr.py`.
+
+**Provenance** is recorded automatically at each step:
 
 ```
- official sources ──fetch──► data/raw/ ──process──► data/processed/ ──build──► docs/data/*.json ──► GitHub Pages
- (catalog/sources.yml)       (gitignored)            (tidy CSV, committed)     (generated)           (docs/)
+fetch   → data/raw/<source>/_manifest.json      url, retrieved, Last-Modified, sha256
+process → data/processed/<id>.csv + .meta.json  processor, generated, inputs (from manifest)
+build   → docs/data/<id>.json                   shown on the chart card as "Retrieved …"
+```
+
+## Pipeline
+
+```
+catalog/sources.yml ─fetch─► data/raw/ ─process─► data/processed/ ─check─► build ─► docs/data/*.json ─► GitHub Pages
+                             (gitignored)          (tidy CSV + provenance, committed)   (generated)
 ```
 
 | Step | Command | What it does |
 |---|---|---|
-| fetch | `python -m pipeline.fetch [--source ID]` | Downloads files listed under `downloads:` in `catalog/sources.yml` into `data/raw/<source>/` |
-| process | `python -m pipeline.process [module]` | Runs each module in `pipeline/process/`, turning raw files into tidy CSVs |
-| build | `python -m pipeline.build_site` | Converts every dataset in `catalog/datasets.yml` into JSON for the site |
+| fetch | `python -m pipeline.fetch [--source ID] [--force]` | Downloads files listed under `downloads:` and records them in the manifest |
+| process | `python -m pipeline.process [module]` | Runs `pipeline/process/<source>.py`, writing tidy CSVs and provenance |
+| check | `python -m pipeline.check [--links]` | Validates catalogue schema, cross-references and processed files. `--links` also tests every URL |
+| build | `python -m pipeline.build_site` | Converts datasets and catalogue into JSON for the site |
 | preview | `python -m http.server -d docs 8000` | Serves the site at <http://localhost:8000> |
 
 ## Repository layout
 
 ```
-catalog/
-  sources.yml          # Who publishes what: publisher, URL, terms, download links
-  datasets.yml         # Each dataset shown on the site: title, unit, source, chart type, status
+catalog/            sources.yml · datasets.yml · references.yml · README.md (schema)
 data/
-  raw/                 # Downloaded source files (gitignored, reproducible via fetch)
-  processed/           # Tidy CSVs, one per dataset, grouped by theme
-    national/  buildings/  electricity/  renewables/  mobility/  emissions/
+  raw/              downloads, one folder per source (gitignored; reproducible via fetch)
+  processed/        <theme>/<dataset>.csv + <dataset>.meta.json (committed)
 pipeline/
-  common.py            # Paths, catalog loading, tidy-schema validation
-  fetch.py             # Downloader
-  process/             # One module per source → one or more processed datasets
-    _template.py       # Copy this to add a processor
-    buildings_gwr.py   # Example: building register (GWR) → heating & age statistics
-  build_site.py        # processed CSV → docs/data/<id>.json + catalog.json
-docs/                  # GitHub Pages site (plain HTML + Chart.js, no build step)
-  index.html  national.html  buildings.html  electricity.html  renewables.html  sources.html
-  assets/app.js        # Renders every <div class="chart" data-dataset="..."> automatically
-  assets/style.css
-.github/workflows/
-  pages.yml            # Build JSON + deploy site on push to main
-  update-data.yml      # Monthly fetch + process, opens a PR with changed data
+  common.py         paths, catalogue validation, tidy contract, provenance
+  fetch.py  check.py  build_site.py
+  process/          one module per source; _template.py to start a new one
+docs/               the website (plain HTML + Chart.js, no build step)
+.github/workflows/  pages.yml (check + deploy on push) · update-data.yml (monthly refresh PR)
 ```
 
-## Data conventions
+## Current datasets
 
-Every processed dataset is a **tidy CSV** with exactly these columns:
+| Dataset | Source | Coverage |
+|---|---|---|
+| Final energy consumption by carrier / sector | SFOE Overall Energy Statistics (OGD 115) | 1980–2025, PJ |
+| Electricity production by technology | SFOE Electricity Statistics (OGD 32) | 1990–2025, TWh |
+| Installed solar PV capacity | SFOE register of production plants | 2005–2025, MW |
+| Main heating energy source of residential buildings | FSO building register (GWR) | current snapshot, % |
+| Residential buildings by construction period | FSO building register (GWR) | current snapshot |
 
-| column | meaning |
-|---|---|
-| `year` | integer year (snapshot year for cross-sectional data) |
-| `category` | series name, e.g. `Natural gas`, `Households`, `Solar PV` |
-| `value` | number |
-| `unit` | one unit per dataset, e.g. `PJ`, `TWh`, `MW`, `%` |
+## Adding something
 
-See [data/README.md](data/README.md) for details.
+- **A dataset:** register the source in `sources.yml` (with `downloads:`), copy
+  `pipeline/process/_template.py` to `pipeline/process/<source_id>.py`, register the
+  output in `datasets.yml`, and add `<div class="chart" data-dataset="theme/name"></div>` to a page.
+- **A report, website or tool:** add an entry to `references.yml` with today's date
+  in `checked`. It appears on the Library page on the next deploy.
 
-## Adding a dataset
-
-1. Register the source in `catalog/sources.yml` (add `downloads:` if it can be fetched automatically).
-2. Write a processor: copy `pipeline/process/_template.py`, output via `write_tidy()`.
-3. Register the dataset in `catalog/datasets.yml` (`status: official` once it's real data).
-4. Show it on a page: `<div class="chart" data-dataset="theme/dataset_id"></div>`.
+Run `python -m pipeline.check` before committing.
 
 ## Setup
 
 ```bash
 python -m venv .venv && .venv/Scripts/activate   # Windows; use bin/activate elsewhere
 pip install -r requirements.txt
+python -m pipeline.fetch        # the building register is a ~950 MB download
+python -m pipeline.process
+python -m pipeline.check
 python -m pipeline.build_site
 python -m http.server -d docs 8000
 ```
 
-**GitHub Pages:** in the repo settings, set *Pages → Source* to **GitHub Actions**.
-The `pages.yml` workflow deploys on every push to `main`.
+## Data licence
 
-## Themes and main sources (planned)
-
-| Theme | Sources |
-|---|---|
-| National energy balance | SFOE Overall Energy Statistics (Gesamtenergiestatistik) |
-| Buildings | FSO Federal Register of Buildings and Dwellings (GWR/RegBL), GEAK/CECB certificates |
-| Electricity | SFOE Electricity Statistics, Swissgrid, ElCom tariffs |
-| Renewables | SFOE renewable energy statistics, electricity production plants register, sonnendach.ch |
-| Mobility | FSO vehicle stock, SFOE transport energy |
-| Emissions | FOEN Greenhouse Gas Inventory |
-
-Source URLs in `catalog/sources.yml` should be checked against the publisher before
-a processor is written. Each source keeps its own terms of use; cite the publisher
-when reusing the data.
+The data belongs to its publishers and is reused under their terms, listed per source
+in `catalog/sources.yml` and on the Sources page. The federal sources used so far
+allow free use with attribution (for example "Source: Swiss Federal Office of Energy
+SFOE" or "Bundesamt für Statistik; Eidg. Gebäude- und Wohnungsregister").

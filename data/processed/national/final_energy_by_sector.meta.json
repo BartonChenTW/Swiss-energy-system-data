@@ -1,0 +1,20 @@
+{
+  "dataset": "national/final_energy_by_sector",
+  "processor": "pipeline.process.bfe_energy_statistics",
+  "generated": "2026-09-28T12:27:45+00:00",
+  "rows": 230,
+  "years": [
+    1980,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_energy_statistics/ogd115_gest_bilanz.csv",
+      "url": "https://www.uvek-gis.admin.ch/BFE/ogd/115/ogd115_gest_bilanz.csv",
+      "retrieved": "2026-09-28T12:27:02+00:00",
+      "last_modified": "Thu, 09 Jul 2026 12:36:41 GMT",
+      "sha256": "0f203a5310d23ed14ff2dfbcba66a9906f16a81f3baeee1cf8dadbf9768acdd1",
+      "bytes": 581470
+    }
+  ]
+}
