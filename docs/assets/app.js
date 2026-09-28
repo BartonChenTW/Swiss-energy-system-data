@@ -129,7 +129,7 @@ function coverageTag(ds) {
   if (ds.coverage === "regional") {
     return `<span class="tag tag-regional" title="Covers only ${esc(ds.region)}, not all of Switzerland">Regional · ${esc(ds.region)}</span>`;
   }
-  return ds.coverage === "national" ? '<span class="tag tag-national" title="Covers all of Switzerland">National</span>' : "";
+  return ds.coverage === "national" ? '<span class="tag tag-national" title="Covers all of Switzerland">National · Switzerland</span>' : "";
 }
 
 const charts = [];

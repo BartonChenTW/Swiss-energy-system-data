@@ -9,6 +9,7 @@
   --axis: #c3c2b7;
   --border: rgba(11, 11, 11, 0.10);
   --accent: #2a78d6;
+  --tag-national: #4a3aa7;
   --badge-bg: #fdf1d6;
   --badge-text: #7a5200;
   --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
@@ -24,7 +25,7 @@
     --page: #0d0d0d; --surface: #1a1a19;
     --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
     --grid: #2c2c2a; --axis: #383835; --border: rgba(255, 255, 255, 0.10);
-    --accent: #3987e5; --badge-bg: #3a2c0a; --badge-text: #f5cf7a;
+    --accent: #3987e5; --tag-national: #9085e9; --badge-bg: #3a2c0a; --badge-text: #f5cf7a;
     --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
     --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
     --seq-1: #184f95; --seq-2: #1c5cab; --seq-3: #2a78d6; --seq-4: #3987e5;
@@ -36,7 +37,7 @@
   --page: #0d0d0d; --surface: #1a1a19;
   --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
   --grid: #2c2c2a; --axis: #383835; --border: rgba(255, 255, 255, 0.10);
-  --accent: #3987e5; --badge-bg: #3a2c0a; --badge-text: #f5cf7a;
+  --accent: #3987e5; --tag-national: #9085e9; --badge-bg: #3a2c0a; --badge-text: #f5cf7a;
   --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
   --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
   --seq-1: #184f95; --seq-2: #1c5cab; --seq-3: #2a78d6; --seq-4: #3987e5;
@@ -97,6 +98,7 @@ a.tile:hover { border-color: var(--accent); }
   border: 1px solid var(--border); color: var(--text-secondary);
 }
 .tag-regional { border-color: var(--accent); color: var(--accent); }
+.tag-national { border-color: var(--tag-national); color: var(--tag-national); }
 .canvas-box { position: relative; height: 300px; }
 .card-foot { margin: 12px 0 0; font-size: 13px; color: var(--text-muted); }
 details { margin-top: 12px; font-size: 14px; }
