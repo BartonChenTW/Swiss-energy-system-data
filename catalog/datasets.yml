@@ -1,0 +1,47 @@
+# Datasets published to the site. `id` = path under data/processed/ without .csv.
+#
+#   chart:   line | stacked-area | stacked-bar | hbar   (hbar = categories of the latest year)
+#   status:  sample (placeholder values, badged on the site) | official (processed from the source)
+
+datasets:
+  - id: national/final_energy_by_carrier
+    title: Final energy consumption by carrier
+    description: Energy delivered to end users, by energy carrier.
+    source: bfe_energy_statistics
+    chart: stacked-area
+    status: sample
+
+  - id: national/final_energy_by_sector
+    title: Final energy consumption by sector
+    description: Energy delivered to end users, by consuming sector.
+    source: bfe_energy_statistics
+    chart: stacked-bar
+    status: sample
+
+  - id: buildings/heating_energy_source
+    title: Main heating energy source of buildings
+    description: Share of residential buildings by main heating energy source.
+    source: bfs_gwr
+    chart: hbar
+    status: sample
+
+  - id: buildings/buildings_by_construction_period
+    title: Buildings by construction period
+    description: Number of residential buildings by period of construction.
+    source: bfs_gwr
+    chart: hbar
+    status: sample
+
+  - id: electricity/production_by_technology
+    title: Electricity production by technology
+    description: Domestic net electricity generation.
+    source: bfe_electricity_statistics
+    chart: stacked-bar
+    status: sample
+
+  - id: renewables/pv_installed_capacity
+    title: Installed solar PV capacity
+    description: Cumulative installed photovoltaic capacity at year end.
+    source: bfe_renewable_statistics
+    chart: line
+    status: sample

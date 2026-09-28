@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buildings · Swiss Energy System Data</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main class="wrap">
+    <h1>Buildings</h1>
+    <p class="lede">The Swiss building stock and how it is heated, based on the Federal Register of
+      Buildings and Dwellings (GWR).</p>
+    <div class="grid">
+      <div class="chart" data-dataset="buildings/heating_energy_source"></div>
+      <div class="chart" data-dataset="buildings/buildings_by_construction_period"></div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

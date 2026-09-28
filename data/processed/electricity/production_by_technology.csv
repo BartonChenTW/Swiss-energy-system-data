@@ -1,0 +1,31 @@
+year,category,value,unit
+2019,Run-of-river hydro,17.5,TWh
+2019,Storage hydro,20.7,TWh
+2019,Nuclear,25.4,TWh
+2019,Solar PV,2.2,TWh
+2019,Thermal & other,3.9,TWh
+2019,Wind,0.15,TWh
+2020,Run-of-river hydro,17.9,TWh
+2020,Storage hydro,22.1,TWh
+2020,Nuclear,23.0,TWh
+2020,Solar PV,2.6,TWh
+2020,Thermal & other,3.8,TWh
+2020,Wind,0.14,TWh
+2021,Run-of-river hydro,18.0,TWh
+2021,Storage hydro,21.6,TWh
+2021,Nuclear,18.5,TWh
+2021,Solar PV,2.8,TWh
+2021,Thermal & other,3.9,TWh
+2021,Wind,0.14,TWh
+2022,Run-of-river hydro,15.9,TWh
+2022,Storage hydro,17.8,TWh
+2022,Nuclear,23.1,TWh
+2022,Solar PV,3.9,TWh
+2022,Thermal & other,3.7,TWh
+2022,Wind,0.15,TWh
+2023,Run-of-river hydro,17.8,TWh
+2023,Storage hydro,21.3,TWh
+2023,Nuclear,23.3,TWh
+2023,Solar PV,4.6,TWh
+2023,Thermal & other,3.9,TWh
+2023,Wind,0.17,TWh

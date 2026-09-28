@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>National Energy Balance · Swiss Energy System Data</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main class="wrap">
+    <h1>National energy balance</h1>
+    <p class="lede">How much energy Switzerland consumes, in which form, and in which sectors.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="national/final_energy_by_carrier"></div>
+      <div class="chart" data-dataset="national/final_energy_by_sector"></div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

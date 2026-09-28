@@ -1,0 +1,101 @@
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11, 11, 11, 0.10);
+  --accent: #2a78d6;
+  --badge-bg: #fdf1d6;
+  --badge-text: #7a5200;
+  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
+  --series-5: #e87ba4; --series-6: #008300; --series-7: #4a3aa7; --series-8: #e34948;
+  --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19;
+    --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255, 255, 255, 0.10);
+    --accent: #3987e5; --badge-bg: #3a2c0a; --badge-text: #f5cf7a;
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
+    --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19;
+  --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255, 255, 255, 0.10);
+  --accent: #3987e5; --badge-bg: #3a2c0a; --badge-text: #f5cf7a;
+  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
+  --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text-primary);
+  font: 16px/1.55 var(--font);
+}
+a { color: var(--accent); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+/* Header */
+#site-header { border-bottom: 1px solid var(--border); background: var(--surface); }
+.header-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding-block: 12px; }
+.brand { font-weight: 650; color: var(--text-primary); text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+nav a { color: var(--text-secondary); text-decoration: none; font-size: 15px; }
+nav a:hover { color: var(--text-primary); }
+nav a[aria-current="page"] { color: var(--text-primary); font-weight: 600; }
+
+/* Page */
+main { padding-block: 32px 64px; }
+h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 40px 0 12px; }
+.lede { color: var(--text-secondary); max-width: 68ch; margin: 0 0 24px; }
+
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); }
+.tiles { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  min-width: 0;
+}
+a.tile { display: block; color: inherit; text-decoration: none; }
+a.tile:hover { border-color: var(--accent); }
+.tile h3 { margin: 0 0 4px; font-size: 16px; }
+.tile p { margin: 0; color: var(--text-secondary); font-size: 14px; }
+
+/* Chart cards */
+.card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.card-head h3 { margin: 0; font-size: 16px; }
+.card-sub { margin: 2px 0 12px; color: var(--text-secondary); font-size: 14px; }
+.badge {
+  flex: none; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+  background: var(--badge-bg); color: var(--badge-text);
+}
+.canvas-box { position: relative; height: 300px; }
+.card-foot { margin: 12px 0 0; font-size: 13px; color: var(--text-muted); }
+details { margin-top: 12px; font-size: 14px; }
+summary { cursor: pointer; color: var(--text-secondary); }
+.table-scroll { overflow-x: auto; margin-top: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
+th, td { text-align: right; padding: 4px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--text-secondary); font-weight: 600; }
+.error { color: var(--text-secondary); font-size: 14px; }
+
+/* Sources page */
+.sources td, .sources th { white-space: normal; text-align: left; vertical-align: top; }
+
+footer { border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; padding-block: 20px; }
