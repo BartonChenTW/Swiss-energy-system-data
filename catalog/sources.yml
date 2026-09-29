@@ -279,12 +279,22 @@ sources:
     frequency: annual
 
   - id: foen_ghg_inventory
-    name: Switzerland's Greenhouse Gas Inventory
+    name: Treibhausgasemissionen nach Sektor und Gas
     publisher: Federal Office for the Environment (FOEN / BAFU)
     theme: emissions
-    url: https://www.bafu.admin.ch/en/climate
-    terms: TBD
+    url: https://opendata.swiss/de/dataset/treibhausgasemissionen-nach-sektor-und-gas
+    terms: "Open use. Must provide the source (LINDAS cube terms: Provide the Source)."
     frequency: annual
+    downloads:
+      # SPARQL on LINDAS, cube ubd000502 version 8 (inventory of April 2026); answers CSV to a GET.
+      # Query: every observation's sector, gas, year and unrounded value (Mt CO2-eq).
+      - url: "https://lindas.admin.ch/query?query=PREFIX%20cube%3A%20%3Chttps%3A%2F%2Fcube.link%2F%3E%20SELECT%20%3Fsector%20%3Fgas%20%3Fyear%20%3Fvalue%20WHERE%20%7B%20%3Chttps%3A%2F%2Fenvironment.ld.admin.ch%2Ffoen%2Fubd000502%2F8%3E%20cube%3AobservationSet%2Fcube%3Aobservation%20%3Fo%20.%20%3Fo%20%3Chttps%3A%2F%2Fenvironment.ld.admin.ch%2Ffoen%2Fubd000502%2Fsektorid%3E%20%3Fsector%20%3B%20%3Chttps%3A%2F%2Fenvironment.ld.admin.ch%2Ffoen%2Fubd000502%2Fgas%3E%20%3Fgas%20%3B%20%3Chttps%3A%2F%2Fenvironment.ld.admin.ch%2Ffoen%2Fubd000502%2Fjahr%3E%20%3Fyear%20%3B%20%3Chttps%3A%2F%2Fenvironment.ld.admin.ch%2Ffoen%2Fubd000502%2FwerteNichtGerundet%3E%20%3Fvalue%20.%20%7D%20ORDER%20BY%20%3Fsector%20%3Fgas%20%3Fyear"
+        filename: ghg_inventory_ubd000502_v8.csv
+    notes: >-
+      Greenhouse gas inventory 1990 on, by sector of the CO2 Ordinance (buildings, transport,
+      industry, other) and by gas, in Mt CO2 equivalents. International aviation and the land-use
+      balance are reported separately and are not in the national total. A new inventory is
+      published each April as a new cube version; update the version number in the query.
 
   - id: bfs_vehicles
     name: Bestand und neue Inverkehrsetzungen der Personenwagen nach technischen Merkmalen

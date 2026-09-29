@@ -66,11 +66,11 @@ docs/               the website (plain HTML + Chart.js, no build step)
 
 ## Current datasets
 
-38 datasets from 18 sources; the full list with descriptions is in `catalog/datasets.yml`.
+40 datasets from 19 sources; the full list with descriptions is in `catalog/datasets.yml`.
 
 | Page | Datasets | Main sources |
 |---|---|---|
-| National | Final energy by carrier and sector, 1980–2025 | SFOE energy balance |
+| National | Final energy by carrier and sector, 1980–2025; greenhouse gas emissions by sector and gas, 1990–2024 | SFOE energy balance, FOEN greenhouse gas inventory |
 | Electricity | Production by technology, 1990–2025 | SFOE electricity statistics |
 | Renewables | Renewable production by source; new-renewable electricity; PV production and capacity; wind generation, capacity and wind farms; biomass capacity | SFOE renewables balance, electricity statistics, plant register |
 | Electricity: energy communities | PV installations and capacity by self-consumption type (single site, ZEV, full feed-in) | SFOE survey of grid operators |

@@ -316,3 +316,19 @@ datasets:
     chart: line
     status: official
     coverage: national
+
+  - id: emissions/ghg_by_sector
+    title: Greenhouse gas emissions by sector
+    description: Domestic greenhouse gas emissions in CO2 equivalents, by sector of the CO2 Ordinance. Buildings are heating and hot water in households and services; industry includes waste incineration. International aviation and shipping and the land-use balance are not included.
+    source: foen_ghg_inventory
+    chart: stacked-area
+    status: official
+    coverage: national
+
+  - id: emissions/ghg_by_gas
+    title: Greenhouse gas emissions by gas
+    description: The same national total by gas. Methane and nitrous oxide come mostly from agriculture; synthetic gases are mainly refrigerants (HFCs).
+    source: foen_ghg_inventory
+    chart: stacked-area
+    status: official
+    coverage: national

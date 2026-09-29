@@ -1,0 +1,20 @@
+{
+  "dataset": "emissions/ghg_by_sector",
+  "processor": "pipeline.process.foen_ghg_inventory",
+  "generated": "2026-09-29T14:18:49+00:00",
+  "rows": 210,
+  "years": [
+    1990,
+    2024
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/foen_ghg_inventory/ghg_inventory_ubd000502_v8.csv",
+      "url": "https://lindas.admin.ch/query?query=PREFIX%20cube%3A%20%3Chttps%3A%2F%2Fcube.link%2F%3E%20SELECT%20%3Fsector%20%3Fgas%20%3Fyear%20%3Fvalue%20WHERE%20%7B%20%3Chttps%3A%2F%2Fenvironment.ld.admin.ch%2Ffoen%2Fubd000502%2F8%3E%20cube%3AobservationSet%2Fcube%3Aobservation%20%3Fo%20.%20%3Fo%20%3Chttps%3A%2F%2Fenvironment.ld.admin.ch%2Ffoen%2Fubd000502%2Fsektorid%3E%20%3Fsector%20%3B%20%3Chttps%3A%2F%2Fenvironment.ld.admin.ch%2Ffoen%2Fubd000502%2Fgas%3E%20%3Fgas%20%3B%20%3Chttps%3A%2F%2Fenvironment.ld.admin.ch%2Ffoen%2Fubd000502%2Fjahr%3E%20%3Fyear%20%3B%20%3Chttps%3A%2F%2Fenvironment.ld.admin.ch%2Ffoen%2Fubd000502%2FwerteNichtGerundet%3E%20%3Fvalue%20.%20%7D%20ORDER%20BY%20%3Fsector%20%3Fgas%20%3Fyear",
+      "retrieved": "2026-09-29T14:18:34+00:00",
+      "last_modified": null,
+      "sha256": "c438bd7814ae682717ef891a54bcb5ef8ad3417a43091e958f8dbacc4924c234",
+      "bytes": 693781
+    }
+  ]
+}

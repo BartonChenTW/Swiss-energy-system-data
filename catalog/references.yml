@@ -348,6 +348,17 @@ references:
     related_sources: [foen_ghg_inventory]
     checked: 2026-09-28
 
+  - id: foen_ghg_inventory_page
+    type: website
+    title: Treibhausgasinventar der Schweiz
+    publisher: Federal Office for the Environment (FOEN / BAFU)
+    url: https://www.bafu.admin.ch/de/treibhausgasinventar
+    themes: [emissions]
+    language: de/fr/it/en
+    description: The national inventory submitted under the UN climate convention each April, with the methods report and key figures by sector.
+    related_sources: [foen_ghg_inventory]
+    checked: 2026-09-29
+
   - id: bfe_thermal_networks_info
     type: website
     title: Thermische Netze (SFOE)

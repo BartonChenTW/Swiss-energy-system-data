@@ -1,0 +1,211 @@
+year,category,value,unit
+1990,Buildings,16.723,Mt CO2-eq
+1990,Transport,14.895,Mt CO2-eq
+1990,Industry (incl. waste incineration),13.265,Mt CO2-eq
+1990,Agriculture,7.786,Mt CO2-eq
+1990,Waste,2.25,Mt CO2-eq
+1990,Synthetic gases,0.246,Mt CO2-eq
+1991,Buildings,18.092,Mt CO2-eq
+1991,Transport,15.366,Mt CO2-eq
+1991,Industry (incl. waste incineration),13.441,Mt CO2-eq
+1991,Agriculture,7.729,Mt CO2-eq
+1991,Waste,2.13,Mt CO2-eq
+1991,Synthetic gases,0.233,Mt CO2-eq
+1992,Buildings,18.136,Mt CO2-eq
+1992,Transport,15.686,Mt CO2-eq
+1992,Industry (incl. waste incineration),12.897,Mt CO2-eq
+1992,Agriculture,7.659,Mt CO2-eq
+1992,Waste,2.112,Mt CO2-eq
+1992,Synthetic gases,0.233,Mt CO2-eq
+1993,Buildings,17.528,Mt CO2-eq
+1993,Transport,14.603,Mt CO2-eq
+1993,Industry (incl. waste incineration),12.184,Mt CO2-eq
+1993,Agriculture,7.625,Mt CO2-eq
+1993,Waste,2.037,Mt CO2-eq
+1993,Synthetic gases,0.186,Mt CO2-eq
+1994,Buildings,16.254,Mt CO2-eq
+1994,Transport,14.767,Mt CO2-eq
+1994,Industry (incl. waste incineration),12.315,Mt CO2-eq
+1994,Agriculture,7.586,Mt CO2-eq
+1994,Waste,1.947,Mt CO2-eq
+1994,Synthetic gases,0.204,Mt CO2-eq
+1995,Buildings,17.307,Mt CO2-eq
+1995,Transport,14.442,Mt CO2-eq
+1995,Industry (incl. waste incineration),12.339,Mt CO2-eq
+1995,Agriculture,7.605,Mt CO2-eq
+1995,Waste,1.931,Mt CO2-eq
+1995,Synthetic gases,0.338,Mt CO2-eq
+1996,Buildings,18.168,Mt CO2-eq
+1996,Transport,14.495,Mt CO2-eq
+1996,Industry (incl. waste incineration),12.145,Mt CO2-eq
+1996,Agriculture,7.438,Mt CO2-eq
+1996,Waste,1.902,Mt CO2-eq
+1996,Synthetic gases,0.387,Mt CO2-eq
+1997,Buildings,16.739,Mt CO2-eq
+1997,Transport,15.064,Mt CO2-eq
+1997,Industry (incl. waste incineration),11.955,Mt CO2-eq
+1997,Agriculture,7.235,Mt CO2-eq
+1997,Waste,1.862,Mt CO2-eq
+1997,Synthetic gases,0.483,Mt CO2-eq
+1998,Buildings,17.556,Mt CO2-eq
+1998,Transport,15.273,Mt CO2-eq
+1998,Industry (incl. waste incineration),12.425,Mt CO2-eq
+1998,Agriculture,7.206,Mt CO2-eq
+1998,Waste,1.821,Mt CO2-eq
+1998,Synthetic gases,0.604,Mt CO2-eq
+1999,Buildings,16.893,Mt CO2-eq
+1999,Transport,15.864,Mt CO2-eq
+1999,Industry (incl. waste incineration),12.324,Mt CO2-eq
+1999,Agriculture,7.12,Mt CO2-eq
+1999,Waste,1.786,Mt CO2-eq
+1999,Synthetic gases,0.674,Mt CO2-eq
+2000,Buildings,15.803,Mt CO2-eq
+2000,Transport,16.107,Mt CO2-eq
+2000,Industry (incl. waste incineration),12.345,Mt CO2-eq
+2000,Agriculture,7.17,Mt CO2-eq
+2000,Waste,1.765,Mt CO2-eq
+2000,Synthetic gases,0.813,Mt CO2-eq
+2001,Buildings,17.159,Mt CO2-eq
+2001,Transport,15.807,Mt CO2-eq
+2001,Industry (incl. waste incineration),12.724,Mt CO2-eq
+2001,Agriculture,7.176,Mt CO2-eq
+2001,Waste,1.763,Mt CO2-eq
+2001,Synthetic gases,0.883,Mt CO2-eq
+2002,Buildings,16.024,Mt CO2-eq
+2002,Transport,15.739,Mt CO2-eq
+2002,Industry (incl. waste incineration),12.364,Mt CO2-eq
+2002,Agriculture,7.069,Mt CO2-eq
+2002,Waste,1.76,Mt CO2-eq
+2002,Synthetic gases,0.98,Mt CO2-eq
+2003,Buildings,17.028,Mt CO2-eq
+2003,Transport,15.888,Mt CO2-eq
+2003,Industry (incl. waste incineration),12.317,Mt CO2-eq
+2003,Agriculture,6.931,Mt CO2-eq
+2003,Waste,1.717,Mt CO2-eq
+2003,Synthetic gases,1.097,Mt CO2-eq
+2004,Buildings,16.889,Mt CO2-eq
+2004,Transport,15.917,Mt CO2-eq
+2004,Industry (incl. waste incineration),12.91,Mt CO2-eq
+2004,Agriculture,6.911,Mt CO2-eq
+2004,Waste,1.721,Mt CO2-eq
+2004,Synthetic gases,1.212,Mt CO2-eq
+2005,Buildings,17.122,Mt CO2-eq
+2005,Transport,15.991,Mt CO2-eq
+2005,Industry (incl. waste incineration),13.156,Mt CO2-eq
+2005,Agriculture,7.031,Mt CO2-eq
+2005,Waste,1.686,Mt CO2-eq
+2005,Synthetic gases,1.245,Mt CO2-eq
+2006,Buildings,16.274,Mt CO2-eq
+2006,Transport,16.112,Mt CO2-eq
+2006,Industry (incl. waste incineration),13.453,Mt CO2-eq
+2006,Agriculture,6.995,Mt CO2-eq
+2006,Waste,1.656,Mt CO2-eq
+2006,Synthetic gases,1.356,Mt CO2-eq
+2007,Buildings,14.461,Mt CO2-eq
+2007,Transport,16.43,Mt CO2-eq
+2007,Industry (incl. waste incineration),12.957,Mt CO2-eq
+2007,Agriculture,7.058,Mt CO2-eq
+2007,Waste,1.613,Mt CO2-eq
+2007,Synthetic gases,1.419,Mt CO2-eq
+2008,Buildings,15.331,Mt CO2-eq
+2008,Transport,16.772,Mt CO2-eq
+2008,Industry (incl. waste incineration),13.017,Mt CO2-eq
+2008,Agriculture,7.135,Mt CO2-eq
+2008,Waste,1.57,Mt CO2-eq
+2008,Synthetic gases,1.489,Mt CO2-eq
+2009,Buildings,14.91,Mt CO2-eq
+2009,Transport,16.57,Mt CO2-eq
+2009,Industry (incl. waste incineration),12.366,Mt CO2-eq
+2009,Agriculture,7.045,Mt CO2-eq
+2009,Waste,1.524,Mt CO2-eq
+2009,Synthetic gases,1.427,Mt CO2-eq
+2010,Buildings,16.096,Mt CO2-eq
+2010,Transport,16.461,Mt CO2-eq
+2010,Industry (incl. waste incineration),12.892,Mt CO2-eq
+2010,Agriculture,7.07,Mt CO2-eq
+2010,Waste,1.485,Mt CO2-eq
+2010,Synthetic gases,1.432,Mt CO2-eq
+2011,Buildings,12.931,Mt CO2-eq
+2011,Transport,16.268,Mt CO2-eq
+2011,Industry (incl. waste incineration),12.152,Mt CO2-eq
+2011,Agriculture,6.986,Mt CO2-eq
+2011,Waste,1.448,Mt CO2-eq
+2011,Synthetic gases,1.497,Mt CO2-eq
+2012,Buildings,14.162,Mt CO2-eq
+2012,Transport,16.393,Mt CO2-eq
+2012,Industry (incl. waste incineration),12.021,Mt CO2-eq
+2012,Agriculture,7.075,Mt CO2-eq
+2012,Waste,1.411,Mt CO2-eq
+2012,Synthetic gases,1.604,Mt CO2-eq
+2013,Buildings,15.081,Mt CO2-eq
+2013,Transport,16.305,Mt CO2-eq
+2013,Industry (incl. waste incineration),12.167,Mt CO2-eq
+2013,Agriculture,6.902,Mt CO2-eq
+2013,Waste,1.405,Mt CO2-eq
+2013,Synthetic gases,1.606,Mt CO2-eq
+2014,Buildings,11.711,Mt CO2-eq
+2014,Transport,16.205,Mt CO2-eq
+2014,Industry (incl. waste incineration),11.614,Mt CO2-eq
+2014,Agriculture,6.97,Mt CO2-eq
+2014,Waste,1.381,Mt CO2-eq
+2014,Synthetic gases,1.63,Mt CO2-eq
+2015,Buildings,12.558,Mt CO2-eq
+2015,Transport,15.467,Mt CO2-eq
+2015,Industry (incl. waste incineration),11.082,Mt CO2-eq
+2015,Agriculture,6.873,Mt CO2-eq
+2015,Waste,1.339,Mt CO2-eq
+2015,Synthetic gases,1.672,Mt CO2-eq
+2016,Buildings,13.026,Mt CO2-eq
+2016,Transport,15.313,Mt CO2-eq
+2016,Industry (incl. waste incineration),11.205,Mt CO2-eq
+2016,Agriculture,6.9,Mt CO2-eq
+2016,Waste,1.301,Mt CO2-eq
+2016,Synthetic gases,1.605,Mt CO2-eq
+2017,Buildings,12.4,Mt CO2-eq
+2017,Transport,15.046,Mt CO2-eq
+2017,Industry (incl. waste incineration),11.22,Mt CO2-eq
+2017,Agriculture,6.901,Mt CO2-eq
+2017,Waste,1.257,Mt CO2-eq
+2017,Synthetic gases,1.608,Mt CO2-eq
+2018,Buildings,11.236,Mt CO2-eq
+2018,Transport,15.057,Mt CO2-eq
+2018,Industry (incl. waste incineration),11.025,Mt CO2-eq
+2018,Agriculture,6.761,Mt CO2-eq
+2018,Waste,1.225,Mt CO2-eq
+2018,Synthetic gases,1.577,Mt CO2-eq
+2019,Buildings,11.237,Mt CO2-eq
+2019,Transport,15.006,Mt CO2-eq
+2019,Industry (incl. waste incineration),11.04,Mt CO2-eq
+2019,Agriculture,6.677,Mt CO2-eq
+2019,Waste,1.2,Mt CO2-eq
+2019,Synthetic gases,1.484,Mt CO2-eq
+2020,Buildings,10.389,Mt CO2-eq
+2020,Transport,13.713,Mt CO2-eq
+2020,Industry (incl. waste incineration),10.628,Mt CO2-eq
+2020,Agriculture,6.631,Mt CO2-eq
+2020,Waste,1.178,Mt CO2-eq
+2020,Synthetic gases,1.45,Mt CO2-eq
+2021,Buildings,11.656,Mt CO2-eq
+2021,Transport,13.886,Mt CO2-eq
+2021,Industry (incl. waste incineration),10.639,Mt CO2-eq
+2021,Agriculture,6.676,Mt CO2-eq
+2021,Waste,1.154,Mt CO2-eq
+2021,Synthetic gases,1.29,Mt CO2-eq
+2022,Buildings,9.369,Mt CO2-eq
+2022,Transport,13.717,Mt CO2-eq
+2022,Industry (incl. waste incineration),9.778,Mt CO2-eq
+2022,Agriculture,6.505,Mt CO2-eq
+2022,Waste,1.131,Mt CO2-eq
+2022,Synthetic gases,1.227,Mt CO2-eq
+2023,Buildings,9.032,Mt CO2-eq
+2023,Transport,13.733,Mt CO2-eq
+2023,Industry (incl. waste incineration),9.117,Mt CO2-eq
+2023,Agriculture,6.481,Mt CO2-eq
+2023,Waste,1.117,Mt CO2-eq
+2023,Synthetic gases,1.191,Mt CO2-eq
+2024,Buildings,8.836,Mt CO2-eq
+2024,Transport,13.425,Mt CO2-eq
+2024,Industry (incl. waste incineration),8.944,Mt CO2-eq
+2024,Agriculture,6.607,Mt CO2-eq
+2024,Waste,1.1,Mt CO2-eq
+2024,Synthetic gases,1.199,Mt CO2-eq
