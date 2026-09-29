@@ -7,6 +7,21 @@ energy balance, buildings, electricity, renewables and more — visualised on
 Every chart is built from an official source by a script in this repo, and records
 where its data came from and when it was retrieved.
 
+## Goals
+
+1. **Collect Swiss energy system modelling data:** open, machine-readable data that energy
+   system models need, processed reproducibly and published with its provenance.
+2. **Identify the gaps in the existing data:** what modellers need but cannot get openly, with
+   evidence of who holds it and under which terms.
+
+Work is tracked in three files:
+
+| File | What it holds |
+|---|---|
+| [TODO.md](TODO.md) | Open work, grouped by the two goals, plus recurring maintenance |
+| [LOG.md](LOG.md) | Dated working log: what was done, decisions, findings on data availability |
+| [CHANGELOG.md](CHANGELOG.md) | Site releases; the version is shown in the site footer |
+
 ## How information is organised
 
 Everything the project knows about lives in **three catalogue files** under `catalog/`:
@@ -51,6 +66,7 @@ catalog/sources.yml ─fetch─► data/raw/ ─process─► data/processed/ �
 ## Repository layout
 
 ```
+README.md · TODO.md · LOG.md · CHANGELOG.md
 catalog/            sources.yml · datasets.yml · references.yml · README.md (schema)
 data/
   raw/              downloads, one folder per source (gitignored; reproducible via fetch)
