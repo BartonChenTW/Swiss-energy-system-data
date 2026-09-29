@@ -1,0 +1,20 @@
+{
+  "dataset": "heat/renewable_district_heat_by_source",
+  "processor": "pipeline.process.bfe_renewable_statistics",
+  "generated": "2026-09-29T10:27:01+00:00",
+  "rows": 108,
+  "years": [
+    1990,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_renewable_statistics/ogd123_Energiebilanz_erneuerbareEnergien.csv",
+      "url": "https://www.uvek-gis.admin.ch/BFE/ogd/123/ogd123_Energiebilanz_erneuerbareEnergien.csv",
+      "retrieved": "2026-09-29T09:55:11+00:00",
+      "last_modified": "Thu, 09 Jul 2026 12:58:28 GMT",
+      "sha256": "844d8823cd775aa59bde1bc3885dff27a95674db205a68dbc64151c792765fa4",
+      "bytes": 646289
+    }
+  ]
+}

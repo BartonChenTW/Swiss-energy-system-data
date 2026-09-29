@@ -8,6 +8,7 @@ const PAGES = [
   ["buildings.html", "Buildings"],
   ["electricity.html", "Electricity"],
   ["renewables.html", "Renewables"],
+  ["heat.html", "Heat"],
   ["sources.html", "Sources"],
   ["library.html", "Library"],
 ];

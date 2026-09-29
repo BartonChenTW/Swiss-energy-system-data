@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heat · Swiss Energy System Data</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main class="wrap">
+    <h1>Heat</h1>
+    <p class="lede">How heat is supplied beyond individual boilers and heat pumps. District heating
+      is still a small share of heat supply, but it is growing fast, fed mainly by waste
+      incineration and wood.</p>
+
+    <h2 id="district-heating">District heating</h2>
+    <p class="section-note">The energy balance counts district heat once it reaches consumers.
+      The SFOE register of thermal networks lists about 1,700 networks reported by their
+      operators, from small wood-chip networks in villages to city networks fed by waste
+      incineration. About 6 % of buildings name district heating as their main heat source
+      (building register, see <a href="buildings.html#stock">Buildings</a>).</p>
+    <div class="grid">
+      <div class="chart" data-dataset="heat/district_heat_by_sector"></div>
+      <div class="chart" data-dataset="heat/renewable_district_heat_by_source"></div>
+      <div class="chart" data-dataset="heat/thermal_networks_by_commissioning"></div>
+      <div class="chart" data-dataset="heat/thermal_networks_power_by_source"></div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

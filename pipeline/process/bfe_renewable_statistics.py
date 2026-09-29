@@ -3,6 +3,7 @@
 Input : data/raw/bfe_renewable_statistics/ogd123_Energiebilanz_erneuerbareEnergien.csv
         columns Jahr, Rubrik (balance item), Energietraeger (carrier), TJ
 Output: renewables/production_by_source  (PJ, Rubrik "Inlandproduktion", from 1990)
+        heat/renewable_district_heat_by_source  (PJ, Energietraeger "Erneuerbare Fernwärme")
 
 "Sonne" covers both PV and solar thermal; "Umweltwärme" is ambient heat used by heat pumps.
 """
@@ -22,6 +23,12 @@ SOURCES = {  # Energietraeger -> label, in stack order (bottom first)
     "Biogas": "Biogas",
     "flüssige eTS/eBS": "Liquid biofuels",
     "Wind": "Wind",
+}
+DISTRICT_HEAT = {  # Rubrik producing "Erneuerbare Fernwärme" -> label, in stack order
+    "Energieumwandlung - Kehrichtverbrennungsanlagen": "Waste incineration (renewable share)",
+    "Energieumwandlung - Automatische Feuerungen mit Holz (Fernwärme-Produktion)": "Wood",
+    "Energieumwandlung - Feuerungen mit Holzanteilen (Fernwärme-Produktion)": "Wood",
+    "Energieumwandlung - Deponiegasanlagen": "Landfill gas",
 }
 
 
@@ -43,3 +50,15 @@ def run() -> None:
     tidy = pd.DataFrame({"year": prod["Jahr"], "category": prod["category"],
                          "value": (prod["TJ"].fillna(0) / 1000).round(3), "unit": "PJ"})
     write_tidy(tidy, "renewables/production_by_source", [path], __name__)
+
+    dh = bal[(bal["Energietraeger"] == "Erneuerbare Fernwärme") & bal["Rubrik"].str.startswith("Energieumwandlung")]
+    unmapped = set(dh.loc[dh["TJ"].fillna(0) > 0, "Rubrik"]) - set(DISTRICT_HEAT)
+    if unmapped:
+        raise ValueError(f"Unmapped plants producing renewable district heat: {unmapped}")
+    dh = dh.assign(category=dh["Rubrik"].map(DISTRICT_HEAT)).dropna(subset=["category"])
+    dh = dh.groupby(["Jahr", "category"], sort=False)["TJ"].sum().reset_index()
+    order = {c: i for i, c in enumerate(dict.fromkeys(DISTRICT_HEAT.values()))}
+    dh = dh.sort_values(["Jahr", "category"], key=lambda s: s.map(order) if s.name == "category" else s)
+    write_tidy(pd.DataFrame({"year": dh["Jahr"], "category": dh["category"],
+                             "value": (dh["TJ"].fillna(0) / 1000).round(3), "unit": "PJ"}),
+               "heat/renewable_district_heat_by_source", [path], __name__)

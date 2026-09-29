@@ -236,3 +236,35 @@ datasets:
     chart: line
     status: official
     coverage: national
+
+  - id: heat/district_heat_by_sector
+    title: District heat consumption by sector
+    description: Final consumption of district heat from the national energy balance. Network losses and the plants' own use are not included.
+    source: bfe_energy_statistics
+    chart: stacked-area
+    status: official
+    coverage: national
+
+  - id: heat/renewable_district_heat_by_source
+    title: Renewable district heat by source
+    description: Production of district heat counted as renewable. Only the renewable (biogenic) share of the heat from waste incineration, about half, is included; heat pumps and fossil inputs are not part of this balance.
+    source: bfe_renewable_statistics
+    chart: stacked-area
+    status: official
+    coverage: national
+
+  - id: heat/thermal_networks_power_by_source
+    title: Thermal networks by main energy source
+    description: Installed heating power of the district heating and cooling networks in the SFOE register, by the main energy source reported by the operator. Networks that report no power are left out.
+    source: bfe_thermal_networks
+    chart: hbar
+    status: official
+    coverage: national
+
+  - id: heat/thermal_networks_by_commissioning
+    title: Growth of thermal networks
+    description: Cumulative number of networks still in operation, by year of commissioning and main energy source. Networks without a commissioning year (about a quarter) and closed networks are not counted, so the totals are lower bounds.
+    source: bfe_thermal_networks
+    chart: stacked-area
+    status: official
+    coverage: national

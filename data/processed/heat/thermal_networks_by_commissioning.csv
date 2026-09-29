@@ -1,0 +1,277 @@
+year,category,value,unit
+1980,Waste incineration,5,networks
+1981,Waste incineration,6,networks
+1982,Waste incineration,6,networks
+1983,Waste incineration,7,networks
+1984,Waste incineration,7,networks
+1985,Waste incineration,7,networks
+1986,Waste incineration,7,networks
+1987,Waste incineration,8,networks
+1988,Waste incineration,8,networks
+1989,Waste incineration,8,networks
+1990,Waste incineration,8,networks
+1991,Waste incineration,9,networks
+1992,Waste incineration,9,networks
+1993,Waste incineration,9,networks
+1994,Waste incineration,10,networks
+1995,Waste incineration,11,networks
+1996,Waste incineration,12,networks
+1997,Waste incineration,12,networks
+1998,Waste incineration,12,networks
+1999,Waste incineration,12,networks
+2000,Waste incineration,12,networks
+2001,Waste incineration,13,networks
+2002,Waste incineration,13,networks
+2003,Waste incineration,13,networks
+2004,Waste incineration,13,networks
+2005,Waste incineration,14,networks
+2006,Waste incineration,14,networks
+2007,Waste incineration,14,networks
+2008,Waste incineration,15,networks
+2009,Waste incineration,16,networks
+2010,Waste incineration,17,networks
+2011,Waste incineration,18,networks
+2012,Waste incineration,19,networks
+2013,Waste incineration,22,networks
+2014,Waste incineration,22,networks
+2015,Waste incineration,23,networks
+2016,Waste incineration,23,networks
+2017,Waste incineration,27,networks
+2018,Waste incineration,28,networks
+2019,Waste incineration,29,networks
+2020,Waste incineration,30,networks
+2021,Waste incineration,31,networks
+2022,Waste incineration,33,networks
+2023,Waste incineration,33,networks
+2024,Waste incineration,35,networks
+2025,Waste incineration,36,networks
+1980,Wood,3,networks
+1981,Wood,4,networks
+1982,Wood,5,networks
+1983,Wood,6,networks
+1984,Wood,8,networks
+1985,Wood,10,networks
+1986,Wood,11,networks
+1987,Wood,12,networks
+1988,Wood,13,networks
+1989,Wood,15,networks
+1990,Wood,24,networks
+1991,Wood,26,networks
+1992,Wood,29,networks
+1993,Wood,32,networks
+1994,Wood,49,networks
+1995,Wood,67,networks
+1996,Wood,81,networks
+1997,Wood,95,networks
+1998,Wood,100,networks
+1999,Wood,111,networks
+2000,Wood,124,networks
+2001,Wood,133,networks
+2002,Wood,144,networks
+2003,Wood,158,networks
+2004,Wood,170,networks
+2005,Wood,188,networks
+2006,Wood,217,networks
+2007,Wood,250,networks
+2008,Wood,291,networks
+2009,Wood,331,networks
+2010,Wood,384,networks
+2011,Wood,435,networks
+2012,Wood,492,networks
+2013,Wood,542,networks
+2014,Wood,580,networks
+2015,Wood,632,networks
+2016,Wood,675,networks
+2017,Wood,716,networks
+2018,Wood,756,networks
+2019,Wood,780,networks
+2020,Wood,805,networks
+2021,Wood,829,networks
+2022,Wood,845,networks
+2023,Wood,855,networks
+2024,Wood,880,networks
+2025,Wood,889,networks
+1980,"Heat pumps (lake, ground, air, wastewater)",3,networks
+1981,"Heat pumps (lake, ground, air, wastewater)",3,networks
+1982,"Heat pumps (lake, ground, air, wastewater)",3,networks
+1983,"Heat pumps (lake, ground, air, wastewater)",3,networks
+1984,"Heat pumps (lake, ground, air, wastewater)",4,networks
+1985,"Heat pumps (lake, ground, air, wastewater)",4,networks
+1986,"Heat pumps (lake, ground, air, wastewater)",4,networks
+1987,"Heat pumps (lake, ground, air, wastewater)",5,networks
+1988,"Heat pumps (lake, ground, air, wastewater)",5,networks
+1989,"Heat pumps (lake, ground, air, wastewater)",6,networks
+1990,"Heat pumps (lake, ground, air, wastewater)",6,networks
+1991,"Heat pumps (lake, ground, air, wastewater)",8,networks
+1992,"Heat pumps (lake, ground, air, wastewater)",11,networks
+1993,"Heat pumps (lake, ground, air, wastewater)",11,networks
+1994,"Heat pumps (lake, ground, air, wastewater)",12,networks
+1995,"Heat pumps (lake, ground, air, wastewater)",12,networks
+1996,"Heat pumps (lake, ground, air, wastewater)",13,networks
+1997,"Heat pumps (lake, ground, air, wastewater)",16,networks
+1998,"Heat pumps (lake, ground, air, wastewater)",16,networks
+1999,"Heat pumps (lake, ground, air, wastewater)",17,networks
+2000,"Heat pumps (lake, ground, air, wastewater)",19,networks
+2001,"Heat pumps (lake, ground, air, wastewater)",20,networks
+2002,"Heat pumps (lake, ground, air, wastewater)",20,networks
+2003,"Heat pumps (lake, ground, air, wastewater)",21,networks
+2004,"Heat pumps (lake, ground, air, wastewater)",22,networks
+2005,"Heat pumps (lake, ground, air, wastewater)",23,networks
+2006,"Heat pumps (lake, ground, air, wastewater)",24,networks
+2007,"Heat pumps (lake, ground, air, wastewater)",26,networks
+2008,"Heat pumps (lake, ground, air, wastewater)",32,networks
+2009,"Heat pumps (lake, ground, air, wastewater)",43,networks
+2010,"Heat pumps (lake, ground, air, wastewater)",49,networks
+2011,"Heat pumps (lake, ground, air, wastewater)",55,networks
+2012,"Heat pumps (lake, ground, air, wastewater)",68,networks
+2013,"Heat pumps (lake, ground, air, wastewater)",76,networks
+2014,"Heat pumps (lake, ground, air, wastewater)",87,networks
+2015,"Heat pumps (lake, ground, air, wastewater)",97,networks
+2016,"Heat pumps (lake, ground, air, wastewater)",111,networks
+2017,"Heat pumps (lake, ground, air, wastewater)",124,networks
+2018,"Heat pumps (lake, ground, air, wastewater)",132,networks
+2019,"Heat pumps (lake, ground, air, wastewater)",143,networks
+2020,"Heat pumps (lake, ground, air, wastewater)",150,networks
+2021,"Heat pumps (lake, ground, air, wastewater)",155,networks
+2022,"Heat pumps (lake, ground, air, wastewater)",159,networks
+2023,"Heat pumps (lake, ground, air, wastewater)",162,networks
+2024,"Heat pumps (lake, ground, air, wastewater)",165,networks
+2025,"Heat pumps (lake, ground, air, wastewater)",167,networks
+1980,"Other waste heat (industry, nuclear, tunnel)",0,networks
+1981,"Other waste heat (industry, nuclear, tunnel)",0,networks
+1982,"Other waste heat (industry, nuclear, tunnel)",0,networks
+1983,"Other waste heat (industry, nuclear, tunnel)",2,networks
+1984,"Other waste heat (industry, nuclear, tunnel)",6,networks
+1985,"Other waste heat (industry, nuclear, tunnel)",7,networks
+1986,"Other waste heat (industry, nuclear, tunnel)",7,networks
+1987,"Other waste heat (industry, nuclear, tunnel)",7,networks
+1988,"Other waste heat (industry, nuclear, tunnel)",7,networks
+1989,"Other waste heat (industry, nuclear, tunnel)",7,networks
+1990,"Other waste heat (industry, nuclear, tunnel)",7,networks
+1991,"Other waste heat (industry, nuclear, tunnel)",7,networks
+1992,"Other waste heat (industry, nuclear, tunnel)",7,networks
+1993,"Other waste heat (industry, nuclear, tunnel)",8,networks
+1994,"Other waste heat (industry, nuclear, tunnel)",9,networks
+1995,"Other waste heat (industry, nuclear, tunnel)",10,networks
+1996,"Other waste heat (industry, nuclear, tunnel)",12,networks
+1997,"Other waste heat (industry, nuclear, tunnel)",13,networks
+1998,"Other waste heat (industry, nuclear, tunnel)",13,networks
+1999,"Other waste heat (industry, nuclear, tunnel)",14,networks
+2000,"Other waste heat (industry, nuclear, tunnel)",14,networks
+2001,"Other waste heat (industry, nuclear, tunnel)",14,networks
+2002,"Other waste heat (industry, nuclear, tunnel)",16,networks
+2003,"Other waste heat (industry, nuclear, tunnel)",16,networks
+2004,"Other waste heat (industry, nuclear, tunnel)",16,networks
+2005,"Other waste heat (industry, nuclear, tunnel)",16,networks
+2006,"Other waste heat (industry, nuclear, tunnel)",16,networks
+2007,"Other waste heat (industry, nuclear, tunnel)",17,networks
+2008,"Other waste heat (industry, nuclear, tunnel)",17,networks
+2009,"Other waste heat (industry, nuclear, tunnel)",17,networks
+2010,"Other waste heat (industry, nuclear, tunnel)",19,networks
+2011,"Other waste heat (industry, nuclear, tunnel)",19,networks
+2012,"Other waste heat (industry, nuclear, tunnel)",19,networks
+2013,"Other waste heat (industry, nuclear, tunnel)",20,networks
+2014,"Other waste heat (industry, nuclear, tunnel)",22,networks
+2015,"Other waste heat (industry, nuclear, tunnel)",26,networks
+2016,"Other waste heat (industry, nuclear, tunnel)",27,networks
+2017,"Other waste heat (industry, nuclear, tunnel)",28,networks
+2018,"Other waste heat (industry, nuclear, tunnel)",33,networks
+2019,"Other waste heat (industry, nuclear, tunnel)",35,networks
+2020,"Other waste heat (industry, nuclear, tunnel)",35,networks
+2021,"Other waste heat (industry, nuclear, tunnel)",36,networks
+2022,"Other waste heat (industry, nuclear, tunnel)",36,networks
+2023,"Other waste heat (industry, nuclear, tunnel)",38,networks
+2024,"Other waste heat (industry, nuclear, tunnel)",39,networks
+2025,"Other waste heat (industry, nuclear, tunnel)",39,networks
+1980,Biogas & solar thermal,0,networks
+1981,Biogas & solar thermal,0,networks
+1982,Biogas & solar thermal,0,networks
+1983,Biogas & solar thermal,0,networks
+1984,Biogas & solar thermal,0,networks
+1985,Biogas & solar thermal,0,networks
+1986,Biogas & solar thermal,0,networks
+1987,Biogas & solar thermal,0,networks
+1988,Biogas & solar thermal,1,networks
+1989,Biogas & solar thermal,1,networks
+1990,Biogas & solar thermal,1,networks
+1991,Biogas & solar thermal,1,networks
+1992,Biogas & solar thermal,1,networks
+1993,Biogas & solar thermal,1,networks
+1994,Biogas & solar thermal,1,networks
+1995,Biogas & solar thermal,2,networks
+1996,Biogas & solar thermal,2,networks
+1997,Biogas & solar thermal,2,networks
+1998,Biogas & solar thermal,2,networks
+1999,Biogas & solar thermal,2,networks
+2000,Biogas & solar thermal,2,networks
+2001,Biogas & solar thermal,2,networks
+2002,Biogas & solar thermal,3,networks
+2003,Biogas & solar thermal,3,networks
+2004,Biogas & solar thermal,3,networks
+2005,Biogas & solar thermal,4,networks
+2006,Biogas & solar thermal,5,networks
+2007,Biogas & solar thermal,5,networks
+2008,Biogas & solar thermal,5,networks
+2009,Biogas & solar thermal,5,networks
+2010,Biogas & solar thermal,5,networks
+2011,Biogas & solar thermal,6,networks
+2012,Biogas & solar thermal,7,networks
+2013,Biogas & solar thermal,8,networks
+2014,Biogas & solar thermal,9,networks
+2015,Biogas & solar thermal,9,networks
+2016,Biogas & solar thermal,9,networks
+2017,Biogas & solar thermal,12,networks
+2018,Biogas & solar thermal,13,networks
+2019,Biogas & solar thermal,13,networks
+2020,Biogas & solar thermal,14,networks
+2021,Biogas & solar thermal,14,networks
+2022,Biogas & solar thermal,14,networks
+2023,Biogas & solar thermal,14,networks
+2024,Biogas & solar thermal,14,networks
+2025,Biogas & solar thermal,14,networks
+1980,Oil & natural gas,3,networks
+1981,Oil & natural gas,3,networks
+1982,Oil & natural gas,4,networks
+1983,Oil & natural gas,5,networks
+1984,Oil & natural gas,5,networks
+1985,Oil & natural gas,5,networks
+1986,Oil & natural gas,5,networks
+1987,Oil & natural gas,6,networks
+1988,Oil & natural gas,7,networks
+1989,Oil & natural gas,9,networks
+1990,Oil & natural gas,9,networks
+1991,Oil & natural gas,12,networks
+1992,Oil & natural gas,16,networks
+1993,Oil & natural gas,19,networks
+1994,Oil & natural gas,24,networks
+1995,Oil & natural gas,27,networks
+1996,Oil & natural gas,30,networks
+1997,Oil & natural gas,30,networks
+1998,Oil & natural gas,32,networks
+1999,Oil & natural gas,32,networks
+2000,Oil & natural gas,38,networks
+2001,Oil & natural gas,42,networks
+2002,Oil & natural gas,51,networks
+2003,Oil & natural gas,52,networks
+2004,Oil & natural gas,53,networks
+2005,Oil & natural gas,53,networks
+2006,Oil & natural gas,55,networks
+2007,Oil & natural gas,56,networks
+2008,Oil & natural gas,57,networks
+2009,Oil & natural gas,57,networks
+2010,Oil & natural gas,57,networks
+2011,Oil & natural gas,57,networks
+2012,Oil & natural gas,57,networks
+2013,Oil & natural gas,63,networks
+2014,Oil & natural gas,66,networks
+2015,Oil & natural gas,71,networks
+2016,Oil & natural gas,72,networks
+2017,Oil & natural gas,73,networks
+2018,Oil & natural gas,75,networks
+2019,Oil & natural gas,84,networks
+2020,Oil & natural gas,84,networks
+2021,Oil & natural gas,84,networks
+2022,Oil & natural gas,84,networks
+2023,Oil & natural gas,84,networks
+2024,Oil & natural gas,84,networks
+2025,Oil & natural gas,84,networks

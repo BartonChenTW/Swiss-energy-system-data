@@ -4,6 +4,7 @@ Input : data/raw/bfe_energy_statistics/ogd115_gest_bilanz.csv
         columns Jahr, Rubrik (balance item), Energietraeger (carrier), TJ
 Output: national/final_energy_by_carrier
         national/final_energy_by_sector
+        heat/district_heat_by_sector    (final consumption of district heat, Energietraeger "Fernwärme")
 """
 import pandas as pd
 
@@ -54,3 +55,8 @@ def run() -> None:
 
     sectors = bal[bal["Rubrik"].isin(SECTORS)]
     write_tidy(to_pj(sectors, "Rubrik", SECTORS), "national/final_energy_by_sector", [path], __name__)
+
+    district_heat = sectors[sectors["Energietraeger"] == "Fernwärme"]
+    by_sector = to_pj(district_heat, "Rubrik", SECTORS)
+    by_sector = by_sector[by_sector.groupby("category")["value"].transform("sum") > 0]  # no district heat in transport
+    write_tidy(by_sector, "heat/district_heat_by_sector", [path], __name__)

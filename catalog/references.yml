@@ -314,6 +314,27 @@ references:
     related_sources: [foen_ghg_inventory]
     checked: 2026-09-28
 
+  - id: bfe_thermal_networks_info
+    type: website
+    title: Thermische Netze (SFOE)
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://www.bfe.admin.ch/de/thermische-netze
+    themes: [heat]
+    language: de/fr
+    description: SFOE page on district heating and cooling, with the map of thermal networks and links to studies and support programmes.
+    related_sources: [bfe_thermal_networks]
+    checked: 2026-09-29
+
+  - id: thermische_netze_schweiz
+    type: website
+    title: Thermische Netze Schweiz (TNS)
+    publisher: Thermische Netze Schweiz (formerly Verband Fernwärme Schweiz)
+    url: https://www.thermische-netze.ch/
+    themes: [heat]
+    language: de/fr
+    description: Industry association of district heating operators; annual reports with network statistics and the Weissbuch Fernwärme on potentials.
+    checked: 2026-09-29
+
   # ---------- tools ----------
   - id: map_geo_admin_energy
     type: tool

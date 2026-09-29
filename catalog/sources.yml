@@ -55,6 +55,21 @@ sources:
       Register of plants in operation (from the guarantee-of-origin system), with
       commissioning date and current power in kW. Decommissioned plants are not included.
 
+  - id: bfe_thermal_networks
+    name: "Thermische Netze (Nahwärme, Fernwärme, Fernkälte)"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    theme: heat
+    url: https://opendata.swiss/de/dataset/thermische-netze-nahwarme-fernwarme-fernkalte
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: weekly
+    downloads:
+      - url: https://data.geo.admin.ch/ch.bfe.thermische-netze/csv/2056/ch.bfe.thermische-netze.zip
+        filename: ch.bfe.thermische-netze.zip
+    notes: >-
+      Register of about 1,700 district heating and cooling networks, reported by operators:
+      commissioning year, power (MW), energy delivered (MWh/a), house connections, length
+      and up to two energy sources. Many fields are incomplete; each value is the current state.
+
   - id: bfs_gwr
     name: Federal Register of Buildings and Dwellings (GWR / RegBL)
     publisher: Federal Statistical Office (FSO / BFS)
