@@ -23,6 +23,24 @@ const css = (name) => getComputedStyle(document.documentElement).getPropertyValu
 const fmt = (v) => (v == null ? "–" : v.toLocaleString("en-CH", { maximumFractionDigits: 2 }));
 const fmtDate = (iso) => (iso ? new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "");
 
+// Light/dark: an explicit choice is stored by the header button (applied early by theme.js);
+// otherwise the page follows the operating system.
+const systemDark = matchMedia("(prefers-color-scheme: dark)");
+const currentTheme = () => document.documentElement.dataset.theme || (systemDark.matches ? "dark" : "light");
+const ICONS = {
+  // shown in light mode: switch to dark
+  moon: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a8.5 8.5 0 1 0 11.5 11.5Z"/></svg>',
+  // shown in dark mode: switch to light
+  sun: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>',
+};
+
+function updateThemeToggle(button) {
+  const dark = currentTheme() === "dark";
+  button.innerHTML = dark ? ICONS.sun : ICONS.moon;
+  button.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+  button.title = button.getAttribute("aria-label");
+}
+
 function renderChrome() {
   const here = location.pathname.split("/").pop() || "index.html";
   const header = document.getElementById("site-header");
@@ -30,7 +48,17 @@ function renderChrome() {
     header.innerHTML = `<div class="wrap header-inner">
       <a class="brand" href="index.html">Swiss Energy System Data</a>
       <nav>${PAGES.map(([href, label]) => `<a href="${href}"${href === here ? ' aria-current="page"' : ""}>${label}</a>`).join("")}</nav>
+      <button class="theme-toggle" type="button" data-theme-toggle></button>
     </div>`;
+    const toggle = header.querySelector("[data-theme-toggle]");
+    updateThemeToggle(toggle);
+    toggle.addEventListener("click", () => {
+      const next = currentTheme() === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("theme", next); } catch {}
+      updateThemeToggle(toggle);
+      recolorCharts();
+    });
   }
   const footer = document.getElementById("site-footer");
   if (footer) {
@@ -171,6 +199,10 @@ function coverageTag(ds) {
 
 const charts = [];
 
+// Stacked charts with several series can also be shown as one line per series,
+// which makes each series' trend easier to read.
+const switchable = (type, ds) => (type === "stacked-area" || type === "stacked-bar") && ds.series.length > 1;
+
 async function renderCard(el) {
   const id = el.dataset.dataset;
   el.classList.add("card");
@@ -180,6 +212,9 @@ async function renderCard(el) {
     el.innerHTML = `
       <div class="card-head"><h3>${esc(ds.title)}</h3><span class="tags-head">${coverageTag(ds)}${ds.status === "sample" ? '<span class="badge" title="Placeholder values — not official statistics">Sample data</span>' : ""}</span></div>
       <p class="card-sub">${esc(ds.description)} <span>(${esc(ds.unit)})</span></p>
+      ${switchable(type, ds) ? `<div class="view-switch" role="group" aria-label="Chart view">
+        <button type="button" data-view="${type}" aria-pressed="true">Stacked</button><button type="button" data-view="line" aria-pressed="false">Lines</button>
+      </div>` : ""}
       <div class="canvas-box"><canvas role="img" aria-label="${esc(ds.title)}, ${esc(ds.unit)}"></canvas></div>
       <details><summary>Data table</summary>${dataTable(ds)}</details>
       <p class="card-foot">Source: <a href="${esc(ds.source.url)}">${esc(ds.source.name)}</a>, ${esc(ds.source.publisher)}.
@@ -187,7 +222,15 @@ async function renderCard(el) {
         ${ds.provenance?.notes ? `<br>${esc(ds.provenance.notes)}` : ""}</p>`;
     const canvas = el.querySelector("canvas");
     if (type === "hbar") el.querySelector(".canvas-box").style.height = `${Math.max(300, ds.series.length * 30 + 70)}px`;
-    charts.push({ canvas, ds, type, chart: new Chart(canvas, chartConfig(ds, type)) });
+    const entry = { canvas, ds, type, chart: new Chart(canvas, chartConfig(ds, type)) };
+    charts.push(entry);
+    el.querySelectorAll("[data-view]").forEach((button) => button.addEventListener("click", () => {
+      if (entry.type === button.dataset.view) return;
+      entry.type = button.dataset.view;
+      el.querySelectorAll("[data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+      entry.chart.destroy();
+      entry.chart = new Chart(canvas, chartConfig(ds, entry.type));
+    }));
   } catch (err) {
     el.innerHTML = `<p class="error">Could not load <code>${esc(id)}</code> (${esc(err.message)}). Run <code>python -m pipeline.build_site</code> first.</p>`;
   }
@@ -248,13 +291,19 @@ function applyChartDefaults() {
   Chart.defaults.color = css("--text-muted");
 }
 
-// Re-colour charts when the OS theme changes.
-matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+// Charts read colours from CSS variables when drawn, so redraw them after a theme change.
+function recolorCharts() {
   applyChartDefaults();
   for (const c of charts) {
     c.chart.destroy();
     c.chart = new Chart(c.canvas, chartConfig(c.ds, c.type));
   }
+}
+
+systemDark.addEventListener("change", () => {
+  const toggle = document.querySelector("[data-theme-toggle]");
+  if (toggle) updateThemeToggle(toggle);
+  recolorCharts();
 });
 
 renderChrome();

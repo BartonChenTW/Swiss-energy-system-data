@@ -8,6 +8,9 @@ for fixes, wording and styling. To release, rename `Unreleased` to the new versi
 with today's date; `python -m pipeline.build_site` picks up the top released entry.
 
 ## [Unreleased]
+### Added
+- Light/dark mode switch in the header; the choice is remembered, otherwise the site follows the system setting.
+- Stacked charts can be switched to one line per series.
 
 ## [0.6.0] - 2026-09-29
 ### Added
