@@ -384,6 +384,46 @@ references:
     description: Swiss background LCA database used for the KBOB list.
     checked: 2026-09-28
 
+  - id: ckw_smart_meter_open_data
+    type: portal
+    title: CKW Open Data – smart meter consumption
+    publisher: CKW (Axpo Group)
+    url: https://www.ckw.ch/landingpages/open-data
+    themes: [electricity, buildings]
+    language: de/en
+    description: >-
+      Anonymised 15-minute smart meter consumption in the Canton of Lucerne (meters under
+      25 MWh/yr, from 2020), plus aggregates by postcode. Regularly updated.
+    checked: 2026-09-29
+
+  - id: ekz_residential_load_profiles
+    type: portal
+    title: Dataset on residential electricity load profiles in Switzerland
+    publisher: Kaiser, Kreft, González Vayá, Hug (ETH Zurich / EKZ)
+    year: 2026
+    url: https://doi.org/10.5281/zenodo.21398769
+    themes: [electricity, buildings]
+    language: en
+    description: >-
+      15-minute active and reactive energy (withdrawal and injection) of 2,447 EKZ
+      residential installations, 2023–2024: apartments, houses, heat pumps, common areas.
+      Includes a pilot with dynamic grid tariffs and load control. CC BY 4.0.
+    checked: 2026-09-29
+
+  - id: heapo
+    type: portal
+    title: HEAPO – heat pump smart meter data with inspection protocols
+    publisher: Brudermueller, González Vayá, Fleisch, Staake (ETH Zurich / EKZ)
+    year: 2025
+    url: https://doi.org/10.5281/zenodo.15056919
+    themes: [electricity, buildings, heat]
+    language: en
+    description: >-
+      15-minute and daily smart meter data of 1,408 heat-pump households in the Canton of
+      Zurich (2018–2024), with metadata, weather and 410 on-site inspection protocols.
+      CC BY 4.0. Code: https://github.com/tbrumue/heapo
+    checked: 2026-09-29
+
   # ---------- models ----------
   - id: cesar_p
     type: model
