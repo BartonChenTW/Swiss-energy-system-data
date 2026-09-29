@@ -636,3 +636,538 @@ references:
       networks, e-mobility; cost, emission and self-sufficiency objectives. pip install ehubx ·
       docs: https://ehubx.readthedocs.io
     checked: 2026-09-29
+
+  # ---------- EV profile data (study on the Mobility page; see `ev_profile` in catalog/README.md) ----------
+  # --- Switzerland ---
+  - id: swiss_public_charging_status
+    type: portal
+    title: Swiss public charging dataset – historical status and estimated load
+    publisher: Rudolph Santarromana (Carnegie Mellon University)
+    year: 2026
+    url: https://doi.org/10.5281/zenodo.18324722
+    themes: [mobility, electricity]
+    language: en
+    description: >-
+      Archive of the SFOE real-time status feed of every public charging point, polled every 5 minutes,
+      with an estimated national charging load. The load is derived from status and rated power, not metered.
+      Code: https://github.com/rudolphsanta/Swiss-public-charging-dataset
+    related_sources: [bfe_charging_infrastructure]
+    ev_profile: {region: Switzerland, data: [status, load], coverage: "About 19,000 public charging points, Dec 2022–Dec 2025", resolution: 5 min, access: open, licence: CC BY 4.0}
+    checked: 2026-09-29
+
+  - id: epfl_desl_dc_charging
+    type: portal
+    title: EPFL-DESL Level-3 EV charging dataset
+    publisher: EPFL Distributed Electrical Systems Laboratory (DESL)
+    year: 2024
+    url: https://github.com/DESL-EPFL/Level-3-EV-charging-dataset
+    themes: [mobility, electricity]
+    language: en
+    description: Sessions with arrival and departure, energy, state of charge and battery capacity, plus 1-minute power measurements, at one commercial fast-charging station in western Switzerland.
+    ev_profile: {region: Switzerland, data: [sessions, load], coverage: "1 fast charger (172.5 kW, 2 CCS), Apr 2022–Jul 2023, 1,878 sessions", resolution: session and 1 min, access: open, licence: MIT}
+    checked: 2026-09-29
+
+  - id: zh_canton_fleet_charging
+    type: portal
+    title: E-Ladestationen der kantonalen Verwaltung Zürich
+    publisher: Kanton Zürich, Immobilienamt
+    year: 2024
+    url: https://opendata.swiss/de/dataset/e-ladestationen-der-kantonalen-verwaltung-zurich
+    themes: [mobility]
+    language: de
+    description: Charging sessions of the cantonal fleet (police and other vehicles) with energy, average and rated power, connector and stop reason. Only the year is given, no start or end time, so it suits energy-per-session statistics rather than time profiles.
+    ev_profile: {region: Switzerland, data: [sessions], coverage: "55,853 sessions at 83 sites, Oct 2021–Sep 2025", resolution: session (no timestamps), access: open, licence: opendata.swiss open use}
+    checked: 2026-09-29
+
+  - id: bs_smarte_strasse_charging
+    type: portal
+    title: Smarte Strasse – charging sessions of the pilot charging station
+    publisher: Kanton Basel-Stadt
+    url: https://data.bs.ch/explore/dataset/100047/
+    themes: [mobility]
+    language: de
+    description: Start, stop, duration and energy of every session at one public street charger in Basel.
+    ev_profile: {region: Switzerland, data: [sessions], coverage: "1 street charger (22 kW, 2 connectors), Basel, Aug 2021–Sep 2025, 4,159 sessions", resolution: session, access: open, licence: CC BY 4.0}
+    checked: 2026-09-29
+
+  - id: bs_iwb_bay_occupancy
+    type: portal
+    title: IWB charging bay occupancy (parking sensors), Basel
+    publisher: IWB / Kanton Basel-Stadt
+    url: https://data.bs.ch/explore/dataset/100196/
+    themes: [mobility]
+    language: de
+    description: Event-based occupancy of public charging bays from parking sensors. It shows whether a car is parked in the bay, not whether it is charging. The pilot ended in 2022; raw data is dataset 100149.
+    ev_profile: {region: Switzerland, data: [status], coverage: "About 26 public charging bays, Basel, 2018–Sep 2022", resolution: event-based, access: open, licence: "open use, attribution; commercial use with permission"}
+    checked: 2026-09-29
+
+  - id: sfoe_charging_status_feed
+    type: portal
+    title: Ladestationen für Elektroautos – real-time data (DIEMO)
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://opendata.swiss/de/dataset/ladestationen-fuer-elektroautos
+    themes: [mobility]
+    language: de/fr/it/en
+    description: Live location and status (available, occupied, out of service) of every public charging point reported to ich-tanke-strom.ch, in OICP JSON. No history is kept; the files are overwritten continuously.
+    related_sources: [bfe_charging_infrastructure]
+    ev_profile: {region: Switzerland, data: [status], coverage: "About 19,000 public charging points, live only", resolution: live, access: open, licence: "open use, attribution; commercial use with permission"}
+    checked: 2026-09-29
+
+  - id: ethz_ev_flexibility_2050
+    type: portal
+    title: Charging demand and flexibility of a fully electric Swiss car fleet in 2050
+    publisher: Parajeles Herrera and Hug (ETH Zurich, Power Systems Laboratory)
+    year: 2025
+    url: https://doi.org/10.5281/zenodo.16597426
+    themes: [mobility, electricity, scenarios]
+    language: en
+    description: "Baseline charging power with upper and lower bounds and daily flexible energy for every municipality, from a mobility simulation calibrated on charging behaviour. Method: https://arxiv.org/abs/2504.03633"
+    ev_profile: {region: Switzerland, data: [synthetic, load], coverage: "Every Swiss municipality, 8,760 hours of 2050", resolution: hourly, access: open, licence: CC BY 4.0}
+    checked: 2026-09-29
+
+  - id: swissdn_ders
+    type: portal
+    title: SwissDN-DERs – distributed energy resources in Swiss distribution grids
+    publisher: Zapparoli, Oneto, Parajeles Herrera, Gjorgiev, Hug, Sansavini (ETH Zurich)
+    year: 2025
+    url: https://doi.org/10.5281/zenodo.16272961
+    themes: [mobility, electricity, scenarios]
+    language: en
+    description: EV allocation and hourly charging profiles with flexibility bounds for every low- and medium-voltage grid node, from a simulation of more than 3 million vehicles (4.5 GB). Paper in Scientific Data, https://doi.org/10.1038/s41597-025-05830-y
+    ev_profile: {region: Switzerland, data: [synthetic, load], coverage: "Every LV/MV grid node, 2030, 2040 and 2050", resolution: hourly, access: open, licence: CC BY 4.0}
+    checked: 2026-09-29
+
+  - id: empa_v2g_trip_profiles
+    type: portal
+    title: Data on the Swiss energy system and electric vehicles (V2G study)
+    publisher: Di Natale et al. (Empa, ETH Zurich)
+    year: 2021
+    url: https://doi.org/10.5281/zenodo.5242901
+    themes: [mobility, electricity]
+    language: en
+    description: Weekly car-trip profiles derived from the Mikrozensus Mobilität und Verkehr 2015 (the authors note they are not representative), charger assumptions and 15-minute system series for 2018. Paper https://doi.org/10.3390/en14164812
+    ev_profile: {region: Switzerland, data: [driving, synthetic], coverage: "Car-trip profiles derived from MZMV 2015", resolution: trip and 15 min, access: open, licence: CC BY 4.0}
+    checked: 2026-09-29
+
+  - id: bfe_ladebedarfsszenarien
+    type: portal
+    title: Ladebedarfsszenarien (charging demand scenarios 2035)
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://opendata.swiss/de/dataset/ladebedarfsszenarien
+    themes: [mobility, scenarios]
+    language: de/fr
+    description: Scenarios per municipality for 2035 of plug-in vehicles, access to home charging, charging points and energy demand. Annual values, no time profiles.
+    ev_profile: {region: Switzerland, data: [synthetic], coverage: "Every municipality, 2035 scenarios", resolution: annual, access: open, licence: "opendata.swiss open use, attribution"}
+    checked: 2026-09-29
+
+  - id: mzmv
+    type: website
+    title: Mikrozensus Mobilität und Verkehr (MZMV)
+    publisher: Federal Statistical Office (FSO / BFS) and Federal Office for Spatial Development (ARE)
+    url: https://www.are.admin.ch/de/mzmv
+    themes: [mobility]
+    language: de/fr/it
+    description: The national travel diary survey, every five years. Only aggregate tables are open; microdata requires a data protection contract with FSO and may be charged. It is the main input of Swiss EV charging models.
+    ev_profile: {region: Switzerland, data: [driving], coverage: "About 55,000 persons, editions 1994–2021 (2025 in progress)", resolution: trip, access: restricted, licence: "FSO data contract"}
+    checked: 2026-09-29
+
+  - id: mobis_gps_study
+    type: report
+    title: MOBIS – GPS tracking study of travel behaviour in Switzerland
+    publisher: ETH Zurich, Institute for Transport Planning and Systems (IVT)
+    year: 2022
+    url: https://link.springer.com/article/10.1007/s11116-022-10299-4
+    themes: [mobility]
+    language: en
+    description: 3,680 people tracked for eight weeks with a GPS app. Trip data is available from the project team on request; raw tracks only by agreement.
+    ev_profile: {region: Switzerland, data: [driving], coverage: "3,680 people, 8 weeks, Sep 2019–Jan 2020, more than 3 million trip stages", resolution: GPS trip stages, access: restricted, licence: on request}
+    checked: 2026-09-29
+
+  - id: v2x_suisse
+    type: report
+    title: V2X Suisse – bidirectional charging with 50 car-sharing vehicles
+    publisher: Mobility and partners (SFOE pilot and demonstration project)
+    year: 2024
+    url: https://www.aramis.admin.ch/Grunddaten/?ProjectID=49448
+    themes: [mobility, electricity]
+    language: de
+    description: Pilot of vehicle-to-grid with 50 bidirectional Honda e cars in the Mobility car-sharing fleet. Only reports are published, no dataset.
+    ev_profile: {region: Switzerland, data: [sessions, load], coverage: "50 bidirectional cars, 2022–2024", resolution: reports only, access: restricted, licence: not published}
+    checked: 2026-09-29
+
+  # --- Europe ---
+  - id: chargeplace_scotland
+    type: portal
+    title: ChargePlace Scotland – monthly charge point performance
+    publisher: ChargePlace Scotland (Transport Scotland)
+    url: https://chargeplacescotland.org/monthly-charge-point-performance/
+    themes: [mobility]
+    language: en
+    description: >-
+      One file per month with every session on Scotland's public network: charger, connector, start time, duration,
+      energy and amount paid. The largest continuously updated open session source in Europe. A curated extract with
+      site context (Oct 2022–Mar 2024, CC BY 4.0) is at https://doi.org/10.15129/1f431af7-5caa-4840-a9ab-c1f3b521e033
+    ev_profile: {region: Europe, data: [sessions], coverage: "Scotland's public network, Oct 2022 to date", resolution: session (minute), access: open, licence: not stated}
+    checked: 2026-09-29
+
+  - id: norway_residential_charging
+    type: portal
+    title: EV charging dataset with 35,000 sessions from 12 residential locations in Norway
+    publisher: Sørensen, Sartori, Lindberg, Andresen (SINTEF / NTNU)
+    year: 2024
+    url: https://doi.org/10.5281/zenodo.13896176
+    themes: [mobility, electricity]
+    language: en
+    description: Session reports from five operators with estimated battery capacity, power and plug-in state of charge, plus hourly energy and connected-capacity series. Article https://doi.org/10.1016/j.dib.2024.110883
+    ev_profile: {region: Europe, data: [sessions, load], coverage: "Norway, 267 users at 12 residential sites, Nov 2018–May 2021", resolution: session and hourly, access: open, licence: CC BY 4.0}
+    checked: 2026-09-29
+
+  - id: trondheim_apartment_charging
+    type: portal
+    title: Residential EV charging datasets from apartment buildings (Trondheim)
+    publisher: Sørensen et al. (NTNU / SINTEF)
+    year: 2021
+    url: https://doi.org/10.17632/jbks2rcwyj.1
+    themes: [mobility, electricity]
+    language: en
+    description: Sessions and hourly loads per user and in aggregate for one housing cooperative, with a real garage smart-meter series. Article https://doi.org/10.1016/j.dib.2021.107105
+    ev_profile: {region: Europe, data: [sessions, load], coverage: "Norway, 6,878 sessions, 97 users, Dec 2018–Jan 2020", resolution: session and hourly, access: open, licence: CC BY 4.0}
+    checked: 2026-09-29
+
+  - id: electric_nation
+    type: portal
+    title: Electric Nation – home smart-charging trial
+    publisher: Western Power Distribution (now National Grid Electricity Distribution), EA Technology
+    year: 2019
+    url: https://connecteddata.nationalgrid.co.uk/dataset/electric-nation
+    themes: [mobility, electricity]
+    language: en
+    description: Transactions and meter values of home chargers under managed charging, plus a customer survey. Downloads sit behind a browser check, so they must be fetched by hand.
+    ev_profile: {region: Europe, data: [sessions, load], coverage: "UK, about 700 home chargers, more than 130,000 charging events, 2017–2019", resolution: 3 and 15 min, access: open, licence: WPD Open Data Licence}
+    checked: 2026-09-29
+
+  - id: dft_chargepoint_analysis_2017
+    type: portal
+    title: Electric Chargepoint Analysis 2017 (domestics, rapids, public sector fasts)
+    publisher: UK Department for Transport / OLEV
+    year: 2018
+    url: https://www.gov.uk/government/statistics/electric-chargepoint-analysis-2017-local-authority-rapids
+    themes: [mobility]
+    language: en
+    description: Raw session files for 2017 from local-authority rapid chargers, public-sector fast chargers and government-funded home chargers. The main domestic file is no longer attached on gov.uk.
+    ev_profile: {region: Europe, data: [sessions], coverage: "UK, public rapid, public fast and domestic chargers, 2017", resolution: session, access: open, licence: OGL v3.0}
+    checked: 2026-09-29
+
+  - id: dundee_charging_sessions
+    type: portal
+    title: Dundee – public EV charge point usage
+    publisher: Dundee City Council
+    url: https://data.dundeecity.gov.uk/datasets/8b443deaf9174b7aa9d3e10eaa906422
+    themes: [mobility]
+    language: en
+    description: Every session with charger, connector, start, end and energy, in yearly files from mid-2021.
+    ev_profile: {region: Europe, data: [sessions], coverage: "Dundee public network, Jul 2021–Aug 2025", resolution: session (minute), access: open, licence: not stated}
+    checked: 2026-09-29
+
+  - id: perth_kinross_charging
+    type: portal
+    title: Perth & Kinross – EV charge station use
+    publisher: Perth & Kinross Council
+    url: https://data.pkc.gov.uk/datasets/perth-kinross::ev-charge-station-use-sept-2018-to-aug-2019
+    themes: [mobility]
+    language: en
+    description: Sessions with start and end time, energy, site and charger model, in yearly files.
+    ev_profile: {region: Europe, data: [sessions], coverage: "Perth & Kinross public chargers, Sep 2016–Aug 2019", resolution: session, access: open, licence: OGL v3.0}
+    checked: 2026-09-29
+
+  - id: dtu_danish_home_charging
+    type: portal
+    title: Danish residential EV charging profiles for distribution grid planning
+    publisher: Ziras, Yousefi, Thingvad, Weckesser, Odgaard (DTU)
+    year: 2024
+    url: https://doi.org/10.11583/DTU.25348213.v1
+    themes: [mobility, electricity]
+    language: en
+    description: Hourly percentile load profiles by charger type, season, day type and number of chargers (1–200). Companion statistics from 5,534 chargers, 2022–2023, https://doi.org/10.11583/DTU.25407898.v1
+    ev_profile: {region: Europe, data: [load], coverage: "Denmark, about 3,500 home chargers, 2023 (aggregated)", resolution: hourly, access: open, licence: CC BY 4.0}
+    checked: 2026-09-29
+
+  - id: my_electric_avenue
+    type: portal
+    title: My Electric Avenue – trial data
+    publisher: EA Technology for SSEN
+    year: 2015
+    url: https://eatechnology.com/resources/projects/my-electric-avenue-data-download/
+    themes: [mobility, electricity]
+    language: en
+    description: Charge events with state of charge and trips with distance and energy for households that each drove a Nissan Leaf with a 3.6 kW home charger.
+    ev_profile: {region: Europe, data: [sessions, driving], coverage: "UK, about 215 households, 2014–2015", resolution: session and trip, access: registration, licence: not stated}
+    checked: 2026-09-29
+
+  - id: emp_2019_france
+    type: portal
+    title: Enquête mobilité des personnes 2018–2019 – detailed data
+    publisher: SDES / INSEE (France)
+    year: 2021
+    url: https://www.data.gouv.fr/datasets/donnees-detaillees-de-lenquete-mobilite-des-personnes-2018-2019
+    themes: [mobility]
+    language: fr
+    description: Anonymised microdata of households, persons and trips from the French national travel survey. The only fully open national travel-survey microdata found in Europe.
+    ev_profile: {region: Europe, data: [driving], coverage: "France, about 20,000 households, May 2018–Apr 2019", resolution: trip, access: open, licence: Licence Ouverte 2.0}
+    checked: 2026-09-29
+
+  - id: ndw_charging_points
+    type: portal
+    title: NDW – national charging point data (OCPI)
+    publisher: Nationaal Dataportaal Wegverkeer (NDW, Netherlands)
+    url: https://opendata.ndw.nu/charging_point_locations_ocpi.json.gz
+    themes: [mobility]
+    language: en
+    description: Real-time location, availability and price of charging points in the Netherlands under the EU AFIR regulation. Snapshot only, no history; similar live feeds exist in Germany (Mobilithek) and Paris (Belib').
+    ev_profile: {region: Europe, data: [status], coverage: "Netherlands, all AFIR charging points, live only", resolution: live, access: open, licence: not stated}
+    checked: 2026-09-29
+
+  - id: elaadnl_data
+    type: website
+    title: ElaadNL data
+    publisher: ElaadNL (Netherlands)
+    url: https://elaad.nl/delen/download
+    themes: [mobility]
+    language: nl
+    description: The Dutch charging-session samples (2019 transactions and meter values) that were long the standard open EV dataset are no longer published; the portal now needs an access code for session data.
+    ev_profile: {region: Europe, data: [sessions, load], coverage: "Dutch public charging sessions", resolution: session and 15 min, access: restricted, licence: access code required}
+    checked: 2026-09-29
+
+  - id: uk_national_travel_survey
+    type: portal
+    title: UK National Travel Survey 2002–2024
+    publisher: UK Department for Transport (UK Data Service SN 5340)
+    url: https://doi.org/10.5255/UKDA-SN-5340-15
+    themes: [mobility]
+    language: en
+    description: Trip diaries of the UK travel survey. Available under the UK Data Service End User Licence after registration, not for commercial use. Germany's MiD 2023 is similarly restricted.
+    ev_profile: {region: Europe, data: [driving], coverage: "UK households, 2002–2024", resolution: trip, access: restricted, licence: End User Licence (non-commercial)}
+    checked: 2026-09-29
+
+  - id: emobpy
+    type: tool
+    title: emobpy – EV profile generator
+    publisher: Gaete-Morales, Kramer, Schill, Zerrahn (DIW Berlin)
+    year: 2021
+    url: https://gitlab.com/diw-evu/emobpy/emobpy
+    themes: [mobility, electricity]
+    language: en
+    description: >-
+      Python tool (MIT) generating driving, consumption, grid availability and charging profiles for battery-electric cars.
+      Paper https://doi.org/10.1038/s41597-021-00932-9 · example data for 200 cars in Germany: https://doi.org/10.5281/zenodo.4514928 (CC BY 4.0)
+    ev_profile: {region: Europe, data: [synthetic], coverage: "Generator, calibrated on German mobility statistics", resolution: 15 min and hourly, access: open, licence: MIT}
+    checked: 2026-09-29
+
+  - id: ramp_mobility
+    type: tool
+    title: RAMP-mobility – stochastic EV mobility and charging profiles
+    publisher: Mangipinto, Lombardi et al. (Politecnico di Milano, TU Delft, KU Leuven)
+    year: 2022
+    url: https://github.com/RAMP-project/RAMP-mobility
+    themes: [mobility, electricity]
+    language: en
+    description: Generates EV mobility and charging profiles for 28 European countries, including Switzerland, with several charging strategies. No precomputed profiles are included.
+    ev_profile: {region: Europe, data: [synthetic], coverage: "Generator for 28 European countries including Switzerland", resolution: 1 min, access: open, licence: EUPL-1.2}
+    checked: 2026-09-29
+
+  - id: simbev
+    type: tool
+    title: SimBEV – BEV and PHEV driving and charging demand
+    publisher: Reiner Lemoine Institut
+    url: https://github.com/rl-institut/simbev
+    themes: [mobility, electricity]
+    language: en
+    description: Generates driving and charging demand of electric cars per German region type, based on the MiD 2017 travel survey.
+    ev_profile: {region: Europe, data: [synthetic], coverage: "Generator for German region types", resolution: configurable, access: open, licence: MIT}
+    checked: 2026-09-29
+
+  # --- World ---
+  - id: ev_watts
+    type: portal
+    title: EV WATTS public database
+    publisher: Energetics for US DOE Vehicle Technologies Office (Livewire)
+    url: https://livewire.energy.gov/ds/evwatts/evwatts.public
+    themes: [mobility, electricity]
+    language: en
+    description: By far the largest open charging dataset worldwide, with charging sessions and connected-vehicle trips across about 50 US states. Download needs a free Livewire account. DOI 10.15483/1970735
+    ev_profile: {region: World, data: [sessions, driving], coverage: "USA, 13.9 million sessions at 36,900 chargers and 1.7 million vehicle trips, 2019–2022", resolution: session and trip, access: registration, licence: US DOE public (no licence stated)}
+    checked: 2026-09-29
+
+  - id: acn_data
+    type: portal
+    title: ACN-Data – Adaptive Charging Network dataset
+    publisher: Caltech / PowerFlex (Lee, Li, Low)
+    year: 2019
+    url: https://ev.caltech.edu/dataset
+    themes: [mobility, electricity]
+    language: en
+    description: Sessions with users' requested energy and departure time, and per-session charging-current series, through an API. Often called open, but registration binds users to education and research use. Paper https://doi.org/10.1145/3307772.3328313
+    ev_profile: {region: World, data: [sessions, load], coverage: "USA, 3 sites (Caltech, JPL, an office), about 110 chargers, 2018 to date", resolution: session and charging-current series, access: registration, licence: education and research use only}
+    checked: 2026-09-29
+
+  - id: nhts_2022
+    type: portal
+    title: National Household Travel Survey 2022 (NextGen NHTS)
+    publisher: US Federal Highway Administration / ORNL
+    year: 2023
+    url: https://nhts.ornl.gov/
+    themes: [mobility]
+    language: en
+    description: Public-use travel diaries with trip times, distances and dwell times. NHTS 2017, much larger, is the basis of most US EV models.
+    ev_profile: {region: World, data: [driving], coverage: "USA, 7,893 households, 31,074 trips, 2022", resolution: trip, access: open, licence: US federal data}
+    checked: 2026-09-29
+
+  - id: evi_pro_lite
+    type: tool
+    title: EVI-Pro Lite – EV charging load profiles
+    publisher: National Laboratory of the Rockies (formerly NREL) / US DOE AFDC
+    url: https://afdc.energy.gov/evi-x-toolbox
+    themes: [mobility, electricity]
+    language: en
+    description: Web tool and API returning weekday and weekend charging load profiles by location and charger type for a given fleet, based on travel surveys. Free API key.
+    ev_profile: {region: World, data: [synthetic, load], coverage: "Generator for US cities and fleets", resolution: 15 min, access: registration, licence: DOE/NREL notice (free use with credit)}
+    checked: 2026-09-29
+
+  - id: urbanev
+    type: portal
+    title: UrbanEV – urban EV charging occupancy dataset (Shenzhen)
+    publisher: Li, Qu et al.
+    year: 2025
+    url: https://doi.org/10.5061/dryad.np5hqc04z
+    themes: [mobility]
+    language: en
+    description: Station occupancy, duration, energy and price with weather and points of interest. Collected from a public charging app, so upstream rights are unclear. Paper https://doi.org/10.1038/s41597-025-04874-4
+    ev_profile: {region: World, data: [status, load], coverage: "Shenzhen, 1,362 stations, 17,532 chargers, Sep 2022–Feb 2023", resolution: 5 min and hourly, access: open, licence: "CC0 (scraped; rights unclear)"}
+    checked: 2026-09-29
+
+  - id: charged_dataset
+    type: portal
+    title: CHARGED – harmonised EV charging demand in six cities
+    publisher: Guo, You, Zhu, Zhang, Yuen
+    year: 2025
+    url: https://doi.org/10.5281/zenodo.15638530
+    themes: [mobility]
+    language: en
+    description: Charging volume, duration and price per site in Amsterdam, Johannesburg, Los Angeles, Melbourne, São Paulo and Shenzhen, scraped from operator apps. Paper https://doi.org/10.1038/s41597-025-05584-7
+    ev_profile: {region: World, data: [status, load], coverage: "6 cities, about 12,000 chargers at 4,280 sites, Apr–Sep 2023", resolution: 5 min and hourly, access: open, licence: "MIT repository (scraped; rights unclear)"}
+    checked: 2026-09-29
+
+  - id: palo_alto_charging
+    type: portal
+    title: City of Palo Alto – EV charging station usage 2011–2020
+    publisher: City of Palo Alto
+    url: https://data.paloalto.gov/datasets/194693/electric-vehicle-charging-station-usage-july-2011-dec-2020/
+    themes: [mobility]
+    language: en
+    description: Sessions at city-owned public chargers over almost ten years; no longer updated.
+    ev_profile: {region: World, data: [sessions], coverage: "Palo Alto (USA), about 260,000 sessions, Jul 2011–Dec 2020", resolution: session, access: open, licence: ODC PDDL}
+    checked: 2026-09-29
+
+  - id: boulder_charging
+    type: portal
+    title: City of Boulder – EV charging station data
+    publisher: City of Boulder
+    url: https://open-data.bouldercolorado.gov/datasets/95992b3938be4622b07f0b05eba95d4c_0
+    themes: [mobility]
+    language: en
+    description: Sessions with start and end time and energy at city-owned chargers.
+    ev_profile: {region: World, data: [sessions], coverage: "Boulder (USA), about 26 stations, 148,136 records, 2018–Nov 2023", resolution: session, access: open, licence: CC0-1.0}
+    checked: 2026-09-29
+
+  - id: korea_charging_transactions
+    type: portal
+    title: A dataset for multi-faceted analysis of EV charging transactions (South Korea)
+    publisher: Baek, Lee, Kim
+    year: 2024
+    url: https://doi.org/10.6084/m9.figshare.22495141.v1
+    themes: [mobility]
+    language: en
+    description: Sessions from one charging operator. Paper https://doi.org/10.1038/s41597-024-02942-9
+    ev_profile: {region: World, data: [sessions], coverage: "South Korea, 72,856 sessions, 2,119 chargers, 2,238 users, Sep 2021–Sep 2022", resolution: session, access: open, licence: CC BY 4.0}
+    checked: 2026-09-29
+
+  - id: jiaxing_charging_transactions
+    type: portal
+    title: High-resolution EV charging transactions in Jiaxing, China
+    publisher: Zhang et al.
+    year: 2025
+    url: https://doi.org/10.6084/m9.figshare.28182251.v3
+    themes: [mobility]
+    language: en
+    description: Transactions with second-level timestamps, energy, tariff, service fee, stop reason and weather. Paper https://doi.org/10.1038/s41597-025-04982-1
+    ev_profile: {region: World, data: [sessions], coverage: "Jiaxing (China), 441,077 transactions at 13 stations over 2 years", resolution: session (second), access: open, licence: CC BY 4.0}
+    checked: 2026-09-29
+
+  - id: nlr_workplace_charging
+    type: portal
+    title: Workplace charging data (NREL campus)
+    publisher: Neuman, Meintz, Jun (National Laboratory of the Rockies, formerly NREL)
+    year: 2022
+    url: https://data.nlr.gov/submissions/182
+    themes: [mobility]
+    language: en
+    description: Four years of workplace sessions, including free versus paid charging and before and after COVID. DOI 10.7799/1838140
+    ev_profile: {region: World, data: [sessions], coverage: "USA, more than 300 EVs at one campus, to Oct 2021", resolution: session, access: open, licence: NLR data notice (attribution)}
+    checked: 2026-09-29
+
+  - id: workplace_charging_dataverse
+    type: portal
+    title: Workplace EV charging of casual and habitual users
+    publisher: Asensio, Lawson, Apablaza
+    year: 2021
+    url: https://doi.org/10.7910/DVN/QF1PMO
+    themes: [mobility]
+    language: en
+    description: Sessions from a corporate workplace charging programme. Paper https://doi.org/10.1038/s41597-021-00956-1
+    ev_profile: {region: World, data: [sessions], coverage: "USA, 3,395 sessions, 85 drivers, 105 stations at 25 sites", resolution: session, access: open, licence: CC0 1.0}
+    checked: 2026-09-29
+
+  - id: speech_generator
+    type: tool
+    title: SPEECh – scalable probabilistic estimates of EV charging
+    publisher: Powell et al. (Stanford University)
+    year: 2022
+    url: https://github.com/SiobhanPowell/speech
+    themes: [mobility, electricity]
+    language: en
+    description: Open model generating charging demand by driver group and charging segment, trained on Californian session data that is not itself public.
+    ev_profile: {region: World, data: [synthetic], coverage: "Generator for California", resolution: 15 min, access: open, licence: BSD-2-Clause}
+    checked: 2026-09-29
+
+  - id: pecan_street_dataport
+    type: portal
+    title: Pecan Street Dataport
+    publisher: Pecan Street Inc.
+    url: https://www.pecanstreet.org/dataport/licenses/
+    themes: [mobility, electricity, buildings]
+    language: en
+    description: Circuit-level household energy data, including EV charging circuits. Paid licences; the free university tier covers 75 homes for a single academic user.
+    ev_profile: {region: World, data: [load], coverage: "USA (mainly Texas), household circuits", resolution: 1 min to 15 min, access: restricted, licence: paid licence}
+    checked: 2026-09-29
+
+  - id: amara_ouali_ev_open_data_review
+    type: report
+    title: A review of electric vehicle load open data and models
+    publisher: Amara-Ouali, Goude, Massart, Poggi, Yan (Energies 14(8):2233)
+    year: 2021
+    url: https://doi.org/10.3390/en14082233
+    themes: [mobility, electricity]
+    language: en
+    description: The standard catalogue of open EV load data (about 60 relevant datasets out of 860 repositories screened), with a companion list at https://github.com/yvenn-amara/ev-load-open-data
+    checked: 2026-09-29
+
+  - id: ev_charging_load_modeling_survey
+    type: report
+    title: "Electric vehicle charging load modeling: a survey, trends, challenges and opportunities"
+    publisher: Lin, Prabowo, Razzak, Xue, Amos, Behrens, Salim (arXiv 2511.03741)
+    year: 2025
+    url: https://doi.org/10.48550/arXiv.2511.03741
+    themes: [mobility, electricity]
+    language: en
+    description: Survey of EV charging load modelling methods published 2020–2024.
+    checked: 2026-09-29

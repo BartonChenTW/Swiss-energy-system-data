@@ -286,6 +286,55 @@ async function renderLibrary(el) {
   }
 }
 
+// ---------- EV profile data study (Mobility page), from references with an `ev_profile` block ----------
+
+const EV_REGIONS = { Switzerland: "Switzerland", Europe: "Europe (outside Switzerland)", World: "Rest of the world" };
+const EV_DATA = { sessions: "Sessions", load: "Load profile", driving: "Driving", status: "Status", synthetic: "Synthetic" };
+const EV_ACCESS = { open: "Open download", registration: "Free registration", restricted: "Restricted" };
+
+async function renderEvProfiles(el) {
+  try {
+    const { references } = await loadJSON("data/catalog.json");
+    const entries = references.filter((r) => r.ev_profile);
+    const accessRank = { open: 0, registration: 1, restricted: 2 };
+    el.innerHTML = `
+      <div class="filters">
+        <label>Data <select data-filter="data"><option value="">All</option>${Object.entries(EV_DATA).map(([k, v]) => `<option value="${k}">${v}</option>`).join("")}</select></label>
+        <label>Access <select data-filter="access"><option value="">All</option>${Object.entries(EV_ACCESS).map(([k, v]) => `<option value="${k}">${v}</option>`).join("")}</select></label>
+      </div>
+      <div data-list></div>`;
+    const list = el.querySelector("[data-list]");
+    const draw = () => {
+      const data = el.querySelector('[data-filter="data"]').value;
+      const access = el.querySelector('[data-filter="access"]').value;
+      const shown = entries.filter((r) => (!data || r.ev_profile.data.includes(data)) && (!access || r.ev_profile.access === access));
+      list.innerHTML = Object.entries(EV_REGIONS).map(([key, label]) => {
+        const group = shown.filter((r) => r.ev_profile.region === key)
+          .sort((a, b) => accessRank[a.ev_profile.access] - accessRank[b.ev_profile.access]);
+        if (!group.length) return "";
+        const rows = group.map((r) => {
+          const ev = r.ev_profile;
+          return `<tr>
+            <td><a href="${esc(r.url)}">${esc(r.title)}</a><div class="muted">${esc(r.publisher)}${r.year ? `, ${r.year}` : ""}</div></td>
+            <td><span class="tags">${ev.data.map((t) => `<span>${esc(EV_DATA[t])}</span>`).join("")}</span></td>
+            <td>${esc(ev.coverage)}</td>
+            <td>${esc(ev.resolution)}</td>
+            <td><span class="access access-${esc(ev.access)}">${esc(EV_ACCESS[ev.access])}</span><div class="muted">${esc(ev.licence)}</div></td>
+          </tr>`;
+        }).join("");
+        return `<h3 class="ev-region">${label} <span class="muted">${group.length}</span></h3>
+          <div class="table-scroll"><table class="sources ev-profiles">
+            <thead><tr><th>Dataset</th><th>Data</th><th>Coverage</th><th>Resolution</th><th>Access and licence</th></tr></thead>
+            <tbody>${rows}</tbody></table></div>`;
+      }).join("") || `<p class="muted">Nothing matches these filters.</p>`;
+    };
+    el.querySelectorAll("select").forEach((s) => s.addEventListener("change", draw));
+    draw();
+  } catch (err) {
+    el.innerHTML = `<p class="error">Could not load the catalog (${esc(err.message)}).</p>`;
+  }
+}
+
 function applyChartDefaults() {
   Chart.defaults.font.family = css("--font");
   Chart.defaults.color = css("--text-muted");
@@ -312,3 +361,4 @@ document.querySelectorAll(".chart[data-dataset]").forEach(renderCard);
 document.querySelectorAll("[data-catalog]").forEach(renderSources);
 document.querySelectorAll("[data-library]").forEach(renderLibrary);
 document.querySelectorAll("[data-changelog]").forEach(renderChangelog);
+document.querySelectorAll("[data-ev-profiles]").forEach(renderEvProfiles);

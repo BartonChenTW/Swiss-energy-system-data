@@ -9,6 +9,11 @@ with today's date; `python -m pipeline.build_site` picks up the top released ent
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-09-29
+### Added
+- Mobility: study of open EV profile data (charging sessions, load profiles, driving data, charger status and generators) in Switzerland, Europe and the rest of the world: 43 datasets and tools with coverage, resolution, access and licence, filterable, plus key findings.
+- Catalog: optional `ev_profile` block on references, validated by `pipeline.check`; all study entries are also in the Library.
+
 ## [0.7.0] - 2026-09-29
 ### Added
 - Light/dark mode switch in the header; the choice is remembered, otherwise the site follows the system setting.

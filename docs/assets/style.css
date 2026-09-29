@@ -150,6 +150,16 @@ th { color: var(--text-secondary); font-weight: 600; }
 .prose li + li { margin-top: 6px; }
 h2[id] { scroll-margin-top: 16px; }
 
+/* EV profile data study */
+.ev-region { margin: 24px 0 4px; font-size: 16px; }
+.ev-region .muted { font-weight: 400; font-size: 14px; }
+.ev-profiles td:nth-child(2) { min-width: 120px; }
+.ev-profiles td:nth-child(3) { min-width: 220px; }
+.access { font-size: 12px; font-weight: 600; white-space: nowrap; }
+.access-open { color: var(--text-primary); }
+.access-registration { color: var(--text-secondary); }
+.access-restricted { color: var(--text-muted); }
+
 /* Changelog page */
 .releases { display: grid; gap: 12px; max-width: 80ch; }
 .release h2 { margin: 0; font-size: 18px; }

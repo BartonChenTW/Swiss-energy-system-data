@@ -75,6 +75,7 @@ docs/               the website (plain HTML + Chart.js, no build step)
 | Renewables | Renewable production by source; new-renewable electricity; PV production and capacity; wind generation, capacity and wind farms; biomass capacity | SFOE renewables balance, electricity statistics, plant register |
 | Electricity: energy communities | PV installations and capacity by self-consumption type (single site, ZEV, full feed-in) | SFOE survey of grid operators |
 | Mobility | Plug-in share; new cars by propulsion; electric car stock; public charging stations | FSO vehicle register (stats.swiss), SFOE ich-tanke-strom |
+| Mobility: EV profile data study | 43 open (and some restricted) EV charging and driving datasets and generators in CH, Europe and worldwide, from `ev_profile` entries in `references.yml` | Various; see the Library |
 | Heat | District heat by sector; renewable district heat by source; thermal networks by year and energy source | SFOE energy balance, renewables balance, thermal networks register |
 | Buildings: stock | Heating source, construction period, final energy by carrier | FSO GWR, cantonal reporting (FOEN/SFOE) |
 | Buildings: performance | kWh/m² and kg CO2/m² of the stock; modelled CO2 class per building; Geneva measured IDC; Lucerne GEAK classes; Minergie by canton | FOEN, cantonal reporting, Geneva OCEN, Lucerne, SFOE/Minergie |

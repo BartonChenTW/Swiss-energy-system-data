@@ -13,7 +13,8 @@
     <h1>Mobility</h1>
     <p class="lede">Transport uses more than a third of Switzerland's final energy,
       mostly oil products. Electric cars are the main lever for road transport; energy use by mode and
-      public transport are planned.</p>
+      public transport are planned. Below the charts, a <a href="#ev-profile-data">study of open EV
+      profile data</a> in Switzerland, Europe and worldwide.</p>
 
     <h2 id="electric-vehicles">Electric vehicles</h2>
     <p class="section-note">A third of new cars now plug in, but the stock turns over slowly: most
@@ -25,6 +26,39 @@
       <div class="chart" data-dataset="mobility/electric_car_stock"></div>
       <div class="chart" data-dataset="mobility/public_charging_stations"></div>
     </div>
+
+    <h2 id="ev-profile-data">Study: open EV profile data</h2>
+    <p class="section-note">Modelling EV charging needs <em>profiles</em>: when cars are driven and
+      parked, when and how much they charge, and how busy chargers are. This survey lists the open
+      data in Switzerland, Europe and the rest of the world, plus the open generators that produce
+      synthetic profiles, and names important data that is not open. Links and licences were
+      checked in September 2026.</p>
+    <div class="card prose">
+      <p><strong>Key findings</strong></p>
+      <ul>
+        <li><strong>Switzerland:</strong> measured open EV data is thin and fragmented: single sites
+          (an EPFL fast charger, one Basel street charger), a cantonal fleet log without timestamps
+          and a finished bay-occupancy pilot. SFOE's live charger status keeps no history; the only
+          national time series is a researcher's archive of that feed. There is no open home-charging
+          data, and the national travel survey (MZMV) needs an FSO contract. The practical inputs for
+          modelling are ETH's synthetic profiles per municipality (2050) and per grid node (2030–2050).</li>
+        <li><strong>Europe:</strong> open session data comes mainly from the UK (ChargePlace Scotland,
+          Dundee, Perth &amp; Kinross, Electric Nation) and Norway (SINTEF/NTNU). The continent offers
+          aggregated profiles (DTU, Denmark) and live status feeds under the EU AFIR regulation that
+          keep no history. The Dutch ElaadNL data, long the standard example, is no longer open.
+          Open generators fill the gap: emobpy, SimBEV and RAMP-mobility, which covers Switzerland.</li>
+        <li><strong>Rest of the world:</strong> US federal data dominates: EV WATTS (about 14 million
+          sessions, free account), the NHTS travel survey and the EVI-Pro Lite profile tool. Large
+          Chinese occupancy datasets are scraped from charging apps, so their rights are unclear;
+          Korea and Jiaxing offer cleanly licensed session data. ACN-Data, often called open, is
+          limited to research and education.</li>
+      </ul>
+      <p>Earlier catalogues: <a href="https://doi.org/10.3390/en14082233">Amara-Ouali et al. (2021),
+        a review of EV load open data and models</a>, and a
+        <a href="https://doi.org/10.48550/arXiv.2511.03741">2025 survey of charging load modelling</a>.
+        Every entry below is also in the <a href="library.html">Library</a>.</p>
+    </div>
+    <div data-ev-profiles></div>
   </main>
   <footer id="site-footer"></footer>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>

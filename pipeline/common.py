@@ -24,6 +24,11 @@ CHART_TYPES = {"line", "stacked-area", "stacked-bar", "hbar"}
 PALETTES = {"sequential"}  # optional; default is the categorical palette
 STATUSES = {"official", "sample"}
 COVERAGES = {"national", "regional"}  # regional datasets also name their `region`
+# Optional `ev_profile` block on references: the EV profile data study on the Mobility page
+EV_REGIONS = {"Switzerland", "Europe", "World"}
+EV_DATA = {"sessions", "load", "driving", "status", "synthetic"}
+EV_ACCESS = {"open", "registration", "restricted"}
+EV_FIELDS = {"region", "data", "coverage", "resolution", "access", "licence"}
 
 REQUIRED = {
     "sources": ["id", "name", "publisher", "theme", "url", "terms"],
@@ -95,6 +100,18 @@ def catalog_errors(sources: list, datasets: list, references: list) -> list[str]
                 errors.append(f"references[{r['id']}]: unknown related source {sid!r}")
         if not isinstance(r.get("checked"), date):
             errors.append(f"references[{r['id']}]: 'checked' must be a YYYY-MM-DD date")
+        if "ev_profile" in r:
+            ev = r["ev_profile"] or {}
+            missing = EV_FIELDS - {k for k, v in ev.items() if v not in (None, "", [])}
+            if missing:
+                errors.append(f"references[{r['id']}]: ev_profile missing {sorted(missing)}")
+            if ev.get("region") not in EV_REGIONS:
+                errors.append(f"references[{r['id']}]: unknown ev_profile region {ev.get('region')!r}")
+            if ev.get("access") not in EV_ACCESS:
+                errors.append(f"references[{r['id']}]: unknown ev_profile access {ev.get('access')!r}")
+            for t in ev.get("data") or []:
+                if t not in EV_DATA:
+                    errors.append(f"references[{r['id']}]: unknown ev_profile data type {t!r}")
     return errors
 
 

@@ -66,6 +66,21 @@ Used across all three files. `pipeline.check` rejects anything else.
 | `description` | no | one or two sentences: what it is, why it's useful here |
 | `related_sources` | no | `sources.yml` ids it describes or builds on |
 | `checked` | yes | date (YYYY-MM-DD) the link and content were last checked |
+| `ev_profile` | no | puts the entry in the EV profile data study on the Mobility page; see below |
+
+### `ev_profile` (optional, on references)
+
+Open EV charging and driving data, shown as tables by region on the Mobility page. All fields are required
+when the block is present:
+
+| field | values |
+|---|---|
+| `region` | `Switzerland`, `Europe` (outside Switzerland), `World` (outside Europe) |
+| `data` | list of `sessions` (charging sessions), `load` (load profiles or time series), `driving` (trips, travel diaries, GPS), `status` (charger occupancy), `synthetic` (model outputs and generators) |
+| `coverage` | place, size and period, e.g. `"Norway, 267 users at 12 sites, Nov 2018–May 2021"` |
+| `resolution` | e.g. `session`, `5 min`, `hourly`, `live` |
+| `access` | `open` (direct download), `registration` (free account or key), `restricted` (contract, fee or on request) |
+| `licence` | as published, or `not stated` |
 
 ## Provenance (automatic)
 
