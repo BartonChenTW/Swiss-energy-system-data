@@ -11,6 +11,7 @@ import sys
 import pandas as pd
 import requests
 
+from .changelog import site_version
 from .common import PROCESSED_DIR, ROOT, load_catalog, validate_tidy
 
 
@@ -77,6 +78,10 @@ def main() -> None:
     print(f"catalog ok: {len(sources)} sources, {len(datasets)} datasets, {len(references)} references")
 
     errors = check_processed(datasets)
+    try:
+        print(f"changelog ok: version {site_version('')['version']}")
+    except ValueError as e:
+        errors.append(str(e))
     if args.links:
         errors += check_links(sources, references)
     if errors:

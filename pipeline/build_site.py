@@ -4,13 +4,15 @@
 
 Writes docs/data/<dataset id>.json for every dataset in catalog/datasets.yml
 (values + catalog metadata + provenance), plus docs/data/catalog.json with all
-sources, datasets and references for the Sources and Library pages.
+sources, datasets and references for the Sources and Library pages, and
+docs/data/version.json (version from CHANGELOG.md, build date, commit).
 """
 import json
 from datetime import date
 
 import pandas as pd
 
+from .changelog import site_version
 from .common import PROCESSED_DIR, ROOT, SITE_DATA_DIR, load_catalog, validate_tidy
 
 
@@ -69,8 +71,13 @@ def main() -> None:
         built.append(ds["id"])
         print(f"  built {ds['id']}")
 
+    built_on = date.today().isoformat()
+    version = site_version(built_on)
+    write_json(version, SITE_DATA_DIR / "version.json")
+    print(f"version {version['version']} ({(version['commit'] or 'no commit')[:7]})")
+
     write_json({
-        "built": date.today().isoformat(),
+        "built": built_on,
         "sources": [{k: v for k, v in s.items() if k != "downloads"} for s in sources.values()],
         "datasets": [ds for ds in datasets if ds["id"] in built],
         "references": references,

@@ -12,6 +12,8 @@ const PAGES = [
   ["library.html", "Library"],
 ];
 
+const REPO = "https://github.com/BartonChenTW/Swiss-energy-system-data";
+
 const REFERENCE_TYPES = { report: "Reports", standard: "Standards & norms", dashboard: "Dashboards", website: "Websites", tool: "Tools", model: "Models", portal: "Data portals" };
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -31,7 +33,40 @@ function renderChrome() {
   const footer = document.getElementById("site-footer");
   if (footer) {
     footer.innerHTML = `<div class="wrap">Data from Swiss federal offices and other publishers, used under their terms —
-      see <a href="sources.html">Sources</a>. Built from the <a href="https://github.com/BartonChenTW/Swiss-energy-system-data">open pipeline on GitHub</a>.</div>`;
+      see <a href="sources.html">Sources</a>. Built from the <a href="${REPO}">open pipeline on GitHub</a>.
+      <div class="version" data-version></div></div>`;
+    renderVersion(footer.querySelector("[data-version]"));
+  }
+}
+
+// "Version 0.5.0 · built 29 Sep 2026 from a16cbca · Changelog", from docs/data/version.json.
+async function renderVersion(el) {
+  try {
+    const v = await loadJSON("data/version.json");
+    const sha = v.commit ? ` from <a href="${REPO}/commit/${esc(v.commit)}"><code>${esc(v.commit.slice(0, 7))}</code></a>` : "";
+    el.innerHTML = `Version ${esc(v.version)}${v.unreleased ? " + unreleased changes" : ""} · built ${esc(fmtDate(v.built))}${sha}
+      · <a href="changelog.html">Changelog</a>`;
+  } catch {
+    el.innerHTML = `<a href="changelog.html">Changelog</a>`;
+  }
+}
+
+// Changelog bullets are Markdown: support `code` and [text](url), escape the rest.
+const inlineMd = (s) => esc(s)
+  .replace(/`([^`]+)`/g, "<code>$1</code>")
+  .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2">$1</a>');
+
+async function renderChangelog(el) {
+  try {
+    const { changelog } = await loadJSON("data/version.json");
+    el.innerHTML = changelog.map((v) => `
+      <section class="card release">
+        <h2>${v.version === "Unreleased" ? "Unreleased" : `Version ${esc(v.version)}`}${v.date ? ` <span class="muted">${esc(fmtDate(v.date))}</span>` : ""}</h2>
+        ${v.sections.filter((s) => s.items.length).map((s) => `<h3>${esc(s.title)}</h3>
+          <ul>${s.items.map((i) => `<li>${inlineMd(i)}</li>`).join("")}</ul>`).join("")}
+      </section>`).join("");
+  } catch (err) {
+    el.innerHTML = `<p class="error">Could not load the changelog (${esc(err.message)}). Run <code>python -m pipeline.build_site</code> first.</p>`;
   }
 }
 
@@ -225,3 +260,4 @@ applyChartDefaults();
 document.querySelectorAll(".chart[data-dataset]").forEach(renderCard);
 document.querySelectorAll("[data-catalog]").forEach(renderSources);
 document.querySelectorAll("[data-library]").forEach(renderLibrary);
+document.querySelectorAll("[data-changelog]").forEach(renderChangelog);

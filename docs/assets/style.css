@@ -137,4 +137,13 @@ th { color: var(--text-secondary); font-weight: 600; }
 .prose li + li { margin-top: 6px; }
 h2[id] { scroll-margin-top: 16px; }
 
+/* Changelog page */
+.releases { display: grid; gap: 12px; max-width: 80ch; }
+.release h2 { margin: 0; font-size: 18px; }
+.release h2 .muted { font-size: 14px; font-weight: 400; margin-left: 6px; }
+.release h3 { margin: 12px 0 4px; font-size: 14px; color: var(--text-secondary); }
+.release ul { margin: 0; padding-left: 20px; font-size: 14px; }
+.release li + li { margin-top: 4px; }
+
 footer { border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; padding-block: 20px; }
+footer .version { margin-top: 6px; }

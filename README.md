@@ -57,6 +57,7 @@ data/
   processed/        <theme>/<dataset>.csv + <dataset>.meta.json (committed)
 pipeline/
   common.py         paths, catalogue validation, tidy contract, provenance
+  changelog.py      reads CHANGELOG.md into the site version shown in the footer
   fetch.py  check.py  build_site.py
   process/          one module per source; _template.py to start a new one
 docs/               the website (plain HTML + Chart.js, no build step)
@@ -89,6 +90,14 @@ to their open counterparts and lists what is not openly available.
   in `checked`. It appears on the Library page on the next deploy.
 
 Run `python -m pipeline.check` before committing.
+
+## Versions
+
+The site's version, build date and commit are shown in the footer; the history is in
+[CHANGELOG.md](CHANGELOG.md) and on the site's Changelog page. Note each change under
+`## [Unreleased]`. To release, rename that heading to the next version and date, for
+example `## [0.6.0] - 2026-10-01`, and add a fresh empty `Unreleased` above it.
+`pipeline.check` rejects headings that don't follow this pattern.
 
 ## Setup
 
