@@ -10,10 +10,36 @@
   <header id="site-header"></header>
   <main class="wrap">
     <h1>Electricity</h1>
-    <p class="lede">Domestic electricity production by technology. Consumption, imports/exports and
-      tariffs are planned.</p>
+    <p class="lede">Domestic electricity production by technology, and how locally produced solar
+      power is shared in energy communities. Consumption, imports/exports and tariffs are planned.</p>
     <div class="grid">
       <div class="chart" data-dataset="electricity/production_by_technology"></div>
+    </div>
+
+    <h2 id="energy-communities">Energy communities</h2>
+    <div class="card prose">
+      <p>Swiss law lets neighbours share locally produced electricity in three forms:</p>
+      <ul>
+        <li><strong>ZEV</strong> (Zusammenschluss zum Eigenverbrauch, since 2018): owners and tenants
+          behind one grid connection share the output of their PV system and face the grid as a single
+          customer. The PV system must reach at least 10 % of the connection capacity
+          (EnG Art. 17–18, EnV Art. 14–18).</li>
+        <li><strong>Virtual ZEV</strong> (since 2025): the same, but the grid operator's connection
+          lines below 1 kV can be used instead of private cabling.</li>
+        <li><strong>LEG</strong> (lokale Elektrizitätsgemeinschaft, since 1 January 2026): consumers,
+          producers and storage in the same municipality and grid area, all with smart meters, share
+          electricity over the public grid. Local production must reach 5 % of the members' connection
+          capacity. The electricity shared every 15 minutes gets a 40 % discount on the network tariff
+          (20 % if it passes a transformer) (StromVG Art. 17d–17e, StromVV Art. 19e–19h).</li>
+      </ul>
+      <p>There is no open register of ZEV or LEG. The grid operators' survey below counts the PV
+        systems inside ZEV: about 23,700 with 770 MW at the end of 2024. Swissolar estimates about
+        1,860 LEG by the end of June 2026 (see <a href="library.html">Library</a>), and Winterthur
+        publishes the first open time series of electricity exchanged within its LEG.</p>
+    </div>
+    <div class="grid">
+      <div class="chart" data-dataset="electricity/pv_installations_by_self_consumption"></div>
+      <div class="chart" data-dataset="electricity/pv_capacity_by_self_consumption"></div>
     </div>
   </main>
   <footer id="site-footer"></footer>

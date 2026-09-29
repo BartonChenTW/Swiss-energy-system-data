@@ -12,6 +12,7 @@ with today's date; `python -m pipeline.build_site` picks up the top released ent
 - Renewables: annual solar PV electricity production.
 - Renewables: list of wind farms with number of turbines, years in operation and capacity.
 - Heat page with a district heating section: consumption by sector, renewable district heat by source, and the SFOE register of thermal networks (growth and power by energy source).
+- Electricity: energy communities section (ZEV, virtual ZEV, LEG) with PV installations and capacity by self-consumption type, and references on LEG.
 - Library: models STEM (Swiss TIMES Energy systems Model, PSI) and ehubX (Empa).
 
 ## [0.5.0] - 2026-09-29

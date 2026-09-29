@@ -268,3 +268,19 @@ datasets:
     chart: stacked-area
     status: official
     coverage: national
+
+  - id: electricity/pv_installations_by_self_consumption
+    title: PV installations by self-consumption
+    description: Number of PV installations at the end of each year, by whether the owner uses the electricity on site, shares it within a ZEV, or feeds it all into the grid. From the SFOE survey of distribution system operators; SFOE notes that plausibility checks were not fully possible.
+    source: bfe_self_consumption_survey
+    chart: stacked-bar
+    status: official
+    coverage: national
+
+  - id: electricity/pv_capacity_by_self_consumption
+    title: PV capacity by self-consumption
+    description: Installed AC inverter power of the same PV installations, in MW. Installations in a ZEV are larger than single-site ones on average (apartment and commercial buildings).
+    source: bfe_self_consumption_survey
+    chart: stacked-bar
+    status: official
+    coverage: national

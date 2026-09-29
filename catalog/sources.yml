@@ -70,6 +70,22 @@ sources:
       commissioning year, power (MW), energy delivered (MWh/a), house connections, length
       and up to two energy sources. Many fields are incomplete; each value is the current state.
 
+  - id: bfe_self_consumption_survey
+    name: "Monitoring ES2050: Datenblätter Eigenverbrauch und intelligente Netzkomponenten im Strombereich"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    theme: electricity
+    url: https://www.bfe.admin.ch/de/monitoring-energiestrategie-2050
+    terms: "SFOE publication; no licence stated. Cite as: Datenumfrage BFE bei Verteilnetzbetreibern."
+    frequency: annual
+    downloads:
+      - url: https://pubdb.bfe.admin.ch/de/publication/download/12429
+        filename: bfe_eigenverbrauch_datenblaetter.xlsx
+    notes: >-
+      Survey of distribution system operators for the Energy Strategy 2050 monitoring, one sheet
+      per year from 2019: PV installations with and without self-consumption and in ZEV (count,
+      AC power, surplus fed in), plus smart meters. SFOE notes that plausibility checks were not
+      fully possible. The download id changes with each edition.
+
   - id: bfs_gwr
     name: Federal Register of Buildings and Dwellings (GWR / RegBL)
     publisher: Federal Statistical Office (FSO / BFS)

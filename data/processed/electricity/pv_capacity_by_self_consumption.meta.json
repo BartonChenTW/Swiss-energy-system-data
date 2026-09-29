@@ -1,0 +1,20 @@
+{
+  "dataset": "electricity/pv_capacity_by_self_consumption",
+  "processor": "pipeline.process.bfe_self_consumption_survey",
+  "generated": "2026-09-29T10:28:45+00:00",
+  "rows": 18,
+  "years": [
+    2019,
+    2024
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_self_consumption_survey/bfe_eigenverbrauch_datenblaetter.xlsx",
+      "url": "https://pubdb.bfe.admin.ch/de/publication/download/12429",
+      "retrieved": "2026-09-29T10:28:43+00:00",
+      "last_modified": "Thu, 05 Mar 2026 08:32:48 GMT",
+      "sha256": "b557ed4ea5f41e386551d9df50d45442a5ff74e31c86ab152e3fd616bb506283",
+      "bytes": 28037
+    }
+  ]
+}

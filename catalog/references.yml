@@ -150,6 +150,40 @@ references:
     related_sources: [kbob_lca]
     checked: 2026-09-28
 
+  - id: bfe_leitfaden_eigenverbrauch
+    type: report
+    title: Leitfaden Eigenverbrauch (version 3.0)
+    publisher: EnergieSchweiz / SFOE
+    year: 2023
+    url: https://pubdb.bfe.admin.ch/de/publication/download/9329
+    themes: [electricity, buildings]
+    language: de
+    description: Guide to self-consumption and ZEV for owners, landlords and grid operators. Written before vZEV and LEG existed.
+    checked: 2026-09-29
+
+  - id: vse_bd_leg_2025
+    type: report
+    title: Branchenempfehlung Lokale Elektrizitätsgemeinschaften (BD LEG – CH 2025 V2)
+    publisher: VSE, with Swissolar
+    year: 2025
+    url: https://www.strom.ch/de/media/15458/download
+    themes: [electricity]
+    language: de
+    description: Industry recommendation on how grid operators set up and bill local electricity communities (LEG), including the network tariff discount.
+    checked: 2026-09-29
+
+  - id: bfe_monitoring_es2050_2025
+    type: report
+    title: Energiestrategie 2050 – Monitoring-Bericht 2025
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    year: 2025
+    url: https://pubdb.bfe.admin.ch/de/publication/download/12426
+    themes: [national, electricity, renewables]
+    language: de
+    description: Annual monitoring of the Energy Strategy 2050 indicators. Section 3.2.6 covers PV self-consumption and ZEV (about 2.2 TWh self-consumed in 2024). Corrected edition of March 2026.
+    related_sources: [bfe_self_consumption_survey]
+    checked: 2026-09-29
+
   # ---------- standards ----------
   - id: sia_2024
     type: standard
@@ -335,6 +369,26 @@ references:
     description: Industry association of district heating operators; annual reports with network statistics and the Weissbuch Fernwärme on potentials.
     checked: 2026-09-29
 
+  - id: lokalerstrom
+    type: website
+    title: lokalerstrom.ch – ZEV, vZEV and LEG explained
+    publisher: EnergieSchweiz, Swissolar and VSE
+    url: https://www.lokalerstrom.ch/
+    themes: [electricity]
+    language: de/fr
+    description: Information platform on sharing locally produced electricity, with guides and news, including Swissolar's count of LEG in 2026.
+    checked: 2026-09-29
+
+  - id: stromvv_leg
+    type: website
+    title: Stromversorgungsverordnung (StromVV, SR 734.71), Art. 19e–19h on LEG
+    publisher: Swiss Federal Council (Fedlex)
+    url: https://www.fedlex.admin.ch/eli/cc/2008/226/de
+    themes: [electricity]
+    language: de/fr/it
+    description: Legal rules for local electricity communities in force since 1 January 2026; the underlying act is StromVG Art. 17d–17e.
+    checked: 2026-09-29
+
   # ---------- tools ----------
   - id: map_geo_admin_energy
     type: tool
@@ -443,6 +497,16 @@ references:
       15-minute and daily smart meter data of 1,408 heat-pump households in the Canton of
       Zurich (2018–2024), with metadata, weather and 410 on-site inspection protocols.
       CC BY 4.0. Code: https://github.com/tbrumue/heapo
+    checked: 2026-09-29
+
+  - id: winterthur_leg_load_profile
+    type: portal
+    title: Winterthur – energy exchanged within local electricity communities
+    publisher: Stadt Winterthur (Stadtwerk Winterthur)
+    url: https://opendata.swiss/de/dataset/lastgang-des-energieaustauschs-der-lokalen-elektrizitatsgemeinschaften-der-stadt-winterthur
+    themes: [electricity]
+    language: de
+    description: 15-minute load profile of the electricity shared inside all LEG in Winterthur's grid since January 2026, updated daily. The first open LEG time series in Switzerland.
     checked: 2026-09-29
 
   # ---------- models ----------
