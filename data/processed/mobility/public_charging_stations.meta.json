@@ -1,0 +1,21 @@
+{
+  "dataset": "mobility/public_charging_stations",
+  "processor": "pipeline.process.bfe_charging_infrastructure",
+  "generated": "2026-09-29T10:30:31+00:00",
+  "rows": 12,
+  "years": [
+    2020,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_charging_infrastructure/ich_tanke_strom_Kennzahlen_monatlich.csv",
+      "url": "https://www.uvek-gis.admin.ch/BFE/ogd/57/ich_tanke_strom_Kennzahlen_monatlich.csv",
+      "retrieved": "2026-09-29T10:30:02+00:00",
+      "last_modified": "Thu, 10 Sep 2026 09:23:17 GMT",
+      "sha256": "fddcfe683f5b4d732253016641377b26d51e9618cd88a5f0cc285c527bb22849",
+      "bytes": 41773
+    }
+  ],
+  "notes": "December values; latest month in the file: 2026-08."
+}

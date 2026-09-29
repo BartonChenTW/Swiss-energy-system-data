@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobility · Swiss Energy System Data</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main class="wrap">
+    <h1>Mobility</h1>
+    <p class="lede">Transport uses more than a third of Switzerland's final energy,
+      mostly oil products. Electric cars are the main lever for road transport; energy use by mode and
+      public transport are planned.</p>
+
+    <h2 id="electric-vehicles">Electric vehicles</h2>
+    <p class="section-note">A third of new cars now plug in, but the stock turns over slowly: most
+      cars on the road still run on petrol or diesel. Figures are from the federal vehicle register
+      (FSO) and the SFOE charging platform.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="mobility/plug_in_share"></div>
+      <div class="chart" data-dataset="mobility/new_cars_by_fuel"></div>
+      <div class="chart" data-dataset="mobility/electric_car_stock"></div>
+      <div class="chart" data-dataset="mobility/public_charging_stations"></div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -389,6 +389,37 @@ references:
     description: Legal rules for local electricity communities in force since 1 January 2026; the underlying act is StromVG Art. 17d–17e.
     checked: 2026-09-29
 
+  - id: ich_tanke_strom
+    type: dashboard
+    title: ich-tanke-strom.ch – public charging stations
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    url: https://www.ich-tanke-strom.ch/kennzahlen
+    themes: [mobility]
+    language: de/fr/it
+    description: Live map and key figures of public EV charging stations, the source of the charging chart on the Mobility page.
+    related_sources: [bfe_charging_infrastructure]
+    checked: 2026-09-29
+
+  - id: roadmap_elektromobilitaet
+    type: website
+    title: Roadmap Elektromobilität
+    publisher: EnergieSchweiz / federal government and industry
+    url: https://www.energieschweiz.ch/roadmap-elektromobilitaet/
+    themes: [mobility]
+    language: de/fr
+    description: Joint roadmap of federal offices, cantons and industry with targets for the share of plug-in cars and charging infrastructure, and progress reports.
+    checked: 2026-09-29
+
+  - id: swiss_emobility
+    type: website
+    title: Swiss eMobility
+    publisher: Swiss eMobility (industry association)
+    url: https://www.swiss-emobility.ch/
+    themes: [mobility]
+    language: de/fr
+    description: Industry association for electric mobility; market figures and publications on EVs and charging.
+    checked: 2026-09-29
+
   # ---------- tools ----------
   - id: map_geo_admin_energy
     type: tool

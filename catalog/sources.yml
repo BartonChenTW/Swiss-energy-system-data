@@ -287,9 +287,34 @@ sources:
     frequency: annual
 
   - id: bfs_vehicles
-    name: Road vehicle stock
+    name: Bestand und neue Inverkehrsetzungen der Personenwagen nach technischen Merkmalen
     publisher: Federal Statistical Office (FSO / BFS)
     theme: mobility
-    url: https://www.bfs.admin.ch/bfs/en/home/statistics/mobility-transport.html
-    terms: TBD
+    url: https://opendata.swiss/de/dataset/bestand-der-personenwagen-nach-technischen-merkmalen-1-2
+    terms: "opendata.swiss: Open use. Must provide the source."
     frequency: annual
+    downloads:
+      - url: https://disseminate.stats.swiss/rest/data/CH1.MFZ_IVS,DF_MFZ_1_TECH,1.0.0/_T._T._T.._T._T._T.A?format=csvfile
+        filename: DF_MFZ_1_TECH_stock_by_fuel.csv
+      - url: https://disseminate.stats.swiss/rest/data/CH1.MFZ_IVS,DF_IVS_1_TECH,1.0.0/_T.N._T.._T._T._T.A?format=csvfile
+        filename: DF_IVS_1_TECH_new_by_fuel.csv
+    notes: >-
+      FSO SDMX dataflows on stats.swiss, Switzerland total by fuel (UV_RV_FUEL), 2005 on.
+      Stock on 30 September; new registrations as registered by 3 January of the next year.
+      Cars with a foreign holder address are included from 2018. The whole series was revised
+      on 4 February 2026; the older PXWeb tables on opendata.swiss are not updated.
+
+  - id: bfe_charging_infrastructure
+    name: "Kennzahlen öffentliche Ladeinfrastruktur Elektromobilität"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    theme: mobility
+    url: https://opendata.swiss/de/dataset/kennzahlen-offentliche-ladeinfrastruktur-elektromobilitat
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: monthly
+    downloads:
+      - url: https://www.uvek-gis.admin.ch/BFE/ogd/57/ich_tanke_strom_Kennzahlen_monatlich.csv
+        filename: ich_tanke_strom_Kennzahlen_monatlich.csv
+    notes: >-
+      Monthly averages of daily readings of public charging stations reported to
+      ich-tanke-strom.ch, from November 2020, nationally and by canton. Only connected
+      operators are covered.

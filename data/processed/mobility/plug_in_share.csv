@@ -1,0 +1,43 @@
+year,category,value,unit
+2005,New cars,0.0,%
+2006,New cars,0.0,%
+2007,New cars,0.01,%
+2008,New cars,0.01,%
+2009,New cars,0.02,%
+2010,New cars,0.07,%
+2011,New cars,0.15,%
+2012,New cars,0.3,%
+2013,New cars,0.57,%
+2014,New cars,0.89,%
+2015,New cars,1.94,%
+2016,New cars,2.01,%
+2017,New cars,2.66,%
+2018,New cars,3.16,%
+2019,New cars,5.6,%
+2020,New cars,14.33,%
+2021,New cars,22.47,%
+2022,New cars,25.71,%
+2023,New cars,30.12,%
+2024,New cars,27.91,%
+2025,New cars,33.9,%
+2005,Stock,0.02,%
+2006,Stock,0.01,%
+2007,Stock,0.01,%
+2008,Stock,0.01,%
+2009,Stock,0.01,%
+2010,Stock,0.02,%
+2011,Stock,0.03,%
+2012,Stock,0.04,%
+2013,Stock,0.07,%
+2014,Stock,0.12,%
+2015,Stock,0.22,%
+2016,Stock,0.34,%
+2017,Stock,0.48,%
+2018,Stock,0.66,%
+2019,Stock,0.93,%
+2020,Stock,1.44,%
+2021,Stock,2.47,%
+2022,Stock,3.68,%
+2023,Stock,4.97,%
+2024,Stock,6.32,%
+2025,Stock,7.78,%

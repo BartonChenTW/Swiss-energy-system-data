@@ -284,3 +284,35 @@ datasets:
     chart: stacked-bar
     status: official
     coverage: national
+
+  - id: mobility/plug_in_share
+    title: Share of plug-in cars
+    description: Battery-electric and plug-in hybrid cars as a share of new passenger car registrations and of the passenger car stock.
+    source: bfs_vehicles
+    chart: line
+    status: official
+    coverage: national
+
+  - id: mobility/new_cars_by_fuel
+    title: New passenger cars by propulsion
+    description: New passenger cars registered each year (new vehicles only, not used imports). Hybrids that cannot be plugged in are shown separately from plug-in hybrids.
+    source: bfs_vehicles
+    chart: stacked-bar
+    status: official
+    coverage: national
+
+  - id: mobility/electric_car_stock
+    title: Electric cars on the road
+    description: Battery-electric (including range extenders) and plug-in hybrid passenger cars in the stock on 30 September. From 2018 cars with a foreign holder address are included (about 0.3 %).
+    source: bfs_vehicles
+    chart: stacked-area
+    status: official
+    coverage: national
+
+  - id: mobility/public_charging_stations
+    title: Public charging infrastructure
+    description: Public charging stations and the sites they are grouped at, in December of each year, as reported to ich-tanke-strom.ch. A station can have several charging points. Operators not connected to the platform are missing.
+    source: bfe_charging_infrastructure
+    chart: line
+    status: official
+    coverage: national

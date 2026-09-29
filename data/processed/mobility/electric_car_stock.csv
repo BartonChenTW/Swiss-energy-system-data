@@ -1,0 +1,43 @@
+year,category,value,unit
+2005,Battery-electric,592,cars
+2006,Battery-electric,559,cars
+2007,Battery-electric,528,cars
+2008,Battery-electric,517,cars
+2009,Battery-electric,512,cars
+2010,Battery-electric,664,cars
+2011,Battery-electric,1044,cars
+2012,Battery-electric,1408,cars
+2013,Battery-electric,2183,cars
+2014,Battery-electric,3699,cars
+2015,Battery-electric,6291,cars
+2016,Battery-electric,9222,cars
+2017,Battery-electric,12893,cars
+2018,Battery-electric,17363,cars
+2019,Battery-electric,26808,cars
+2020,Battery-electric,41457,cars
+2021,Battery-electric,69775,cars
+2022,Battery-electric,108112,cars
+2023,Battery-electric,153673,cars
+2024,Battery-electric,200803,cars
+2025,Battery-electric,249832,cars
+2005,Plug-in hybrid,0,cars
+2006,Plug-in hybrid,0,cars
+2007,Plug-in hybrid,0,cars
+2008,Plug-in hybrid,0,cars
+2009,Plug-in hybrid,0,cars
+2010,Plug-in hybrid,1,cars
+2011,Plug-in hybrid,26,cars
+2012,Plug-in hybrid,380,cars
+2013,Plug-in hybrid,720,cars
+2014,Plug-in hybrid,1479,cars
+2015,Plug-in hybrid,3527,cars
+2016,Plug-in hybrid,6224,cars
+2017,Plug-in hybrid,9128,cars
+2018,Plug-in hybrid,12979,cars
+2019,Plug-in hybrid,16444,cars
+2020,Plug-in hybrid,25762,cars
+2021,Plug-in hybrid,46672,cars
+2022,Plug-in hybrid,66048,cars
+2023,Plug-in hybrid,83612,cars
+2024,Plug-in hybrid,102845,cars
+2025,Plug-in hybrid,126730,cars

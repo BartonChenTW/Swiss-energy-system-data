@@ -1,0 +1,20 @@
+{
+  "dataset": "mobility/new_cars_by_fuel",
+  "processor": "pipeline.process.bfs_vehicles",
+  "generated": "2026-09-29T10:30:29+00:00",
+  "rows": 126,
+  "years": [
+    2005,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfs_vehicles/DF_IVS_1_TECH_new_by_fuel.csv",
+      "url": "https://disseminate.stats.swiss/rest/data/CH1.MFZ_IVS,DF_IVS_1_TECH,1.0.0/_T.N._T.._T._T._T.A?format=csvfile",
+      "retrieved": "2026-09-29T10:30:00+00:00",
+      "last_modified": null,
+      "sha256": "fa615efdfe4ddd1ce2295fe6703bab60f8a38f552b6919dc9234a7f0b6542124",
+      "bytes": 19049
+    }
+  ]
+}
