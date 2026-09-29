@@ -5,6 +5,7 @@ Input : data/raw/bfe_electricity_statistics/ogd32_elektrizitaetbilanz_jahreswert
 Output: electricity/production_by_technology  (TWh, from 1990 when the full breakdown starts)
         renewables/new_renewable_electricity  (GWh: PV, wind, wood & biogas, renewable waste)
         renewables/wind_electricity           (GWh, from the first year with production)
+        renewables/pv_electricity             (GWh, from the first year with production)
 
 Check: the production columns minus Verbrauch_speicherpumpen_GWh equal
 Erzeugung_netto_GWh (Erzeugung_andere_total = fossil + waste; wood and biogas are separate).
@@ -65,3 +66,6 @@ def run() -> None:
 
     wind = bal.loc[bal["Erzeugung_wind_GWh"].gt(0).idxmax():]
     write_tidy(to_tidy(wind, {"Erzeugung_wind_GWh": "Wind"}, "GWh", 1), "renewables/wind_electricity", [path], __name__)
+
+    pv = bal.loc[bal["Erzeugung_photovoltaik_GWh"].gt(0).idxmax():]
+    write_tidy(to_tidy(pv, {"Erzeugung_photovoltaik_GWh": "Solar PV"}, "GWh", 1), "renewables/pv_electricity", [path], __name__)

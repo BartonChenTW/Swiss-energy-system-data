@@ -8,6 +8,10 @@ for fixes, wording and styling. To release, rename `Unreleased` to the new versi
 with today's date; `python -m pipeline.build_site` picks up the top released entry.
 
 ## [Unreleased]
+### Added
+- Renewables: annual solar PV electricity production.
+- Renewables: list of wind farms with number of turbines, years in operation and capacity.
+- Library: models STEM (Swiss TIMES Energy systems Model, PSI) and ehubX (Empa).
 
 ## [0.5.0] - 2026-09-29
 ### Added

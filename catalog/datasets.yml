@@ -200,6 +200,27 @@ datasets:
     status: official
     coverage: national
 
+  - id: renewables/wind_farms
+    title: Wind farms and their capacity
+    description: >-
+      Current capacity of each wind site in the plant register, labelled with its number of turbines and
+      the years its turbines entered operation. The register has no farm names, so turbines within 3 km of
+      each other are grouped and named after their main municipality (Mont-Crosin includes Mont-Soleil;
+      Airolo is the Gotthard wind farm; Ulrichen is Gries). Years are those of the turbines now running,
+      so repowered farms such as Mont-Crosin (first turbines 1996) show their newer dates.
+    source: bfe_production_plants
+    chart: hbar
+    status: official
+    coverage: national
+
+  - id: renewables/pv_electricity
+    title: Solar PV electricity production
+    description: Annual gross electricity production from photovoltaics, including self-consumed electricity.
+    source: bfe_electricity_statistics
+    chart: line
+    status: official
+    coverage: national
+
   - id: renewables/wind_biomass_installed_capacity
     title: Installed wind and biomass capacity
     description: Cumulative electrical capacity of wind and biomass plants in the register, by year of commissioning. Only plants still in operation are counted, at their current power, so earlier years are slightly understated.

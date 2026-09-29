@@ -481,3 +481,31 @@ references:
     language: fr/en
     description: Open-source whole-energy-system model with a Swiss case study and an online calculator.
     checked: 2026-09-28
+
+  - id: stem
+    type: model
+    title: STEM – Swiss TIMES Energy systems Model
+    publisher: Paul Scherrer Institute (PSI), Energy Economics Group
+    url: https://www.psi.ch/en/eem/swiss-times-energy-systems-model-stem
+    themes: [scenarios, national]
+    language: en
+    description: >-
+      Least-cost, technology-rich model of the whole Swiss energy system in the TIMES framework,
+      from resource supply to more than 90 end-use demands, with hourly time slices up to 2100.
+      Widely used for Swiss net-zero pathway studies.
+    checked: 2026-09-29
+
+  - id: ehubx
+    type: model
+    title: ehubX – energy hub optimisation framework
+    publisher: Empa Urban Energy Systems Lab
+    year: 2025
+    url: https://github.com/uesl-empa/ehubx
+    themes: [scenarios, buildings, electricity, heat]
+    language: en
+    description: >-
+      Python framework (GPL-3.0) that turns YAML and CSV inputs into MILP models for designing
+      multi-energy systems of buildings, districts and municipalities: conversion, storage,
+      networks, e-mobility; cost, emission and self-sufficiency objectives. pip install ehubx ·
+      docs: https://ehubx.readthedocs.io
+    checked: 2026-09-29
