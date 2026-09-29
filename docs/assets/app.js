@@ -67,6 +67,24 @@ function renderChrome() {
       <div class="version" data-version></div></div>`;
     renderVersion(footer.querySelector("[data-version]"));
   }
+  renderBackToTop();
+}
+
+// Floating "Back to top" button, shown once the page is scrolled past the first screen.
+function renderBackToTop() {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "to-top";
+  button.innerHTML = '<span aria-hidden="true">↑</span> Back to top';
+  button.addEventListener("click", () => {
+    history.replaceState(null, "", location.pathname + location.search);  // drop #section so a reload stays at the top
+    window.scrollTo({ top: 0 });
+    document.querySelector(".brand")?.focus({ preventScroll: true });
+  });
+  document.body.append(button);
+  const update = () => button.classList.toggle("visible", window.scrollY > 400);
+  window.addEventListener("scroll", update, { passive: true });
+  update();
 }
 
 // "Version 0.5.0 · built 29 Sep 2026 from a16cbca · Changelog", from docs/data/version.json.

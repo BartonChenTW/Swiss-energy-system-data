@@ -9,6 +9,7 @@ Open work is in [TODO.md](TODO.md). Site releases are in [CHANGELOG.md](CHANGELO
 ## 2026-09-29
 
 ### Done
+- **0.8.1:** section links on the Buildings page styled as buttons; a Back to top button on every page.
 - Added TODO.md and LOG.md and wrote down the repository's two goals in the README.
 - **0.8.0:** study of open EV profile data on the Mobility page: 43 datasets and generators for
   Switzerland, Europe and the rest of the world, stored as `references.yml` entries with a new

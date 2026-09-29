@@ -9,6 +9,12 @@ with today's date; `python -m pipeline.build_site` picks up the top released ent
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-09-29
+### Changed
+- Buildings: the "On this page" links are shown as clear buttons.
+### Added
+- A "Back to top" button appears on every page once you scroll down.
+
 ## [0.8.0] - 2026-09-29
 ### Added
 - Mobility: study of open EV profile data (charging sessions, load profiles, driving data, charger status and generators) in Switzerland, Europe and the rest of the world: 43 datasets and tools with coverage, resolution, access and licence, filterable, plus key findings.
