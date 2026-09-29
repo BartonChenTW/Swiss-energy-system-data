@@ -1,14 +1,16 @@
 # Log
 
 Working log of this repository, newest first: what was done, the decisions behind it, and
-what was learned about data availability. It serves the repository's two goals: **a.** collect
-Swiss energy system modelling data, and **b.** identify the gaps in the existing data.
+what was learned about data availability. It serves the repository's three goals: **a.** collect
+Swiss energy system modelling data, **b.** identify the gaps in the existing data, and **c.** review
+whether the data is enough to train a foundation model for the building domain.
 
 Open work is in [TODO.md](TODO.md). Site releases are in [CHANGELOG.md](CHANGELOG.md).
 
 ## 2026-09-29
 
 ### Done
+- Added goal c (foundation model readiness for buildings) to the README, TODO.md and LOG.md, with review steps in TODO.md.
 - **0.8.1:** section links on the Buildings page styled as buttons; a Back to top button on every page.
 - Added TODO.md and LOG.md and wrote down the repository's two goals in the README.
 - **0.8.0:** study of open EV profile data on the Mobility page: 43 datasets and generators for

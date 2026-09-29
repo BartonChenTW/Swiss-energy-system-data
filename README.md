@@ -13,12 +13,16 @@ where its data came from and when it was retrieved.
    system models need, processed reproducibly and published with its provenance.
 2. **Identify the gaps in the existing data:** what modellers need but cannot get openly, with
    evidence of who holds it and under which terms.
+3. **Review whether the data is enough to train a foundation model for the building domain:**
+   what such a model needs (per-building energy time series, building attributes, weather, and
+   licences that allow training), how much of it is openly available for Switzerland, and what
+   is missing.
 
 Work is tracked in three files:
 
 | File | What it holds |
 |---|---|
-| [TODO.md](TODO.md) | Open work, grouped by the two goals, plus recurring maintenance |
+| [TODO.md](TODO.md) | Open work, grouped by the three goals, plus recurring maintenance |
 | [LOG.md](LOG.md) | Dated working log: what was done, decisions, findings on data availability |
 | [CHANGELOG.md](CHANGELOG.md) | Site releases; the version is shown in the site footer |
 

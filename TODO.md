@@ -1,11 +1,13 @@
 # TODO
 
-Open work for this repository, grouped by its two goals:
+Open work for this repository, grouped by its three goals:
 
 - **a. Collect Swiss energy system modelling data**: open, machine-readable data that
   energy system models need, processed reproducibly and shown on the site.
 - **b. Identify the gaps in the existing data**: what modellers need but cannot get openly,
   with evidence (who holds it, under which terms).
+- **c. Review whether the data is enough to train a foundation model for the building domain**:
+  what such a model needs, how much of it is openly available for Switzerland, and what is missing.
 
 Tick an item when it is done and add a line to [LOG.md](LOG.md). User-facing changes also go
 under `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md).
@@ -51,6 +53,25 @@ Known gaps so far (tick when they are on the gaps page):
 - [ ] **Heat:** the thermal networks register is voluntary and incomplete (power missing for about a sixth, commissioning year for about a quarter, energy for about half); the district heat input mix exists only as a spreadsheet table.
 - [ ] **Mobility:** SFOE keeps no history of charger status; no open charging-session or home-charging data; MZMV travel diaries need an FSO contract; utility smart-charging pilots (EKZ, BKW, CKW) publish no data.
 - [ ] **Licences to clarify** with publishers: ChargePlace Scotland, Dundee, My Electric Avenue (not stated); UrbanEV and CHARGED (scraped from apps).
+
+## c. Foundation model readiness (buildings)
+
+- [ ] **Define the requirements** of a building-domain foundation model: which data types
+  (per-building electricity and heat time series, building attributes and geometry, heating
+  system, energy labels, retrofits, occupancy, weather), what scale (buildings × years ×
+  resolution) and which licence terms (training allowed, redistribution of derived models).
+- [ ] **Inventory the Swiss open data** against these requirements, starting with what the repo
+  already lists: the building register (GWR), FOEN's modelled CO2 per building, Geneva's measured
+  heat index, Lucerne GEAK, the smart meter datasets (EKZ load profiles, HEAPO heat pumps, CKW
+  Lucerne) and open weather data (MeteoSwiss). Record size, resolution, period and licence.
+- [ ] **Compare with the corpora used for building foundation models** elsewhere, e.g. NREL's
+  End-Use Load Profiles (ResStock/ComStock) and BuildingsBench, and the Building Data Genome 2
+  (verify each: size, licence, whether real or simulated).
+- [ ] **Check licences for ML use:** whether training and publishing model weights is allowed
+  (CC BY, opendata.swiss "open use", "commercial use on request", research-only terms).
+- [ ] **Conclude**: enough for pre-training, enough only for fine-tuning or evaluation, or not
+  enough, and which gaps matter most (these feed goal b).
+- [ ] **Publish the review** on the site, as a section of the Buildings page or the Data gaps page.
 
 ## Maintenance
 
