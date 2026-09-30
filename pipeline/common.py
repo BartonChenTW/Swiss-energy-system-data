@@ -29,6 +29,9 @@ EV_REGIONS = {"Switzerland", "Europe", "World"}
 EV_DATA = {"sessions", "load", "driving", "status", "synthetic"}
 EV_ACCESS = {"open", "registration", "restricted"}
 EV_FIELDS = {"region", "data", "coverage", "resolution", "access", "licence"}
+# catalog/gaps.yml: what modellers need but cannot get openly (goal b)
+GAP_STATUSES = {"not-published", "restricted", "paid", "incomplete", "not-machine-readable"}
+GAP_REQUIRED = ["id", "theme", "title", "missing", "holder", "status", "evidence", "found"]
 
 REQUIRED = {
     "sources": ["id", "name", "publisher", "theme", "url", "terms"],
@@ -124,6 +127,33 @@ def load_catalog() -> tuple[dict, list, list]:
     if errors:
         raise ValueError("Invalid catalog:\n  " + "\n  ".join(errors))
     return {s["id"]: s for s in sources}, datasets, references
+
+
+def load_gaps(sources: dict, references: list) -> list:
+    """Return catalog/gaps.yml entries; raise if one is invalid or cites an unknown id."""
+    gaps = load_yaml("gaps.yml")["gaps"]
+    known = set(sources) | {r["id"] for r in references}
+    errors, seen = [], set()
+    for i, g in enumerate(gaps):
+        label = f"gaps[{g.get('id', i)}]"
+        for field in GAP_REQUIRED:
+            if g.get(field) in (None, "", []):
+                errors.append(f"{label}: missing '{field}'")
+        if g.get("id") in seen:
+            errors.append(f"{label}: duplicate id")
+        seen.add(g.get("id"))
+        if g.get("theme") not in THEMES:
+            errors.append(f"{label}: unknown theme {g.get('theme')!r}")
+        if g.get("status") not in GAP_STATUSES:
+            errors.append(f"{label}: unknown status {g.get('status')!r}")
+        for ref in g.get("evidence") or []:
+            if ref not in known:
+                errors.append(f"{label}: evidence {ref!r} is not a source or reference id")
+        if not isinstance(g.get("found"), date):
+            errors.append(f"{label}: 'found' must be a YYYY-MM-DD date")
+    if errors:
+        raise ValueError("Invalid catalog/gaps.yml:\n  " + "\n  ".join(errors))
+    return gaps
 
 
 # ---------- raw files & provenance ----------

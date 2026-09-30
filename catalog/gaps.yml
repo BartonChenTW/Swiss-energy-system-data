@@ -1,0 +1,196 @@
+# Gaps in open Swiss energy system data (goal b). Schema and vocabulary: catalog/README.md
+# Shown on the Data gaps page (docs/gaps.html) and, per theme, on other pages.
+# `evidence` lists ids from sources.yml or references.yml.
+
+gaps:
+  # ---------- buildings ----------
+  - id: energy_performance_certificates
+    theme: buildings
+    title: Energy performance certificates (GEAK / CECB)
+    missing: >-
+      No national open data on certified envelope and system efficiency per building, although
+      about 207,000 buildings hold a GEAK.
+    available: Lucerne publishes GEAK classes since 2019; Jura publishes 91 public buildings.
+    holder: GEAK association and the cantons
+    status: not-published
+    evidence: [geak_statistik, lu_geak]
+    found: 2026-09-28
+
+  - id: renovation_rate
+    theme: buildings
+    title: Renovation rate of the building stock
+    missing: >-
+      No annual series of energy renovations. The building register has no renovation year (last
+      collected in the 2000 census).
+    available: >-
+      One-off estimates (about 1.5 % of envelopes per year, 2011–2020); subsidised projects of the
+      Building Programme; FSO investment in conversion and renovation, which is not energy-specific.
+    holder: FSO (building register), cantons (building permits)
+    status: not-published
+    evidence: [bfe_renovation_rates_2024, bfe_gebaeudeprogramm, bfs_construction_investment]
+    found: 2026-09-28
+
+  - id: measured_energy_per_building
+    theme: buildings
+    title: Measured energy use per building
+    missing: >-
+      No national open data on metered heat or electricity use per building. It is the key input to
+      calibrate building-stock models and to train data-driven ones.
+    available: >-
+      Geneva's measured heat index (IDC); FOEN's CO2 per building, modelled from often outdated
+      register data; a few smart meter samples (EKZ, HEAPO, CKW).
+    holder: Cantons, utilities and grid operators (billing and smart meter data)
+    status: not-published
+    evidence: [ge_idc, bafu_co2_buildings, ekz_residential_load_profiles, heapo, ckw_smart_meter_open_data]
+    found: 2026-09-28
+
+  - id: embodied_emissions_stock
+    theme: buildings
+    title: Embodied emissions of the building stock
+    missing: No official dataset of the materials and embodied emissions of existing buildings.
+    available: Per-material factors (KBOB list); stock totals only in research models.
+    holder: FOEN, research groups
+    status: not-published
+    evidence: [kbob_lca, rbsm]
+    found: 2026-09-28
+
+  - id: sia_norms
+    theme: buildings
+    title: Standard building parameters (SIA norms)
+    missing: >-
+      The standard usage profiles and calculation parameters most Swiss building models use are in
+      paid standards.
+    available: Titles and scope are public; the values are not.
+    holder: SIA (Swiss Society of Engineers and Architects)
+    status: paid
+    evidence: [sia_2024, sia_380_1, sia_2032, sia_2040, sia_390_1]
+    found: 2026-09-28
+
+  - id: minergie_register
+    theme: buildings
+    title: Complete register of Minergie buildings
+    missing: The open dataset is a snapshot of about 33,000 buildings; Minergie counts about 60,500.
+    available: The snapshot, and yearly totals in Minergie's own statistics.
+    holder: Minergie association
+    status: incomplete
+    evidence: [minergie_buildings, minergie_in_zahlen]
+    found: 2026-09-28
+
+  # ---------- electricity ----------
+  - id: energy_community_register
+    theme: electricity
+    title: Register of ZEV, virtual ZEV and LEG
+    missing: >-
+      No open register of self-consumption communities and local electricity communities, their
+      members, production or consumption.
+    available: >-
+      The SFOE survey of grid operators counts PV installations in ZEV (2019–2024); Swissolar
+      estimates about 1,860 LEG by June 2026; Winterthur publishes its LEG exchange load profile.
+    holder: Distribution system operators (they register ZEV and LEG); SFOE
+    status: not-published
+    evidence: [bfe_self_consumption_survey, lokalerstrom, winterthur_leg_load_profile, stromvv_leg]
+    found: 2026-09-29
+
+  - id: self_consumption_measured
+    theme: electricity
+    title: Measured PV self-consumption
+    missing: >-
+      No measured series of self-consumed PV electricity; national figures are survey-based
+      estimates (about 2.2 TWh in 2024).
+    available: >-
+      Surplus fed into the grid per installation type (SFOE survey). The planned national data
+      platform (StromVV Art. 8a) is to publish anonymised 15-minute data per municipality.
+    holder: Distribution system operators; SFOE
+    status: not-published
+    evidence: [bfe_self_consumption_survey, bfe_monitoring_es2050_2025]
+    found: 2026-09-29
+
+  # ---------- heat ----------
+  - id: thermal_networks_register_fields
+    theme: heat
+    title: Complete data on thermal networks
+    missing: >-
+      The register is voluntary: power is missing for about a sixth of the networks, the
+      commissioning year for about a quarter and the energy delivered for about half. Closed
+      networks are not listed.
+    available: About 1,700 networks with location, operator and main energy source.
+    holder: Network operators, reporting to SFOE
+    status: incomplete
+    evidence: [bfe_thermal_networks, bfe_thermal_networks_info]
+    found: 2026-09-29
+
+  - id: district_heat_input_mix
+    theme: heat
+    title: Fuel mix of district heating as open data
+    missing: >-
+      The inputs to district heating plants (waste, wood, gas, oil, heat pumps) are not in the open
+      energy balance files, and even the spreadsheet table does not show heat pumps separately.
+    available: Table T26 in the yearly spreadsheet of the overall energy statistics.
+    holder: SFOE
+    status: not-machine-readable
+    evidence: [bfe_gest_report, bfe_energy_statistics]
+    found: 2026-09-29
+
+  # ---------- mobility ----------
+  - id: charger_status_history
+    theme: mobility
+    title: History of public charger status
+    missing: >-
+      SFOE publishes the live status of every public charging point but keeps no history, so
+      utilisation over time cannot be analysed from official data.
+    available: A researcher's archive of the feed with estimated load (Dec 2022–Dec 2025).
+    holder: SFOE (ich-tanke-strom.ch)
+    status: not-published
+    evidence: [sfoe_charging_status_feed, swiss_public_charging_status]
+    found: 2026-09-29
+
+  - id: ev_charging_sessions
+    theme: mobility
+    title: EV charging sessions and home charging profiles
+    missing: >-
+      No open charging-session data from Swiss operators, and no open home or workplace charging
+      profiles. Utility smart-charging pilots (EKZ, BKW, CKW) publish no data.
+    available: >-
+      Single sites (an EPFL fast charger, one Basel street charger), a cantonal fleet log without
+      timestamps, and ETH's synthetic profiles.
+    holder: Charge point operators, utilities
+    status: not-published
+    evidence: [epfl_desl_dc_charging, bs_smarte_strasse_charging, zh_canton_fleet_charging, ethz_ev_flexibility_2050, swissdn_ders]
+    found: 2026-09-29
+
+  - id: travel_diaries
+    theme: mobility
+    title: Travel diary microdata (MZMV)
+    missing: >-
+      Trip-level microdata of the national travel survey, the main input of EV charging and
+      transport energy models, needs a data protection contract with FSO and may be charged.
+    available: Aggregate tables; one small derived trip-profile set (Empa, 2015 data).
+    holder: FSO and ARE
+    status: restricted
+    evidence: [mzmv, empa_v2g_trip_profiles]
+    found: 2026-09-29
+
+  - id: mobility_pilot_data
+    theme: mobility
+    title: Data from mobility studies and V2X pilots
+    missing: >-
+      GPS tracking (MOBIS), car-sharing bookings and bidirectional charging pilots (V2X Suisse) are
+      published as reports only; data is on request or not available.
+    available: Reports and papers.
+    holder: ETH Zurich (IVT), Mobility cooperative, pilot partners
+    status: restricted
+    evidence: [mobis_gps_study, v2x_suisse]
+    found: 2026-09-29
+
+  - id: ev_study_licences
+    theme: mobility
+    title: Unclear licences of foreign EV datasets
+    missing: >-
+      Some datasets in the EV profile study state no licence (ChargePlace Scotland, Dundee, My
+      Electric Avenue) or were scraped from charging apps (UrbanEV, CHARGED), so reuse terms are
+      unclear.
+    available: The data can be downloaded; terms need to be confirmed with the publishers.
+    holder: The publishers named
+    status: incomplete
+    evidence: [chargeplace_scotland, dundee_charging_sessions, my_electric_avenue, urbanev, charged_dataset]
+    found: 2026-09-29

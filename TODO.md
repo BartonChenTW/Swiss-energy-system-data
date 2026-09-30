@@ -44,15 +44,16 @@ under `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md).
 
 ## b. Identify gaps
 
-- [ ] A site-wide *Data gaps* page that collects the gaps below per sector, with evidence and the organisation that could publish the data. Start from Buildings → "What is not openly available", the EV profile data study and the energy communities section.
+- [x] A site-wide *Data gaps* page that collects the gaps below per sector, with evidence and the organisation that could publish the data (`catalog/gaps.yml`, `docs/gaps.html`).
+- [ ] Add each new gap to `catalog/gaps.yml` as it is found, and review the list when sources are updated.
 
-Known gaps so far (tick when they are on the gaps page):
+Known gaps so far (ticked: on the gaps page):
 
-- [ ] **Buildings:** no national open energy performance certificates (GEAK); no renovation-rate series; measured energy use per building only in Geneva; no embodied emissions of the stock; SIA norms are paid; the open Minergie dataset is incomplete.
-- [ ] **Electricity:** no register of ZEV, virtual ZEV or LEG and their members; self-consumption known only from the SFOE survey of grid operators (2019–2024).
-- [ ] **Heat:** the thermal networks register is voluntary and incomplete (power missing for about a sixth, commissioning year for about a quarter, energy for about half); the district heat input mix exists only as a spreadsheet table.
-- [ ] **Mobility:** SFOE keeps no history of charger status; no open charging-session or home-charging data; MZMV travel diaries need an FSO contract; utility smart-charging pilots (EKZ, BKW, CKW) publish no data.
-- [ ] **Licences to clarify** with publishers: ChargePlace Scotland, Dundee, My Electric Avenue (not stated); UrbanEV and CHARGED (scraped from apps).
+- [x] **Buildings:** no national open energy performance certificates (GEAK); no renovation-rate series; measured energy use per building only in Geneva; no embodied emissions of the stock; SIA norms are paid; the open Minergie dataset is incomplete.
+- [x] **Electricity:** no register of ZEV, virtual ZEV or LEG and their members; self-consumption known only from the SFOE survey of grid operators (2019–2024).
+- [x] **Heat:** the thermal networks register is voluntary and incomplete (power missing for about a sixth, commissioning year for about a quarter, energy for about half); the district heat input mix exists only as a spreadsheet table.
+- [x] **Mobility:** SFOE keeps no history of charger status; no open charging-session or home-charging data; MZMV travel diaries need an FSO contract; utility smart-charging pilots (EKZ, BKW, CKW) publish no data.
+- [x] **Licences to clarify** (on the page; still to ask the publishers): ChargePlace Scotland, Dundee, My Electric Avenue (not stated); UrbanEV and CHARGED (scraped from apps).
 
 ## c. Foundation model readiness (buildings)
 

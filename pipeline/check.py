@@ -12,7 +12,7 @@ import pandas as pd
 import requests
 
 from .changelog import site_version
-from .common import PROCESSED_DIR, ROOT, load_catalog, validate_tidy
+from .common import PROCESSED_DIR, ROOT, load_catalog, load_gaps, validate_tidy
 
 
 def check_processed(datasets: list) -> list[str]:
@@ -76,6 +76,10 @@ def main() -> None:
     except ValueError as e:
         sys.exit(str(e))
     print(f"catalog ok: {len(sources)} sources, {len(datasets)} datasets, {len(references)} references")
+    try:
+        print(f"gaps ok: {len(load_gaps(sources, references))} gaps")
+    except ValueError as e:
+        sys.exit(str(e))
 
     errors = check_processed(datasets)
     try:

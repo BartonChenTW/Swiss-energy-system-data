@@ -13,7 +13,7 @@ from datetime import date
 import pandas as pd
 
 from .changelog import site_version
-from .common import PROCESSED_DIR, ROOT, SITE_DATA_DIR, load_catalog, validate_tidy
+from .common import PROCESSED_DIR, ROOT, SITE_DATA_DIR, load_catalog, load_gaps, validate_tidy
 
 
 def to_series(df: pd.DataFrame) -> tuple[list[int], list[dict]]:
@@ -81,6 +81,7 @@ def main() -> None:
         "sources": [{k: v for k, v in s.items() if k != "downloads"} for s in sources.values()],
         "datasets": [ds for ds in datasets if ds["id"] in built],
         "references": references,
+        "gaps": load_gaps(sources, references),
     }, SITE_DATA_DIR / "catalog.json")
     print(f"{len(built)} datasets -> {SITE_DATA_DIR.relative_to(ROOT)}")
 

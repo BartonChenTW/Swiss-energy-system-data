@@ -1,21 +1,22 @@
 # Catalog
 
-Everything this project knows about lives in three YAML files here. They are the
+Everything this project knows about lives in four YAML files here. They are the
 single source of truth: the pipeline reads them, `python -m pipeline.check`
-validates them, and the website's Sources and Library pages are generated from them.
+validates them, and the website's Sources, Library and Data gaps pages are generated from them.
 
 | File | Holds | One entry per |
 |---|---|---|
 | [sources.yml](sources.yml) | Machine-readable **data sources** the pipeline can fetch | publisher dataset (a CSV, zip, API) |
 | [datasets.yml](datasets.yml) | **Datasets published on the site**, derived from sources | chart-ready tidy CSV in `data/processed/` |
 | [references.yml](references.yml) | **Reports, websites, dashboards, tools and models** we cite or use but don't process | document / site / tool |
+| [gaps.yml](gaps.yml) | **Data gaps**: data modellers need that is not openly available | missing dataset or kind of data |
 
 Rule of thumb: if the pipeline downloads it, it goes in `sources.yml`. If a person
 reads or uses it, it goes in `references.yml`.
 
 ## Controlled vocabulary
 
-Used across all three files. `pipeline.check` rejects anything else.
+Used across all four files. `pipeline.check` rejects anything else.
 
 - **theme**: `national`, `buildings`, `electricity`, `renewables`, `heat`, `mobility`, `emissions`, `prices`, `scenarios`, `general`
 - **reference type**: `report`, `standard` (norms such as SIA, often paid), `website`, `dashboard`, `tool`, `model`, `portal`
@@ -81,6 +82,23 @@ when the block is present:
 | `resolution` | e.g. `session`, `5 min`, `hourly`, `live` |
 | `access` | `open` (direct download), `registration` (free account or key), `restricted` (contract, fee or on request) |
 | `licence` | as published, or `not stated` |
+
+## `gaps.yml`
+
+Gaps in the open data (goal b). Shown on the Data gaps page, grouped by theme; a page can show
+one theme with `<div data-gaps="buildings"></div>`.
+
+| field | required | notes |
+|---|---|---|
+| `id` | yes | snake_case, unique; also the anchor `gaps.html#gap-<id>` |
+| `theme` | yes | from the vocabulary |
+| `title` | yes | the missing data, as a noun phrase |
+| `missing` | yes | what is not openly available, and why it matters for modelling |
+| `available` | no | what exists instead (partial, modelled, regional, on request) |
+| `holder` | yes | who holds the data or could publish it |
+| `status` | yes | `not-published` (exists, not released), `restricted` (contract, on request), `paid`, `incomplete` (published with large holes), `not-machine-readable` (only in PDF/spreadsheet tables) |
+| `evidence` | yes | list of `sources.yml` or `references.yml` ids that document the gap |
+| `found` | yes | date (YYYY-MM-DD) the gap was recorded |
 
 ## Provenance (automatic)
 

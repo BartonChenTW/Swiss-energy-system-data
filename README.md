@@ -28,16 +28,17 @@ Work is tracked in three files:
 
 ## How information is organised
 
-Everything the project knows about lives in **three catalogue files** under `catalog/`:
+Everything the project knows about lives in **four catalogue files** under `catalog/`:
 
 | File | What goes in it | Shown on |
 |---|---|---|
 | `catalog/sources.yml` | Machine-readable **data sources** the pipeline downloads (CSV, zip, API) | Sources page |
 | `catalog/datasets.yml` | **Datasets on the site**: title, unit, source, chart type, status | Every chart card |
 | `catalog/references.yml` | **Reports, websites, dashboards, tools, models** we cite but don't process | Library page |
+| `catalog/gaps.yml` | **Data gaps**: what modellers need but cannot get openly, who holds it, with evidence | Data gaps page |
 
 The rule: if the pipeline downloads it, it goes in `sources.yml`. If a person reads or
-uses it, it goes in `references.yml`. Field definitions and the controlled vocabulary
+uses it, it goes in `references.yml`. If it is needed but not openly available, it goes in `gaps.yml`. Field definitions and the controlled vocabulary
 (themes, types) are in [catalog/README.md](catalog/README.md), and
 `python -m pipeline.check` enforces them.
 
@@ -71,7 +72,7 @@ catalog/sources.yml ─fetch─► data/raw/ ─process─► data/processed/ �
 
 ```
 README.md · TODO.md · LOG.md · CHANGELOG.md
-catalog/            sources.yml · datasets.yml · references.yml · README.md (schema)
+catalog/            sources.yml · datasets.yml · references.yml · gaps.yml · README.md (schema)
 data/
   raw/              downloads, one folder per source (gitignored; reproducible via fetch)
   processed/        <theme>/<dataset>.csv + <dataset>.meta.json (committed)

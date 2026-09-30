@@ -9,6 +9,13 @@ with today's date; `python -m pipeline.build_site` picks up the top released ent
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-09-30
+### Added
+- Data gaps page: 15 gaps in open Swiss energy data across buildings, electricity, heat and mobility, each with what is missing, what exists instead, who holds the data and the evidence, filterable by sector and status.
+- Catalog: `gaps.yml`, validated by `pipeline.check` (evidence must be known source or reference ids).
+### Changed
+- Buildings: "What is not openly available" is now drawn from the same list.
+
 ## [0.8.1] - 2026-09-29
 ### Changed
 - Buildings: the "On this page" links are shown as clear buttons.

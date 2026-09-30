@@ -7,6 +7,17 @@ whether the data is enough to train a foundation model for the building domain.
 
 Open work is in [TODO.md](TODO.md). Site releases are in [CHANGELOG.md](CHANGELOG.md).
 
+## 2026-09-30
+
+### Done
+- **0.9.0:** Data gaps page (goal b) from a new `catalog/gaps.yml`: 15 gaps in four sectors,
+  validated by `pipeline.check`; the Buildings gap list now reads from it.
+
+### Decisions
+- Gaps are catalog entries like sources and references, so each is recorded once and cites its
+  evidence by id; pages show all gaps or one theme.
+- Gap status vocabulary: not published, restricted, paid, incomplete, not machine-readable.
+
 ## 2026-09-29
 
 ### Done

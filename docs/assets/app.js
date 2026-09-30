@@ -12,6 +12,7 @@ const PAGES = [
   ["mobility.html", "Mobility"],
   ["sources.html", "Sources"],
   ["library.html", "Library"],
+  ["gaps.html", "Data gaps"],
 ];
 
 const REPO = "https://github.com/BartonChenTW/Swiss-energy-system-data";
@@ -304,6 +305,67 @@ async function renderLibrary(el) {
   }
 }
 
+// ---------- Data gaps (catalog/gaps.yml) ----------
+// <div data-gaps></div> lists all gaps with filters; <div data-gaps="buildings"> only one theme.
+
+const GAP_STATUS = {
+  "not-published": "Not published", restricted: "Restricted", paid: "Paid",
+  incomplete: "Incomplete", "not-machine-readable": "Not machine-readable",
+};
+const capitalise = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+function gapCard(g, lookup) {
+  const evidence = g.evidence.map((id) => lookup[id]
+    ? `<a href="${esc(lookup[id].url)}">${esc(lookup[id].title)}</a>` : esc(id)).join(" · ");
+  return `<article class="card gap" id="gap-${esc(g.id)}">
+    <div class="card-head"><h3>${esc(g.title)}</h3><span class="gap-status gap-${esc(g.status)}">${esc(GAP_STATUS[g.status])}</span></div>
+    <dl>
+      <dt>Missing</dt><dd>${esc(g.missing)}</dd>
+      ${g.available ? `<dt>Available instead</dt><dd>${esc(g.available)}</dd>` : ""}
+      <dt>Held by</dt><dd>${esc(g.holder)}</dd>
+      <dt>Evidence</dt><dd>${evidence}</dd>
+    </dl>
+  </article>`;
+}
+
+async function renderGaps(el) {
+  try {
+    const { gaps, references, sources } = await loadJSON("data/catalog.json");
+    const lookup = Object.fromEntries([
+      ...sources.map((s) => [s.id, { title: s.name, url: s.url }]),
+      ...references.map((r) => [r.id, { title: r.title, url: r.url }]),
+    ]);
+    const only = el.dataset.gaps;
+    if (only) {
+      el.innerHTML = `<div class="gaps">${gaps.filter((g) => g.theme === only).map((g) => gapCard(g, lookup)).join("")}</div>
+        <p class="muted">All gaps across sectors: <a href="gaps.html">Data gaps</a>.</p>`;
+      return;
+    }
+    const themes = [...new Set(gaps.map((g) => g.theme))];
+    el.innerHTML = `
+      <div class="filters">
+        <label>Sector <select data-filter="theme"><option value="">All</option>${themes.map((t) => `<option value="${esc(t)}">${esc(capitalise(t))}</option>`).join("")}</select></label>
+        <label>Status <select data-filter="status"><option value="">All</option>${Object.entries(GAP_STATUS).map(([k, v]) => `<option value="${k}">${v}</option>`).join("")}</select></label>
+      </div>
+      <div data-list></div>`;
+    const list = el.querySelector("[data-list]");
+    const draw = () => {
+      const theme = el.querySelector('[data-filter="theme"]').value;
+      const status = el.querySelector('[data-filter="status"]').value;
+      const shown = gaps.filter((g) => (!theme || g.theme === theme) && (!status || g.status === status));
+      list.innerHTML = themes.map((t) => {
+        const group = shown.filter((g) => g.theme === t);
+        return group.length ? `<h2 id="${esc(t)}">${esc(capitalise(t))} <span class="muted">${group.length}</span></h2>
+          <div class="gaps">${group.map((g) => gapCard(g, lookup)).join("")}</div>` : "";
+      }).join("") || `<p class="muted">Nothing matches these filters.</p>`;
+    };
+    el.querySelectorAll("select").forEach((s) => s.addEventListener("change", draw));
+    draw();
+  } catch (err) {
+    el.innerHTML = `<p class="error">Could not load the gaps (${esc(err.message)}). Run <code>python -m pipeline.build_site</code> first.</p>`;
+  }
+}
+
 // ---------- EV profile data study (Mobility page), from references with an `ev_profile` block ----------
 
 const EV_REGIONS = { Switzerland: "Switzerland", Europe: "Europe (outside Switzerland)", World: "Rest of the world" };
@@ -380,3 +442,4 @@ document.querySelectorAll("[data-catalog]").forEach(renderSources);
 document.querySelectorAll("[data-library]").forEach(renderLibrary);
 document.querySelectorAll("[data-changelog]").forEach(renderChangelog);
 document.querySelectorAll("[data-ev-profiles]").forEach(renderEvProfiles);
+document.querySelectorAll("[data-gaps]").forEach(renderGaps);
