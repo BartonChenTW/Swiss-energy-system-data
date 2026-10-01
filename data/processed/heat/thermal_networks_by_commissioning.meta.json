@@ -1,7 +1,7 @@
 {
   "dataset": "heat/thermal_networks_by_commissioning",
   "processor": "pipeline.process.bfe_thermal_networks",
-  "generated": "2026-09-29T10:27:03+00:00",
+  "generated": "2026-10-01T11:23:13+00:00",
   "rows": 276,
   "years": [
     1980,
@@ -11,11 +11,11 @@
     {
       "file": "data/raw/bfe_thermal_networks/ch.bfe.thermische-netze.zip",
       "url": "https://data.geo.admin.ch/ch.bfe.thermische-netze/csv/2056/ch.bfe.thermische-netze.zip",
-      "retrieved": "2026-09-29T09:55:06+00:00",
-      "last_modified": "Wed, 23 Sep 2026 02:25:08 GMT",
-      "sha256": "87a80fa0199d7b23a2bc31736b830928dc695cf0aec1f4ff0dfbb4b99a059eb0",
-      "bytes": 121332
+      "retrieved": "2026-10-01T11:22:17+00:00",
+      "last_modified": "Wed, 30 Sep 2026 02:25:13 GMT",
+      "sha256": "f703393cd06afb7b7b745793046fa032402e14f243b9264e69793a254c36fbc6",
+      "bytes": 121554
     }
   ],
-  "notes": "1229 of 1666 networks report a commissioning year."
+  "notes": "1233 of 1671 networks report a commissioning year."
 }

@@ -1,14 +1,4 @@
 year,category,value,unit
-2005,Battery-electric,12,cars
-2006,Battery-electric,7,cars
-2007,Battery-electric,19,cars
-2008,Battery-electric,21,cars
-2009,Battery-electric,52,cars
-2010,Battery-electric,197,cars
-2011,Battery-electric,447,cars
-2012,Battery-electric,521,cars
-2013,Battery-electric,1162,cars
-2014,Battery-electric,1642,cars
 2015,Battery-electric,3221,cars
 2016,Battery-electric,3247,cars
 2017,Battery-electric,4710,cars
@@ -20,16 +10,16 @@ year,category,value,unit
 2023,Battery-electric,52336,cars
 2024,Battery-electric,45693,cars
 2025,Battery-electric,52843,cars
-2005,Plug-in hybrid,0,cars
-2006,Plug-in hybrid,0,cars
-2007,Plug-in hybrid,0,cars
-2008,Plug-in hybrid,0,cars
-2009,Plug-in hybrid,0,cars
-2010,Plug-in hybrid,1,cars
-2011,Plug-in hybrid,39,cars
-2012,Plug-in hybrid,451,cars
-2013,Plug-in hybrid,571,cars
-2014,Plug-in hybrid,1024,cars
+2014,Battery-electric,1642,cars
+2013,Battery-electric,1162,cars
+2012,Battery-electric,521,cars
+2011,Battery-electric,447,cars
+2010,Battery-electric,197,cars
+2009,Battery-electric,52,cars
+2008,Battery-electric,21,cars
+2007,Battery-electric,19,cars
+2006,Battery-electric,7,cars
+2005,Battery-electric,12,cars
 2015,Plug-in hybrid,3000,cars
 2016,Plug-in hybrid,3085,cars
 2017,Plug-in hybrid,3579,cars
@@ -41,16 +31,16 @@ year,category,value,unit
 2023,Plug-in hybrid,23064,cars
 2024,Plug-in hybrid,20634,cars
 2025,Plug-in hybrid,26019,cars
-2005,Hybrid (not plug-in),1374,cars
-2006,Hybrid (not plug-in),2209,cars
-2007,Hybrid (not plug-in),3209,cars
-2008,Hybrid (not plug-in),3080,cars
-2009,Hybrid (not plug-in),3883,cars
-2010,Hybrid (not plug-in),4203,cars
-2011,Hybrid (not plug-in),5314,cars
-2012,Hybrid (not plug-in),6469,cars
-2013,Hybrid (not plug-in),6658,cars
-2014,Hybrid (not plug-in),6071,cars
+2014,Plug-in hybrid,1024,cars
+2013,Plug-in hybrid,571,cars
+2012,Plug-in hybrid,451,cars
+2011,Plug-in hybrid,39,cars
+2010,Plug-in hybrid,1,cars
+2009,Plug-in hybrid,0,cars
+2008,Plug-in hybrid,0,cars
+2007,Plug-in hybrid,0,cars
+2006,Plug-in hybrid,0,cars
+2005,Plug-in hybrid,0,cars
 2015,Hybrid (not plug-in),6042,cars
 2016,Hybrid (not plug-in),7614,cars
 2017,Hybrid (not plug-in),8365,cars
@@ -62,16 +52,16 @@ year,category,value,unit
 2023,Hybrid (not plug-in),68397,cars
 2024,Hybrid (not plug-in),79970,cars
 2025,Hybrid (not plug-in),82145,cars
-2005,Petrol,184022,cars
-2006,Petrol,183471,cars
-2007,Petrol,184184,cars
-2008,Petrol,188102,cars
-2009,Petrol,181068,cars
-2010,Petrol,198297,cars
-2011,Petrol,205719,cars
-2012,Petrol,197006,cars
-2013,Petrol,183221,cars
-2014,Petrol,179059,cars
+2014,Hybrid (not plug-in),6071,cars
+2013,Hybrid (not plug-in),6658,cars
+2012,Hybrid (not plug-in),6469,cars
+2011,Hybrid (not plug-in),5314,cars
+2010,Hybrid (not plug-in),4203,cars
+2009,Hybrid (not plug-in),3883,cars
+2008,Hybrid (not plug-in),3080,cars
+2007,Hybrid (not plug-in),3209,cars
+2006,Hybrid (not plug-in),2209,cars
+2005,Hybrid (not plug-in),1374,cars
 2015,Petrol,183181,cars
 2016,Petrol,176855,cars
 2017,Petrol,182123,cars
@@ -83,16 +73,16 @@ year,category,value,unit
 2023,Petrol,83235,cars
 2024,Petrol,69035,cars
 2025,Petrol,55832,cars
-2005,Diesel,73953,cars
-2006,Diesel,79641,cars
-2007,Diesel,91264,cars
-2008,Diesel,92305,cars
-2009,Diesel,77575,cars
-2010,Diesel,88377,cars
-2011,Diesel,103781,cars
-2012,Diesel,119304,cars
-2013,Diesel,111931,cars
-2014,Diesel,110108,cars
+2014,Petrol,179059,cars
+2013,Petrol,183221,cars
+2012,Petrol,197006,cars
+2011,Petrol,205719,cars
+2010,Petrol,198297,cars
+2009,Petrol,181068,cars
+2008,Petrol,188102,cars
+2007,Petrol,184184,cars
+2006,Petrol,183471,cars
+2005,Petrol,184022,cars
 2015,Diesel,124470,cars
 2016,Diesel,122559,cars
 2017,Diesel,111764,cars
@@ -104,16 +94,16 @@ year,category,value,unit
 2023,Diesel,23249,cars
 2024,Diesel,22285,cars
 2025,Diesel,15752,cars
-2005,"Other (gas, hydrogen, other)",828,cars
-2006,"Other (gas, hydrogen, other)",1438,cars
-2007,"Other (gas, hydrogen, other)",3195,cars
-2008,"Other (gas, hydrogen, other)",2313,cars
-2009,"Other (gas, hydrogen, other)",1582,cars
-2010,"Other (gas, hydrogen, other)",1000,cars
-2011,"Other (gas, hydrogen, other)",1109,cars
-2012,"Other (gas, hydrogen, other)",880,cars
-2013,"Other (gas, hydrogen, other)",839,cars
-2014,"Other (gas, hydrogen, other)",1052,cars
+2014,Diesel,110108,cars
+2013,Diesel,111931,cars
+2012,Diesel,119304,cars
+2011,Diesel,103781,cars
+2010,Diesel,88377,cars
+2009,Diesel,77575,cars
+2008,Diesel,92305,cars
+2007,Diesel,91264,cars
+2006,Diesel,79641,cars
+2005,Diesel,73953,cars
 2015,"Other (gas, hydrogen, other)",1083,cars
 2016,"Other (gas, hydrogen, other)",953,cars
 2017,"Other (gas, hydrogen, other)",763,cars
@@ -125,3 +115,13 @@ year,category,value,unit
 2023,"Other (gas, hydrogen, other)",71,cars
 2024,"Other (gas, hydrogen, other)",19,cars
 2025,"Other (gas, hydrogen, other)",11,cars
+2014,"Other (gas, hydrogen, other)",1052,cars
+2013,"Other (gas, hydrogen, other)",839,cars
+2012,"Other (gas, hydrogen, other)",880,cars
+2011,"Other (gas, hydrogen, other)",1109,cars
+2010,"Other (gas, hydrogen, other)",1000,cars
+2009,"Other (gas, hydrogen, other)",1582,cars
+2008,"Other (gas, hydrogen, other)",2313,cars
+2007,"Other (gas, hydrogen, other)",3195,cars
+2006,"Other (gas, hydrogen, other)",1438,cars
+2005,"Other (gas, hydrogen, other)",828,cars

@@ -1,7 +1,7 @@
 {
   "dataset": "buildings/minergie_per_1000_buildings",
   "processor": "pipeline.process.minergie_buildings",
-  "generated": "2026-09-28T13:41:38+00:00",
+  "generated": "2026-10-01T11:23:26+00:00",
   "rows": 26,
   "years": [
     2026,
@@ -11,7 +11,7 @@
     {
       "file": "data/raw/minergie_buildings/ogd91_minergiegebaeude_pro_gemeinde.csv",
       "url": "https://data.geo.admin.ch/ch.bfe.minergiegebaeude/ogd/ogd91_minergiegebaeude_pro_gemeinde.csv",
-      "retrieved": "2026-09-28T13:34:55+00:00",
+      "retrieved": "2026-10-01T11:23:01+00:00",
       "last_modified": "Wed, 09 Sep 2026 02:38:54 GMT",
       "sha256": "086a324e24d6c3eb7585bb23626eddd5545b09daebd07501f34062ae2c764cce",
       "bytes": 61811
@@ -19,10 +19,10 @@
     {
       "file": "data/raw/bfs_gwr/ch.zip",
       "url": "https://public.madd.bfs.admin.ch/ch.zip",
-      "retrieved": "2026-09-28T12:21:21+00:00",
-      "last_modified": "Mon, 28 Sep 2026 03:42:41 GMT",
-      "sha256": "9d26f819ff97eac06d6fe27848a95c6eb2ad1b97b1b5149c4ffdaf98768b0100",
-      "bytes": 947045673
+      "retrieved": "2026-10-01T11:22:42+00:00",
+      "last_modified": "Thu, 01 Oct 2026 04:02:42 GMT",
+      "sha256": "498127e261c37c0779be2413341f1504151fe2d05a375017f46077f43f185161",
+      "bytes": 947236478
     }
   ],
   "notes": "32,940 Minergie buildings in the dataset (47 in 39 municipality numbers not in the current GWR). Minergie itself reports ~60,500 certified buildings, so the dataset is incomplete."
