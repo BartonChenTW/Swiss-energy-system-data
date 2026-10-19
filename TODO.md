@@ -15,9 +15,11 @@ under `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md).
 ## a. Collect data
 
 ### Electricity
-- [ ] Process the registered Swissgrid sources (`bfe_swissgrid_production`, `bfe_swissgrid_consumption`). Needs sub-annual data support, see *Site*.
-- [ ] Consumption by sector, imports and exports (the Electricity page says they are planned).
-- [ ] Tariffs by municipality from ElCom (`elcom_tariffs` is a placeholder; terms still TBD).
+- [x] Process the registered Swissgrid sources (`bfe_swissgrid_production`, `bfe_swissgrid_consumption`) as winter and summer half-years.
+- [ ] Show the Swissgrid data monthly or daily (needs sub-annual data support, see *Site*).
+- [x] Total consumption, imports and exports (annual, from 1960).
+- [ ] Electricity consumption by sector.
+- [ ] Median household tariff and its components from ElCom (`elcom_tariffs`, planned; LINDAS SPARQL query like `foen_ghg_inventory`).
 - [ ] Smart meter rollout, 2019–2024 (smart and conventional meters are already in the `bfe_self_consumption_survey` workbook).
 
 ### Heat
@@ -38,6 +40,14 @@ under `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md).
 
 ### Scenarios
 - [ ] Energieperspektiven 2050+ scenario results; replace the publication-search link of `bfe_energy_perspectives_2050` with a stable page.
+
+### Planned sources
+Identified in `catalog/sources.yml` with `status: planned`. Set `status: active` one at a time, inspect the file, write the processor.
+- [ ] `bfe_electricity_monthly`: official monthly balance; replace the dashboard-based winter/summer charts.
+- [ ] `bfe_reservoirs`: weekly fill level of storage lakes.
+- [ ] `bfe_wasta`: hydropower plants by type and capacity (the *Renewables* item above).
+- [ ] `bfs_ghg_by_sector`: emissions by source group.
+- [ ] `bfs_population`: per-capita indicators.
 
 ### Site
 - [ ] Support monthly, hourly and 15-minute datasets in the tidy contract and the charts (Swissgrid, Winterthur LEG load profile, EV profiles).
@@ -78,5 +88,6 @@ Known gaps so far (ticked: on the gaps page):
 
 - [ ] **Every April:** the FOEN greenhouse gas inventory is published as a new LINDAS cube version. Update the version number in the `foen_ghg_inventory` query in `catalog/sources.yml`.
 - [ ] **New SFOE editions:** pubdb download ids change (e.g. `bfe_self_consumption_survey`, id 12429). Update the URL when a new edition appears.
-- [ ] **Before 19 Oct 2026:** GitHub's `ubuntu-latest` moves to Ubuntu 26 and actions on Node 20 are deprecated. Bump `actions/checkout`, `setup-python`, `configure-pages` and `upload-pages-artifact` in both workflows and check they still run.
+- [x] **Before 19 Oct 2026:** bump the actions in both workflows to their Node 24 releases (done 19 Oct 2026).
+- [ ] Check that both workflows still run on the new `ubuntu-latest` after the next push.
 - [ ] Run `python -m pipeline.check --links` now and then. Some sites (MDPI, National Grid, Mendeley) block scripts and answer 403 although the link works in a browser.

@@ -8,6 +8,16 @@ for fixes, wording and styling. To release, rename `Unreleased` to the new versi
 with today's date; `python -m pipeline.build_site` picks up the top released entry.
 
 ## [Unreleased]
+### Added
+- National: gross energy consumption by source, domestic production vs net imports, and import dependency (about 70 % in 2025).
+- Electricity: consumption, imports and exports since 1960; winter and summer balance of production and consumption, and winter production by source, from daily Swissgrid data.
+- Renewables: solar PV capacity per building, by canton.
+- Data gaps: history of plants in the production plant register (Renewables).
+- Library: Swiss SolarWind Explorer (ETH Zürich) and EDGE Recommender (HSLU).
+- Catalog: sources can be marked `status: planned` with `planned_for`; six planned sources form the download wish list.
+### Changed
+- National, Electricity and Renewables pages are split into sections with "On this page" links and explanatory notes; Electricity and Renewables end with "What is not openly available".
+- Building charts refreshed from the latest downloads (small revisions).
 
 ## [0.9.0] - 2026-09-30
 ### Added

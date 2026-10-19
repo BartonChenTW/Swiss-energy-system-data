@@ -7,6 +7,32 @@ whether the data is enough to train a foundation model for the building domain.
 
 Open work is in [TODO.md](TODO.md). Site releases are in [CHANGELOG.md](CHANGELOG.md).
 
+## 2026-10-19
+
+### Done
+- Finished the work begun on the workstation on 2026-09-28 (branch `euler-handoff`): fetched and
+  processed on Euler; all processors run. Nine new datasets on the National, Electricity and
+  Renewables pages, which now follow the Buildings layout (sections, notes, data gaps).
+- Planned sources (`status: planned`) in `catalog/sources.yml`: the download wish list, listed in TODO.md.
+- New gap: history of the production plant register (Renewables).
+- Library: Swiss SolarWind Explorer and EDGE Recommender.
+- Bumped the GitHub Actions in both workflows to their Node 24 releases.
+
+### Decisions
+- Related Swiss platforms (tools, dashboards) go into `references.yml` and the Library, not a
+  separate page; pages link to them where relevant.
+- Gross energy chart: coal and waste are one series, as in final energy, to stay within the
+  eight-colour palette.
+
+### Findings on data availability
+- Sanity checks: import dependency 67–76 % since 2018 (about 80 % 1980–2010); domestic production
+  plus net imports equals gross consumption. Winter consumption exceeded domestic production in
+  every complete winter except 2020, 2024 and 2025; the largest gap was 6.5 TWh (winter 2022).
+- Winter 2026 nuclear output was low (8.5 TWh): Gösgen was offline from May 2025 to March 2026.
+- PV per existing building: 2.78 kW for Switzerland, 1.35 (UR) to 4.72 (LU).
+- The workstation's endpoint security (Cortex XDR) blocks commands launched from VS Code there,
+  so pipeline runs happen on Euler.
+
 ## 2026-09-30
 
 ### Done
