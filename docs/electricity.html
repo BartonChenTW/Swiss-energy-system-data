@@ -11,10 +11,42 @@
   <header id="site-header"></header>
   <main class="wrap">
     <h1>Electricity</h1>
-    <p class="lede">Domestic electricity production by technology, and how locally produced solar
-      power is shared in energy communities. Consumption, imports/exports and tariffs are planned.</p>
+    <p class="lede">How much electricity Switzerland produces and uses, how much it trades with its
+      neighbours, the winter gap between production and consumption, and how locally produced solar
+      power is shared in energy communities. Tariffs are planned.</p>
+    <nav class="toc" aria-label="On this page">
+      <span class="toc-label">On this page:</span>
+      <a href="#annual">Production and use</a><a href="#trade">Trade</a><a href="#seasons">Winter and summer</a>
+      <a href="#energy-communities">Energy communities</a><a href="#gaps">Data gaps</a>
+    </nav>
+
+    <h2 id="annual">Production and consumption</h2>
+    <p class="section-note">Hydropower and nuclear supply over 80 % of the electricity; solar PV, at 8 TWh in 2025, is now the
+      third source, far ahead of wind. National consumption was about 62 TWh in 2025, of which about 58 TWh reached
+      final users; the rest is grid losses.</p>
     <div class="grid">
       <div class="chart" data-dataset="electricity/production_by_technology"></div>
+      <div class="chart" data-dataset="electricity/consumption"></div>
+    </div>
+
+    <h2 id="trade">Cross-border trade</h2>
+    <p class="section-note">Switzerland imports and exports 25–40 TWh a year each way, about half of
+      its consumption, as a transit hub between its neighbours. Over a year the balance is small and
+      changes sign: a net export of 14 TWh in the wet year 2024, about zero in 2025.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="electricity/cross_border_trade"></div>
+    </div>
+
+    <h2 id="seasons">Winter and summer</h2>
+    <p class="section-note">The annual balance hides a seasonal one. In summer, hydropower and solar
+      produce far more than the country uses. In most winters consumption is higher than domestic
+      production and the gap is imported, 6.5 TWh in winter 2022. Winter supply is the
+      focus of Swiss security-of-supply policy. These charts use the daily Swissgrid data of the
+      Energy Dashboard; an official monthly balance is on the list of sources to add.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="electricity/winter_balance"></div>
+      <div class="chart" data-dataset="electricity/summer_balance"></div>
+      <div class="chart" data-dataset="electricity/winter_production_by_source"></div>
     </div>
 
     <h2 id="energy-communities">Energy communities</h2>
@@ -42,6 +74,9 @@
       <div class="chart" data-dataset="electricity/pv_installations_by_self_consumption"></div>
       <div class="chart" data-dataset="electricity/pv_capacity_by_self_consumption"></div>
     </div>
+
+    <h2 id="gaps">What is not openly available</h2>
+    <div data-gaps="electricity"></div>
   </main>
   <footer id="site-footer"></footer>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>

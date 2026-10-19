@@ -4,412 +4,366 @@ year,category,value,unit
 1980,Hydropower,120.75,PJ
 1980,Natural gas,36.28,PJ
 1980,Wood,26.28,PJ
-1980,Waste,10.1,PJ
+1980,Coal & waste,24.4,PJ
 1980,Other renewables,0.0,PJ
-1980,Coal,14.3,PJ
 1980,Electricity trade balance,-29.45,PJ
 1981,Oil (crude and products),508.68,PJ
 1981,Nuclear fuel,157.77,PJ
 1981,Hydropower,129.95,PJ
 1981,Natural gas,39.14,PJ
 1981,Wood,25.48,PJ
-1981,Waste,14.04,PJ
+1981,Coal & waste,35.19,PJ
 1981,Other renewables,0.0,PJ
-1981,Coal,21.15,PJ
 1981,Electricity trade balance,-38.56,PJ
 1982,Oil (crude and products),484.8,PJ
 1982,Nuclear fuel,155.74,PJ
 1982,Hydropower,133.33,PJ
 1982,Natural gas,41.34,PJ
 1982,Wood,24.93,PJ
-1982,Waste,16.2,PJ
+1982,Coal & waste,34.91,PJ
 1982,Other renewables,0.0,PJ
-1982,Coal,18.71,PJ
 1982,Electricity trade balance,-38.97,PJ
 1983,Oil (crude and products),494.23,PJ
 1983,Nuclear fuel,161.68,PJ
 1983,Hydropower,129.61,PJ
 1983,Natural gas,45.45,PJ
 1983,Wood,25.34,PJ
-1983,Waste,16.04,PJ
+1983,Coal & waste,32.37,PJ
 1983,Other renewables,0.0,PJ
-1983,Coal,16.33,PJ
 1983,Electricity trade balance,-33.28,PJ
 1984,Oil (crude and products),501.01,PJ
 1984,Nuclear fuel,189.77,PJ
 1984,Hydropower,111.14,PJ
 1984,Natural gas,50.69,PJ
 1984,Wood,26.56,PJ
-1984,Waste,17.92,PJ
+1984,Coal & waste,38.9,PJ
 1984,Other renewables,0.0,PJ
-1984,Coal,20.98,PJ
 1984,Electricity trade balance,-16.9,PJ
 1985,Oil (crude and products),509.06,PJ
 1985,Nuclear fuel,232.16,PJ
 1985,Hydropower,117.64,PJ
 1985,Natural gas,53.07,PJ
 1985,Wood,27.03,PJ
-1985,Waste,20.39,PJ
+1985,Coal & waste,41.46,PJ
 1985,Other renewables,0.0,PJ
-1985,Coal,21.07,PJ
 1985,Electricity trade balance,-31.32,PJ
 1986,Oil (crude and products),522.15,PJ
 1986,Nuclear fuel,232.4,PJ
 1986,Hydropower,120.92,PJ
 1986,Natural gas,54.35,PJ
 1986,Wood,26.29,PJ
-1986,Waste,22.57,PJ
+1986,Coal & waste,40.7,PJ
 1986,Other renewables,0.0,PJ
-1986,Coal,18.13,PJ
 1986,Electricity trade balance,-30.91,PJ
 1987,Oil (crude and products),522.96,PJ
 1987,Nuclear fuel,236.74,PJ
 1987,Hydropower,127.48,PJ
 1987,Natural gas,58.27,PJ
 1987,Wood,26.38,PJ
-1987,Waste,22.68,PJ
+1987,Coal & waste,39.55,PJ
 1987,Other renewables,0.0,PJ
-1987,Coal,16.87,PJ
 1987,Electricity trade balance,-34.03,PJ
 1988,Oil (crude and products),525.98,PJ
 1988,Nuclear fuel,234.57,PJ
 1988,Hydropower,131.18,PJ
 1988,Natural gas,58.68,PJ
 1988,Wood,25.01,PJ
-1988,Waste,22.79,PJ
+1988,Coal & waste,37.19,PJ
 1988,Other renewables,0.0,PJ
-1988,Coal,14.4,PJ
 1988,Electricity trade balance,-34.64,PJ
 1989,Oil (crude and products),518.55,PJ
 1989,Nuclear fuel,235.01,PJ
 1989,Hydropower,109.75,PJ
 1989,Natural gas,63.82,PJ
 1989,Wood,24.87,PJ
-1989,Waste,22.97,PJ
+1989,Coal & waste,37.86,PJ
 1989,Other renewables,0.0,PJ
-1989,Coal,14.89,PJ
 1989,Electricity trade balance,-9.06,PJ
 1990,Oil (crude and products),532.26,PJ
 1990,Nuclear fuel,243.25,PJ
 1990,Hydropower,110.43,PJ
 1990,Natural gas,68.31,PJ
 1990,Wood,28.69,PJ
-1990,Waste,23.2,PJ
+1990,Coal & waste,38.09,PJ
 1990,Other renewables,4.58,PJ
-1990,Coal,14.89,PJ
 1990,Electricity trade balance,-7.59,PJ
 1991,Oil (crude and products),561.01,PJ
 1991,Nuclear fuel,236.23,PJ
 1991,Hydropower,119.1,PJ
 1991,Natural gas,76.68,PJ
 1991,Wood,31.61,PJ
-1991,Waste,24.43,PJ
+1991,Coal & waste,37.08,PJ
 1991,Other renewables,5.14,PJ
-1991,Coal,12.65,PJ
 1991,Electricity trade balance,-10.06,PJ
 1992,Oil (crude and products),564.44,PJ
 1992,Nuclear fuel,241.32,PJ
 1992,Hydropower,121.41,PJ
 1992,Natural gas,80.6,PJ
 1992,Wood,30.66,PJ
-1992,Waste,24.64,PJ
+1992,Coal & waste,33.4,PJ
 1992,Other renewables,5.27,PJ
-1992,Coal,8.76,PJ
 1992,Electricity trade balance,-15.44,PJ
 1993,Oil (crude and products),533.44,PJ
 1993,Nuclear fuel,240.32,PJ
 1993,Hydropower,130.51,PJ
 1993,Natural gas,84.56,PJ
 1993,Wood,30.75,PJ
-1993,Waste,29.33,PJ
+1993,Coal & waste,36.67,PJ
 1993,Other renewables,5.62,PJ
-1993,Coal,7.34,PJ
 1993,Electricity trade balance,-25.92,PJ
 1994,Oil (crude and products),522.27,PJ
 1994,Nuclear fuel,250.73,PJ
 1994,Hydropower,142.4,PJ
 1994,Natural gas,83.41,PJ
 1994,Wood,28.71,PJ
-1994,Waste,29.53,PJ
+1994,Coal & waste,36.96,PJ
 1994,Other renewables,5.73,PJ
-1994,Coal,7.43,PJ
 1994,Electricity trade balance,-42.64,PJ
 1995,Oil (crude and products),529.71,PJ
 1995,Nuclear fuel,256.21,PJ
 1995,Hydropower,128.15,PJ
 1995,Natural gas,91.92,PJ
 1995,Wood,30.64,PJ
-1995,Waste,32.82,PJ
+1995,Coal & waste,40.79,PJ
 1995,Other renewables,6.16,PJ
-1995,Coal,7.97,PJ
 1995,Electricity trade balance,-26.18,PJ
 1996,Oil (crude and products),539.86,PJ
 1996,Nuclear fuel,258.75,PJ
 1996,Hydropower,106.91,PJ
 1996,Natural gas,99.5,PJ
 1996,Wood,33.72,PJ
-1996,Waste,33.59,PJ
+1996,Coal & waste,39.55,PJ
 1996,Other renewables,6.67,PJ
-1996,Coal,5.96,PJ
 1996,Electricity trade balance,-3.4,PJ
 1997,Oil (crude and products),532.34,PJ
 1997,Nuclear fuel,261.5,PJ
 1997,Hydropower,125.26,PJ
 1997,Natural gas,96.06,PJ
 1997,Wood,29.66,PJ
-1997,Waste,35.63,PJ
+1997,Coal & waste,40.22,PJ
 1997,Other renewables,6.63,PJ
-1997,Coal,4.59,PJ
 1997,Electricity trade balance,-24.31,PJ
 1998,Oil (crude and products),551.94,PJ
 1998,Nuclear fuel,265.83,PJ
 1998,Hydropower,123.46,PJ
 1998,Natural gas,98.88,PJ
 1998,Wood,30.2,PJ
-1998,Waste,37.66,PJ
+1998,Coal & waste,41.47,PJ
 1998,Other renewables,7.08,PJ
-1998,Coal,3.81,PJ
 1998,Electricity trade balance,-21.43,PJ
 1999,Oil (crude and products),550.4,PJ
 1999,Nuclear fuel,256.61,PJ
 1999,Hydropower,146.22,PJ
 1999,Natural gas,102.45,PJ
 1999,Wood,30.07,PJ
-1999,Waste,41.67,PJ
+1999,Coal & waste,45.63,PJ
 1999,Other renewables,7.36,PJ
-1999,Coal,3.96,PJ
 1999,Electricity trade balance,-36.82,PJ
 2000,Oil (crude and products),535.79,PJ
 2000,Nuclear fuel,272.17,PJ
 2000,Hydropower,136.26,PJ
 2000,Natural gas,101.88,PJ
 2000,Wood,28.39,PJ
-2000,Waste,45.56,PJ
+2000,Coal & waste,51.33,PJ
 2000,Other renewables,7.44,PJ
-2000,Coal,5.77,PJ
 2000,Electricity trade balance,-25.45,PJ
 2001,Oil (crude and products),547.82,PJ
 2001,Nuclear fuel,275.92,PJ
 2001,Hydropower,152.14,PJ
 2001,Natural gas,106.04,PJ
 2001,Wood,30.2,PJ
-2001,Waste,46.36,PJ
+2001,Coal & waste,52.39,PJ
 2001,Other renewables,7.92,PJ
-2001,Coal,6.03,PJ
 2001,Electricity trade balance,-37.59,PJ
 2002,Oil (crude and products),522.71,PJ
 2002,Nuclear fuel,280.28,PJ
 2002,Hydropower,131.45,PJ
 2002,Natural gas,104.08,PJ
 2002,Wood,29.09,PJ
-2002,Waste,48.15,PJ
+2002,Coal & waste,53.71,PJ
 2002,Other renewables,8.01,PJ
-2002,Coal,5.56,PJ
 2002,Electricity trade balance,-16.23,PJ
 2003,Oil (crude and products),529.24,PJ
 2003,Nuclear fuel,282.88,PJ
 2003,Hydropower,131.2,PJ
 2003,Natural gas,110.01,PJ
 2003,Wood,31.2,PJ
-2003,Waste,48.65,PJ
+2003,Coal & waste,54.36,PJ
 2003,Other renewables,8.52,PJ
-2003,Coal,5.71,PJ
 2003,Electricity trade balance,-11.21,PJ
 2004,Oil (crude and products),530.42,PJ
 2004,Nuclear fuel,277.44,PJ
 2004,Hydropower,126.42,PJ
 2004,Natural gas,113.49,PJ
 2004,Wood,31.1,PJ
-2004,Waste,49.12,PJ
+2004,Coal & waste,54.54,PJ
 2004,Other renewables,8.8,PJ
-2004,Coal,5.42,PJ
 2004,Electricity trade balance,-2.53,PJ
 2005,Oil (crude and products),533.33,PJ
 2005,Nuclear fuel,240.22,PJ
 2005,Hydropower,117.93,PJ
 2005,Natural gas,116.51,PJ
 2005,Wood,32.46,PJ
-2005,Waste,51.26,PJ
+2005,Coal & waste,57.3,PJ
 2005,Other renewables,9.56,PJ
-2005,Coal,6.04,PJ
 2005,Electricity trade balance,22.86,PJ
 2006,Oil (crude and products),532.31,PJ
 2006,Nuclear fuel,286.3,PJ
 2006,Hydropower,117.21,PJ
 2006,Natural gas,113.29,PJ
 2006,Wood,33.22,PJ
-2006,Waste,55.09,PJ
+2006,Coal & waste,61.61,PJ
 2006,Other renewables,10.08,PJ
-2006,Coal,6.52,PJ
 2006,Electricity trade balance,9.73,PJ
 2007,Oil (crude and products),508.42,PJ
 2007,Nuclear fuel,287.39,PJ
 2007,Hydropower,130.94,PJ
 2007,Natural gas,110.31,PJ
 2007,Wood,32.67,PJ
-2007,Waste,55.26,PJ
+2007,Coal & waste,62.56,PJ
 2007,Other renewables,10.95,PJ
-2007,Coal,7.3,PJ
 2007,Electricity trade balance,-7.43,PJ
 2008,Oil (crude and products),525.99,PJ
 2008,Nuclear fuel,285.08,PJ
 2008,Hydropower,135.21,PJ
 2008,Natural gas,117.53,PJ
 2008,Wood,37.46,PJ
-2008,Waste,54.69,PJ
+2008,Coal & waste,61.25,PJ
 2008,Other renewables,12.61,PJ
-2008,Coal,6.56,PJ
 2008,Electricity trade balance,-4.09,PJ
 2009,Oil (crude and products),512.71,PJ
 2009,Nuclear fuel,284.93,PJ
 2009,Hydropower,133.69,PJ
 2009,Natural gas,112.81,PJ
 2009,Wood,39.24,PJ
-2009,Waste,52.77,PJ
+2009,Coal & waste,58.96,PJ
 2009,Other renewables,13.66,PJ
-2009,Coal,6.19,PJ
 2009,Electricity trade balance,-7.77,PJ
 2010,Oil (crude and products),523.48,PJ
 2010,Nuclear fuel,274.96,PJ
 2010,Hydropower,134.82,PJ
 2010,Natural gas,126.01,PJ
 2010,Wood,42.73,PJ
-2010,Waste,54.69,PJ
+2010,Coal & waste,60.9,PJ
 2010,Other renewables,16.3,PJ
-2010,Coal,6.21,PJ
 2010,Electricity trade balance,1.87,PJ
 2011,Oil (crude and products),485.28,PJ
 2011,Nuclear fuel,278.84,PJ
 2011,Hydropower,121.66,PJ
 2011,Natural gas,111.77,PJ
 2011,Wood,38.13,PJ
-2011,Waste,55.57,PJ
+2011,Coal & waste,61.31,PJ
 2011,Other renewables,16.8,PJ
-2011,Coal,5.74,PJ
 2011,Electricity trade balance,9.32,PJ
 2012,Oil (crude and products),494.27,PJ
 2012,Nuclear fuel,265.58,PJ
 2012,Hydropower,143.66,PJ
 2012,Natural gas,122.52,PJ
 2012,Wood,42.92,PJ
-2012,Waste,56.81,PJ
+2012,Coal & waste,61.98,PJ
 2012,Other renewables,19.68,PJ
-2012,Coal,5.17,PJ
 2012,Electricity trade balance,-7.92,PJ
 2013,Oil (crude and products),503.88,PJ
 2013,Nuclear fuel,271.32,PJ
 2013,Hydropower,142.46,PJ
 2013,Natural gas,129.03,PJ
 2013,Wood,47.31,PJ
-2013,Waste,55.23,PJ
+2013,Coal & waste,60.8,PJ
 2013,Other renewables,22.28,PJ
-2013,Coal,5.57,PJ
 2013,Electricity trade balance,-8.62,PJ
 2014,Oil (crude and products),462.55,PJ
 2014,Nuclear fuel,287.67,PJ
 2014,Hydropower,141.51,PJ
 2014,Natural gas,111.77,PJ
 2014,Wood,40.59,PJ
-2014,Waste,57.48,PJ
+2014,Coal & waste,63.18,PJ
 2014,Other renewables,23.39,PJ
-2014,Coal,5.7,PJ
 2014,Electricity trade balance,-19.77,PJ
 2015,Oil (crude and products),452.98,PJ
 2015,Nuclear fuel,241.04,PJ
 2015,Hydropower,142.15,PJ
 2015,Natural gas,119.42,PJ
 2015,Wood,42.25,PJ
-2015,Waste,57.15,PJ
+2015,Coal & waste,62.36,PJ
 2015,Other renewables,27.8,PJ
-2015,Coal,5.21,PJ
 2015,Electricity trade balance,-3.72,PJ
 2016,Oil (crude and products),451.89,PJ
 2016,Nuclear fuel,220.75,PJ
 2016,Hydropower,130.77,PJ
 2016,Natural gas,125.46,PJ
 2016,Wood,45.71,PJ
-2016,Waste,59.45,PJ
+2016,Coal & waste,64.24,PJ
 2016,Other renewables,32.0,PJ
-2016,Coal,4.79,PJ
 2016,Electricity trade balance,14.13,PJ
 2017,Oil (crude and products),445.03,PJ
 2017,Nuclear fuel,212.72,PJ
 2017,Hydropower,132.0,PJ
 2017,Natural gas,125.99,PJ
 2017,Wood,46.72,PJ
-2017,Waste,59.68,PJ
+2017,Coal & waste,64.29,PJ
 2017,Other renewables,36.3,PJ
-2017,Coal,4.61,PJ
 2017,Electricity trade balance,19.98,PJ
 2018,Oil (crude and products),436.17,PJ
 2018,Nuclear fuel,266.33,PJ
 2018,Hydropower,134.74,PJ
 2018,Natural gas,119.51,PJ
 2018,Wood,44.16,PJ
-2018,Waste,60.34,PJ
+2018,Coal & waste,64.63,PJ
 2018,Other renewables,39.15,PJ
-2018,Coal,4.29,PJ
 2018,Electricity trade balance,-5.72,PJ
 2019,Oil (crude and products),432.24,PJ
 2019,Nuclear fuel,275.78,PJ
 2019,Hydropower,146.0,PJ
 2019,Natural gas,122.61,PJ
 2019,Wood,46.07,PJ
-2019,Waste,61.25,PJ
+2019,Coal & waste,65.09,PJ
 2019,Other renewables,42.39,PJ
-2019,Coal,3.84,PJ
 2019,Electricity trade balance,-22.53,PJ
 2020,Oil (crude and products),352.68,PJ
 2020,Nuclear fuel,250.8,PJ
 2020,Hydropower,146.22,PJ
 2020,Natural gas,119.39,PJ
 2020,Wood,45.49,PJ
-2020,Waste,61.21,PJ
+2020,Coal & waste,64.91,PJ
 2020,Other renewables,44.83,PJ
-2020,Coal,3.7,PJ
 2020,Electricity trade balance,-20.01,PJ
 2021,Oil (crude and products),369.03,PJ
 2021,Nuclear fuel,202.15,PJ
 2021,Hydropower,142.2,PJ
 2021,Natural gas,129.85,PJ
 2021,Wood,53.09,PJ
-2021,Waste,60.58,PJ
+2021,Coal & waste,64.31,PJ
 2021,Other renewables,48.59,PJ
-2021,Coal,3.73,PJ
 2021,Electricity trade balance,8.69,PJ
 2022,Oil (crude and products),372.89,PJ
 2022,Nuclear fuel,252.14,PJ
 2022,Hydropower,120.6,PJ
 2022,Natural gas,106.87,PJ
 2022,Wood,48.1,PJ
-2022,Waste,58.28,PJ
+2022,Coal & waste,62.16,PJ
 2022,Other renewables,51.89,PJ
-2022,Coal,3.88,PJ
 2022,Electricity trade balance,12.18,PJ
 2023,Oil (crude and products),380.57,PJ
 2023,Nuclear fuel,254.55,PJ
 2023,Hydropower,146.81,PJ
 2023,Natural gas,98.93,PJ
 2023,Wood,50.29,PJ
-2023,Waste,58.32,PJ
+2023,Coal & waste,61.38,PJ
 2023,Other renewables,57.79,PJ
-2023,Coal,3.06,PJ
 2023,Electricity trade balance,-23.02,PJ
 2024,Oil (crude and products),377.61,PJ
 2024,Nuclear fuel,250.72,PJ
 2024,Hydropower,174.01,PJ
 2024,Natural gas,100.48,PJ
 2024,Wood,51.27,PJ
-2024,Waste,60.17,PJ
+2024,Coal & waste,62.73,PJ
 2024,Other renewables,65.07,PJ
-2024,Coal,2.56,PJ
 2024,Electricity trade balance,-51.83,PJ
 2025,Oil (crude and products),375.13,PJ
 2025,Nuclear fuel,200.5,PJ
 2025,Hydropower,134.95,PJ
 2025,Natural gas,99.2,PJ
 2025,Wood,51.6,PJ
-2025,Waste,60.58,PJ
+2025,Coal & waste,62.85,PJ
 2025,Other renewables,75.27,PJ
-2025,Coal,2.27,PJ
 2025,Electricity trade balance,0.08,PJ

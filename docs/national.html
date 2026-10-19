@@ -11,8 +11,29 @@
   <header id="site-header"></header>
   <main class="wrap">
     <h1>National energy balance</h1>
-    <p class="lede">How much energy Switzerland consumes, in which form, and in which sectors, and the
-      greenhouse gases it emits.</p>
+    <p class="lede">Where Switzerland's energy comes from, how much of it is imported, in which form
+      and in which sectors it is used, and the greenhouse gases it emits.</p>
+    <nav class="toc" aria-label="On this page">
+      <span class="toc-label">On this page:</span>
+      <a href="#supply">Supply and imports</a><a href="#final">Final consumption</a><a href="#emissions">Emissions</a>
+    </nav>
+
+    <h2 id="supply">Energy supply and import dependency</h2>
+    <p class="section-note"><strong>Gross energy consumption</strong> counts all energy before
+      conversion, including nuclear fuel and the water driving hydropower, about 1,000 PJ a year.
+      Only hydropower, wood, waste and other renewables are produced at home; oil, gas and nuclear
+      fuel are all imported. Net imports have covered about 80 % of gross consumption since 1980,
+      falling to about 70 % in recent years.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="national/gross_energy_by_source"></div>
+      <div class="chart" data-dataset="national/supply_domestic_vs_imports"></div>
+      <div class="chart" data-dataset="national/import_dependency"></div>
+    </div>
+
+    <h2 id="final">Final energy consumption</h2>
+    <p class="section-note"><strong>Final consumption</strong> is the energy delivered to users, after
+      conversion and transport losses: about 780 PJ in 2025. Oil products, mostly transport fuels
+      and heating oil, are still the largest carrier.</p>
     <div class="grid">
       <div class="chart" data-dataset="national/final_energy_by_carrier"></div>
       <div class="chart" data-dataset="national/final_energy_by_sector"></div>

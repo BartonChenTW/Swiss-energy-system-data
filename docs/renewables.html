@@ -13,24 +13,43 @@
     <h1>Renewables</h1>
     <p class="lede">Hydropower still provides most of Switzerland's renewable energy. Growth now comes
       from solar PV, ambient heat used by heat pumps, and wood. Wind remains small.</p>
+    <nav class="toc" aria-label="On this page">
+      <span class="toc-label">On this page:</span>
+      <a href="#overview">Overview</a><a href="#pv">Solar PV</a><a href="#wind">Wind and biomass</a><a href="#gaps">Data gaps</a>
+    </nav>
 
+    <h2 id="overview">Overview</h2>
+    <p class="section-note">The left chart counts all renewable energy, including heat; the right one
+      only the new renewable electricity counted towards the Energy Strategy 2050 targets
+      (hydropower excluded).</p>
     <div class="grid">
       <div class="chart" data-dataset="renewables/production_by_source"></div>
       <div class="chart" data-dataset="renewables/new_renewable_electricity"></div>
     </div>
 
-    <h2>Solar PV</h2>
+    <h2 id="pv">Solar PV</h2>
+    <p class="section-note">About 340,000 PV plants with 8.8 GW were in the register in 2026, and they
+      produced about 8 TWh in 2025. Per existing building that is 2.8 kW on average, from 1.4 kW in Uri
+      to 4.7 kW in Lucerne. The remaining roof and facade potential, roof by roof, is on
+      <a href="https://www.sonnendach.ch/">sonnendach.ch</a>; suitable sites for large ground-mounted
+      plants are mapped by the <a href="https://swiss-solarwind-explorer.ethz.ch/">Swiss SolarWind Explorer</a>.</p>
     <div class="grid">
       <div class="chart" data-dataset="renewables/pv_electricity"></div>
       <div class="chart" data-dataset="renewables/pv_installed_capacity"></div>
+      <div class="chart" data-dataset="renewables/pv_per_building_by_canton"></div>
     </div>
 
-    <h2>Wind and biomass</h2>
+    <h2 id="wind">Wind and biomass</h2>
+    <p class="section-note">Wind supplied about 0.2 TWh in 2025, from the 64 turbines in the register. The plant
+      register has no farm names, so the farms below are grouped from turbine locations.</p>
     <div class="grid">
       <div class="chart" data-dataset="renewables/wind_electricity"></div>
       <div class="chart" data-dataset="renewables/wind_biomass_installed_capacity"></div>
     </div>
     <div class="chart" data-dataset="renewables/wind_farms"></div>
+
+    <h2 id="gaps">What is not openly available</h2>
+    <div data-gaps="renewables"></div>
   </main>
   <footer id="site-footer"></footer>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>

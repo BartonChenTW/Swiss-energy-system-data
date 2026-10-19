@@ -452,6 +452,33 @@ references:
     description: Roof-by-roof solar PV and solar-thermal potential for every building in Switzerland.
     checked: 2026-09-28
 
+  - id: sswe
+    type: tool
+    title: Swiss SolarWind Explorer
+    publisher: ETH Zürich (PLUS) with SPEED2ZERO, SCNAT and partners at Eawag, WSL and SLF
+    year: 2025
+    url: https://swiss-solarwind-explorer.ethz.ch/
+    themes: [renewables]
+    language: de/fr/it/en
+    description: >-
+      Maps of where large solar and wind installations fit best while limiting conflicts with
+      biodiversity and landscape, at 50 m resolution for all of Switzerland. Users weight the criteria
+      and can download the overlay maps for GIS. Terms of use are linked; no data licence is stated.
+    checked: 2026-10-19
+
+  - id: edge_recommender
+    type: tool
+    title: EDGE Recommender (prototype)
+    publisher: Lucerne University of Applied Sciences (HSLU, CC Thermal Energy Storage), SWEET EDGE consortium
+    year: 2024
+    url: https://prototype.recommendertool.ch/
+    themes: [heat, renewables, buildings]
+    language: de
+    description: >-
+      Overview of a chosen municipality and recommendations for its energy planning, built in the
+      SFOE-funded SWEET EDGE project. A prototype, not optimised for small screens.
+    checked: 2026-10-19
+
   - id: bafu_co2_calculator
     type: tool
     title: CO2-Rechner Gebäude

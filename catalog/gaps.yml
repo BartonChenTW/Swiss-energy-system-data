@@ -105,6 +105,22 @@ gaps:
     evidence: [bfe_self_consumption_survey, bfe_monitoring_es2050_2025]
     found: 2026-09-29
 
+  # ---------- renewables ----------
+  - id: plant_register_history
+    theme: renewables
+    title: History of power plants in the plant register
+    missing: >-
+      The register lists only plants now in operation, at their current power. Decommissioned and
+      repowered plants drop out, so installed capacity by year can only be reconstructed as a lower
+      bound. It has no plant or site names, so wind farms have to be inferred from turbine locations.
+    available: >-
+      The current register of about 340,000 plants with commissioning date; annual production by
+      technology in the electricity statistics.
+    holder: SFOE; Pronovo (guarantee-of-origin system, the register's source)
+    status: incomplete
+    evidence: [bfe_production_plants, bfe_electricity_statistics]
+    found: 2026-10-19
+
   # ---------- heat ----------
   - id: thermal_networks_register_fields
     theme: heat

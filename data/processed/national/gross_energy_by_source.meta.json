@@ -1,8 +1,8 @@
 {
   "dataset": "national/gross_energy_by_source",
   "processor": "pipeline.process.bfe_energy_statistics",
-  "generated": "2026-10-19T17:05:41+00:00",
-  "rows": 414,
+  "generated": "2026-10-19T17:12:11+00:00",
+  "rows": 368,
   "years": [
     1980,
     2025

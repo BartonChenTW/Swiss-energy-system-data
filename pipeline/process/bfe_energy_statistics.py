@@ -35,9 +35,9 @@ GROSS_SOURCES = {  # Energietraeger -> label for gross energy consumption, in st
     "Wasserkraft": "Hydropower",
     "Gas": "Natural gas",
     "Holzenergie": "Wood",
-    "Müll und Industrieabfälle": "Waste",
+    "Müll und Industrieabfälle": "Coal & waste",
     "Uebrige erneuerbare Energien": "Other renewables",
-    "Kohle": "Coal",
+    "Kohle": "Coal & waste",
     "Elektrizität": "Electricity trade balance",
     "Fernwärme": "District heating",
 }
