@@ -46,6 +46,9 @@ def main() -> None:
 
     sources, _, _ = load_catalog()
     for sid in args.source or list(sources):
+        if sources[sid].get("status") == "planned":
+            print(f"[{sid}] planned source, not downloaded (set status: active in catalog/sources.yml)")
+            continue
         downloads = sources[sid].get("downloads") or []
         if not downloads:
             print(f"[{sid}] no automatic downloads configured, skipping")

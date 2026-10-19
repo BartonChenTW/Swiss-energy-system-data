@@ -6,6 +6,8 @@ Output: electricity/production_by_technology  (TWh, from 1990 when the full brea
         renewables/new_renewable_electricity  (GWh: PV, wind, wood & biogas, renewable waste)
         renewables/wind_electricity           (GWh, from the first year with production)
         renewables/pv_electricity             (GWh, from the first year with production)
+        electricity/cross_border_trade        (TWh, imports and exports, from 1960)
+        electricity/consumption               (TWh, national consumption and final consumption, from 1960)
 
 Check: the production columns minus Verbrauch_speicherpumpen_GWh equal
 Erzeugung_netto_GWh (Erzeugung_andere_total = fossil + waste; wood and biogas are separate).
@@ -49,13 +51,20 @@ def to_tidy(bal: pd.DataFrame, columns: dict, unit: str, scale: float) -> pd.Dat
                          "value": (long["v"] / scale).round(3), "unit": unit})
 
 
+TRADE = {"Einfuhr_GWh": "Imports", "Ausfuhr_GWh": "Exports"}
+CONSUMPTION = {"Landesverbrauch_GWh": "National consumption (incl. grid losses)", "Endverbrauch_GWh": "Final consumption"}
+
+
 def run() -> None:
     path = RAW_DIR / SOURCE_ID / FILE
     if not path.exists():
         print(f"  {FILE} not found, run: python -m pipeline.fetch --source {SOURCE_ID}")
         return
-    bal = pd.read_csv(path, encoding="utf-8-sig")
-    bal = bal[bal["Jahr"] >= FIRST_YEAR].set_index("Jahr")
+    full = pd.read_csv(path, encoding="utf-8-sig").set_index("Jahr")
+    write_tidy(to_tidy(full, TRADE, "TWh", 1000), "electricity/cross_border_trade", [path], __name__)
+    write_tidy(to_tidy(full, CONSUMPTION, "TWh", 1000), "electricity/consumption", [path], __name__)
+
+    bal = full.loc[FIRST_YEAR:]
 
     gap = bal[list(TECHNOLOGIES)].sum(axis=1) - bal["Verbrauch_speicherpumpen_GWh"] - bal["Erzeugung_netto_GWh"]
     if gap.abs().max() > 5:

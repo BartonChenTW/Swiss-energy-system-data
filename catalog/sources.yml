@@ -270,13 +270,83 @@ sources:
       - url: https://www.bfe-ogd.ch/ogd103_stromverbrauch_swissgrid_lv_und_endv.csv
         filename: ogd103_stromverbrauch_swissgrid_lv_und_endv.csv
 
+  # ---------- planned: identified, not yet downloaded (pipeline.fetch skips these) ----------
+  # Download URLs below were found via the opendata.swiss API on 2026-09-28; the file
+  # contents have not been fully inspected yet. Set `status: active` once approved.
+
+  - id: bfe_electricity_monthly
+    status: planned
+    planned_for: Electricity page – official monthly balance (winter imports, seasonal production by technology), replacing the dashboard-based winter/summer charts
+    name: "ENSTAT: Elektrizitätsbilanz der Schweiz – Monatswerte"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    theme: electricity
+    url: https://opendata.swiss/de/dataset/enstat-elektrizitatsbilanz-der-schweiz-monatswerte-csv
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: monthly
+    downloads:
+      - url: https://www.bfe-ogd.ch/ogd35/ogd35_schweizerische_elektrizitaetsbilanz_monatswerte.csv
+        filename: ogd35_schweizerische_elektrizitaetsbilanz_monatswerte.csv
+
+  - id: bfe_reservoirs
+    status: planned
+    planned_for: Electricity page – fill level of storage lakes (weekly, 2000–today, four regions), a key winter security indicator
+    name: "ENSTAT: Füllungsgrad der Speicherseen (Wochenbericht)"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    theme: electricity
+    url: https://opendata.swiss/de/dataset/enstat-fullungsgrad-der-speicherseen-sonntag-24h-wochenbericht-speicherinhalt
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: weekly
+    downloads:
+      - url: https://www.bfe-ogd.ch/ogd17/ogd17_fuellungsgrad_speicherseen.csv
+        filename: ogd17_fuellungsgrad_speicherseen.csv
+
+  - id: bfe_wasta
+    status: planned
+    planned_for: Renewables/Electricity pages – hydropower capacity and expected production by plant type (run-of-river, storage, pumped storage) and canton
+    name: Statistik der Wasserkraftanlagen (WASTA)
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    theme: renewables
+    url: https://opendata.swiss/de/dataset/statistik-der-wasserkraftanlagen-wasta
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: annual
+    downloads:
+      - url: https://data.geo.admin.ch/ch.bfe.statistik-wasserkraftanlagen/statistik-wasserkraftanlagen/statistik-wasserkraftanlagen_2056.csv.zip
+        filename: statistik-wasserkraftanlagen_2056.csv.zip
+
   - id: elcom_tariffs
-    name: Electricity tariffs by municipality
+    status: planned
+    planned_for: Electricity page – median household electricity price and its components (grid, energy, levies), 2011–next year
+    name: Median Strompreis für die Schweiz (ElCom, linked data)
     publisher: Federal Electricity Commission (ElCom)
     theme: prices
-    url: https://www.strompreis.elcom.admin.ch/
-    terms: TBD
+    url: https://opendata.swiss/de/dataset/median-strompreis-fur-die-schweiz
+    terms: "Open use (LINDAS terms of use)."
     frequency: annual
+    notes: Published as a linked-data cube on LINDAS (SPARQL endpoint https://lindas.admin.ch/query); needs a query-based download.
+
+  - id: bfs_ghg_by_sector
+    status: planned
+    planned_for: National page – greenhouse gas emissions by source group (transport, buildings, industry, agriculture, …)
+    name: Treibhausgasemissionen nach Verursachergruppen
+    publisher: Federal Statistical Office (FSO / BFS), based on the FOEN inventory
+    theme: emissions
+    url: https://opendata.swiss/de/dataset/treibhausgasemissionen-nach-verursachergruppen4
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: annual
+    downloads:
+      - url: https://dam-api.bfs.admin.ch/hub/api/dam/assets/36768503/master
+        filename: treibhausgasemissionen_nach_verursachergruppen.xlsx
+
+  - id: bfs_population
+    status: planned
+    planned_for: Per-capita indicators (energy per inhabitant, PV watts per inhabitant by canton)
+    name: Ständige Wohnbevölkerung nach Kanton (STATPOP)
+    publisher: Federal Statistical Office (FSO / BFS)
+    theme: general
+    url: https://www.pxweb.bfs.admin.ch/pxweb/de/px-x-0102010000_101/
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: annual
+    notes: PXWeb table px-x-0102010000_101, 2010–2025; would be queried like bfs_construction_investment.
 
   - id: foen_ghg_inventory
     name: Treibhausgasemissionen nach Sektor und Gas

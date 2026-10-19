@@ -18,6 +18,30 @@ datasets:
     status: official
     coverage: national
 
+  - id: national/gross_energy_by_source
+    title: Gross energy consumption by source
+    description: All energy used in Switzerland before conversion, including nuclear fuel and hydropower. The electricity trade balance is negative in years of net exports.
+    source: bfe_energy_statistics
+    chart: stacked-bar
+    status: official
+    coverage: national
+
+  - id: national/supply_domestic_vs_imports
+    title: Energy supply, domestic production vs net imports
+    description: Gross energy consumption split into domestic production (hydropower, wood, waste, other renewables) and net imports (imports minus exports, plus or minus stock changes). Nuclear fuel counts as imported.
+    source: bfe_energy_statistics
+    chart: stacked-bar
+    status: official
+    coverage: national
+
+  - id: national/import_dependency
+    title: Import dependency
+    description: Share of gross energy consumption covered by net imports.
+    source: bfe_energy_statistics
+    chart: line
+    status: official
+    coverage: national
+
   - id: buildings/heating_energy_source
     title: Main heating energy source of residential buildings (share of number of buildings)
     description: Share of the number of existing residential buildings (one count per building, EGID, regardless of size or number of dwellings) by the energy source of their main heating system. Only buildings with a recorded source are included. Air, ground and water sources indicate heat pumps.

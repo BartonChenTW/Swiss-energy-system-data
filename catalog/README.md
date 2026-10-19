@@ -38,6 +38,8 @@ Used across all four files. `pipeline.check` rejects anything else.
 | `frequency` | no | update frequency stated by the publisher |
 | `downloads` | no | list of `{url, filename}` fetched by `python -m pipeline.fetch` |
 | `notes` | no | caveats: coverage, breaks in series, definitions |
+| `status` | no | `active` (default) or `planned`: identified but not yet downloaded. `pipeline.fetch` skips planned sources, and no dataset may use one |
+| `planned_for` | if planned | what the source would add to the site. This is the download wish list |
 
 ## `datasets.yml`
 

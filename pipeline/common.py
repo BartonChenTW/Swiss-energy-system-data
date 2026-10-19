@@ -24,6 +24,7 @@ CHART_TYPES = {"line", "stacked-area", "stacked-bar", "hbar"}
 PALETTES = {"sequential"}  # optional; default is the categorical palette
 STATUSES = {"official", "sample"}
 COVERAGES = {"national", "regional"}  # regional datasets also name their `region`
+SOURCE_STATUSES = {"active", "planned"}  # planned = identified but not yet downloaded; fetch skips it
 # Optional `ev_profile` block on references: the EV profile data study on the Mobility page
 EV_REGIONS = {"Switzerland", "Europe", "World"}
 EV_DATA = {"sessions", "load", "driving", "status", "synthetic"}
@@ -74,12 +75,19 @@ def catalog_errors(sources: list, datasets: list, references: list) -> list[str]
     for s in sources:
         if s.get("theme") not in THEMES:
             errors.append(f"sources[{s['id']}]: unknown theme {s.get('theme')!r}")
+        if s.get("status", "active") not in SOURCE_STATUSES:
+            errors.append(f"sources[{s['id']}]: unknown status {s.get('status')!r}")
+        if s.get("status") == "planned" and not s.get("planned_for"):
+            errors.append(f"sources[{s['id']}]: planned sources need 'planned_for' (what they would add)")
         for d in s.get("downloads") or []:
             if not d.get("url") or not d.get("filename"):
                 errors.append(f"sources[{s['id']}]: each download needs url and filename")
+    planned = {s["id"] for s in sources if s.get("status") == "planned"}
     for d in datasets:
         if d.get("source") not in source_ids:
             errors.append(f"datasets[{d['id']}]: unknown source {d.get('source')!r}")
+        if d.get("source") in planned:
+            errors.append(f"datasets[{d['id']}]: source {d.get('source')!r} is still planned")
         if d.get("chart") not in CHART_TYPES:
             errors.append(f"datasets[{d['id']}]: unknown chart {d.get('chart')!r}")
         if d.get("status") not in STATUSES:

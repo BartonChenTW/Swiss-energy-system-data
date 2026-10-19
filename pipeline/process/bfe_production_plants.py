@@ -7,6 +7,8 @@ Input : data/raw/bfe_production_plants/ch.bfe.elektrizitaetsproduktionsanlagen.z
 Output: renewables/pv_installed_capacity             (MW, cumulative by commissioning year)
         renewables/wind_biomass_installed_capacity   (MW, cumulative by commissioning year)
         renewables/wind_farms                        (MW per wind farm, current register)
+        renewables/pv_per_building_by_canton         (kW of PV per existing building, snapshot)
+          (building counts from data/raw/bfs_gwr/ch.zip)
 
 Caveat: the register holds plants currently in operation at their current power,
 so the series are lower bounds for past years. The current calendar year is
@@ -17,12 +19,13 @@ from datetime import date
 
 import pandas as pd
 
-from ..common import RAW_DIR, write_tidy
+from ..common import RAW_DIR, input_record, write_tidy
 
 SOURCE_ID = "bfe_production_plants"
 FILE = "ch.bfe.elektrizitaetsproduktionsanlagen.zip"
 SITE_RADIUS_M = 3000  # turbines closer than this form one wind farm (LV95 metres)
 SITE_MIN_MW = 0.5     # smaller sites are summed into one bar
+GWR = RAW_DIR / "bfs_gwr" / "ch.zip"
 
 
 def cumulative_mw(plants: pd.DataFrame, first_year: int) -> pd.DataFrame:
@@ -54,6 +57,20 @@ def run() -> None:
     pv = plants[plants["label"] == "Solar PV"]
     write_tidy(cumulative_mw(pv, 2005), "renewables/pv_installed_capacity", [path], __name__,
                notes=f"{len(pv):,} PV plants in the register with a commissioning date.")
+
+    if GWR.exists():
+        with zipfile.ZipFile(GWR) as zf:
+            b = pd.read_csv(zf.open("gebaeude_batiment_edificio.csv"), sep="\t", dtype=str, usecols=["GDEKT", "GSTAT"])
+        buildings = b[b["GSTAT"] == "1004"].groupby("GDEKT").size()
+        per = (pv.groupby("Canton")["TotalPower"].sum() / buildings).dropna().sort_values(ascending=False)
+        unmatched = set(pv["Canton"].dropna()) - set(buildings.index)
+        if unmatched:
+            raise ValueError(f"Canton codes not in GWR: {unmatched}")
+        write_tidy(pd.DataFrame({"year": int(input_record(path)["retrieved"][:4]), "category": per.index,
+                                 "value": per.round(2).values, "unit": "kW per building"}),
+                   "renewables/pv_per_building_by_canton", [path, GWR], __name__,
+                   notes=f"Switzerland: {pv['TotalPower'].sum() / buildings.sum():.2f} kW per building "
+                         f"({pv['TotalPower'].sum() / 1000:,.0f} MW on {buildings.sum():,} existing buildings).")
 
     wb = plants[plants["label"].isin(["Wind", "Biomass"])]
     counts = wb["label"].value_counts()
