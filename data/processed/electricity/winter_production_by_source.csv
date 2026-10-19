@@ -1,0 +1,67 @@
+year,category,value,unit
+2016,Run-of-river hydro,5.51,TWh
+2016,Storage hydro,10.03,TWh
+2016,Nuclear,11.72,TWh
+2016,Thermal,2.15,TWh
+2016,Solar PV,0.36,TWh
+2016,Wind,0.06,TWh
+2017,Run-of-river hydro,5.02,TWh
+2017,Storage hydro,9.75,TWh
+2017,Nuclear,8.61,TWh
+2017,Thermal,2.22,TWh
+2017,Solar PV,0.47,TWh
+2017,Wind,0.06,TWh
+2018,Run-of-river hydro,6.19,TWh
+2018,Storage hydro,10.51,TWh
+2018,Nuclear,10.2,TWh
+2018,Thermal,2.05,TWh
+2018,Solar PV,0.51,TWh
+2018,Wind,0.08,TWh
+2019,Run-of-river hydro,5.46,TWh
+2019,Storage hydro,9.61,TWh
+2019,Nuclear,13.0,TWh
+2019,Thermal,2.14,TWh
+2019,Solar PV,0.63,TWh
+2019,Wind,0.08,TWh
+2020,Run-of-river hydro,7.11,TWh
+2020,Storage hydro,11.29,TWh
+2020,Nuclear,13.48,TWh
+2020,Thermal,2.27,TWh
+2020,Solar PV,0.68,TWh
+2020,Wind,0.1,TWh
+2021,Run-of-river hydro,6.42,TWh
+2021,Storage hydro,11.7,TWh
+2021,Nuclear,12.5,TWh
+2021,Thermal,2.08,TWh
+2021,Solar PV,0.68,TWh
+2021,Wind,0.09,TWh
+2022,Run-of-river hydro,5.21,TWh
+2022,Storage hydro,9.49,TWh
+2022,Nuclear,10.92,TWh
+2022,Thermal,2.09,TWh
+2022,Solar PV,0.99,TWh
+2022,Wind,0.09,TWh
+2023,Run-of-river hydro,5.85,TWh
+2023,Storage hydro,9.84,TWh
+2023,Nuclear,12.87,TWh
+2023,Thermal,1.95,TWh
+2023,Solar PV,1.1,TWh
+2023,Wind,0.09,TWh
+2024,Run-of-river hydro,7.58,TWh
+2024,Storage hydro,13.0,TWh
+2024,Nuclear,12.97,TWh
+2024,Thermal,1.83,TWh
+2024,Solar PV,1.43,TWh
+2024,Wind,0.12,TWh
+2025,Run-of-river hydro,6.47,TWh
+2025,Storage hydro,11.98,TWh
+2025,Nuclear,12.6,TWh
+2025,Thermal,1.88,TWh
+2025,Solar PV,1.77,TWh
+2025,Wind,0.09,TWh
+2026,Run-of-river hydro,5.68,TWh
+2026,Storage hydro,10.65,TWh
+2026,Nuclear,8.5,TWh
+2026,Thermal,1.95,TWh
+2026,Solar PV,2.21,TWh
+2026,Wind,0.1,TWh

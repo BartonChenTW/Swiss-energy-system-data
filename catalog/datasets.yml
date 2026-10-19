@@ -200,6 +200,50 @@ datasets:
     status: official
     coverage: national
 
+  - id: electricity/consumption
+    title: Electricity consumption
+    description: National consumption is final consumption plus transmission and distribution losses. Neither includes the electricity used by pumped-storage pumps.
+    source: bfe_electricity_statistics
+    chart: line
+    status: official
+    coverage: national
+
+  - id: electricity/cross_border_trade
+    title: Electricity imports and exports
+    description: Physical electricity imports and exports across the national border. Switzerland trades large volumes in both directions every year; the balance changes with hydropower and nuclear output.
+    source: bfe_electricity_statistics
+    chart: line
+    status: official
+    coverage: national
+
+  - id: electricity/winter_balance
+    title: Winter half-year, production vs consumption
+    description: >-
+      Domestic production and national consumption from October to March, from daily Swissgrid data
+      (winter 2024 = October 2023 to March 2024). Production includes pumped storage; consumption excludes
+      the pumps, so the gap approximates net imports minus pumping. The dashboard figures differ from the
+      official annual statistics by up to about 3 %.
+    source: bfe_swissgrid_production
+    chart: line
+    status: official
+    coverage: national
+
+  - id: electricity/summer_balance
+    title: Summer half-year, production vs consumption
+    description: The same balance from April to September, when Switzerland usually produces more than it consumes.
+    source: bfe_swissgrid_production
+    chart: line
+    status: official
+    coverage: national
+
+  - id: electricity/winter_production_by_source
+    title: Winter electricity production by source
+    description: Domestic production from October to March by source, from daily Swissgrid data. Winter 2026 shows the outage of the Gösgen nuclear plant.
+    source: bfe_swissgrid_production
+    chart: stacked-bar
+    status: official
+    coverage: national
+
   - id: renewables/production_by_source
     title: Domestic renewable energy production by source
     description: Primary production of renewable energy in Switzerland. Solar covers PV and solar thermal. Ambient heat is the environmental heat used by heat pumps (their electricity input is not included).
@@ -258,6 +302,17 @@ datasets:
     description: Cumulative capacity of PV plants in the register, by year of commissioning. Only plants still in operation are counted, at their current power, so earlier years are slightly understated.
     source: bfe_production_plants
     chart: line
+    status: official
+    coverage: national
+
+  - id: renewables/pv_per_building_by_canton
+    title: Solar PV capacity per building, by canton
+    description: >-
+      Installed PV capacity in the plant register divided by the number of existing buildings in the
+      building register (GWR), per canton. A rough measure of how far rooftop PV has spread; it counts
+      ground-mounted and facade plants too, and does not account for building size.
+    source: bfe_production_plants
+    chart: hbar
     status: official
     coverage: national
 

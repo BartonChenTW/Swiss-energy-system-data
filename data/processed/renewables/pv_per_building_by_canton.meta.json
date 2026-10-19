@@ -1,0 +1,29 @@
+{
+  "dataset": "renewables/pv_per_building_by_canton",
+  "processor": "pipeline.process.bfe_production_plants",
+  "generated": "2026-10-19T17:05:59+00:00",
+  "rows": 26,
+  "years": [
+    2026,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_production_plants/ch.bfe.elektrizitaetsproduktionsanlagen.zip",
+      "url": "https://data.geo.admin.ch/ch.bfe.elektrizitaetsproduktionsanlagen/csv/2056/ch.bfe.elektrizitaetsproduktionsanlagen.zip",
+      "retrieved": "2026-09-29T09:48:16+00:00",
+      "last_modified": "Mon, 14 Sep 2026 11:42:19 GMT",
+      "sha256": "8f207b57a5df548a78c587ba1e6a732549b1b16525d9b07db2f2a1d63c1cb2c6",
+      "bytes": 19195387
+    },
+    {
+      "file": "data/raw/bfs_gwr/ch.zip",
+      "url": "https://public.madd.bfs.admin.ch/ch.zip",
+      "retrieved": "2026-10-19T17:05:24+00:00",
+      "last_modified": "Mon, 19 Oct 2026 03:12:49 GMT",
+      "sha256": "44e259986724f7c707ad7347fc6012b322bdde3188b032770d060d5b652d515f",
+      "bytes": 433368161
+    }
+  ],
+  "notes": "Switzerland: 2.78 kW per building (8,829 MW on 3,178,539 existing buildings)."
+}

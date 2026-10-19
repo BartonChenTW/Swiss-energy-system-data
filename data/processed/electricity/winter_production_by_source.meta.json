@@ -1,0 +1,20 @@
+{
+  "dataset": "electricity/winter_production_by_source",
+  "processor": "pipeline.process.bfe_swissgrid_production",
+  "generated": "2026-10-19T17:06:00+00:00",
+  "rows": 66,
+  "years": [
+    2016,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_swissgrid_production/ogd104_stromproduktion_swissgrid.csv",
+      "url": "https://www.bfe-ogd.ch/ogd104_stromproduktion_swissgrid.csv",
+      "retrieved": "2026-10-19T17:05:29+00:00",
+      "last_modified": "Mon, 19 Oct 2026 09:00:18 GMT",
+      "sha256": "9b5acdc69173f945b981ed5916a84b5d21bc4cbdb072d306193f525166d7f266",
+      "bytes": 682283
+    }
+  ]
+}

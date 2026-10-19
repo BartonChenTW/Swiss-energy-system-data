@@ -1,0 +1,29 @@
+{
+  "dataset": "electricity/winter_balance",
+  "processor": "pipeline.process.bfe_swissgrid_production",
+  "generated": "2026-10-19T17:06:00+00:00",
+  "rows": 18,
+  "years": [
+    2018,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_swissgrid_production/ogd104_stromproduktion_swissgrid.csv",
+      "url": "https://www.bfe-ogd.ch/ogd104_stromproduktion_swissgrid.csv",
+      "retrieved": "2026-10-19T17:05:29+00:00",
+      "last_modified": "Mon, 19 Oct 2026 09:00:18 GMT",
+      "sha256": "9b5acdc69173f945b981ed5916a84b5d21bc4cbdb072d306193f525166d7f266",
+      "bytes": 682283
+    },
+    {
+      "file": "data/raw/bfe_swissgrid_consumption/ogd103_stromverbrauch_swissgrid_lv_und_endv.csv",
+      "url": "https://www.bfe-ogd.ch/ogd103_stromverbrauch_swissgrid_lv_und_endv.csv",
+      "retrieved": "2026-10-19T17:05:29+00:00",
+      "last_modified": "Mon, 19 Oct 2026 09:00:18 GMT",
+      "sha256": "8c52d160d7d1ce898ef07a5a295f0f4aebe2b18dce9627ddbd476e5c585513a0",
+      "bytes": 67114
+    }
+  ],
+  "notes": "Winter half-years 2018–2026. Dashboard consumption differs from the official annual statistics by up to ~3%."
+}

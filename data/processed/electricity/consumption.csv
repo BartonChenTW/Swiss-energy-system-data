@@ -1,0 +1,133 @@
+year,category,value,unit
+1960,National consumption (incl. grid losses),17.911,TWh
+1960,Final consumption,15.891,TWh
+1961,National consumption (incl. grid losses),18.77,TWh
+1961,Final consumption,16.741,TWh
+1962,National consumption (incl. grid losses),19.831,TWh
+1962,Final consumption,17.716,TWh
+1963,National consumption (incl. grid losses),20.745,TWh
+1963,Final consumption,18.483,TWh
+1964,National consumption (incl. grid losses),21.566,TWh
+1964,Final consumption,19.346,TWh
+1965,National consumption (incl. grid losses),22.516,TWh
+1965,Final consumption,20.221,TWh
+1966,National consumption (incl. grid losses),23.14,TWh
+1966,Final consumption,20.708,TWh
+1967,National consumption (incl. grid losses),24.043,TWh
+1967,Final consumption,21.527,TWh
+1968,National consumption (incl. grid losses),24.944,TWh
+1968,Final consumption,22.437,TWh
+1969,National consumption (incl. grid losses),26.349,TWh
+1969,Final consumption,23.699,TWh
+1970,National consumption (incl. grid losses),27.896,TWh
+1970,Final consumption,25.087,TWh
+1971,National consumption (incl. grid losses),29.13,TWh
+1971,Final consumption,26.248,TWh
+1972,National consumption (incl. grid losses),30.172,TWh
+1972,Final consumption,27.141,TWh
+1973,National consumption (incl. grid losses),31.933,TWh
+1973,Final consumption,28.774,TWh
+1974,National consumption (incl. grid losses),32.638,TWh
+1974,Final consumption,29.567,TWh
+1975,National consumption (incl. grid losses),32.071,TWh
+1975,Final consumption,28.903,TWh
+1976,National consumption (incl. grid losses),32.982,TWh
+1976,Final consumption,29.903,TWh
+1977,National consumption (incl. grid losses),34.441,TWh
+1977,Final consumption,31.289,TWh
+1978,National consumption (incl. grid losses),35.595,TWh
+1978,Final consumption,32.464,TWh
+1979,National consumption (incl. grid losses),36.918,TWh
+1979,Final consumption,33.766,TWh
+1980,National consumption (incl. grid losses),38.45,TWh
+1980,Final consumption,35.252,TWh
+1981,National consumption (incl. grid losses),39.408,TWh
+1981,Final consumption,36.194,TWh
+1982,National consumption (incl. grid losses),39.926,TWh
+1982,Final consumption,36.731,TWh
+1983,National consumption (incl. grid losses),41.227,TWh
+1983,Final consumption,37.97,TWh
+1984,National consumption (incl. grid losses),43.013,TWh
+1984,Final consumption,39.665,TWh
+1985,National consumption (incl. grid losses),44.765,TWh
+1985,Final consumption,41.321,TWh
+1986,National consumption (incl. grid losses),45.833,TWh
+1986,Final consumption,42.348,TWh
+1987,National consumption (incl. grid losses),47.142,TWh
+1987,Final consumption,43.591,TWh
+1988,National consumption (incl. grid losses),47.898,TWh
+1988,Final consumption,44.327,TWh
+1989,National consumption (incl. grid losses),49.14,TWh
+1989,Final consumption,45.502,TWh
+1990,National consumption (incl. grid losses),50.271,TWh
+1990,Final consumption,46.578,TWh
+1991,National consumption (incl. grid losses),51.336,TWh
+1991,Final consumption,47.586,TWh
+1992,National consumption (incl. grid losses),51.621,TWh
+1992,Final consumption,47.866,TWh
+1993,National consumption (incl. grid losses),50.928,TWh
+1993,Final consumption,47.239,TWh
+1994,National consumption (incl. grid losses),50.547,TWh
+1994,Final consumption,46.897,TWh
+1995,National consumption (incl. grid losses),51.567,TWh
+1995,Final consumption,47.882,TWh
+1996,National consumption (incl. grid losses),52.42,TWh
+1996,Final consumption,48.692,TWh
+1997,National consumption (incl. grid losses),52.327,TWh
+1997,Final consumption,48.612,TWh
+1998,National consumption (incl. grid losses),53.374,TWh
+1998,Final consumption,49.62,TWh
+1999,National consumption (incl. grid losses),55.056,TWh
+1999,Final consumption,51.213,TWh
+2000,National consumption (incl. grid losses),56.304,TWh
+2000,Final consumption,52.373,TWh
+2001,National consumption (incl. grid losses),57.783,TWh
+2001,Final consumption,53.749,TWh
+2002,National consumption (incl. grid losses),58.085,TWh
+2002,Final consumption,54.029,TWh
+2003,National consumption (incl. grid losses),59.261,TWh
+2003,Final consumption,55.122,TWh
+2004,National consumption (incl. grid losses),60.387,TWh
+2004,Final consumption,56.171,TWh
+2005,National consumption (incl. grid losses),61.637,TWh
+2005,Final consumption,57.33,TWh
+2006,National consumption (incl. grid losses),62.124,TWh
+2006,Final consumption,57.782,TWh
+2007,National consumption (incl. grid losses),61.75,TWh
+2007,Final consumption,57.432,TWh
+2008,National consumption (incl. grid losses),63.147,TWh
+2008,Final consumption,58.729,TWh
+2009,National consumption (incl. grid losses),61.814,TWh
+2009,Final consumption,57.494,TWh
+2010,National consumption (incl. grid losses),64.278,TWh
+2010,Final consumption,59.785,TWh
+2011,National consumption (incl. grid losses),63.002,TWh
+2011,Final consumption,58.599,TWh
+2012,National consumption (incl. grid losses),63.408,TWh
+2012,Final consumption,58.973,TWh
+2013,National consumption (incl. grid losses),63.784,TWh
+2013,Final consumption,59.323,TWh
+2014,National consumption (incl. grid losses),61.787,TWh
+2014,Final consumption,57.466,TWh
+2015,National consumption (incl. grid losses),62.626,TWh
+2015,Final consumption,58.246,TWh
+2016,National consumption (incl. grid losses),62.617,TWh
+2016,Final consumption,58.239,TWh
+2017,National consumption (incl. grid losses),62.877,TWh
+2017,Final consumption,58.483,TWh
+2018,National consumption (incl. grid losses),61.984,TWh
+2018,Final consumption,57.647,TWh
+2019,National consumption (incl. grid losses),61.501,TWh
+2019,Final consumption,57.198,TWh
+2020,National consumption (incl. grid losses),60.312,TWh
+2020,Final consumption,56.097,TWh
+2021,National consumption (incl. grid losses),63.226,TWh
+2021,Final consumption,58.803,TWh
+2022,National consumption (incl. grid losses),62.336,TWh
+2022,Final consumption,57.976,TWh
+2023,National consumption (incl. grid losses),60.975,TWh
+2023,Final consumption,56.71,TWh
+2024,National consumption (incl. grid losses),61.838,TWh
+2024,Final consumption,57.512,TWh
+2025,National consumption (incl. grid losses),62.328,TWh
+2025,Final consumption,57.97,TWh
