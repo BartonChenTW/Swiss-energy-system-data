@@ -8,6 +8,8 @@ for fixes, wording and styling. To release, rename `Unreleased` to the new versi
 with today's date; `python -m pipeline.build_site` picks up the top released entry.
 
 ## [Unreleased]
+
+## [0.10.0] - 2026-10-19
 ### Added
 - National: gross energy consumption by source, domestic production vs net imports, and import dependency (about 70 % in 2025).
 - Electricity: consumption, imports and exports since 1960; winter and summer balance of production and consumption, and winter production by source, from daily Swissgrid data.

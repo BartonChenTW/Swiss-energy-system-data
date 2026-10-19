@@ -10,7 +10,7 @@ Open work is in [TODO.md](TODO.md). Site releases are in [CHANGELOG.md](CHANGELO
 ## 2026-10-19
 
 ### Done
-- Finished the work begun on the workstation on 2026-09-28 (branch `euler-handoff`): fetched and
+- **0.10.0:** finished the work begun on the workstation on 2026-09-28 (branch `euler-handoff`): fetched and
   processed on Euler; all processors run. Nine new datasets on the National, Electricity and
   Renewables pages, which now follow the Buildings layout (sections, notes, data gaps).
 - Planned sources (`status: planned`) in `catalog/sources.yml`: the download wish list, listed in TODO.md.
