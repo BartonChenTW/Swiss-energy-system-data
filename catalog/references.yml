@@ -479,6 +479,234 @@ references:
       SFOE-funded SWEET EDGE project. A prototype, not optimised for small screens.
     checked: 2026-10-19
 
+  # ---------- renewables: potential studies and data (checked 2026-10-20) ----------
+  - id: dujardin_2021_solar_wind_optimization
+    type: report
+    title: Synergistic optimization of renewable energy installations through evolution strategy
+    publisher: Dujardin, Kahl, Lehning (EPFL CRYOS / WSL-SLF), Environmental Research Letters 16, 064016
+    year: 2021
+    url: https://doi.org/10.1088/1748-9326/abfc75
+    themes: [renewables, electricity, scenarios]
+    language: en
+    description: >-
+      EPFL's solar and wind siting study for Switzerland: optimising where to build new wind turbines and
+      PV together gives a mix of about 75 % wind (13.4 GW) and 25 % mostly alpine PV (4.4 GW), cutting the
+      required imports from 17.5 TWh (business as usual) to 3.5 TWh. Open access (CC BY 4.0); the data are
+      only available on request from the authors.
+    checked: 2026-10-20
+
+  - id: dujardin_2017_pv_wind_hydro
+    type: report
+    title: Interplay between photovoltaic, wind energy and storage hydropower in a fully renewable Switzerland
+    publisher: Dujardin, Kahl, Kruyt, Bartlett, Lehning (EPFL / SLF), Energy 135, 513–525
+    year: 2017
+    url: https://doi.org/10.1016/j.energy.2017.06.092
+    themes: [renewables, electricity, scenarios]
+    language: en
+    description: >-
+      Models a fully renewable Swiss power system after the nuclear phase-out. Existing storage hydropower can
+      balance wind and PV at today's import levels as long as the PV share stays moderate. Paywalled; no data released.
+    checked: 2026-10-20
+
+  - id: kahl_2019_alpine_pv_winter
+    type: report
+    title: The bright side of PV production in snow-covered mountains
+    publisher: Kahl, Dujardin, Lehning (EPFL CRYOS / SLF), PNAS 116(4), 1162–1167
+    year: 2019
+    url: https://doi.org/10.1073/pnas.1720808116
+    themes: [renewables, electricity]
+    language: en
+    description: >-
+      Shows that steeply tilted PV in snow-covered Alpine areas shifts output from summer to winter and so
+      reduces the winter supply gap. No downloadable data.
+    checked: 2026-10-20
+
+  - id: frischholz_2024_alpine_pv
+    type: report
+    title: Confirmation of the power gain for solar photovoltaic systems in alpine areas and across scales
+    publisher: Frischholz, Schilt, Sharma, Kahl, Strebel, Anderegg, Rohrer, Lehning (EPFL / ZHAW), Frontiers in Energy Research 12, 1372680
+    year: 2024
+    url: https://doi.org/10.3389/fenrg.2024.1372680
+    themes: [renewables]
+    language: en
+    description: >-
+      Compares alpine test rigs (including ZHAW's Davos-Totalp) with the first utility-scale alpine PV plant: the
+      higher winter share carries over to large plants, though absolute yields are lower. CC BY 4.0; monitoring
+      data of the three plants are on EnviDat (doi:10.16904/envidat.469, CC BY-SA).
+    checked: 2026-10-20
+
+  - id: walch_2020_rooftop_pv
+    type: report
+    title: Big data mining for the estimation of hourly rooftop photovoltaic potential and its uncertainty
+    publisher: Walch, Castello, Mohajeri, Scartezzini (EPFL LESO-PB), Applied Energy 262, 114404
+    year: 2020
+    url: https://doi.org/10.1016/j.apenergy.2019.114404
+    themes: [renewables, buildings]
+    language: en
+    description: >-
+      Machine-learning estimate of the hourly PV potential of 9.6 million Swiss roof surfaces: 55 % of roof area
+      is usable, giving 24 ± 9 TWh/a. Data on Zenodo (doi:10.5281/zenodo.3609833, CC BY 4.0, 13.7 GB of CSV) per
+      building and per roof category.
+    checked: 2026-10-20
+
+  - id: hyenergy_platform
+    type: tool
+    title: Swiss Renewable Energy Data (HyEnergy)
+    publisher: EPFL (NRP 75 HyEnergy project), with UNIL and UCL
+    year: 2020
+    url: https://hyenergy.epfl.ch
+    themes: [renewables, buildings, heat]
+    language: en
+    description: >-
+      Map platform with rooftop PV potential (annual and hourly), wind potential (2008–2017) and ground-source
+      heat pump potential by municipality, building and pixel. No download or licence is stated.
+    checked: 2026-10-20
+
+  - id: envidat_ch_poa300
+    type: portal
+    title: CH-POA300, hourly plane-of-array solar irradiance at 300 m for Switzerland
+    publisher: Frischholz (EPFL), EnviDat
+    year: 2025
+    url: https://doi.org/10.16904/envidat.632
+    themes: [renewables]
+    language: en
+    description: >-
+      Hourly irradiance on tilted surfaces at 300 m resolution: 2004–2020 for south-facing tilts of 0, 35, 60 and
+      90°, and the year 2016 for 6 azimuths × 10 tilts. CC BY 4.0.
+    checked: 2026-10-20
+
+  - id: envidat_ch_alpv300
+    type: portal
+    title: CH-ALPV300, hourly Alpine PV potential profiles in Switzerland
+    publisher: Frischholz, Cintas, Reusser, Lehning (EPFL / ETH Zurich), EnviDat
+    year: 2026
+    url: https://doi.org/10.16904/envidat.729
+    themes: [renewables, electricity]
+    language: en
+    description: >-
+      Hourly alpine PV generation for 2016, aggregated to about 713 alpine municipalities and about 126
+      transmission-grid nodes, for six siting scenarios based on the Swiss SolarWind Explorer. NetCDF (112 MB), CC BY 4.0.
+    checked: 2026-10-20
+
+  - id: envidat_ch_rpv300
+    type: portal
+    title: CH-RPV300, hourly rooftop PV potential profiles in Switzerland
+    publisher: Frischholz (EPFL), Renggli, Darudi, Savelsberg (ETH Zurich), EnviDat
+    year: 2026
+    url: https://doi.org/10.16904/envidat.733
+    themes: [renewables, buildings, electricity]
+    language: en
+    description: >-
+      Hourly rooftop PV generation for 12 weather years (2008–2019) at about 130 grid nodes, by 48 orientation and
+      tilt classes and 5 size classes. NetCDF (4–6 GB per zip), CC BY-SA 4.0.
+    checked: 2026-10-20
+
+  - id: envidat_swiss_elec_modeling
+    type: portal
+    title: Swiss electricity system modelling data (HV grid, hydropower, inflows, renewable production)
+    publisher: Cintas, Dujardin, Lehning, Frischholz (EPFL), EnviDat
+    year: 2025
+    url: https://doi.org/10.16904/envidat.699
+    themes: [electricity, renewables, scenarios]
+    language: en
+    description: >-
+      High-voltage grid (2019), reservoir and plant topology, hourly inflows 2009–2019, wind production per node,
+      PV irradiance and 15-minute run-of-river production. The open inputs behind EPFL's power-system studies.
+      Several GB, CC BY 4.0.
+    checked: 2026-10-20
+
+  - id: bfe_windatlas
+    type: portal
+    title: Windatlas Schweiz (wind atlas)
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    year: 2019
+    url: https://opendata.swiss/de/dataset/windatlas-schweiz-jahresmittel-der-modellierten-windgeschwindigkeit-und-windrichtung-in-100-m-h
+    themes: [renewables]
+    language: de/fr/it/en
+    description: >-
+      Modelled mean annual wind speed and direction on a 100 m grid, 50–150 m above ground (uncertainty ±0.5 m/s
+      in the Jura, ±1.3 m/s in the Alps). GeoTIFF and GeoPackage, opendata.swiss open use with source.
+    checked: 2026-10-20
+
+  - id: bfe_hydropower_potential_2019
+    type: report
+    title: Wasserkraftpotenzial der Schweiz
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    year: 2019
+    url: https://pubdb.bfe.admin.ch/de/publication/download/9815
+    themes: [renewables, electricity, scenarios]
+    language: de
+    description: >-
+      Estimates the additional hydropower that can be developed by 2050 at 1,560 GWh/a under optimised
+      conditions (after residual-flow losses), plus about 700 GWh/a from new glacier lakes. PDF tables only.
+    checked: 2026-10-20
+
+  - id: sonnenfassade
+    type: tool
+    title: sonnenfassade.ch – solar potential of facades
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    year: 2019
+    url: https://www.sonnenfassade.ch/
+    themes: [renewables, buildings]
+    language: de/fr/it
+    description: >-
+      Facade-by-facade solar suitability and yield, the companion of sonnendach.ch. Open GeoPackage download
+      (1.9 GB), opendata.swiss open use with source. Summed per municipality in the solar potential source.
+    related_sources: [bfe_solar_potential]
+    checked: 2026-10-20
+
+  - id: wsl_biomass_potentials
+    type: portal
+    title: Potentials of domestic biomass resources for the energy transition in Switzerland
+    publisher: Thees, Burg, Erni, Bowman, Lemm (WSL), EnviDat
+    year: 2017
+    url: https://doi.org/10.16904/18
+    themes: [renewables, heat]
+    language: en
+    description: >-
+      Theoretical and sustainable energy potential (PJ) of ten woody and non-woody biomass categories, at national,
+      cantonal and municipal level (XLSX). Under the WSL Data Policy, not an open licence; reference year 2014.
+    checked: 2026-10-20
+
+  - id: bfe_statistik_sonnenenergie
+    type: report
+    title: Statistik Sonnenenergie, Referenzjahr 2025
+    publisher: Swiss Federal Office of Energy (SFOE / BFE), prepared by Swissolar
+    year: 2026
+    url: https://www.swissolar.ch/_default_upload_bucket/12679-20260703_statistik_sonnenenergie_2025_bericht_de_def.pdf
+    themes: [renewables, electricity, heat]
+    language: de
+    description: >-
+      Official annual survey of PV, solar thermal and battery sales: 1,333 MW of PV installed in 2025 (−26 %),
+      9,499 MW in total. PDF tables only.
+    checked: 2026-10-20
+
+  - id: pronovo_load_profiles
+    type: portal
+    title: Lastgangprofile nach Technologien (quarter-hourly production by technology)
+    publisher: Pronovo AG
+    year: 2026
+    url: https://pronovo.ch/downloads/Lastgangprofile_nach_Technologien/
+    themes: [renewables, electricity]
+    language: de
+    description: >-
+      Quarter-hourly metered production of about 20 technologies (PV, wind, hydro, biomass, ...), PV also by canton,
+      from 2020. CSV in zip files; no licence or column documentation stated.
+    checked: 2026-10-20
+
+  - id: meteoswiss_satellite_radiation
+    type: portal
+    title: MeteoSwiss open data – satellite-derived radiation grids
+    publisher: MeteoSwiss
+    year: 2025
+    url: https://opendatadocs.meteoswiss.ch/c-climate-data/c4-satellite-based-climate-data
+    themes: [renewables]
+    language: en
+    description: >-
+      Global, diffuse and direct radiation from Meteosat as hourly, daily, monthly and yearly NetCDF grids. Free use
+      with source; the archive starts in 2025, older years are announced.
+    checked: 2026-10-20
+
   - id: bafu_co2_calculator
     type: tool
     title: CO2-Rechner Gebäude

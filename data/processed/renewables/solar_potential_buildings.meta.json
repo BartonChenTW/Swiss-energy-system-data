@@ -1,0 +1,29 @@
+{
+  "dataset": "renewables/solar_potential_buildings",
+  "processor": "pipeline.process.bfe_solar_potential",
+  "generated": "2026-10-20T08:42:24+00:00",
+  "rows": 5,
+  "years": [
+    2026,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_solar_potential/Solarenergiepotenziale_Gemeinden_Daecher_und_Fassaden.csv",
+      "url": "https://www.bfe-ogd.ch/ogd52/Solarenergiepotenziale_Gemeinden_Daecher_und_Fassaden.csv",
+      "retrieved": "2026-10-20T08:41:56+00:00",
+      "last_modified": "Mon, 27 Jul 2026 09:02:09 GMT",
+      "sha256": "f6555529169c6f1bc972f0b2923f3ab384c227ab3a8be6006f73fc911a4530bd",
+      "bytes": 673130
+    },
+    {
+      "file": "data/raw/bfe_electricity_statistics/ogd32_elektrizitaetbilanz_jahreswerte.csv",
+      "url": "https://www.uvek-gis.admin.ch/BFE/ogd/32/ogd32_elektrizitaetbilanz_jahreswerte.csv",
+      "retrieved": "2026-09-29T09:48:12+00:00",
+      "last_modified": "Thu, 09 Jul 2026 12:37:33 GMT",
+      "sha256": "3c57a9d73637ed7b826f0400de48f7973d0fe70c3b29ec55c4f5573eaacfacf2",
+      "bytes": 6145
+    }
+  ],
+  "notes": "October–March gives 27% of the annual roof PV potential."
+}

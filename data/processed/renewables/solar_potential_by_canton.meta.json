@@ -1,0 +1,21 @@
+{
+  "dataset": "renewables/solar_potential_by_canton",
+  "processor": "pipeline.process.bfe_solar_potential",
+  "generated": "2026-10-20T08:42:24+00:00",
+  "rows": 26,
+  "years": [
+    2026,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_solar_potential/Solarenergiepotenziale_Gemeinden_Daecher_und_Fassaden.csv",
+      "url": "https://www.bfe-ogd.ch/ogd52/Solarenergiepotenziale_Gemeinden_Daecher_und_Fassaden.csv",
+      "retrieved": "2026-10-20T08:41:56+00:00",
+      "last_modified": "Mon, 27 Jul 2026 09:02:09 GMT",
+      "sha256": "f6555529169c6f1bc972f0b2923f3ab384c227ab3a8be6006f73fc911a4530bd",
+      "bytes": 673130
+    }
+  ],
+  "notes": "Switzerland: 64.8 TWh/a from 2,121 municipalities."
+}

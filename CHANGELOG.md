@@ -10,6 +10,9 @@ with today's date; `python -m pipeline.build_site` picks up the top released ent
 ## [Unreleased]
 ### Added
 - Sources: filter by theme and by status (in use or planned), with a count; planned sources show what they would add.
+- Renewables: solar potential of buildings (roofs and facades, SFOE scenarios) compared with today's PV production, and rooftop potential by canton.
+- Renewables: table of studies on solar, wind and hydropower potential (EPFL siting and alpine PV studies, open EnviDat PV profiles, wind atlas, hydropower and biomass potentials) with their findings and data access.
+- Library: 17 studies and datasets on Swiss renewable potential; Data gaps: three new renewables gaps (siting study results, hydropower potential, solar market statistics).
 ### Fixed
 - Sources: a source used as a secondary input (e.g. the building register for per-building ratios, Swissgrid consumption for the winter balance) now lists those datasets instead of "planned".
 

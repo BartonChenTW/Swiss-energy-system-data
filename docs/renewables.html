@@ -15,7 +15,8 @@
       from solar PV, ambient heat used by heat pumps, and wood. Wind remains small.</p>
     <nav class="toc" aria-label="On this page">
       <span class="toc-label">On this page:</span>
-      <a href="#overview">Overview</a><a href="#pv">Solar PV</a><a href="#wind">Wind and biomass</a><a href="#gaps">Data gaps</a>
+      <a href="#overview">Overview</a><a href="#pv">Solar PV</a><a href="#wind">Wind and biomass</a><a href="#potential">Potential</a>
+      <a href="#studies">Studies</a><a href="#gaps">Data gaps</a>
     </nav>
 
     <h2 id="overview">Overview</h2>
@@ -47,6 +48,58 @@
       <div class="chart" data-dataset="renewables/wind_biomass_installed_capacity"></div>
     </div>
     <div class="chart" data-dataset="renewables/wind_farms"></div>
+
+    <h2 id="potential">Potential</h2>
+    <p class="section-note">If every suitable roof carried PV, Swiss buildings could produce about
+      65 TWh a year, and 86 TWh with facades: eight to eleven times today's PV production. Only about
+      a quarter of the roof potential falls in the winter half-year; facades and alpine plants produce
+      relatively more in winter. Estimates depend on what counts as usable: EPFL's machine-learning study
+      of 9.6 million roof surfaces finds 24 ± 9 TWh, counting only the usable part of each roof.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="renewables/solar_potential_buildings"></div>
+      <div class="chart" data-dataset="renewables/solar_potential_by_canton"></div>
+    </div>
+
+    <h2 id="studies">Studies on solar, wind and hydropower potential</h2>
+    <div class="card prose">
+      <p>Key studies on where renewable electricity could come from, what they found, and whether their data
+        can be reused. All are in the <a href="library.html">Library</a>.</p>
+      <div class="table-scroll"><table class="sources">
+        <thead><tr><th>Study</th><th>Finding</th><th>Open data</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://doi.org/10.1088/1748-9326/abfc75">Dujardin, Kahl &amp; Lehning 2021</a> (EPFL CRYOS / SLF): joint siting of wind and PV</td>
+            <td>The best mix of new capacity is about 75 % wind (13.4 GW) and 25 % mostly alpine PV (4.4 GW); imports fall from 17.5 TWh (business as usual) to 3.5 TWh.</td>
+            <td>On request only</td></tr>
+          <tr><td><a href="https://doi.org/10.1073/pnas.1720808116">Kahl et al. 2019</a>, <a href="https://doi.org/10.3389/fenrg.2024.1372680">Frischholz et al. 2024</a> (EPFL / ZHAW): alpine PV</td>
+            <td>Steep PV above snow shifts output to winter; the gain is confirmed at the first utility-scale alpine plant.</td>
+            <td>Plant monitoring on <a href="https://doi.org/10.16904/envidat.469">EnviDat</a> (CC BY-SA)</td></tr>
+          <tr><td><a href="https://doi.org/10.16904/envidat.729">CH-ALPV300</a>, <a href="https://doi.org/10.16904/envidat.733">CH-RPV300</a>, <a href="https://doi.org/10.16904/envidat.632">CH-POA300</a> (EPFL / ETH)</td>
+            <td>Hourly alpine and rooftop PV potential per municipality or grid node, and hourly irradiance on tilted surfaces at 300 m.</td>
+            <td>NetCDF on EnviDat (CC BY / CC BY-SA)</td></tr>
+          <tr><td><a href="https://doi.org/10.16904/envidat.699">Swiss electricity system modelling data</a> (EPFL)</td>
+            <td>Inputs of EPFL's power-system model: HV grid, hydropower topology and inflows, wind and run-of-river production.</td>
+            <td>EnviDat (CC BY 4.0)</td></tr>
+          <tr><td><a href="https://doi.org/10.1016/j.apenergy.2019.114404">Walch et al. 2020</a> (EPFL LESO-PB): rooftop PV</td>
+            <td>55 % of roof area is usable, giving 24 ± 9 TWh a year, with hourly profiles.</td>
+            <td><a href="https://doi.org/10.5281/zenodo.3609833">Zenodo</a> (CC BY 4.0, 13.7 GB)</td></tr>
+          <tr><td>SFOE solar potential of municipalities (sonnendach.ch, sonnenfassade.ch)</td>
+            <td>About 65 TWh a year on roofs, 86 TWh with facades (charts above).</td>
+            <td>CSV, open use: <a href="sources.html">bfe_solar_potential</a></td></tr>
+          <tr><td><a href="https://swiss-solarwind-explorer.ethz.ch/">Swiss SolarWind Explorer</a> (ETH and partners)</td>
+            <td>Areas suited to large solar and wind plants with few conflicts with landscape and biodiversity, at 50 m.</td>
+            <td>Weighted maps can be downloaded</td></tr>
+          <tr><td>SFOE <a href="https://opendata.swiss/de/dataset/windatlas-schweiz-jahresmittel-der-modellierten-windgeschwindigkeit-und-windrichtung-in-100-m-h">wind atlas</a></td>
+            <td>Mean annual wind speed and direction on a 100 m grid, 50–150 m above ground.</td>
+            <td>GeoTIFF, GeoPackage (open use)</td></tr>
+          <tr><td>SFOE <a href="https://pubdb.bfe.admin.ch/de/publication/download/9815">hydropower potential</a> 2019</td>
+            <td>About 1.6 TWh a year more by 2050 under optimised conditions, plus about 0.7 TWh from new glacier lakes.</td>
+            <td>PDF only</td></tr>
+          <tr><td>WSL <a href="https://doi.org/10.16904/18">biomass potentials</a> 2017</td>
+            <td>Theoretical and sustainable potential of ten biomass categories, by canton and municipality.</td>
+            <td>XLSX (WSL data policy, not an open licence)</td></tr>
+        </tbody>
+      </table></div>
+    </div>
 
     <h2 id="gaps">What is not openly available</h2>
     <div data-gaps="renewables"></div>

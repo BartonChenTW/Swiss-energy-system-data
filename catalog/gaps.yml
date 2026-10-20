@@ -121,6 +121,48 @@ gaps:
     evidence: [bfe_production_plants, bfe_electricity_statistics]
     found: 2026-10-19
 
+  - id: renewable_siting_results
+    theme: renewables
+    title: Results of renewable siting and system studies
+    missing: >-
+      The optimised locations and hourly output of new wind and PV in EPFL's siting study are not published;
+      the data are "available upon reasonable request". The same holds for most scenario studies, which
+      publish reports rather than model results.
+    available: >-
+      The paper itself (CC BY 4.0); EPFL's open hourly profiles of alpine and rooftop PV potential and the
+      inputs of its power-system model on EnviDat.
+    holder: EPFL CRYOS and other research groups
+    status: restricted
+    evidence: [dujardin_2021_solar_wind_optimization, envidat_ch_alpv300, envidat_swiss_elec_modeling]
+    found: 2026-10-20
+
+  - id: hydropower_potential_data
+    theme: renewables
+    title: Hydropower expansion potential as data
+    missing: >-
+      SFOE's estimate of the hydropower that can still be developed exists only as aggregate PDF tables;
+      there is no list of projects or machine-readable potential by plant type or canton. Confidential
+      projects are left out.
+    available: The 2019 report (about 1,560 GWh/a by 2050 under optimised conditions).
+    holder: SFOE; plant operators and cantons
+    status: not-machine-readable
+    evidence: [bfe_hydropower_potential_2019]
+    found: 2026-10-20
+
+  - id: solar_market_statistics
+    theme: renewables
+    title: Solar market statistics as open data
+    missing: >-
+      The official yearly series of PV, solar thermal and battery sales are published as PDF tables only, so
+      new installations per year and battery storage cannot be charted without retyping them.
+    available: >-
+      The annual Statistik Sonnenenergie report; the plant register, which shows plants in operation but no
+      batteries.
+    holder: SFOE and Swissolar
+    status: not-machine-readable
+    evidence: [bfe_statistik_sonnenenergie, bfe_production_plants]
+    found: 2026-10-20
+
   # ---------- heat ----------
   - id: thermal_networks_register_fields
     theme: heat

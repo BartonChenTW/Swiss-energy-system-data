@@ -316,6 +316,26 @@ datasets:
     status: official
     coverage: national
 
+  - id: renewables/solar_potential_buildings
+    title: Solar potential of buildings vs today's PV production
+    description: >-
+      Annual solar potential of all Swiss roofs and facades, from the roof-by-roof and facade-by-facade
+      ratings of sonnendach.ch and sonnenfassade.ch, in SFOE's scenarios, compared with current PV production.
+      "PV next to solar heat" uses the best roof section of each building for solar heat (shown separately)
+      and the rest for PV.
+    source: bfe_solar_potential
+    chart: hbar
+    status: official
+    coverage: national
+
+  - id: renewables/solar_potential_by_canton
+    title: Rooftop solar electricity potential by canton
+    description: Annual PV potential if all suitable roofs were used for PV (SFOE scenario 1), summed by canton.
+    source: bfe_solar_potential
+    chart: hbar
+    status: official
+    coverage: national
+
   - id: heat/district_heat_by_sector
     title: District heat consumption by sector
     description: Final consumption of district heat from the national energy balance. Network losses and the plants' own use are not included.

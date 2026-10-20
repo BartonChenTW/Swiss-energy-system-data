@@ -55,6 +55,22 @@ sources:
       Register of plants in operation (from the guarantee-of-origin system), with
       commissioning date and current power in kW. Decommissioned plants are not included.
 
+  - id: bfe_solar_potential
+    name: Solarenergiepotenziale der Schweizer Gemeinden (Dächer und Fassaden)
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    theme: renewables
+    url: https://opendata.swiss/de/dataset/solarenergiepotenziale-der-schweizer-gemeinden
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: irregular (last update April 2023)
+    downloads:
+      - url: https://www.bfe-ogd.ch/ogd52/Solarenergiepotenziale_Gemeinden_Daecher_und_Fassaden.csv
+        filename: Solarenergiepotenziale_Gemeinden_Daecher_und_Fassaden.csv
+    notes: >-
+      Solar electricity and heat potential per municipality, summed from the roof-by-roof (sonnendach.ch)
+      and facade-by-facade (sonnenfassade.ch) potentials, with monthly values. Scenarios 1 and 3 use all
+      roofs (and facades) for PV; scenarios 2 and 4 use the best roof section of each building for solar
+      heat and the rest for PV. Includes 11 municipalities of Liechtenstein.
+
   - id: bfe_thermal_networks
     name: "Thermische Netze (Nahwärme, Fernwärme, Fernkälte)"
     publisher: Swiss Federal Office of Energy (SFOE / BFE)
