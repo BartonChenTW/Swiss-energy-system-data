@@ -17,6 +17,7 @@ const PAGES = [
 
 const REPO = "https://github.com/BartonChenTW/Swiss-energy-system-data";
 
+const SOURCE_STATUS = { active: "In use", planned: "Planned" };
 const REFERENCE_TYPES = { report: "Reports", standard: "Standards & norms", dashboard: "Dashboards", website: "Websites", tool: "Tools", model: "Models", portal: "Data portals" };
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -258,14 +259,32 @@ async function renderCard(el) {
 async function renderSources(el) {
   try {
     const { sources, datasets } = await loadJSON("data/catalog.json");
-    const rows = sources.map((s) => {
-      const used = datasets.filter((d) => d.source === s.id).map((d) => esc(d.title)).join("<br>") || "<em>planned</em>";
-      return `<tr><td><a href="${esc(s.url)}">${esc(s.name)}</a><div class="muted">${esc(s.publisher)}</div></td>
-        <td>${esc(s.theme)}</td><td>${esc(s.frequency)}</td><td>${esc(s.terms)}</td><td>${used}</td></tr>`;
-    }).join("");
-    el.innerHTML = `<div class="table-scroll"><table class="sources">
-      <thead><tr><th>Source</th><th>Theme</th><th>Frequency</th><th>Terms of use</th><th>Datasets on this site</th></tr></thead>
-      <tbody>${rows}</tbody></table></div>`;
+    const themes = [...new Set(sources.map((s) => s.theme))].sort();
+    el.innerHTML = `
+      <div class="filters">
+        <label>Theme <select data-filter="theme"><option value="">All</option>${themes.map((t) => `<option>${esc(t)}</option>`).join("")}</select></label>
+        <label>Status <select data-filter="status"><option value="">All</option>${Object.entries(SOURCE_STATUS).map(([k, v]) => `<option value="${k}">${v}</option>`).join("")}</select></label>
+        <span class="muted" data-count></span>
+      </div>
+      <div class="table-scroll"><table class="sources">
+        <thead><tr><th>Source</th><th>Theme</th><th>Frequency</th><th>Terms of use</th><th>Datasets on this site</th></tr></thead>
+        <tbody data-list></tbody></table></div>`;
+    const draw = () => {
+      const theme = el.querySelector('[data-filter="theme"]').value;
+      const status = el.querySelector('[data-filter="status"]').value;
+      const shown = sources.filter((s) => (!theme || s.theme === theme) && (!status || (s.status || "active") === status));
+      el.querySelector("[data-count]").textContent = `${shown.length} of ${sources.length} sources`;
+      el.querySelector("[data-list]").innerHTML = shown.map((s) => {
+        // a dataset uses a source if it is its main source or one of its raw inputs (e.g. the GWR for per-building ratios)
+        const used = s.status === "planned"
+          ? `<em>Planned:</em> ${esc(s.planned_for)}`
+          : datasets.filter((d) => d.source === s.id || (d.inputs || []).includes(s.id)).map((d) => esc(d.title)).join("<br>") || "<em>none yet</em>";
+        return `<tr><td><a href="${esc(s.url)}">${esc(s.name)}</a><div class="muted">${esc(s.publisher)}</div></td>
+          <td>${esc(s.theme)}</td><td>${esc(s.frequency)}</td><td>${esc(s.terms)}</td><td>${used}</td></tr>`;
+      }).join("") || `<tr><td colspan="5" class="muted">Nothing matches these filters.</td></tr>`;
+    };
+    el.querySelectorAll("select").forEach((s) => s.addEventListener("change", draw));
+    draw();
   } catch (err) {
     el.innerHTML = `<p class="error">Could not load the catalog (${esc(err.message)}).</p>`;
   }

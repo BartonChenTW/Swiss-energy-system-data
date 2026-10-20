@@ -8,6 +8,10 @@ for fixes, wording and styling. To release, rename `Unreleased` to the new versi
 with today's date; `python -m pipeline.build_site` picks up the top released entry.
 
 ## [Unreleased]
+### Added
+- Sources: filter by theme and by status (in use or planned), with a count; planned sources show what they would add.
+### Fixed
+- Sources: a source used as a secondary input (e.g. the building register for per-building ratios, Swissgrid consumption for the winter balance) now lists those datasets instead of "planned".
 
 ## [0.10.0] - 2026-10-19
 ### Added

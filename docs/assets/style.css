@@ -128,7 +128,7 @@ th { color: var(--text-secondary); font-weight: 600; }
 .sources td, .sources th { white-space: normal; text-align: left; vertical-align: top; padding-block: 8px; }
 .sources td { min-width: 110px; }
 .sources td:first-child { min-width: 240px; }
-.filters { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 8px; font-size: 14px; color: var(--text-secondary); }
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-bottom: 8px; font-size: 14px; color: var(--text-secondary); }
 .filters select {
   margin-left: 6px; font: inherit; color: var(--text-primary); background: var(--surface);
   border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px;

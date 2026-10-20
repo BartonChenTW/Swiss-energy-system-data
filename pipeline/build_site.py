@@ -42,6 +42,15 @@ def provenance(csv) -> dict | None:
     }
 
 
+def input_sources(csv) -> list[str]:
+    """Ids of all sources whose raw files a dataset was built from (data/raw/<source id>/...)."""
+    meta = csv.with_suffix(".meta.json")
+    if not meta.exists():
+        return []
+    files = [i.get("file", "") for i in json.loads(meta.read_text(encoding="utf-8")).get("inputs", [])]
+    return list(dict.fromkeys(f.split("/")[2] for f in files if f.startswith("data/raw/")))
+
+
 def write_json(obj, path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -50,7 +59,7 @@ def write_json(obj, path) -> None:
 
 def main() -> None:
     sources, datasets, references = load_catalog()
-    built = []
+    built = {}  # dataset id -> ids of all its input sources
     for ds in datasets:
         csv = PROCESSED_DIR / f"{ds['id']}.csv"
         if not csv.exists():
@@ -68,7 +77,7 @@ def main() -> None:
             "years": years,
             "series": series,
         }, SITE_DATA_DIR / f"{ds['id']}.json")
-        built.append(ds["id"])
+        built[ds["id"]] = input_sources(csv)
         print(f"  built {ds['id']}")
 
     built_on = date.today().isoformat()
@@ -79,7 +88,7 @@ def main() -> None:
     write_json({
         "built": built_on,
         "sources": [{k: v for k, v in s.items() if k != "downloads"} for s in sources.values()],
-        "datasets": [ds for ds in datasets if ds["id"] in built],
+        "datasets": [{**ds, "inputs": built[ds["id"]]} for ds in datasets if ds["id"] in built],
         "references": references,
         "gaps": load_gaps(sources, references),
     }, SITE_DATA_DIR / "catalog.json")
