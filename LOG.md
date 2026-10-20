@@ -10,7 +10,7 @@ Open work is in [TODO.md](TODO.md). Site releases are in [CHANGELOG.md](CHANGELO
 ## 2026-10-20
 
 ### Done
-- Sources page: theme and status filters; `build_site` now records every input source of a dataset.
+- **0.11.0:** Sources page: theme and status filters; `build_site` now records every input source of a dataset.
 - Renewables: SFOE solar potential of municipalities as a new source (`bfe_solar_potential`, two charts),
   a table of potential studies, 17 references and three gaps.
 - Scenarios page (energy system studies): CROSS v2022-09 results as a new source (`sweet_cross_results`,

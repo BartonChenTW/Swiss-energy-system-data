@@ -8,6 +8,8 @@ for fixes, wording and styling. To release, rename `Unreleased` to the new versi
 with today's date; `python -m pipeline.build_site` picks up the top released entry.
 
 ## [Unreleased]
+
+## [0.11.0] - 2026-10-20
 ### Added
 - Sources: filter by theme and by status (in use or planned), with a count; planned sources show what they would add.
 - Renewables: solar potential of buildings (roofs and facades, SFOE scenarios) compared with today's PV production, and rooftop potential by canton.
