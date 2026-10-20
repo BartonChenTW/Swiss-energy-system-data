@@ -17,6 +17,7 @@ const PAGES = [
 ];
 
 const REPO = "https://github.com/BartonChenTW/Swiss-energy-system-data";
+const GOATCOUNTER = "https://swiss-energy-system-data.goatcounter.com";  // cookie-free visit counter; skips localhost
 
 const SOURCE_STATUS = { active: "In use", planned: "Planned" };
 const REFERENCE_TYPES = { report: "Reports", standard: "Standards & norms", dashboard: "Dashboards", website: "Websites", tool: "Tools", model: "Models", portal: "Data portals" };
@@ -67,10 +68,21 @@ function renderChrome() {
   if (footer) {
     footer.innerHTML = `<div class="wrap">Data from Swiss federal offices and other publishers, used under their terms —
       see <a href="sources.html">Sources</a>. Built from the <a href="${REPO}">open pipeline on GitHub</a>.
+      Visits are counted anonymously, without cookies, by <a href="https://www.goatcounter.com/">GoatCounter</a>.
       <div class="version" data-version></div></div>`;
     renderVersion(footer.querySelector("[data-version]"));
   }
   renderBackToTop();
+  loadVisitCounter();
+}
+
+// GoatCounter counts one view per page path; it reads its endpoint from data-goatcounter.
+function loadVisitCounter() {
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://gc.zgo.at/count.js";
+  script.dataset.goatcounter = `${GOATCOUNTER}/count`;
+  document.body.append(script);
 }
 
 // Floating "Back to top" button, shown once the page is scrolled past the first screen.

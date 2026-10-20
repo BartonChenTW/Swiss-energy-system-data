@@ -15,6 +15,7 @@ with today's date; `python -m pipeline.build_site` picks up the top released ent
 - Library: 17 studies and datasets on Swiss renewable potential; Data gaps: three new renewables gaps (siting study results, hydropower potential, solar market statistics).
 - Scenarios page (energy system studies): solar, wind and net imports in 2050 in nine Swiss models under the same net-zero scenario (SWEET CROSS, CC BY 4.0); a table of 16 scenario, adequacy and grid planning studies with their models, main results and whether results are open data; two new gaps.
 - Library: 17 energy system studies; the Energy Perspectives 2050+ entry now links to its stable SFOE page.
+- Anonymous, cookie-free visit counting with GoatCounter (page views and visitor countries); noted in the footer.
 ### Fixed
 - Sources: a source used as a secondary input (e.g. the building register for per-building ratios, Swissgrid consumption for the winter balance) now lists those datasets instead of "planned".
 
