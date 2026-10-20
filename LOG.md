@@ -7,6 +7,30 @@ whether the data is enough to train a foundation model for the building domain.
 
 Open work is in [TODO.md](TODO.md). Site releases are in [CHANGELOG.md](CHANGELOG.md).
 
+## 2026-10-20
+
+### Done
+- Sources page: theme and status filters; `build_site` now records every input source of a dataset.
+- Renewables: SFOE solar potential of municipalities as a new source (`bfe_solar_potential`, two charts),
+  a table of potential studies, 17 references and three gaps.
+- Scenarios page (energy system studies): CROSS v2022-09 results as a new source (`sweet_cross_results`,
+  three charts), a table of 16 studies, 17 references and two gaps. EP2050+ link fixed.
+
+### Decisions
+- "EPFL's solar and wind study" is read as Dujardin, Kahl & Lehning 2021 (EPFL CRYOS / SLF), the study
+  EPFL and WSL announced as "untapped solar and wind potential in Swiss mountains".
+- Energy system studies get their own page (Scenarios), since they span all sectors.
+- CROSS charts show one scenario (abroad-together), the only one all nine models ran; the tidy format
+  has no axis for a second dimension, so models are bars.
+
+### Findings on data availability
+- Open scenario results are rare: only CROSS v2022-09 (CSV) and PSI's STEM study (XLSX) are CC BY 4.0.
+  EP2050+ results are downloadable but under admin.ch terms (written consent for reproduction).
+- Models disagree widely even in the same CROSS scenario: 2050 solar 9–42 TWh, wind 0–11 TWh.
+- SFOE solar potential: 65 TWh/a on roofs, 86 TWh/a with facades; 27 % of the roof potential in Oct–Mar.
+- EPFL's siting study data are only "available upon reasonable request"; EPFL's EnviDat datasets
+  (hourly PV potential, power-system inputs) are the open alternative.
+
 ## 2026-10-19
 
 ### Done

@@ -1,0 +1,21 @@
+{
+  "dataset": "scenarios/cross_net_imports_2050",
+  "processor": "pipeline.process.sweet_cross_results",
+  "generated": "2026-10-20T08:51:31+00:00",
+  "rows": 7,
+  "years": [
+    2050,
+    2050
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/sweet_cross_results/results-cross-scenarios-2024-12-05.zip",
+      "url": "https://sweet-cross.ch/api/media/file/results-cross-scenarios-2024-12-05.zip",
+      "retrieved": "2026-10-20T08:51:18+00:00",
+      "last_modified": null,
+      "sha256": "698b21d4b5f04ff6c880decb3bbeadefbd3d2c7e1a4f8f66a916681a6aa6137f",
+      "bytes": 18771
+    }
+  ],
+  "notes": "7 of 9 models report this variable for scenario abroad-together."
+}

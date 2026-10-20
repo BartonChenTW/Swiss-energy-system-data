@@ -10,6 +10,7 @@ const PAGES = [
   ["renewables.html", "Renewables"],
   ["heat.html", "Heat"],
   ["mobility.html", "Mobility"],
+  ["scenarios.html", "Scenarios"],
   ["sources.html", "Sources"],
   ["library.html", "Library"],
   ["gaps.html", "Data gaps"],

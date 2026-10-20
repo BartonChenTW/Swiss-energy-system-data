@@ -13,6 +13,8 @@ with today's date; `python -m pipeline.build_site` picks up the top released ent
 - Renewables: solar potential of buildings (roofs and facades, SFOE scenarios) compared with today's PV production, and rooftop potential by canton.
 - Renewables: table of studies on solar, wind and hydropower potential (EPFL siting and alpine PV studies, open EnviDat PV profiles, wind atlas, hydropower and biomass potentials) with their findings and data access.
 - Library: 17 studies and datasets on Swiss renewable potential; Data gaps: three new renewables gaps (siting study results, hydropower potential, solar market statistics).
+- Scenarios page (energy system studies): solar, wind and net imports in 2050 in nine Swiss models under the same net-zero scenario (SWEET CROSS, CC BY 4.0); a table of 16 scenario, adequacy and grid planning studies with their models, main results and whether results are open data; two new gaps.
+- Library: 17 energy system studies; the Energy Perspectives 2050+ entry now links to its stable SFOE page.
 ### Fixed
 - Sources: a source used as a secondary input (e.g. the building register for per-building ratios, Swissgrid consumption for the winter balance) now lists those datasets instead of "planned".
 

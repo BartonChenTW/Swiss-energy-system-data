@@ -51,11 +51,14 @@ references:
     title: Energieperspektiven 2050+
     publisher: Swiss Federal Office of Energy (SFOE / BFE)
     year: 2020
-    url: https://pubdb.bfe.admin.ch/de/suche?keywords=&q=Energieperspektiven+2050%2B
+    url: https://www.bfe.admin.ch/de/energieperspektiven
     themes: [scenarios, national]
     language: de/fr
-    description: Official net-zero 2050 scenarios for the Swiss energy system. Link is a publication search; TODO replace with a stable page.
-    checked: 2026-09-28
+    description: >-
+      The official net-zero 2050 scenarios (ZERO Basis, A, B, C and business as usual) for the Swiss energy
+      system, 2000–2060. Results per scenario and hourly electricity values are XLSX files in ZIP archives on
+      pubdb.bfe.admin.ch, but under the general admin.ch terms, which require written consent for reproduction.
+    checked: 2026-10-20
 
   - id: bfe_renovation_rates_2024
     type: report
@@ -705,6 +708,235 @@ references:
     description: >-
       Global, diffuse and direct radiation from Meteosat as hourly, daily, monthly and yearly NetCDF grids. Free use
       with source; the archive starts in 2025, older years are announced.
+    checked: 2026-10-20
+
+  # ---------- scenarios: Swiss energy system studies (checked 2026-10-20) ----------
+  - id: sweet_cross_scenarios
+    type: portal
+    title: CROSS – Coordination of Scenarios in SWEET
+    publisher: SWEET CROSS, ETH Zurich Energy Science Center (funded by SFOE)
+    year: 2025
+    url: https://sweet-cross.ch/scenarios
+    themes: [scenarios, national, electricity]
+    language: en
+    description: >-
+      Harmonised Swiss net-zero 2050 scenarios for the SWEET programme: v2022-09 (4 scenarios) and v2025
+      (8 scenarios). Results of v2022-09 from nine models are one open CSV (CC BY 4.0, charted on the
+      Scenarios page); v2025 so far publishes assumptions and documents only.
+    related_sources: [sweet_cross_results]
+    checked: 2026-10-20
+
+  - id: eth_esc_energy_security_2023
+    type: report
+    title: Energy security in a net zero emissions future for Switzerland (ESC white paper)
+    publisher: ETH Zurich Energy Science Center, Expert Group Security of Supply
+    year: 2023
+    url: https://doi.org/10.3929/ethz-b-000614564
+    themes: [scenarios, electricity, national]
+    language: en/de
+    description: >-
+      Ensemble of ETH Domain models (including Nexus-e) for the four CROSS 2050 net-zero scenarios.
+      Electricity demand rises from about 60 TWh to at least 80 TWh; net zero is judged feasible and
+      affordable. PDF (in copyright, non-commercial use); the numbers are in the CROSS results.
+    checked: 2026-10-20
+
+  - id: eth_psi_nuclear_2026
+    type: report
+    title: "Nuclear Power and the Future Swiss Energy System: A Techno-Economic Modelling Analysis"
+    publisher: ETH Zurich (Energy Science Center) and PSI
+    year: 2026
+    url: https://doi.org/10.3929/ethz-c-000801809
+    themes: [scenarios, electricity]
+    language: en
+    description: >-
+      Four models (Nexus-e, SES, SES-ETH, STEM) for 2050: new nuclear (2.6–4.9 GW) is cost-optimal only at
+      overnight costs of 5,000–8,000 CHF/kW, and then cuts winter imports by 1–6 TWh. PDF only, no data.
+    checked: 2026-10-20
+
+  - id: psi_stem_netzero_2023
+    type: report
+    title: An assessment of energy system transformation pathways to achieve net-zero CO2 emissions in Switzerland
+    publisher: Panos, Kannan, Hirschberg, Kober (PSI), Communications Earth & Environment
+    year: 2023
+    url: https://doi.org/10.1038/s43247-023-00813-6
+    themes: [scenarios, national, emissions]
+    language: en
+    description: >-
+      STEM (TIMES) pathways to 2050, business as usual vs net-zero variants: net zero with import
+      independence needs about CHF 300 bn more cumulative discounted investment. Article CC BY 4.0;
+      assumptions and energy balances 2019–2050 as XLSX on Zenodo (doi:10.5281/zenodo.7767244, CC BY 4.0).
+    checked: 2026-10-20
+
+  - id: sccer_jasm_synthesis_2021
+    type: report
+    title: Transformation of the Swiss Energy System for a Net-Zero Greenhouse Gas Emission Society
+    publisher: SCCER Joint Activity Scenarios & Modelling (eds. Marcucci, Guidati, Giardini)
+    year: 2021
+    url: https://doi.org/10.3929/ethz-b-000518179
+    themes: [scenarios, national]
+    language: en
+    description: >-
+      Synthesis of the joint scenario work of all eight Swiss Competence Centers for Energy Research,
+      soft-linking STEM, SES and building and mobility models. PDF; model inputs (not results) at
+      data.sccer-jasm.ch, with no licence stated.
+    checked: 2026-10-20
+
+  - id: vse_energiezukunft_2050
+    type: report
+    title: Energiezukunft 2050 (with Update 2025)
+    publisher: VSE (Association of Swiss Electricity Companies) with Empa
+    year: 2022
+    url: https://www.strom.ch/de/energiezukunft-2050/startseite
+    themes: [scenarios, national, electricity]
+    language: de
+    description: >-
+      Hourly whole-system optimisation by Empa in four scenarios (public acceptance × EU integration).
+      Electricity demand grows from 62 TWh to 80–90 TWh in 2050 (about 91 TWh in the 2025 update).
+      PDF reports only; one scenario's results are in the CROSS data.
+    checked: 2026-10-20
+
+  - id: academies_energy_system_2050
+    type: report
+    title: "Swiss Energy System 2050: Pathways to Net Zero CO2 and Security of Supply"
+    publisher: Swiss Academies of Arts and Sciences
+    year: 2022
+    url: https://doi.org/10.5281/zenodo.6967084
+    themes: [scenarios, national]
+    language: en/de
+    description: >-
+      Expert synthesis of net-zero pathways across all sectors, not a single model; finds full energy
+      self-sufficiency hardly possible. PDF (CC BY 4.0 on Zenodo).
+    checked: 2026-10-20
+
+  - id: epfl_energyscope_infrastructure_2023
+    type: report
+    title: On the role of energy infrastructure in the energy transition
+    publisher: Schnidrig, Cherkaoui, Calisesi, Margni, Maréchal (EPFL), Frontiers in Energy Research
+    year: 2023
+    url: https://doi.org/10.3389/fenrg.2023.1164813
+    themes: [scenarios, electricity, renewables]
+    language: en
+    description: >-
+      EnergyScope with electricity, gas and heat grids for an energy-independent, CO2-neutral Switzerland:
+      the optimum reinforces low-voltage grids by 61 % and medium-voltage grids by 82 %, but not the
+      transmission grid. Article CC BY; model and results on GitLab (MIT).
+    checked: 2026-10-20
+
+  - id: sweet_edge_reo2_2025
+    type: report
+    title: Renewable Energy Outlook II for Switzerland
+    publisher: SWEET EDGE (Van Liedekerke, Gjorgiev, Savelsberg et al.)
+    year: 2025
+    url: https://doi.org/10.3929/ethz-b-000735887
+    themes: [scenarios, electricity, renewables]
+    language: en
+    description: >-
+      Compares four electricity system models for 2050 under three national policies, including the
+      renewables target and limits on winter imports. PDF, CC BY 4.0; no data files.
+    checked: 2026-10-20
+
+  - id: pathfndr_flex_synthesis_2025
+    type: report
+    title: Flexibility provision from electromobility and buildings – Synthesis Report
+    publisher: SWEET PATHFNDR (ETH Zurich)
+    year: 2025
+    url: https://doi.org/10.3929/ethz-c-000787060
+    themes: [scenarios, electricity, mobility, heat]
+    language: en/de
+    description: >-
+      Least-cost 2050 scenarios in which flexible heat pumps and electric cars shift about 8 TWh, cutting net
+      imports by 22 % and system costs by up to 4 %. PDF only, no data.
+    checked: 2026-10-20
+
+  - id: elcom_system_adequacy_2025
+    type: report
+    title: System Adequacy 2028, 2030 und 2035
+    publisher: ElCom (simulations by Swissgrid)
+    year: 2025
+    url: https://www.elcom.admin.ch/de/berichte-zur-versorgungssicherheit
+    themes: [electricity, scenarios]
+    language: de/fr/it
+    description: >-
+      Hourly adequacy assessment in the European (ERAA) framework with 36 weather years and stress cases,
+      assuming 75 TWh consumption in 2030 and 82 TWh in 2035. PDF only.
+    checked: 2026-10-20
+
+  - id: bfe_system_adequacy_2022
+    type: report
+    title: Modellierung der Erzeugungs- und Systemkapazität (System Adequacy) in der Schweiz im Bereich Strom 2022
+    publisher: Universität Basel, ETH Zurich and Consentec for SFOE
+    year: 2022
+    url: https://pubdb.bfe.admin.ch/de/publication/download/11253
+    themes: [electricity, scenarios]
+    language: de
+    description: >-
+      European grid and market model chain for 2025–2040 on EP2050+ scenarios: no shortages as long as
+      Switzerland stays integrated in the European market; import capacity limits are the key risk. PDF only.
+    checked: 2026-10-20
+
+  - id: bfe_szenariorahmen_2030_2040
+    type: report
+    title: Szenariorahmen 2030/2040 für die Stromnetzplanung
+    publisher: Swiss Federal Office of Energy (SFOE / BFE), approved by the Federal Council
+    year: 2022
+    url: https://pubdb.bfe.admin.ch/de/publication/download/10749
+    themes: [scenarios, electricity]
+    language: de
+    description: >-
+      Binding framework for grid planning with three scenarios for 2030 and 2040 (reference, divergence,
+      sector coupling), each based on an EP2050+ variant; PV reaches up to 30 GW in 2040. PDF only.
+    checked: 2026-10-20
+
+  - id: swissgrid_strategic_grid_2040
+    type: website
+    title: Strategisches Netz 2040
+    publisher: Swissgrid
+    year: 2025
+    url: https://www.swissgrid.ch/de/home/projects/future-grid.html
+    themes: [electricity, scenarios]
+    language: de
+    description: >-
+      Transmission grid plan derived from the Szenariorahmen 2030/2040: 31 grid projects to 2040, about
+      CHF 5.5 bn. Brochures only, no data.
+    checked: 2026-10-20
+
+  - id: axpo_power_switcher
+    type: dashboard
+    title: Power Switcher
+    publisher: Axpo Holding AG
+    year: 2023
+    url: https://powerswitcher.axpo.com/
+    themes: [scenarios, electricity]
+    language: de/en
+    description: >-
+      Interactive calculator of the 2050 electricity mix with preset scenarios (EP2050+, VSE, ETH and others).
+      No export or licence stated.
+    checked: 2026-10-20
+
+  - id: axpo_energy_reports_2026
+    type: report
+    title: Axpo Energy Reports
+    publisher: Axpo, with ETH Zurich and PSI
+    year: 2026
+    url: https://www.axpo.com/ch/de/knowledge/energy-reports.html
+    themes: [scenarios, electricity]
+    language: de
+    description: >-
+      Technology reports and a synthesis with two winter-secure 2050 scenarios, with and without two new
+      nuclear plants. PDF only; model not stated.
+    checked: 2026-10-20
+
+  - id: bafu_long_term_climate_strategy
+    type: report
+    title: Langfristige Klimastrategie der Schweiz
+    publisher: Federal Council / Federal Office for the Environment (FOEN / BAFU)
+    year: 2021
+    url: https://www.bafu.admin.ch/de/klimastrategie-2050
+    themes: [emissions, scenarios, national]
+    language: de/fr/it
+    description: >-
+      The federal net-zero 2050 strategy with targets per sector, largely based on EP2050+: about 90 % less
+      greenhouse gas than in 1990, the rest balanced by negative emissions. PDF only.
     checked: 2026-10-20
 
   - id: bafu_co2_calculator

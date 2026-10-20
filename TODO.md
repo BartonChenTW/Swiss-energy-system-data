@@ -39,7 +39,10 @@ under `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md).
 - [ ] International aviation and the land-use balance as separate series (already in the FOEN download).
 
 ### Scenarios
-- [ ] Energieperspektiven 2050+ scenario results; replace the publication-search link of `bfe_energy_perspectives_2050` with a stable page.
+- [x] Replace the publication-search link of `bfe_energy_perspectives_2050` with a stable page.
+- [ ] Energieperspektiven 2050+ scenario results: ask SFOE whether the XLSX results may be charted (no open licence, see gap `ep2050_results_licence`).
+- [ ] PSI STEM net-zero results (Zenodo 10.5281/zenodo.7767244, CC BY 4.0): energy balances 2019–2050 as a pathway chart.
+- [ ] CROSS v2025 results, once published.
 
 ### Planned sources
 Identified in `catalog/sources.yml` with `status: planned`. Set `status: active` one at a time, inspect the file, write the processor.
@@ -48,6 +51,11 @@ Identified in `catalog/sources.yml` with `status: planned`. Set `status: active`
 - [ ] `bfe_wasta`: hydropower plants by type and capacity (the *Renewables* item above).
 - [ ] `bfs_ghg_by_sector`: emissions by source group.
 - [ ] `bfs_population`: per-capita indicators.
+
+### Renewables (from the 2026-10-20 review)
+- [ ] Monthly solar potential of roofs and facades (in `bfe_solar_potential`; needs sub-annual support).
+- [ ] EPFL/ETH hourly PV potential profiles on EnviDat (CH-ALPV300, CH-RPV300; CC BY / CC BY-SA, NetCDF).
+- [ ] Pronovo quarter-hourly production by technology: ask Pronovo about the licence first.
 
 ### Site
 - [ ] Support monthly, hourly and 15-minute datasets in the tidy contract and the charts (Swissgrid, Winterthur LEG load profile, EV profiles).

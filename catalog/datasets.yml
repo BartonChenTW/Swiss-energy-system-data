@@ -431,3 +431,29 @@ datasets:
     chart: stacked-area
     status: official
     coverage: national
+
+  - id: scenarios/cross_solar_2050
+    title: Solar electricity in 2050, by model
+    description: >-
+      Solar PV production in 2050 in nine Swiss energy system models, all in the same harmonised net-zero
+      scenario (SWEET CROSS v2022-09, CO2 offsetting abroad, electricity market integrated with the EU).
+    source: sweet_cross_results
+    chart: hbar
+    status: official
+    coverage: national
+
+  - id: scenarios/cross_wind_2050
+    title: Wind electricity in 2050, by model
+    description: Wind production in 2050 in the same scenario. Two models build none, one more than 10 TWh.
+    source: sweet_cross_results
+    chart: hbar
+    status: official
+    coverage: national
+
+  - id: scenarios/cross_net_imports_2050
+    title: Net electricity imports in 2050, by model
+    description: Annual net imports in the same scenario, for the models that report them.
+    source: sweet_cross_results
+    chart: hbar
+    status: official
+    coverage: national

@@ -252,3 +252,33 @@ gaps:
     status: incomplete
     evidence: [chargeplace_scotland, dundee_charging_sessions, my_electric_avenue, urbanev, charged_dataset]
     found: 2026-09-29
+
+  # ---------- scenarios ----------
+  - id: ep2050_results_licence
+    theme: scenarios
+    title: Open licence for the Energy Perspectives 2050+ results
+    missing: >-
+      The official scenario results can be downloaded as spreadsheets, but they are not on opendata.swiss
+      and fall under the general admin.ch terms, which require written consent before reproduction. They
+      cannot be charted or redistributed here without asking SFOE.
+    available: >-
+      XLSX results per scenario and hourly electricity values on pubdb.bfe.admin.ch; the ZERO Basis scenario
+      for 2050 is also in the CROSS results (CC BY 4.0).
+    holder: SFOE
+    status: restricted
+    evidence: [bfe_energy_perspectives_2050, sweet_cross_scenarios]
+    found: 2026-10-20
+
+  - id: scenario_results_as_data
+    theme: scenarios
+    title: Results of Swiss scenario studies as data
+    missing: >-
+      Most scenario and adequacy studies publish reports only: VSE/Empa, ElCom and SFOE system adequacy, the
+      grid planning framework, the SWEET outlooks and the ETH/PSI nuclear study have no result files, so
+      studies cannot be compared or reused without retyping tables.
+    available: >-
+      The CROSS v2022-09 results (nine models, 2050, CC BY 4.0) and PSI's STEM results on Zenodo (CC BY 4.0).
+    holder: SFOE, ElCom, research consortia and industry associations
+    status: not-published
+    evidence: [vse_energiezukunft_2050, elcom_system_adequacy_2025, bfe_system_adequacy_2022, bfe_szenariorahmen_2030_2040, sweet_edge_reo2_2025, eth_psi_nuclear_2026, sweet_cross_scenarios, psi_stem_netzero_2023]
+    found: 2026-10-20

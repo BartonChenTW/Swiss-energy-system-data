@@ -71,6 +71,22 @@ sources:
       roofs (and facades) for PV; scenarios 2 and 4 use the best roof section of each building for solar
       heat and the rest for PV. Includes 11 municipalities of Liechtenstein.
 
+  - id: sweet_cross_results
+    name: Results CROSS scenarios v2022-09
+    publisher: SWEET CROSS (Coordination of Scenarios in SWEET), ETH Zurich Energy Science Center, funded by SFOE
+    theme: scenarios
+    url: https://sweet-cross.ch/scenarios
+    terms: Creative Commons Attribution 4.0 (CC BY 4.0)
+    frequency: irregular (package of 2024-12-05)
+    downloads:
+      - url: https://sweet-cross.ch/api/media/file/results-cross-scenarios-2024-12-05.zip
+        filename: results-cross-scenarios-2024-12-05.zip
+    notes: >-
+      Results for 2050 of nine Swiss energy system models (Calliope, EXPANSE, Nexus-e, SES, SES-ETH,
+      STEM, SecMOD, VSE/Empa, EP2050+ ZERO Basis) in four harmonised net-zero scenarios: CO2 offsetting
+      abroad or domestic, electricity market integrated with the EU ("together") or not ("alone").
+      Not every model ran every scenario or reports every variable.
+
   - id: bfe_thermal_networks
     name: "Thermische Netze (Nahwärme, Fernwärme, Fernkälte)"
     publisher: Swiss Federal Office of Energy (SFOE / BFE)

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Energy System Studies · Swiss Energy System Data</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/theme.js"></script>
+</head>
+<body>
+  <header id="site-header"></header>
+  <main class="wrap">
+    <h1>Energy system studies</h1>
+    <p class="lede">Studies that model how Switzerland's energy system could reach net zero by 2050 and
+      keep its electricity supply secure: which models they use, what they find, and whether their results
+      can be reused as data.</p>
+    <nav class="toc" aria-label="On this page">
+      <span class="toc-label">On this page:</span>
+      <a href="#comparison">Model comparison</a><a href="#studies">Studies</a><a href="#models">Models</a><a href="#gaps">Data gaps</a>
+    </nav>
+
+    <h2 id="comparison">Same scenario, nine models</h2>
+    <p class="section-note">The SWEET programme's <a href="https://sweet-cross.ch/scenarios">CROSS</a>
+      project gave Swiss modelling teams four harmonised net-zero scenarios: CO2 offset at home or abroad,
+      with or without an electricity agreement with the EU. Its open results show how far models differ even
+      with the same assumptions. In the scenario all nine ran (offsetting abroad, integrated with the EU),
+      solar supplies between 9 and 42 TWh in 2050, wind between 0 and 11 TWh, and net imports between 1 and
+      18 TWh.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="scenarios/cross_solar_2050"></div>
+      <div class="chart" data-dataset="scenarios/cross_wind_2050"></div>
+      <div class="chart" data-dataset="scenarios/cross_net_imports_2050"></div>
+    </div>
+
+    <h2 id="studies">Studies</h2>
+    <div class="card prose">
+      <p>The main scenario, adequacy and planning studies for Switzerland. All are in the
+        <a href="library.html">Library</a>.</p>
+      <div class="table-scroll"><table class="sources">
+        <thead><tr><th>Study</th><th>Horizon and scope</th><th>Model</th><th>Main result</th><th>Results as data</th></tr></thead>
+        <tbody>
+          <tr><th colspan="5">Whole energy system, net zero 2050</th></tr>
+          <tr><td><a href="https://www.bfe.admin.ch/de/energieperspektiven">Energieperspektiven 2050+</a> (SFOE, 2020)</td>
+            <td>2000–2060, all sectors; ZERO Basis, A, B, C and business as usual</td><td>Prognos, TEP, Infras, Ecoplan models</td>
+            <td>The official reference for federal policy: net zero by 2050 is reachable with electrification, efficiency and negative emissions.</td>
+            <td>XLSX per scenario and hourly values, but no open licence</td></tr>
+          <tr><td><a href="https://sweet-cross.ch/scenarios">CROSS</a> (SWEET, 2022–2025)</td>
+            <td>2050, all sectors; 4 scenarios (v2022-09), 8 (v2025)</td><td>9 models, from Calliope to STEM</td>
+            <td>Model results differ widely even with the same assumptions (charts above).</td>
+            <td>CSV, CC BY 4.0 (v2022-09)</td></tr>
+          <tr><td><a href="https://doi.org/10.3929/ethz-b-000614564">Energy security in a net-zero future</a> (ETH ESC, 2023)</td>
+            <td>2050, all sectors; the 4 CROSS scenarios</td><td>ETH Domain models incl. Nexus-e</td>
+            <td>Electricity demand rises from about 60 to at least 80 TWh; net zero is feasible and affordable.</td>
+            <td>Via the CROSS data</td></tr>
+          <tr><td><a href="https://doi.org/10.1038/s43247-023-00813-6">Net-zero pathways</a> (PSI, 2023)</td>
+            <td>2019–2050, all sectors</td><td>STEM</td>
+            <td>Net zero with import independence needs about CHF 300 bn more investment than business as usual.</td>
+            <td>XLSX on Zenodo, CC BY 4.0</td></tr>
+          <tr><td><a href="https://doi.org/10.3389/fenrg.2023.1164813">Role of energy infrastructure</a> (EPFL, 2023)</td>
+            <td>2050, all sectors with grids</td><td>EnergyScope</td>
+            <td>Distribution grids need reinforcing (medium voltage +82 %), the transmission grid does not.</td>
+            <td>Model files on GitLab, MIT</td></tr>
+          <tr><td><a href="https://www.strom.ch/de/energiezukunft-2050/startseite">Energiezukunft 2050</a> (VSE with Empa, 2022, update 2025)</td>
+            <td>2050, all sectors; acceptance × EU integration</td><td>Empa hourly optimisation</td>
+            <td>Electricity demand grows from 62 to 80–90 TWh (about 91 TWh in the update).</td>
+            <td>PDF only</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.6967084">Swiss Energy System 2050</a> (Swiss Academies, 2022)</td>
+            <td>2050, all sectors</td><td>Expert synthesis</td>
+            <td>Full energy self-sufficiency is hardly possible.</td>
+            <td>PDF only</td></tr>
+          <tr><td><a href="https://doi.org/10.3929/ethz-b-000518179">JASM synthesis</a> (SCCER, 2021)</td>
+            <td>2050, all sectors</td><td>STEM, SES and sector models, soft-linked</td>
+            <td>Joint net-zero scenarios of all eight Swiss Competence Centers for Energy Research.</td>
+            <td>Inputs only, no licence stated</td></tr>
+          <tr><th colspan="5">Electricity system</th></tr>
+          <tr><td><a href="https://doi.org/10.3929/ethz-c-000801809">Nuclear power and the future Swiss energy system</a> (ETH and PSI, 2026)</td>
+            <td>2050, electricity</td><td>Nexus-e, SES, SES-ETH, STEM</td>
+            <td>New nuclear (2.6–4.9 GW) pays off only at 5,000–8,000 CHF/kW; it would cut winter imports by 1–6 TWh.</td>
+            <td>PDF only</td></tr>
+          <tr><td><a href="https://doi.org/10.3929/ethz-b-000735887">Renewable Energy Outlook II</a> (SWEET EDGE, 2025)</td>
+            <td>2050, electricity; three national policies</td><td>4 electricity models</td>
+            <td>Effect of the renewables target and of limits on winter imports.</td>
+            <td>PDF only (CC BY 4.0)</td></tr>
+          <tr><td><a href="https://doi.org/10.3929/ethz-c-000787060">Flexibility from e-mobility and buildings</a> (SWEET PATHFNDR, 2025)</td>
+            <td>2050, electricity, heat pumps, electric cars</td><td>Not stated</td>
+            <td>Flexible heat pumps and cars shift about 8 TWh and cut net imports by 22 %.</td>
+            <td>PDF only</td></tr>
+          <tr><td><a href="https://doi.org/10.1088/1748-9326/abfc75">Joint siting of wind and PV</a> (EPFL, 2021)</td>
+            <td>New renewables, electricity</td><td>Evolution strategy with hourly weather data</td>
+            <td>75 % wind and 25 % alpine PV cut imports from 17.5 to 3.5 TWh (see <a href="renewables.html#studies">Renewables</a>).</td>
+            <td>On request only</td></tr>
+          <tr><th colspan="5">Security of supply and grid planning</th></tr>
+          <tr><td><a href="https://www.elcom.admin.ch/de/berichte-zur-versorgungssicherheit">System Adequacy 2028–2035</a> (ElCom, 2025)</td>
+            <td>2028, 2030, 2035; electricity</td><td>European adequacy model (Swissgrid)</td>
+            <td>Hourly supply risk with 36 weather years, assuming 75 TWh consumption in 2030 and 82 TWh in 2035.</td>
+            <td>PDF only</td></tr>
+          <tr><td><a href="https://pubdb.bfe.admin.ch/de/publication/download/11253">System Adequacy 2022</a> (SFOE)</td>
+            <td>2025–2040, electricity</td><td>European grid and market model chain</td>
+            <td>No shortages as long as Switzerland stays integrated in the European market.</td>
+            <td>PDF only</td></tr>
+          <tr><td><a href="https://pubdb.bfe.admin.ch/de/publication/download/10749">Szenariorahmen 2030/2040</a> (SFOE, 2022)</td>
+            <td>2030, 2040; electricity grids</td><td>EP2050+ variants</td>
+            <td>The binding scenarios for grid planning; PV up to 30 GW in 2040.</td>
+            <td>PDF only</td></tr>
+          <tr><td><a href="https://www.swissgrid.ch/de/home/projects/future-grid.html">Strategisches Netz 2040</a> (Swissgrid, 2025)</td>
+            <td>2040, transmission grid</td><td>Grid planning</td>
+            <td>31 grid projects, about CHF 5.5 bn.</td>
+            <td>No data</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted">Also in the Library: the federal <a href="https://www.bafu.admin.ch/de/klimastrategie-2050">long-term climate strategy</a>,
+        Axpo's <a href="https://www.axpo.com/ch/de/knowledge/energy-reports.html">Energy Reports</a> and
+        <a href="https://powerswitcher.axpo.com/">Power Switcher</a>.</p>
+    </div>
+
+    <h2 id="models">Models</h2>
+    <p class="section-note">Open or documented Swiss models used in these studies, with links, are in the
+      <a href="library.html">Library</a> under <em>Models</em>: Nexus-e (ETH), STEM (PSI), EnergyScope (EPFL),
+      ehubX and CESAR-P (Empa).</p>
+
+    <h2 id="gaps">What is not openly available</h2>
+    <div data-gaps="scenarios"></div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
