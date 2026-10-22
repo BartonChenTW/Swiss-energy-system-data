@@ -8,6 +8,8 @@ for fixes, wording and styling. To release, rename `Unreleased` to the new versi
 with today's date; `python -m pipeline.build_site` picks up the top released entry.
 
 ## [Unreleased]
+
+## [0.12.0] - 2026-10-22
 ### Added
 - Renewables: a Hydropower, snow and glaciers section with water stored in the snow of the Wägital catchment on 1 April since 1943 (Meteodat, CC BY 4.0), days with snow cover at four MeteoSwiss stations, and the cumulative mass balance and length change of Swiss glaciers (GLAMOS, non-commercial use).
 - Renewables: table of studies on how snow, glaciers and climate change affect Swiss hydropower and the electricity system (Schaefli 2019, Haddad 2025, Savelsberg 2018, Wechsler 2023, SCCER-SoE, Farinotti 2016, Ehrbar 2018, Hydro-CH2018).
