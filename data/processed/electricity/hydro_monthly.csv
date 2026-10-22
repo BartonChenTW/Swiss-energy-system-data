@@ -1,0 +1,961 @@
+period,category,value,unit
+2000-01,Run-of-river,891,GWh
+2000-02,Run-of-river,959,GWh
+2000-03,Run-of-river,1069,GWh
+2000-04,Run-of-river,1196,GWh
+2000-05,Run-of-river,2060,GWh
+2000-06,Run-of-river,2168,GWh
+2000-07,Run-of-river,2069,GWh
+2000-08,Run-of-river,1986,GWh
+2000-09,Run-of-river,1439,GWh
+2000-10,Run-of-river,1473,GWh
+2000-11,Run-of-river,1212,GWh
+2000-12,Run-of-river,1044,GWh
+2001-01,Run-of-river,1016,GWh
+2001-02,Run-of-river,805,GWh
+2001-03,Run-of-river,1241,GWh
+2001-04,Run-of-river,1300,GWh
+2001-05,Run-of-river,2098,GWh
+2001-06,Run-of-river,2156,GWh
+2001-07,Run-of-river,2317,GWh
+2001-08,Run-of-river,2132,GWh
+2001-09,Run-of-river,1622,GWh
+2001-10,Run-of-river,1282,GWh
+2001-11,Run-of-river,898,GWh
+2001-12,Run-of-river,884,GWh
+2002-01,Run-of-river,765,GWh
+2002-02,Run-of-river,748,GWh
+2002-03,Run-of-river,1080,GWh
+2002-04,Run-of-river,1050,GWh
+2002-05,Run-of-river,1912,GWh
+2002-06,Run-of-river,2232,GWh
+2002-07,Run-of-river,2206,GWh
+2002-08,Run-of-river,1984,GWh
+2002-09,Run-of-river,1577,GWh
+2002-10,Run-of-river,1330,GWh
+2002-11,Run-of-river,1477,GWh
+2002-12,Run-of-river,1264,GWh
+2003-01,Run-of-river,1057,GWh
+2003-02,Run-of-river,796,GWh
+2003-03,Run-of-river,910,GWh
+2003-04,Run-of-river,1089,GWh
+2003-05,Run-of-river,1910,GWh
+2003-06,Run-of-river,2207,GWh
+2003-07,Run-of-river,1906,GWh
+2003-08,Run-of-river,1743,GWh
+2003-09,Run-of-river,1110,GWh
+2003-10,Run-of-river,1098,GWh
+2003-11,Run-of-river,828,GWh
+2003-12,Run-of-river,744,GWh
+2004-01,Run-of-river,909,GWh
+2004-02,Run-of-river,743,GWh
+2004-03,Run-of-river,885,GWh
+2004-04,Run-of-river,1106,GWh
+2004-05,Run-of-river,1687,GWh
+2004-06,Run-of-river,2050,GWh
+2004-07,Run-of-river,2147,GWh
+2004-08,Run-of-river,2060,GWh
+2004-09,Run-of-river,1481,GWh
+2004-10,Run-of-river,1203,GWh
+2004-11,Run-of-river,1012,GWh
+2004-12,Run-of-river,756,GWh
+2005-01,Run-of-river,736,GWh
+2005-02,Run-of-river,744,GWh
+2005-03,Run-of-river,961,GWh
+2005-04,Run-of-river,1227,GWh
+2005-05,Run-of-river,1808,GWh
+2005-06,Run-of-river,2006,GWh
+2005-07,Run-of-river,1922,GWh
+2005-08,Run-of-river,1812,GWh
+2005-09,Run-of-river,1458,GWh
+2005-10,Run-of-river,1030,GWh
+2005-11,Run-of-river,663,GWh
+2005-12,Run-of-river,631,GWh
+2006-01,Run-of-river,614,GWh
+2006-02,Run-of-river,577,GWh
+2006-03,Run-of-river,917,GWh
+2006-04,Run-of-river,1334,GWh
+2006-05,Run-of-river,1956,GWh
+2006-06,Run-of-river,2037,GWh
+2006-07,Run-of-river,2073,GWh
+2006-08,Run-of-river,1778,GWh
+2006-09,Run-of-river,1633,GWh
+2006-10,Run-of-river,1211,GWh
+2006-11,Run-of-river,817,GWh
+2006-12,Run-of-river,872,GWh
+2007-01,Run-of-river,959,GWh
+2007-02,Run-of-river,758,GWh
+2007-03,Run-of-river,1007,GWh
+2007-04,Run-of-river,1299,GWh
+2007-05,Run-of-river,1811,GWh
+2007-06,Run-of-river,2185,GWh
+2007-07,Run-of-river,2205,GWh
+2007-08,Run-of-river,1991,GWh
+2007-09,Run-of-river,1473,GWh
+2007-10,Run-of-river,1116,GWh
+2007-11,Run-of-river,815,GWh
+2007-12,Run-of-river,928,GWh
+2008-01,Run-of-river,900,GWh
+2008-02,Run-of-river,699,GWh
+2008-03,Run-of-river,942,GWh
+2008-04,Run-of-river,1170,GWh
+2008-05,Run-of-river,1938,GWh
+2008-06,Run-of-river,2212,GWh
+2008-07,Run-of-river,2201,GWh
+2008-08,Run-of-river,2006,GWh
+2008-09,Run-of-river,1659,GWh
+2008-10,Run-of-river,1054,GWh
+2008-11,Run-of-river,1052,GWh
+2008-12,Run-of-river,853,GWh
+2009-01,Run-of-river,766,GWh
+2009-02,Run-of-river,689,GWh
+2009-03,Run-of-river,902,GWh
+2009-04,Run-of-river,1482,GWh
+2009-05,Run-of-river,1933,GWh
+2009-06,Run-of-river,2097,GWh
+2009-07,Run-of-river,2237,GWh
+2009-08,Run-of-river,2017,GWh
+2009-09,Run-of-river,1250,GWh
+2009-10,Run-of-river,886,GWh
+2009-11,Run-of-river,877,GWh
+2009-12,Run-of-river,974,GWh
+2010-01,Run-of-river,830,GWh
+2010-02,Run-of-river,639,GWh
+2010-03,Run-of-river,870,GWh
+2010-04,Run-of-river,1029,GWh
+2010-05,Run-of-river,1705,GWh
+2010-06,Run-of-river,2131,GWh
+2010-07,Run-of-river,2161,GWh
+2010-08,Run-of-river,2052,GWh
+2010-09,Run-of-river,1460,GWh
+2010-10,Run-of-river,1067,GWh
+2010-11,Run-of-river,1041,GWh
+2010-12,Run-of-river,1045,GWh
+2011-01,Run-of-river,897,GWh
+2011-02,Run-of-river,611,GWh
+2011-03,Run-of-river,710,GWh
+2011-04,Run-of-river,1035,GWh
+2011-05,Run-of-river,1371,GWh
+2011-06,Run-of-river,1816,GWh
+2011-07,Run-of-river,1979,GWh
+2011-08,Run-of-river,1858,GWh
+2011-09,Run-of-river,1538,GWh
+2011-10,Run-of-river,1202,GWh
+2011-11,Run-of-river,766,GWh
+2011-12,Run-of-river,950,GWh
+2012-01,Run-of-river,1053,GWh
+2012-02,Run-of-river,739,GWh
+2012-03,Run-of-river,1008,GWh
+2012-04,Run-of-river,1288,GWh
+2012-05,Run-of-river,2060,GWh
+2012-06,Run-of-river,2217,GWh
+2012-07,Run-of-river,2203,GWh
+2012-08,Run-of-river,1922,GWh
+2012-09,Run-of-river,1584,GWh
+2012-10,Run-of-river,1422,GWh
+2012-11,Run-of-river,1177,GWh
+2012-12,Run-of-river,1159,GWh
+2013-01,Run-of-river,1010,GWh
+2013-02,Run-of-river,950,GWh
+2013-03,Run-of-river,875,GWh
+2013-04,Run-of-river,1398,GWh
+2013-05,Run-of-river,2047,GWh
+2013-06,Run-of-river,2116,GWh
+2013-07,Run-of-river,2288,GWh
+2013-08,Run-of-river,1886,GWh
+2013-09,Run-of-river,1516,GWh
+2013-10,Run-of-river,1435,GWh
+2013-11,Run-of-river,1295,GWh
+2013-12,Run-of-river,943,GWh
+2014-01,Run-of-river,944,GWh
+2014-02,Run-of-river,819,GWh
+2014-03,Run-of-river,976,GWh
+2014-04,Run-of-river,1256,GWh
+2014-05,Run-of-river,1775,GWh
+2014-06,Run-of-river,1949,GWh
+2014-07,Run-of-river,2297,GWh
+2014-08,Run-of-river,2133,GWh
+2014-09,Run-of-river,1572,GWh
+2014-10,Run-of-river,1306,GWh
+2014-11,Run-of-river,1270,GWh
+2014-12,Run-of-river,946,GWh
+2015-01,Run-of-river,1049,GWh
+2015-02,Run-of-river,768,GWh
+2015-03,Run-of-river,1026,GWh
+2015-04,Run-of-river,1433,GWh
+2015-05,Run-of-river,2058,GWh
+2015-06,Run-of-river,2225,GWh
+2015-07,Run-of-river,2115,GWh
+2015-08,Run-of-river,1822,GWh
+2015-09,Run-of-river,1392,GWh
+2015-10,Run-of-river,1046,GWh
+2015-11,Run-of-river,850,GWh
+2015-12,Run-of-river,811,GWh
+2016-01,Run-of-river,869,GWh
+2016-02,Run-of-river,1002,GWh
+2016-03,Run-of-river,936,GWh
+2016-04,Run-of-river,1437,GWh
+2016-05,Run-of-river,1770,GWh
+2016-06,Run-of-river,2236,GWh
+2016-07,Run-of-river,2324,GWh
+2016-08,Run-of-river,1995,GWh
+2016-09,Run-of-river,1442,GWh
+2016-10,Run-of-river,883,GWh
+2016-11,Run-of-river,983,GWh
+2016-12,Run-of-river,697,GWh
+2017-01,Run-of-river,627,GWh
+2017-02,Run-of-river,669,GWh
+2017-03,Run-of-river,1158,GWh
+2017-04,Run-of-river,1083,GWh
+2017-05,Run-of-river,1741,GWh
+2017-06,Run-of-river,2188,GWh
+2017-07,Run-of-river,1981,GWh
+2017-08,Run-of-river,1983,GWh
+2017-09,Run-of-river,1449,GWh
+2017-10,Run-of-river,1110,GWh
+2017-11,Run-of-river,960,GWh
+2017-12,Run-of-river,997,GWh
+2018-01,Run-of-river,1232,GWh
+2018-02,Run-of-river,964,GWh
+2018-03,Run-of-river,924,GWh
+2018-04,Run-of-river,1538,GWh
+2018-05,Run-of-river,2177,GWh
+2018-06,Run-of-river,2311,GWh
+2018-07,Run-of-river,1984,GWh
+2018-08,Run-of-river,1701,GWh
+2018-09,Run-of-river,1294,GWh
+2018-10,Run-of-river,909,GWh
+2018-11,Run-of-river,813,GWh
+2018-12,Run-of-river,1061,GWh
+2019-01,Run-of-river,872,GWh
+2019-02,Run-of-river,751,GWh
+2019-03,Run-of-river,1050,GWh
+2019-04,Run-of-river,1235,GWh
+2019-05,Run-of-river,1636,GWh
+2019-06,Run-of-river,2363,GWh
+2019-07,Run-of-river,2365,GWh
+2019-08,Run-of-river,2169,GWh
+2019-09,Run-of-river,1407,GWh
+2019-10,Run-of-river,1454,GWh
+2019-11,Run-of-river,1220,GWh
+2019-12,Run-of-river,1178,GWh
+2020-01,Run-of-river,889,GWh
+2020-02,Run-of-river,1115,GWh
+2020-03,Run-of-river,1257,GWh
+2020-04,Run-of-river,1390,GWh
+2020-05,Run-of-river,1966,GWh
+2020-06,Run-of-river,2022,GWh
+2020-07,Run-of-river,2146,GWh
+2020-08,Run-of-river,1919,GWh
+2020-09,Run-of-river,1469,GWh
+2020-10,Run-of-river,1512,GWh
+2020-11,Run-of-river,1030,GWh
+2020-12,Run-of-river,933,GWh
+2021-01,Run-of-river,916,GWh
+2021-02,Run-of-river,1024,GWh
+2021-03,Run-of-river,1002,GWh
+2021-04,Run-of-river,1088,GWh
+2021-05,Run-of-river,1765,GWh
+2021-06,Run-of-river,2412,GWh
+2021-07,Run-of-river,2471,GWh
+2021-08,Run-of-river,2171,GWh
+2021-09,Run-of-river,1420,GWh
+2021-10,Run-of-river,994,GWh
+2021-11,Run-of-river,770,GWh
+2021-12,Run-of-river,929,GWh
+2022-01,Run-of-river,923,GWh
+2022-02,Run-of-river,808,GWh
+2022-03,Run-of-river,784,GWh
+2022-04,Run-of-river,1214,GWh
+2022-05,Run-of-river,1869,GWh
+2022-06,Run-of-river,1968,GWh
+2022-07,Run-of-river,1861,GWh
+2022-08,Run-of-river,1581,GWh
+2022-09,Run-of-river,1289,GWh
+2022-10,Run-of-river,1311,GWh
+2022-11,Run-of-river,938,GWh
+2022-12,Run-of-river,944,GWh
+2023-01,Run-of-river,1003,GWh
+2023-02,Run-of-river,673,GWh
+2023-03,Run-of-river,986,GWh
+2023-04,Run-of-river,1178,GWh
+2023-05,Run-of-river,2009,GWh
+2023-06,Run-of-river,2114,GWh
+2023-07,Run-of-river,2009,GWh
+2023-08,Run-of-river,1886,GWh
+2023-09,Run-of-river,1600,GWh
+2023-10,Run-of-river,1201,GWh
+2023-11,Run-of-river,1482,GWh
+2023-12,Run-of-river,1350,GWh
+2024-01,Run-of-river,1270,GWh
+2024-02,Run-of-river,1077,GWh
+2024-03,Run-of-river,1204,GWh
+2024-04,Run-of-river,1574,GWh
+2024-05,Run-of-river,2158,GWh
+2024-06,Run-of-river,2310,GWh
+2024-07,Run-of-river,2428,GWh
+2024-08,Run-of-river,2026,GWh
+2024-09,Run-of-river,1564,GWh
+2024-10,Run-of-river,1703,GWh
+2024-11,Run-of-river,1015,GWh
+2024-12,Run-of-river,1074,GWh
+2025-01,Run-of-river,1085,GWh
+2025-02,Run-of-river,829,GWh
+2025-03,Run-of-river,763,GWh
+2025-04,Run-of-river,1123,GWh
+2025-05,Run-of-river,1695,GWh
+2025-06,Run-of-river,2088,GWh
+2025-07,Run-of-river,1959,GWh
+2025-08,Run-of-river,1866,GWh
+2025-09,Run-of-river,1669,GWh
+2025-10,Run-of-river,1188,GWh
+2025-11,Run-of-river,1100,GWh
+2025-12,Run-of-river,961,GWh
+2026-01,Run-of-river,704,GWh
+2026-02,Run-of-river,845,GWh
+2026-03,Run-of-river,883,GWh
+2026-04,Run-of-river,1279,GWh
+2026-05,Run-of-river,1590,GWh
+2026-06,Run-of-river,1899,GWh
+2026-07,Run-of-river,1656,GWh
+2026-08,Run-of-river,1535,GWh
+2000-01,Storage plants,2004,GWh
+2000-02,Storage plants,1516,GWh
+2000-03,Storage plants,1463,GWh
+2000-04,Storage plants,1068,GWh
+2000-05,Storage plants,1920,GWh
+2000-06,Storage plants,1911,GWh
+2000-07,Storage plants,1730,GWh
+2000-08,Storage plants,1741,GWh
+2000-09,Storage plants,1386,GWh
+2000-10,Storage plants,1951,GWh
+2000-11,Storage plants,1962,GWh
+2000-12,Storage plants,1633,GWh
+2001-01,Storage plants,2035,GWh
+2001-02,Storage plants,2090,GWh
+2001-03,Storage plants,1891,GWh
+2001-04,Storage plants,1574,GWh
+2001-05,Storage plants,2065,GWh
+2001-06,Storage plants,2286,GWh
+2001-07,Storage plants,2828,GWh
+2001-08,Storage plants,2944,GWh
+2001-09,Storage plants,1670,GWh
+2001-10,Storage plants,1697,GWh
+2001-11,Storage plants,1810,GWh
+2001-12,Storage plants,1620,GWh
+2002-01,Storage plants,1579,GWh
+2002-02,Storage plants,1149,GWh
+2002-03,Storage plants,1143,GWh
+2002-04,Storage plants,1278,GWh
+2002-05,Storage plants,1574,GWh
+2002-06,Storage plants,2058,GWh
+2002-07,Storage plants,2076,GWh
+2002-08,Storage plants,1908,GWh
+2002-09,Storage plants,1559,GWh
+2002-10,Storage plants,1148,GWh
+2002-11,Storage plants,1722,GWh
+2002-12,Storage plants,1694,GWh
+2003-01,Storage plants,2138,GWh
+2003-02,Storage plants,2232,GWh
+2003-03,Storage plants,1478,GWh
+2003-04,Storage plants,1287,GWh
+2003-05,Storage plants,1772,GWh
+2003-06,Storage plants,2105,GWh
+2003-07,Storage plants,2173,GWh
+2003-08,Storage plants,2243,GWh
+2003-09,Storage plants,1522,GWh
+2003-10,Storage plants,1507,GWh
+2003-11,Storage plants,1252,GWh
+2003-12,Storage plants,1338,GWh
+2004-01,Storage plants,1517,GWh
+2004-02,Storage plants,1359,GWh
+2004-03,Storage plants,1700,GWh
+2004-04,Storage plants,987,GWh
+2004-05,Storage plants,1439,GWh
+2004-06,Storage plants,1984,GWh
+2004-07,Storage plants,1856,GWh
+2004-08,Storage plants,1693,GWh
+2004-09,Storage plants,1686,GWh
+2004-10,Storage plants,1419,GWh
+2004-11,Storage plants,1739,GWh
+2004-12,Storage plants,1699,GWh
+2005-01,Storage plants,1634,GWh
+2005-02,Storage plants,2009,GWh
+2005-03,Storage plants,1645,GWh
+2005-04,Storage plants,1279,GWh
+2005-05,Storage plants,1434,GWh
+2005-06,Storage plants,1745,GWh
+2005-07,Storage plants,1417,GWh
+2005-08,Storage plants,1322,GWh
+2005-09,Storage plants,1349,GWh
+2005-10,Storage plants,1127,GWh
+2005-11,Storage plants,1481,GWh
+2005-12,Storage plants,1319,GWh
+2006-01,Storage plants,1360,GWh
+2006-02,Storage plants,1394,GWh
+2006-03,Storage plants,1235,GWh
+2006-04,Storage plants,868,GWh
+2006-05,Storage plants,1301,GWh
+2006-06,Storage plants,1450,GWh
+2006-07,Storage plants,1850,GWh
+2006-08,Storage plants,1317,GWh
+2006-09,Storage plants,1488,GWh
+2006-10,Storage plants,1462,GWh
+2006-11,Storage plants,1563,GWh
+2006-12,Storage plants,1450,GWh
+2007-01,Storage plants,1334,GWh
+2007-02,Storage plants,1432,GWh
+2007-03,Storage plants,1384,GWh
+2007-04,Storage plants,1021,GWh
+2007-05,Storage plants,1349,GWh
+2007-06,Storage plants,2185,GWh
+2007-07,Storage plants,2327,GWh
+2007-08,Storage plants,2289,GWh
+2007-09,Storage plants,1680,GWh
+2007-10,Storage plants,1795,GWh
+2007-11,Storage plants,1595,GWh
+2007-12,Storage plants,1435,GWh
+2008-01,Storage plants,1479,GWh
+2008-02,Storage plants,1544,GWh
+2008-03,Storage plants,1331,GWh
+2008-04,Storage plants,1131,GWh
+2008-05,Storage plants,1616,GWh
+2008-06,Storage plants,2288,GWh
+2008-07,Storage plants,2155,GWh
+2008-08,Storage plants,1970,GWh
+2008-09,Storage plants,2629,GWh
+2008-10,Storage plants,1520,GWh
+2008-11,Storage plants,1608,GWh
+2008-12,Storage plants,1602,GWh
+2009-01,Storage plants,1909,GWh
+2009-02,Storage plants,1537,GWh
+2009-03,Storage plants,1487,GWh
+2009-04,Storage plants,1417,GWh
+2009-05,Storage plants,1957,GWh
+2009-06,Storage plants,2257,GWh
+2009-07,Storage plants,2466,GWh
+2009-08,Storage plants,2434,GWh
+2009-09,Storage plants,1666,GWh
+2009-10,Storage plants,1470,GWh
+2009-11,Storage plants,1099,GWh
+2009-12,Storage plants,1327,GWh
+2010-01,Storage plants,1975,GWh
+2010-02,Storage plants,1763,GWh
+2010-03,Storage plants,1449,GWh
+2010-04,Storage plants,1087,GWh
+2010-05,Storage plants,1679,GWh
+2010-06,Storage plants,2197,GWh
+2010-07,Storage plants,2066,GWh
+2010-08,Storage plants,1933,GWh
+2010-09,Storage plants,1756,GWh
+2010-10,Storage plants,1738,GWh
+2010-11,Storage plants,1653,GWh
+2010-12,Storage plants,2124,GWh
+2011-01,Storage plants,1755,GWh
+2011-02,Storage plants,1617,GWh
+2011-03,Storage plants,1322,GWh
+2011-04,Storage plants,1107,GWh
+2011-05,Storage plants,1424,GWh
+2011-06,Storage plants,1576,GWh
+2011-07,Storage plants,1684,GWh
+2011-08,Storage plants,1660,GWh
+2011-09,Storage plants,2001,GWh
+2011-10,Storage plants,1570,GWh
+2011-11,Storage plants,1769,GWh
+2011-12,Storage plants,1577,GWh
+2012-01,Storage plants,1743,GWh
+2012-02,Storage plants,2096,GWh
+2012-03,Storage plants,1140,GWh
+2012-04,Storage plants,1157,GWh
+2012-05,Storage plants,1711,GWh
+2012-06,Storage plants,2269,GWh
+2012-07,Storage plants,2357,GWh
+2012-08,Storage plants,2322,GWh
+2012-09,Storage plants,1842,GWh
+2012-10,Storage plants,1992,GWh
+2012-11,Storage plants,1688,GWh
+2012-12,Storage plants,1757,GWh
+2013-01,Storage plants,2102,GWh
+2013-02,Storage plants,2053,GWh
+2013-03,Storage plants,1458,GWh
+2013-04,Storage plants,1021,GWh
+2013-05,Storage plants,1991,GWh
+2013-06,Storage plants,1867,GWh
+2013-07,Storage plants,2128,GWh
+2013-08,Storage plants,2149,GWh
+2013-09,Storage plants,1581,GWh
+2013-10,Storage plants,1518,GWh
+2013-11,Storage plants,2002,GWh
+2013-12,Storage plants,1943,GWh
+2014-01,Storage plants,1565,GWh
+2014-02,Storage plants,1699,GWh
+2014-03,Storage plants,1800,GWh
+2014-04,Storage plants,1676,GWh
+2014-05,Storage plants,1750,GWh
+2014-06,Storage plants,2026,GWh
+2014-07,Storage plants,2133,GWh
+2014-08,Storage plants,2001,GWh
+2014-09,Storage plants,1602,GWh
+2014-10,Storage plants,1657,GWh
+2014-11,Storage plants,1976,GWh
+2014-12,Storage plants,2180,GWh
+2015-01,Storage plants,2061,GWh
+2015-02,Storage plants,2116,GWh
+2015-03,Storage plants,1474,GWh
+2015-04,Storage plants,1271,GWh
+2015-05,Storage plants,2020,GWh
+2015-06,Storage plants,2360,GWh
+2015-07,Storage plants,2199,GWh
+2015-08,Storage plants,1695,GWh
+2015-09,Storage plants,1849,GWh
+2015-10,Storage plants,2232,GWh
+2015-11,Storage plants,1975,GWh
+2015-12,Storage plants,1639,GWh
+2016-01,Storage plants,1367,GWh
+2016-02,Storage plants,1399,GWh
+2016-03,Storage plants,1420,GWh
+2016-04,Storage plants,1494,GWh
+2016-05,Storage plants,1626,GWh
+2016-06,Storage plants,2309,GWh
+2016-07,Storage plants,1904,GWh
+2016-08,Storage plants,1613,GWh
+2016-09,Storage plants,1747,GWh
+2016-10,Storage plants,1421,GWh
+2016-11,Storage plants,1345,GWh
+2016-12,Storage plants,2107,GWh
+2017-01,Storage plants,2572,GWh
+2017-02,Storage plants,1056,GWh
+2017-03,Storage plants,1246,GWh
+2017-04,Storage plants,1240,GWh
+2017-05,Storage plants,1504,GWh
+2017-06,Storage plants,2034,GWh
+2017-07,Storage plants,1848,GWh
+2017-08,Storage plants,1944,GWh
+2017-09,Storage plants,1706,GWh
+2017-10,Storage plants,1457,GWh
+2017-11,Storage plants,2121,GWh
+2017-12,Storage plants,1992,GWh
+2018-01,Storage plants,1481,GWh
+2018-02,Storage plants,2042,GWh
+2018-03,Storage plants,1419,GWh
+2018-04,Storage plants,1161,GWh
+2018-05,Storage plants,2191,GWh
+2018-06,Storage plants,2284,GWh
+2018-07,Storage plants,1962,GWh
+2018-08,Storage plants,1839,GWh
+2018-09,Storage plants,1370,GWh
+2018-10,Storage plants,1508,GWh
+2018-11,Storage plants,1687,GWh
+2018-12,Storage plants,1576,GWh
+2019-01,Storage plants,2175,GWh
+2019-02,Storage plants,1465,GWh
+2019-03,Storage plants,1199,GWh
+2019-04,Storage plants,1464,GWh
+2019-05,Storage plants,1503,GWh
+2019-06,Storage plants,2446,GWh
+2019-07,Storage plants,2709,GWh
+2019-08,Storage plants,2650,GWh
+2019-09,Storage plants,1650,GWh
+2019-10,Storage plants,1814,GWh
+2019-11,Storage plants,1933,GWh
+2019-12,Storage plants,1848,GWh
+2020-01,Storage plants,2330,GWh
+2020-02,Storage plants,1621,GWh
+2020-03,Storage plants,1748,GWh
+2020-04,Storage plants,1388,GWh
+2020-05,Storage plants,1705,GWh
+2020-06,Storage plants,2159,GWh
+2020-07,Storage plants,2247,GWh
+2020-08,Storage plants,1970,GWh
+2020-09,Storage plants,1895,GWh
+2020-10,Storage plants,1919,GWh
+2020-11,Storage plants,1980,GWh
+2020-12,Storage plants,2006,GWh
+2021-01,Storage plants,2357,GWh
+2021-02,Storage plants,1748,GWh
+2021-03,Storage plants,1694,GWh
+2021-04,Storage plants,1199,GWh
+2021-05,Storage plants,1485,GWh
+2021-06,Storage plants,2380,GWh
+2021-07,Storage plants,2476,GWh
+2021-08,Storage plants,2292,GWh
+2021-09,Storage plants,1683,GWh
+2021-10,Storage plants,1408,GWh
+2021-11,Storage plants,2107,GWh
+2021-12,Storage plants,1709,GWh
+2022-01,Storage plants,1766,GWh
+2022-02,Storage plants,1211,GWh
+2022-03,Storage plants,1292,GWh
+2022-04,Storage plants,1170,GWh
+2022-05,Storage plants,1579,GWh
+2022-06,Storage plants,1819,GWh
+2022-07,Storage plants,1810,GWh
+2022-08,Storage plants,1652,GWh
+2022-09,Storage plants,1441,GWh
+2022-10,Storage plants,1344,GWh
+2022-11,Storage plants,1221,GWh
+2022-12,Storage plants,1706,GWh
+2023-01,Storage plants,2075,GWh
+2023-02,Storage plants,1748,GWh
+2023-03,Storage plants,1749,GWh
+2023-04,Storage plants,1213,GWh
+2023-05,Storage plants,1791,GWh
+2023-06,Storage plants,2102,GWh
+2023-07,Storage plants,2048,GWh
+2023-08,Storage plants,2168,GWh
+2023-09,Storage plants,2265,GWh
+2023-10,Storage plants,1984,GWh
+2023-11,Storage plants,2245,GWh
+2023-12,Storage plants,1901,GWh
+2024-01,Storage plants,2623,GWh
+2024-02,Storage plants,2077,GWh
+2024-03,Storage plants,2170,GWh
+2024-04,Storage plants,1847,GWh
+2024-05,Storage plants,2252,GWh
+2024-06,Storage plants,2623,GWh
+2024-07,Storage plants,3522,GWh
+2024-08,Storage plants,2925,GWh
+2024-09,Storage plants,1947,GWh
+2024-10,Storage plants,2557,GWh
+2024-11,Storage plants,2362,GWh
+2024-12,Storage plants,2029,GWh
+2025-01,Storage plants,2143,GWh
+2025-02,Storage plants,1825,GWh
+2025-03,Storage plants,1065,GWh
+2025-04,Storage plants,1255,GWh
+2025-05,Storage plants,1891,GWh
+2025-06,Storage plants,2081,GWh
+2025-07,Storage plants,1880,GWh
+2025-08,Storage plants,1652,GWh
+2025-09,Storage plants,1958,GWh
+2025-10,Storage plants,1789,GWh
+2025-11,Storage plants,1859,GWh
+2025-12,Storage plants,1761,GWh
+2026-01,Storage plants,2177,GWh
+2026-02,Storage plants,1505,GWh
+2026-03,Storage plants,1555,GWh
+2026-04,Storage plants,1415,GWh
+2026-05,Storage plants,1720,GWh
+2026-06,Storage plants,1806,GWh
+2026-07,Storage plants,1303,GWh
+2026-08,Storage plants,1631,GWh
+2000-01,Storage pumps (consumption),72,GWh
+2000-02,Storage pumps (consumption),40,GWh
+2000-03,Storage pumps (consumption),44,GWh
+2000-04,Storage pumps (consumption),139,GWh
+2000-05,Storage pumps (consumption),228,GWh
+2000-06,Storage pumps (consumption),305,GWh
+2000-07,Storage pumps (consumption),248,GWh
+2000-08,Storage pumps (consumption),275,GWh
+2000-09,Storage pumps (consumption),219,GWh
+2000-10,Storage pumps (consumption),158,GWh
+2000-11,Storage pumps (consumption),122,GWh
+2000-12,Storage pumps (consumption),124,GWh
+2001-01,Storage pumps (consumption),87,GWh
+2001-02,Storage pumps (consumption),66,GWh
+2001-03,Storage pumps (consumption),114,GWh
+2001-04,Storage pumps (consumption),106,GWh
+2001-05,Storage pumps (consumption),255,GWh
+2001-06,Storage pumps (consumption),312,GWh
+2001-07,Storage pumps (consumption),287,GWh
+2001-08,Storage pumps (consumption),239,GWh
+2001-09,Storage pumps (consumption),139,GWh
+2001-10,Storage pumps (consumption),128,GWh
+2001-11,Storage pumps (consumption),96,GWh
+2001-12,Storage pumps (consumption),118,GWh
+2002-01,Storage pumps (consumption),102,GWh
+2002-02,Storage pumps (consumption),84,GWh
+2002-03,Storage pumps (consumption),117,GWh
+2002-04,Storage pumps (consumption),126,GWh
+2002-05,Storage pumps (consumption),214,GWh
+2002-06,Storage pumps (consumption),359,GWh
+2002-07,Storage pumps (consumption),310,GWh
+2002-08,Storage pumps (consumption),274,GWh
+2002-09,Storage pumps (consumption),271,GWh
+2002-10,Storage pumps (consumption),180,GWh
+2002-11,Storage pumps (consumption),184,GWh
+2002-12,Storage pumps (consumption),197,GWh
+2003-01,Storage pumps (consumption),135,GWh
+2003-02,Storage pumps (consumption),139,GWh
+2003-03,Storage pumps (consumption),219,GWh
+2003-04,Storage pumps (consumption),204,GWh
+2003-05,Storage pumps (consumption),306,GWh
+2003-06,Storage pumps (consumption),383,GWh
+2003-07,Storage pumps (consumption),317,GWh
+2003-08,Storage pumps (consumption),361,GWh
+2003-09,Storage pumps (consumption),257,GWh
+2003-10,Storage pumps (consumption),159,GWh
+2003-11,Storage pumps (consumption),184,GWh
+2003-12,Storage pumps (consumption),229,GWh
+2004-01,Storage pumps (consumption),122,GWh
+2004-02,Storage pumps (consumption),90,GWh
+2004-03,Storage pumps (consumption),69,GWh
+2004-04,Storage pumps (consumption),120,GWh
+2004-05,Storage pumps (consumption),246,GWh
+2004-06,Storage pumps (consumption),308,GWh
+2004-07,Storage pumps (consumption),363,GWh
+2004-08,Storage pumps (consumption),338,GWh
+2004-09,Storage pumps (consumption),235,GWh
+2004-10,Storage pumps (consumption),216,GWh
+2004-11,Storage pumps (consumption),158,GWh
+2004-12,Storage pumps (consumption),168,GWh
+2005-01,Storage pumps (consumption),69,GWh
+2005-02,Storage pumps (consumption),53,GWh
+2005-03,Storage pumps (consumption),145,GWh
+2005-04,Storage pumps (consumption),150,GWh
+2005-05,Storage pumps (consumption),258,GWh
+2005-06,Storage pumps (consumption),329,GWh
+2005-07,Storage pumps (consumption),401,GWh
+2005-08,Storage pumps (consumption),319,GWh
+2005-09,Storage pumps (consumption),274,GWh
+2005-10,Storage pumps (consumption),249,GWh
+2005-11,Storage pumps (consumption),176,GWh
+2005-12,Storage pumps (consumption),208,GWh
+2006-01,Storage pumps (consumption),204,GWh
+2006-02,Storage pumps (consumption),152,GWh
+2006-03,Storage pumps (consumption),136,GWh
+2006-04,Storage pumps (consumption),168,GWh
+2006-05,Storage pumps (consumption),301,GWh
+2006-06,Storage pumps (consumption),343,GWh
+2006-07,Storage pumps (consumption),379,GWh
+2006-08,Storage pumps (consumption),317,GWh
+2006-09,Storage pumps (consumption),227,GWh
+2006-10,Storage pumps (consumption),184,GWh
+2006-11,Storage pumps (consumption),148,GWh
+2006-12,Storage pumps (consumption),161,GWh
+2007-01,Storage pumps (consumption),158,GWh
+2007-02,Storage pumps (consumption),112,GWh
+2007-03,Storage pumps (consumption),108,GWh
+2007-04,Storage pumps (consumption),190,GWh
+2007-05,Storage pumps (consumption),214,GWh
+2007-06,Storage pumps (consumption),262,GWh
+2007-07,Storage pumps (consumption),227,GWh
+2007-08,Storage pumps (consumption),208,GWh
+2007-09,Storage pumps (consumption),191,GWh
+2007-10,Storage pumps (consumption),135,GWh
+2007-11,Storage pumps (consumption),139,GWh
+2007-12,Storage pumps (consumption),160,GWh
+2008-01,Storage pumps (consumption),163,GWh
+2008-02,Storage pumps (consumption),125,GWh
+2008-03,Storage pumps (consumption),142,GWh
+2008-04,Storage pumps (consumption),203,GWh
+2008-05,Storage pumps (consumption),314,GWh
+2008-06,Storage pumps (consumption),307,GWh
+2008-07,Storage pumps (consumption),330,GWh
+2008-08,Storage pumps (consumption),312,GWh
+2008-09,Storage pumps (consumption),205,GWh
+2008-10,Storage pumps (consumption),230,GWh
+2008-11,Storage pumps (consumption),166,GWh
+2008-12,Storage pumps (consumption),188,GWh
+2009-01,Storage pumps (consumption),117,GWh
+2009-02,Storage pumps (consumption),137,GWh
+2009-03,Storage pumps (consumption),184,GWh
+2009-04,Storage pumps (consumption),176,GWh
+2009-05,Storage pumps (consumption),283,GWh
+2009-06,Storage pumps (consumption),245,GWh
+2009-07,Storage pumps (consumption),319,GWh
+2009-08,Storage pumps (consumption),289,GWh
+2009-09,Storage pumps (consumption),221,GWh
+2009-10,Storage pumps (consumption),200,GWh
+2009-11,Storage pumps (consumption),151,GWh
+2009-12,Storage pumps (consumption),201,GWh
+2010-01,Storage pumps (consumption),137,GWh
+2010-02,Storage pumps (consumption),107,GWh
+2010-03,Storage pumps (consumption),150,GWh
+2010-04,Storage pumps (consumption),161,GWh
+2010-05,Storage pumps (consumption),249,GWh
+2010-06,Storage pumps (consumption),372,GWh
+2010-07,Storage pumps (consumption),361,GWh
+2010-08,Storage pumps (consumption),296,GWh
+2010-09,Storage pumps (consumption),163,GWh
+2010-10,Storage pumps (consumption),169,GWh
+2010-11,Storage pumps (consumption),183,GWh
+2010-12,Storage pumps (consumption),146,GWh
+2011-01,Storage pumps (consumption),144,GWh
+2011-02,Storage pumps (consumption),99,GWh
+2011-03,Storage pumps (consumption),167,GWh
+2011-04,Storage pumps (consumption),189,GWh
+2011-05,Storage pumps (consumption),238,GWh
+2011-06,Storage pumps (consumption),332,GWh
+2011-07,Storage pumps (consumption),376,GWh
+2011-08,Storage pumps (consumption),315,GWh
+2011-09,Storage pumps (consumption),195,GWh
+2011-10,Storage pumps (consumption),122,GWh
+2011-11,Storage pumps (consumption),120,GWh
+2011-12,Storage pumps (consumption),169,GWh
+2012-01,Storage pumps (consumption),133,GWh
+2012-02,Storage pumps (consumption),92,GWh
+2012-03,Storage pumps (consumption),157,GWh
+2012-04,Storage pumps (consumption),174,GWh
+2012-05,Storage pumps (consumption),227,GWh
+2012-06,Storage pumps (consumption),360,GWh
+2012-07,Storage pumps (consumption),317,GWh
+2012-08,Storage pumps (consumption),288,GWh
+2012-09,Storage pumps (consumption),185,GWh
+2012-10,Storage pumps (consumption),141,GWh
+2012-11,Storage pumps (consumption),147,GWh
+2012-12,Storage pumps (consumption),190,GWh
+2013-01,Storage pumps (consumption),101,GWh
+2013-02,Storage pumps (consumption),69,GWh
+2013-03,Storage pumps (consumption),87,GWh
+2013-04,Storage pumps (consumption),124,GWh
+2013-05,Storage pumps (consumption),146,GWh
+2013-06,Storage pumps (consumption),253,GWh
+2013-07,Storage pumps (consumption),308,GWh
+2013-08,Storage pumps (consumption),272,GWh
+2013-09,Storage pumps (consumption),245,GWh
+2013-10,Storage pumps (consumption),199,GWh
+2013-11,Storage pumps (consumption),138,GWh
+2013-12,Storage pumps (consumption),190,GWh
+2014-01,Storage pumps (consumption),154,GWh
+2014-02,Storage pumps (consumption),122,GWh
+2014-03,Storage pumps (consumption),126,GWh
+2014-04,Storage pumps (consumption),140,GWh
+2014-05,Storage pumps (consumption),226,GWh
+2014-06,Storage pumps (consumption),337,GWh
+2014-07,Storage pumps (consumption),313,GWh
+2014-08,Storage pumps (consumption),331,GWh
+2014-09,Storage pumps (consumption),227,GWh
+2014-10,Storage pumps (consumption),143,GWh
+2014-11,Storage pumps (consumption),119,GWh
+2014-12,Storage pumps (consumption),117,GWh
+2015-01,Storage pumps (consumption),79,GWh
+2015-02,Storage pumps (consumption),70,GWh
+2015-03,Storage pumps (consumption),122,GWh
+2015-04,Storage pumps (consumption),136,GWh
+2015-05,Storage pumps (consumption),278,GWh
+2015-06,Storage pumps (consumption),284,GWh
+2015-07,Storage pumps (consumption),325,GWh
+2015-08,Storage pumps (consumption),329,GWh
+2015-09,Storage pumps (consumption),246,GWh
+2015-10,Storage pumps (consumption),134,GWh
+2015-11,Storage pumps (consumption),101,GWh
+2015-12,Storage pumps (consumption),192,GWh
+2016-01,Storage pumps (consumption),214,GWh
+2016-02,Storage pumps (consumption),124,GWh
+2016-03,Storage pumps (consumption),166,GWh
+2016-04,Storage pumps (consumption),195,GWh
+2016-05,Storage pumps (consumption),284,GWh
+2016-06,Storage pumps (consumption),317,GWh
+2016-07,Storage pumps (consumption),385,GWh
+2016-08,Storage pumps (consumption),344,GWh
+2016-09,Storage pumps (consumption),255,GWh
+2016-10,Storage pumps (consumption),257,GWh
+2016-11,Storage pumps (consumption),223,GWh
+2016-12,Storage pumps (consumption),158,GWh
+2017-01,Storage pumps (consumption),199,GWh
+2017-02,Storage pumps (consumption),246,GWh
+2017-03,Storage pumps (consumption),289,GWh
+2017-04,Storage pumps (consumption),240,GWh
+2017-05,Storage pumps (consumption),372,GWh
+2017-06,Storage pumps (consumption),475,GWh
+2017-07,Storage pumps (consumption),482,GWh
+2017-08,Storage pumps (consumption),453,GWh
+2017-09,Storage pumps (consumption),362,GWh
+2017-10,Storage pumps (consumption),366,GWh
+2017-11,Storage pumps (consumption),354,GWh
+2017-12,Storage pumps (consumption),322,GWh
+2018-01,Storage pumps (consumption),261,GWh
+2018-02,Storage pumps (consumption),161,GWh
+2018-03,Storage pumps (consumption),281,GWh
+2018-04,Storage pumps (consumption),413,GWh
+2018-05,Storage pumps (consumption),462,GWh
+2018-06,Storage pumps (consumption),456,GWh
+2018-07,Storage pumps (consumption),317,GWh
+2018-08,Storage pumps (consumption),356,GWh
+2018-09,Storage pumps (consumption),404,GWh
+2018-10,Storage pumps (consumption),235,GWh
+2018-11,Storage pumps (consumption),307,GWh
+2018-12,Storage pumps (consumption),334,GWh
+2019-01,Storage pumps (consumption),220,GWh
+2019-02,Storage pumps (consumption),200,GWh
+2019-03,Storage pumps (consumption),334,GWh
+2019-04,Storage pumps (consumption),313,GWh
+2019-05,Storage pumps (consumption),384,GWh
+2019-06,Storage pumps (consumption),601,GWh
+2019-07,Storage pumps (consumption),428,GWh
+2019-08,Storage pumps (consumption),338,GWh
+2019-09,Storage pumps (consumption),386,GWh
+2019-10,Storage pumps (consumption),394,GWh
+2019-11,Storage pumps (consumption),248,GWh
+2019-12,Storage pumps (consumption),287,GWh
+2020-01,Storage pumps (consumption),206,GWh
+2020-02,Storage pumps (consumption),232,GWh
+2020-03,Storage pumps (consumption),300,GWh
+2020-04,Storage pumps (consumption),429,GWh
+2020-05,Storage pumps (consumption),600,GWh
+2020-06,Storage pumps (consumption),487,GWh
+2020-07,Storage pumps (consumption),414,GWh
+2020-08,Storage pumps (consumption),508,GWh
+2020-09,Storage pumps (consumption),385,GWh
+2020-10,Storage pumps (consumption),425,GWh
+2020-11,Storage pumps (consumption),203,GWh
+2020-12,Storage pumps (consumption),270,GWh
+2021-01,Storage pumps (consumption),274,GWh
+2021-02,Storage pumps (consumption),212,GWh
+2021-03,Storage pumps (consumption),204,GWh
+2021-04,Storage pumps (consumption),322,GWh
+2021-05,Storage pumps (consumption),506,GWh
+2021-06,Storage pumps (consumption),411,GWh
+2021-07,Storage pumps (consumption),433,GWh
+2021-08,Storage pumps (consumption),404,GWh
+2021-09,Storage pumps (consumption),325,GWh
+2021-10,Storage pumps (consumption),327,GWh
+2021-11,Storage pumps (consumption),309,GWh
+2021-12,Storage pumps (consumption),418,GWh
+2022-01,Storage pumps (consumption),317,GWh
+2022-02,Storage pumps (consumption),303,GWh
+2022-03,Storage pumps (consumption),292,GWh
+2022-04,Storage pumps (consumption),374,GWh
+2022-05,Storage pumps (consumption),423,GWh
+2022-06,Storage pumps (consumption),451,GWh
+2022-07,Storage pumps (consumption),624,GWh
+2022-08,Storage pumps (consumption),597,GWh
+2022-09,Storage pumps (consumption),504,GWh
+2022-10,Storage pumps (consumption),604,GWh
+2022-11,Storage pumps (consumption),485,GWh
+2022-12,Storage pumps (consumption),593,GWh
+2023-01,Storage pumps (consumption),385,GWh
+2023-02,Storage pumps (consumption),303,GWh
+2023-03,Storage pumps (consumption),355,GWh
+2023-04,Storage pumps (consumption),417,GWh
+2023-05,Storage pumps (consumption),510,GWh
+2023-06,Storage pumps (consumption),509,GWh
+2023-07,Storage pumps (consumption),653,GWh
+2023-08,Storage pumps (consumption),493,GWh
+2023-09,Storage pumps (consumption),465,GWh
+2023-10,Storage pumps (consumption),414,GWh
+2023-11,Storage pumps (consumption),354,GWh
+2023-12,Storage pumps (consumption),517,GWh
+2024-01,Storage pumps (consumption),326,GWh
+2024-02,Storage pumps (consumption),291,GWh
+2024-03,Storage pumps (consumption),232,GWh
+2024-04,Storage pumps (consumption),468,GWh
+2024-05,Storage pumps (consumption),438,GWh
+2024-06,Storage pumps (consumption),632,GWh
+2024-07,Storage pumps (consumption),591,GWh
+2024-08,Storage pumps (consumption),423,GWh
+2024-09,Storage pumps (consumption),373,GWh
+2024-10,Storage pumps (consumption),397,GWh
+2024-11,Storage pumps (consumption),365,GWh
+2024-12,Storage pumps (consumption),281,GWh
+2025-01,Storage pumps (consumption),282,GWh
+2025-02,Storage pumps (consumption),196,GWh
+2025-03,Storage pumps (consumption),399,GWh
+2025-04,Storage pumps (consumption),412,GWh
+2025-05,Storage pumps (consumption),535,GWh
+2025-06,Storage pumps (consumption),783,GWh
+2025-07,Storage pumps (consumption),610,GWh
+2025-08,Storage pumps (consumption),699,GWh
+2025-09,Storage pumps (consumption),424,GWh
+2025-10,Storage pumps (consumption),269,GWh
+2025-11,Storage pumps (consumption),261,GWh
+2025-12,Storage pumps (consumption),345,GWh
+2026-01,Storage pumps (consumption),301,GWh
+2026-02,Storage pumps (consumption),284,GWh
+2026-03,Storage pumps (consumption),237,GWh
+2026-04,Storage pumps (consumption),551,GWh
+2026-05,Storage pumps (consumption),593,GWh
+2026-06,Storage pumps (consumption),694,GWh
+2026-07,Storage pumps (consumption),690,GWh
+2026-08,Storage pumps (consumption),628,GWh

@@ -644,6 +644,199 @@ references:
       conditions (after residual-flow losses), plus about 700 GWh/a from new glacier lakes. PDF tables only.
     checked: 2026-10-20
 
+  - id: glamos_bulletin
+    type: report
+    title: Swiss Glacier Bulletin (annual)
+    publisher: Glacier Monitoring Switzerland (GLAMOS)
+    year: 2024
+    url: https://doi.org/10.18752/glbulletin_2024
+    themes: [renewables]
+    language: en
+    description: >-
+      Yearly report on the state of Swiss glaciers. Its total ice volume of all Swiss glaciers and the
+      change per hydrological basin are shown as figures only; the measurements behind it are on the GLAMOS
+      downloads page (non-commercial use).
+    related_sources: [glamos]
+    checked: 2026-10-22
+
+  - id: slf_snow_water_resource
+    type: website
+    title: Snow as a water resource (operational snow hydrology, OSHD)
+    publisher: WSL Institute for Snow and Avalanche Research (SLF)
+    url: https://www.slf.ch/en/snow/snow-as-a-water-resource/
+    themes: [renewables]
+    language: en
+    description: >-
+      SLF's snow hydrology service models the snow water equivalent and melt of all of Switzerland every day
+      for flood and runoff forecasts. Its daily products are not open data.
+    checked: 2026-10-22
+
+  - id: envidat_spass
+    type: portal
+    title: SPASS – gridded climatological snow datasets for Switzerland
+    publisher: Michel, Aschauer, Marty et al. (WSL-SLF), EnviDat
+    year: 2024
+    url: https://doi.org/10.16904/envidat.580
+    themes: [renewables]
+    language: en
+    description: >-
+      Daily snow water equivalent and snow depth on a 1 km grid, hydrological years 1962–2023, from the OSHD
+      temperature-index model with quantile mapping. Under the WSL data policy, not an open licence.
+    checked: 2026-10-22
+
+  - id: envidat_oshd_seasonal
+    type: portal
+    title: Seasonal snow data for Switzerland (OSHD, FSM2), water years 2016–2022
+    publisher: WSL Institute for Snow and Avalanche Research (SLF), EnviDat
+    url: https://doi.org/10.16904/envidat.404
+    themes: [renewables]
+    language: en
+    description: >-
+      Daily snow depth, snow water equivalent, snowmelt runoff and snow cover fraction on a 250 m grid, from SLF's
+      operational model. Seven years only; licence "other" without terms stated on the page.
+    checked: 2026-10-22
+
+  - id: envidat_snow_depth_projections
+    type: portal
+    title: Gridded projections of snow depth for Switzerland
+    publisher: WSL-SLF (SPEED2ZERO), EnviDat
+    url: https://doi.org/10.16904/envidat.759
+    themes: [renewables, scenarios]
+    language: en
+    description: >-
+      Median snow depth through the year for 1991–2020 on a 1 km grid, and its projected change under climate
+      scenarios, for flat terrain and by slope aspect. NetCDF, CC BY 4.0.
+    checked: 2026-10-22
+
+  # ---------- studies: hydropower, snow and glaciers ----------
+  - id: schaefli_2019_glacier_hydropower
+    type: report
+    title: The role of glacier retreat for Swiss hydropower production
+    publisher: Schaefli, Manso, Fischer, Huss, Farinotti, Renewable Energy 132, 615–627
+    year: 2019
+    url: https://doi.org/10.1016/j.renene.2018.07.104
+    themes: [renewables, electricity]
+    language: en
+    description: >-
+      Since 1980, 3–4 % of Swiss hydropower (1.0–1.4 TWh a year) came directly from net glacier mass loss, water
+      that precipitation will not replace. This share is likely to shrink substantially by 2040–2060, and by
+      2070–2090 production falls by about 1.0 TWh a year. Open access; a corrigendum appeared in 2026.
+    related_sources: [glamos]
+    checked: 2026-10-22
+
+  - id: savelsberg_2018_climate_hydropower
+    type: report
+    title: The Impact of Climate Change on Swiss Hydropower
+    publisher: Savelsberg, Schillinger, Schlecht, Weigt (University of Basel), Sustainability 10(7), 2541
+    year: 2018
+    url: https://doi.org/10.3390/su10072541
+    themes: [renewables, electricity, scenarios]
+    language: en
+    description: >-
+      Feeds runoff projections into Swissmod, an electricity market model with 96 % of Swiss hydropower plants and
+      their cascades. Higher winter runoff helps, but dry years raise prices and system costs while wet years lower
+      them. CC BY 4.0; model data not released.
+    checked: 2026-10-22
+
+  - id: haddad_2025_ror_climate
+    type: report
+    title: Recent climate impacts on run-of-river hydropower and electricity systems planning in Switzerland
+    publisher: Haddad, Gudmundsson, Savelsberg, Garrison, Raycheva, Wechsler, Zappa, Hug, Seneviratne (ETH Zurich, WSL), Environmental Research Letters
+    year: 2025
+    url: https://doi.org/10.1088/1748-9326/ade4df
+    themes: [renewables, electricity, scenarios]
+    language: en
+    description: >-
+      Rebuilds the daily output of every run-of-river plant of 300 kW or more for 1991–2022 from gridded runoff, and
+      feeds it into the Nexus-e model. With the 1991 fleet, climate alone lowered annual output by about 1.3 TWh between
+      1991 and 2022; new plants offset it. In the droughts of 2003, 2018 and 2022 only Alpine plants, fed by snow and glacier melt,
+      held up. Data CC BY 4.0 at doi:10.3929/ethz-b-000738591; code on GitHub (Clim2RoR-CH).
+    checked: 2026-10-22
+
+  - id: wechsler_2023_ror_future
+    type: report
+    title: "The future of Alpine Run-of-River hydropower production: Climate change, environmental flow requirements, and technical production potential"
+    publisher: Wechsler, Stähli, Jorde, Zappa, Schaefli (WSL, University of Bern), Science of the Total Environment, 163934
+    year: 2023
+    url: https://doi.org/10.1016/j.scitotenv.2023.163934
+    themes: [renewables, electricity, scenarios]
+    language: en
+    description: >-
+      Simulates 21 Swiss run-of-river plants (5.9 TWh a year) under three emission scenarios. By the end of the
+      century winter output rises 4–9 % and summer output falls 2–22 %, an annual loss of 2–7 %. Residual-flow rules
+      cost 3.5 %; a larger design discharge could add 8 %. CC BY-NC-ND.
+    checked: 2026-10-22
+
+  - id: sccer_soe_2019_climate_hydropower
+    type: report
+    title: "Climate change impact on Swiss hydropower production: synthesis report"
+    publisher: Wechsler, Stähli et al., Swiss Competence Center for Energy Research – Supply of Electricity (SCCER-SoE)
+    year: 2019
+    url: https://boris.unibe.ch/139878
+    themes: [renewables, electricity, scenarios]
+    language: en
+    description: >-
+      Synthesis of the Swiss research on climate change and hydropower: snowfall turns to rain, winter runoff rises,
+      and melt peaks come earlier and smaller. Winter run-of-river output above 1400 m could rise by over 30 %. The
+      PDF in the repository is restricted to registered users.
+    checked: 2026-10-22
+
+  - id: farinotti_2016_dams_replace_glaciers
+    type: report
+    title: "From dwindling ice to headwater lakes: could dams replace glaciers in the European Alps?"
+    publisher: Farinotti, Pistocchi, Huss, Environmental Research Letters 11, 054022
+    year: 2016
+    url: https://doi.org/10.1088/1748-9326/11/5/054022
+    themes: [renewables, scenarios]
+    language: en
+    description: >-
+      Reservoirs in areas becoming ice-free could offset up to 65 % of the change in summer runoff from today's
+      glaciers by 2100, but not the loss of annual runoff: by 2070–2099 about 0.7 km³ a year of glacier water will
+      be missing in the Alps. CC BY 4.0.
+    checked: 2026-10-22
+
+  - id: ehrbar_2018_periglacial_hydropower
+    type: report
+    title: Hydropower Potential in the Periglacial Environment of Switzerland under Climate Change
+    publisher: Ehrbar, Schmocker, Vetsch, Boes (ETH Zurich VAW), Sustainability 10(8), 2794
+    year: 2018
+    url: https://doi.org/10.3390/su10082794
+    themes: [renewables, scenarios]
+    language: en
+    description: >-
+      Ranks possible new hydropower sites in areas the glaciers are leaving, with 16 economic, environmental and
+      social criteria. CC BY 4.0.
+    related_sources: [glamos]
+    checked: 2026-10-22
+
+  - id: schaefli_2007_glacier_catchment_hydropower
+    type: report
+    title: "Climate change and hydropower production in the Swiss Alps: quantification of potential impacts and related modelling uncertainties"
+    publisher: Schaefli, Hingray, Musy (EPFL), Hydrology and Earth System Sciences 11, 1191–1205
+    year: 2007
+    url: https://doi.org/10.5194/hess-11-1191-2007
+    themes: [renewables, scenarios]
+    language: en
+    description: >-
+      Chains climate scenarios, a runoff model, glacier evolution and plant operation for a hydropower plant fed by a
+      highly glacierised catchment, comparing 2070–2099 with 1961–1990 and quantifying the uncertainty of each
+      step. CC BY-NC-SA.
+    checked: 2026-10-22
+
+  - id: hydro_ch2018_synthesis
+    type: report
+    title: "Hydro-CH2018: Effects of climate change on Swiss water bodies (synthesis report)"
+    publisher: Federal Office for the Environment (FOEN), National Centre for Climate Services (NCCS)
+    year: 2021
+    url: https://www.nccs.admin.ch/nccs/en/home/klimawandel-und-auswirkungen/schweizer-hydroszenarien/synthesebericht.html
+    themes: [renewables, scenarios]
+    language: de/fr/it/en
+    description: >-
+      The official hydrological scenarios for Switzerland: annual water availability changes little by 2100, but
+      runoff shifts from summer to winter as snow and glaciers shrink, with consequences for hydropower.
+      Report and brochure as PDF.
+    checked: 2026-10-22
+
   - id: sonnenfassade
     type: tool
     title: sonnenfassade.ch – solar potential of facades

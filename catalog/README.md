@@ -53,6 +53,7 @@ Used across all four files. `pipeline.check` rejects anything else.
 | `coverage` | yes | `national` or `regional`; shown as a tag on the chart card |
 | `region` | if regional | e.g. `Canton of Geneva` |
 | `palette` | no | `sequential` for ordered categories |
+| `span_gaps` | no | `true` draws lines across missing years, for series not observed every year (e.g. glacier surveys) |
 
 ## `references.yml`
 

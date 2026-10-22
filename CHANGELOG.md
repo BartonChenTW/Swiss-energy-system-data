@@ -8,6 +8,14 @@ for fixes, wording and styling. To release, rename `Unreleased` to the new versi
 with today's date; `python -m pipeline.build_site` picks up the top released entry.
 
 ## [Unreleased]
+### Added
+- Renewables: a Hydropower, snow and glaciers section with water stored in the snow of the Wägital catchment on 1 April since 1943 (Meteodat, CC BY 4.0), days with snow cover at four MeteoSwiss stations, and the cumulative mass balance and length change of Swiss glaciers (GLAMOS, non-commercial use).
+- Renewables: table of studies on how snow, glaciers and climate change affect Swiss hydropower and the electricity system (Schaefli 2019, Haddad 2025, Savelsberg 2018, Wechsler 2023, SCCER-SoE, Farinotti 2016, Ehrbar 2018, Hydro-CH2018).
+- Library: nine studies on hydropower, snow and glaciers; GLAMOS glacier bulletin, SLF snow hydrology and three SLF snow datasets on EnviDat; Data gaps: snow water equivalent for all of Switzerland, and glacier data under an open licence.
+- Line charts can join points across years without a survey (`span_gaps` in `datasets.yml`).
+- Renewables: storage lakes and monthly production. Energy stored in Swiss storage lakes every week since 2000, by region; fill level by week of the year for the last five years against the 2000–2025 range; the yearly spring low and autumn high; and monthly run-of-river and storage production and pump consumption since 2000 (SFOE).
+- Charts and the tidy data format support weekly, monthly and daily data (`period` instead of `year`); long data tables list one row per period.
+- Footer and README: the platform was initiated by Barton Chen from the Urban Energy Systems Laboratory (UESL) at Empa.
 
 ## [0.11.0] - 2026-10-20
 ### Added

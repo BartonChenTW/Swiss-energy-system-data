@@ -1,0 +1,21 @@
+{
+  "dataset": "renewables/glacier_mass_balance",
+  "processor": "pipeline.process.glamos",
+  "generated": "2026-10-22T13:40:33+00:00",
+  "rows": 222,
+  "years": [
+    1915,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/glamos/massbalance_fixdate.csv",
+      "url": "https://doi.glamos.ch/data/massbalance/massbalance_fixdate.csv",
+      "retrieved": "2026-10-22T13:40:22+00:00",
+      "last_modified": "Fri, 14 Nov 2025 10:23:29 GMT",
+      "sha256": "b6dc83a90fa04932c02d3f459c4b0a9ff1f798db2d581763771070a552818e21",
+      "bytes": 201253
+    }
+  ],
+  "notes": "Cumulative 1915–2025: Great Aletsch -66.3 m w.e., Silvretta -43.2 m w.e."
+}

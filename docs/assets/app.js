@@ -66,7 +66,10 @@ function renderChrome() {
   }
   const footer = document.getElementById("site-footer");
   if (footer) {
-    footer.innerHTML = `<div class="wrap">Data from Swiss federal offices and other publishers, used under their terms —
+    footer.innerHTML = `<div class="wrap">This platform was initiated by <a href="https://github.com/BartonChenTW">Barton Chen</a>
+      from the <a href="https://www.empa.ch/web/s313">Urban Energy Systems Laboratory (UESL)</a> at
+      <a href="https://www.empa.ch/">Empa</a>.<br>
+      Data from Swiss federal offices and other publishers, used under their terms —
       see <a href="sources.html">Sources</a>. Built from the <a href="${REPO}">open pipeline on GitHub</a>.
       Visits are counted anonymously, without cookies, by <a href="https://www.goatcounter.com/">GoatCounter</a>.
       <div class="version" data-version></div></div>`;
@@ -156,8 +159,11 @@ function chartConfig(ds, type) {
   const axis = css("--axis");
   const unit = ds.unit;
 
+  // Sub-annual periods (dates, months, weeks) are long labels: keep them level and spaced out.
+  const subAnnual = typeof ds.periods[0] === "string";
   const scales = {
-    x: { grid: { display: false }, border: { color: axis }, ticks: { color: muted } },
+    x: { grid: { display: false }, border: { color: axis },
+         ticks: subAnnual ? { color: muted, maxRotation: 0, autoSkipPadding: 24 } : { color: muted } },
     y: { beginAtZero: true, grid: { color: grid }, border: { display: false }, ticks: { color: muted },
          title: { display: true, text: unit, color: muted } },
   };
@@ -170,18 +176,18 @@ function chartConfig(ds, type) {
 
   if (type === "hbar") {
     // Latest year, one bar per category.
-    const last = ds.years.length - 1;
+    const last = ds.periods.length - 1;
     return {
       type: "bar",
       data: {
         labels: ds.series.map((s) => s.name),
-        datasets: [{ label: String(ds.years[last]), data: ds.series.map((s) => s.values[last]),
+        datasets: [{ label: String(ds.periods[last]), data: ds.series.map((s) => s.values[last]),
                      backgroundColor: palette[0], borderRadius: 4, borderSkipped: "start", maxBarThickness: 28 }],
       },
       options: {
         indexAxis: "y", maintainAspectRatio: false,
         scales: {
-          x: { ...scales.y, title: { display: true, text: `${unit} (${ds.years[last]})`, color: muted } },
+          x: { ...scales.y, title: { display: true, text: `${unit} (${ds.periods[last]})`, color: muted } },
           y: { grid: { display: false }, border: { color: axis }, ticks: { color: css("--text-secondary") } },
         },
         plugins: { legend: { display: false }, tooltip },
@@ -200,12 +206,13 @@ function chartConfig(ds, type) {
       backgroundColor: type === "stacked-area" ? color + "cc" : color,
       fill: type === "stacked-area" ? (i === 0 ? "origin" : "-1") : false,
       pointRadius: 0, pointHoverRadius: 5, pointHoverBorderColor: surface, pointHoverBorderWidth: 2, tension: 0,
+      spanGaps: ds.span_gaps === true,  // draw across years without a value (e.g. surveys not made every year)
     };
   });
 
   return {
     type: type === "stacked-bar" ? "bar" : "line",
-    data: { labels: ds.years, datasets },
+    data: { labels: ds.periods, datasets },
     options: {
       maintainAspectRatio: false,
       interaction: { mode: "index", intersect: false },
@@ -216,7 +223,13 @@ function chartConfig(ds, type) {
 }
 
 function dataTable(ds) {
-  const head = `<tr><th>Category</th>${ds.years.map((y) => `<th>${y}</th>`).join("")}</tr>`;
+  // Long series (e.g. weekly values) read better with one row per period.
+  if (ds.periods.length > 40) {
+    const head = `<tr><th>${typeof ds.periods[0] === "string" ? "Period" : "Year"}</th>${ds.series.map((s) => `<th>${esc(s.name)}</th>`).join("")}</tr>`;
+    const rows = ds.periods.map((p, i) => `<tr><td>${esc(p)}</td>${ds.series.map((s) => `<td>${fmt(s.values[i])}</td>`).join("")}</tr>`).join("");
+    return `<div class="table-scroll table-tall"><table><thead>${head}</thead><tbody>${rows}</tbody></table></div>`;
+  }
+  const head = `<tr><th>Category</th>${ds.periods.map((y) => `<th>${y}</th>`).join("")}</tr>`;
   const rows = ds.series.map((s) => `<tr><td>${esc(s.name)}</td>${s.values.map((v) => `<td>${fmt(v)}</td>`).join("")}</tr>`).join("");
   return `<div class="table-scroll"><table><thead>${head}</thead><tbody>${rows}</tbody></table></div>`;
 }

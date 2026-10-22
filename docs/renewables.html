@@ -15,7 +15,7 @@
       from solar PV, ambient heat used by heat pumps, and wood. Wind remains small.</p>
     <nav class="toc" aria-label="On this page">
       <span class="toc-label">On this page:</span>
-      <a href="#overview">Overview</a><a href="#pv">Solar PV</a><a href="#wind">Wind and biomass</a><a href="#potential">Potential</a>
+      <a href="#overview">Overview</a><a href="#hydro">Hydropower, snow and glaciers</a><a href="#pv">Solar PV</a><a href="#wind">Wind and biomass</a><a href="#potential">Potential</a>
       <a href="#studies">Studies</a><a href="#gaps">Data gaps</a>
     </nav>
 
@@ -26,6 +26,62 @@
     <div class="grid">
       <div class="chart" data-dataset="renewables/production_by_source"></div>
       <div class="chart" data-dataset="renewables/new_renewable_electricity"></div>
+    </div>
+
+    <h2 id="hydro">Hydropower, snow and glaciers</h2>
+    <p class="section-note">Hydropower produced 37.5 TWh in 2025, 56 % of Swiss electricity: 16.3 TWh from
+      run-of-river and 21.2 TWh from storage plants (production by technology is on the
+      <a href="electricity.html">Electricity</a> page). Much of its water comes from snow and ice melting
+      in spring and summer. At the stations below, snow lay 15 to 30 fewer days a year in 1997–2026 than in 1961–1990.
+      Since 1915 the Great Aletsch glacier has lost ice equal to 66 m of water over its whole area. Glacier melt
+      adds runoff while the glaciers shrink, but that contribution will fall as they disappear.</p>
+    <h3>Storage lakes and monthly production</h3>
+    <p class="section-note">Swiss storage lakes can hold 8.9 TWh of electricity, about 14 % of a year's
+      consumption. They are lowest in April or May, before the melt, and fullest from September to November.
+      How much water is left in late winter is a key indicator of supply security.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="electricity/reservoir_storage"></div>
+      <div class="chart" data-dataset="electricity/reservoir_fill_by_week"></div>
+      <div class="chart" data-dataset="electricity/reservoir_storage_extremes"></div>
+      <div class="chart" data-dataset="electricity/hydro_monthly"></div>
+    </div>
+
+    <h3>Snow and glaciers</h3>
+    <div class="grid">
+      <div class="chart" data-dataset="renewables/waegital_snow_water_equivalent"></div>
+      <div class="chart" data-dataset="renewables/snow_cover_days"></div>
+      <div class="chart" data-dataset="renewables/glacier_mass_balance"></div>
+      <div class="chart" data-dataset="renewables/glacier_length_change"></div>
+    </div>
+    <div class="card prose">
+      <p>Studies on how snow, glaciers and climate change affect Swiss hydropower and the electricity system.
+        All are in the <a href="library.html">Library</a>.</p>
+      <div class="table-scroll"><table class="sources">
+        <thead><tr><th>Study</th><th>Finding</th><th>Open data</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://doi.org/10.1016/j.renene.2018.07.104">Schaefli et al. 2019</a>: glacier retreat and hydropower</td>
+            <td>Since 1980, 3–4 % of Swiss hydropower (1.0–1.4 TWh a year) came from net glacier loss; by 2070–2090 production falls by about 1 TWh a year.</td>
+            <td>Paper open access; no data</td></tr>
+          <tr><td><a href="https://doi.org/10.1088/1748-9326/ade4df">Haddad et al. 2025</a> (ETH, WSL): run-of-river and the Nexus-e model</td>
+            <td>Climate lowered run-of-river output by about 1.3 TWh a year between 1991 and 2022, offset by new plants; in drought years only Alpine plants fed by melt held up.</td>
+            <td><a href="https://doi.org/10.3929/ethz-b-000738591">ETH Research Collection</a> (CC BY 4.0), code on GitHub</td></tr>
+          <tr><td><a href="https://doi.org/10.3390/su10072541">Savelsberg et al. 2018</a> (Basel): Swissmod market model</td>
+            <td>More winter runoff helps; dry years raise prices and system costs, wet years lower them.</td>
+            <td>Paper CC BY; no data</td></tr>
+          <tr><td><a href="https://doi.org/10.1016/j.scitotenv.2023.163934">Wechsler et al. 2023</a> (WSL, Bern): future run-of-river</td>
+            <td>By 2100 winter output +4 to +9 %, summer −2 to −22 %, annual −2 to −7 % for 21 plants (5.9 TWh a year).</td>
+            <td>Paper CC BY-NC-ND; no data</td></tr>
+          <tr><td><a href="https://boris.unibe.ch/139878">SCCER-SoE 2019</a> synthesis report</td>
+            <td>Snow turns to rain and melt peaks come earlier; winter run-of-river output above 1400 m could rise by over 30 %.</td>
+            <td>PDF for registered users</td></tr>
+          <tr><td><a href="https://doi.org/10.1088/1748-9326/11/5/054022">Farinotti et al. 2016</a>, <a href="https://doi.org/10.3390/su10082794">Ehrbar et al. 2018</a>: new lakes where glaciers retreat</td>
+            <td>Reservoirs could offset up to 65 % of the summer runoff change from glaciers, but not the 0.7 km³ a year of lost glacier water; Ehrbar ranks the possible sites.</td>
+            <td>Papers CC BY; no data</td></tr>
+          <tr><td><a href="https://www.nccs.admin.ch/nccs/en/home/klimawandel-und-auswirkungen/schweizer-hydroszenarien/synthesebericht.html">Hydro-CH2018</a> (FOEN, NCCS)</td>
+            <td>Annual water availability changes little by 2100, but runoff moves from summer to winter.</td>
+            <td>Report PDF</td></tr>
+        </tbody>
+      </table></div>
     </div>
 
     <h2 id="pv">Solar PV</h2>

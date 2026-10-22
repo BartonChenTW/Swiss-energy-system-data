@@ -73,6 +73,7 @@ nav a[aria-current="page"] { color: var(--text-primary); font-weight: 600; }
 main { padding-block: 32px 64px; }
 h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; }
 h2 { font-size: 20px; margin: 40px 0 12px; }
+main > h3 { font-size: 16px; margin: 28px 0 8px; color: var(--text-secondary); }
 .lede { color: var(--text-secondary); max-width: 68ch; margin: 0 0 24px; }
 
 .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); }
@@ -117,6 +118,8 @@ a.tile:hover { border-color: var(--accent); }
 details { margin-top: 12px; font-size: 14px; }
 summary { cursor: pointer; color: var(--text-secondary); }
 .table-scroll { overflow-x: auto; margin-top: 8px; }
+.table-tall { max-height: 360px; overflow-y: auto; }
+.table-tall th { position: sticky; top: 0; background: var(--surface); }
 table { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
 th, td { text-align: right; padding: 4px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
 th:first-child, td:first-child { text-align: left; }

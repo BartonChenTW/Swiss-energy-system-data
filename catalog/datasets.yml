@@ -244,6 +244,48 @@ datasets:
     status: official
     coverage: national
 
+  - id: electricity/reservoir_storage
+    title: Energy stored in storage lakes, weekly
+    description: >-
+      Electricity that the water in Swiss storage lakes could generate, every week since 2000, by region. Lakes
+      fill with snow and glacier melt from May to October and are drawn down over the winter.
+    source: bfe_reservoirs
+    chart: stacked-area
+    status: official
+    coverage: national
+
+  - id: electricity/reservoir_fill_by_week
+    title: Storage lake fill level by week of the year
+    description: >-
+      Stored energy as a share of storage capacity in each week, for the last five years against the lowest,
+      mean and highest level of the reference years. In the energy crisis winter of 2022/23 the lakes were kept
+      much fuller than usual: 75 % in the first week of 2023 against a mean of 60 %.
+    source: bfe_reservoirs
+    chart: line
+    status: official
+    coverage: national
+
+  - id: electricity/reservoir_storage_extremes
+    title: Storage lakes, spring low and autumn high
+    description: >-
+      Lowest stored energy of each year (in April or May, before the melt) and highest (September to November),
+      against the storage capacity, which grew as dams were raised.
+    source: bfe_reservoirs
+    chart: line
+    status: official
+    coverage: national
+
+  - id: electricity/hydro_monthly
+    title: Monthly hydropower production and pumping
+    description: >-
+      Electricity from run-of-river and storage plants each month, and the electricity used by storage pumps.
+      Both peak in June and July with the melt. Storage plants keep producing through the winter, when
+      run-of-river output is lowest, and pumps run most in summer. Recent months are provisional.
+    source: bfe_electricity_monthly
+    chart: line
+    status: official
+    coverage: national
+
   - id: renewables/production_by_source
     title: Domestic renewable energy production by source
     description: Primary production of renewable energy in Switzerland. Solar covers PV and solar thermal. Ambient heat is the environmental heat used by heat pumps (their electricity input is not included).
@@ -335,6 +377,52 @@ datasets:
     chart: hbar
     status: official
     coverage: national
+
+  - id: renewables/glacier_mass_balance
+    title: Cumulative glacier mass balance since 1915
+    description: >-
+      Ice and snow gained or lost since 1915, as metres of water spread over each glacier's area (m w.e.), for
+      the two glaciers measured every year since then. Each hydrological year runs from October to September.
+      The water that glaciers lose adds to summer runoff into hydropower reservoirs and rivers.
+    source: glamos
+    chart: line
+    status: official
+    coverage: regional
+    region: Great Aletsch (VS) and Silvretta (GR) glaciers
+
+  - id: renewables/glacier_length_change
+    title: Cumulative glacier length change since 1880
+    description: >-
+      Retreat of the glacier tongue since the first survey, for four large glaciers measured since about 1880.
+      Lines join surveys that are a few years apart.
+    source: glamos
+    chart: line
+    status: official
+    coverage: regional
+    region: Four glaciers in the Alps (VS, GR)
+    span_gaps: true
+
+  - id: renewables/snow_cover_days
+    title: Days with snow cover per winter
+    description: >-
+      Days with measurable snow on the ground from August to July (2026 = August 2025 to July 2026), at four
+      stations from 911 to 2691 m. A gap marks a year with too few measurements.
+    source: meteoswiss_snow
+    chart: line
+    status: official
+    coverage: regional
+    region: Four stations (GR, AI, SZ)
+
+  - id: renewables/waegital_snow_water_equivalent
+    title: Water stored in the snow on 1 April, Wägital catchment
+    description: >-
+      Snow water equivalent on 1 April in the catchment of the Wägitalersee storage lake, by elevation zone:
+      the water that will melt into the lake in spring. The longest open series of its kind in Switzerland.
+    source: meteodat_waegital_swe
+    chart: stacked-bar
+    status: official
+    coverage: regional
+    region: Wägital catchment (SZ)
 
   - id: heat/district_heat_by_sector
     title: District heat consumption by sector

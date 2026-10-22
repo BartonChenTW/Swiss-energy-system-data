@@ -1,0 +1,21 @@
+{
+  "dataset": "renewables/glacier_length_change",
+  "processor": "pipeline.process.glamos",
+  "generated": "2026-10-22T13:40:33+00:00",
+  "rows": 556,
+  "years": [
+    1880,
+    2024
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/glamos/lengthchange.csv",
+      "url": "https://doi.glamos.ch/data/lengthchange/lengthchange.csv",
+      "retrieved": "2026-10-22T13:40:22+00:00",
+      "last_modified": "Tue, 18 Nov 2025 14:24:25 GMT",
+      "sha256": "e964b2ace671469291e4db2b3bf816cf3b266cac8ed8af21f1a45438689db0b9",
+      "bytes": 724903
+    }
+  ],
+  "notes": "Cumulative to the latest survey: Great Aletsch -3.39 km (2024), Morteratsch -3.06 km (2024), Rhone -1.84 km (2024), Trient -1.38 km (2024)"
+}

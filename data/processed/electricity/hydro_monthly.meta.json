@@ -1,0 +1,21 @@
+{
+  "dataset": "electricity/hydro_monthly",
+  "processor": "pipeline.process.bfe_electricity_monthly",
+  "generated": "2026-10-22T14:10:02+00:00",
+  "rows": 960,
+  "periods": [
+    "2000-01",
+    "2026-08"
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_electricity_monthly/ogd35_schweizerische_elektrizitaetsbilanz_monatswerte.csv",
+      "url": "https://www.bfe-ogd.ch/ogd35/ogd35_schweizerische_elektrizitaetsbilanz_monatswerte.csv",
+      "retrieved": "2026-10-22T14:10:00+00:00",
+      "last_modified": "Wed, 07 Oct 2026 07:18:58 GMT",
+      "sha256": "0b241fa2a28b9cab0f21ffd04996d9c15cc8de5fadf96504601779ea58acbe1f",
+      "bytes": 25956
+    }
+  ],
+  "notes": "Provisional: 2026-01 to 2026-08."
+}

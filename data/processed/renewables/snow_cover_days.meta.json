@@ -1,0 +1,44 @@
+{
+  "dataset": "renewables/snow_cover_days",
+  "processor": "pipeline.process.meteoswiss_snow",
+  "generated": "2026-10-22T13:40:33+00:00",
+  "rows": 296,
+  "years": [
+    1932,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/meteoswiss_snow/ogd-nime_wfj_y.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nime/wfj/ogd-nime_wfj_y.csv",
+      "retrieved": "2026-10-22T13:40:22+00:00",
+      "last_modified": "Thu, 15 Oct 2026 05:08:54 GMT",
+      "sha256": "fec03ddb435c6db467d428f209f61da4db602fa2d00d48734a7d99c8c81afac1",
+      "bytes": 4180
+    },
+    {
+      "file": "data/raw/meteoswiss_snow/ogd-nime_sae_y.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nime/sae/ogd-nime_sae_y.csv",
+      "retrieved": "2026-10-22T13:40:22+00:00",
+      "last_modified": "Thu, 15 Oct 2026 05:08:27 GMT",
+      "sha256": "58103b036f6320568f8a2c36369cff1b3ecd59dc483097b0a3a6dede7cc7bbb5",
+      "bytes": 7280
+    },
+    {
+      "file": "data/raw/meteoswiss_snow/ogd-nime_sia_y.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nime/sia/ogd-nime_sia_y.csv",
+      "retrieved": "2026-10-22T13:40:22+00:00",
+      "last_modified": "Thu, 15 Oct 2026 05:08:36 GMT",
+      "sha256": "242c0b7b9222bc000768c1d7f8b31199bda121ed72a1523764b77d5bf4276ee6",
+      "bytes": 8104
+    },
+    {
+      "file": "data/raw/meteoswiss_snow/ogd-nime_ein_y.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nime/ein/ogd-nime_ein_y.csv",
+      "retrieved": "2026-10-22T13:40:22+00:00",
+      "last_modified": "Thu, 15 Oct 2026 05:07:50 GMT",
+      "sha256": "828cc2fcbd7889c11067b012a603602f9b4300d161d1704152bd3c9b25dbcd7a",
+      "bytes": 7964
+    }
+  ]
+}

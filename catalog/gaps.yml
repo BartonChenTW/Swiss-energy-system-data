@@ -149,6 +149,34 @@ gaps:
     evidence: [bfe_hydropower_potential_2019]
     found: 2026-10-20
 
+  - id: snow_water_equivalent
+    theme: renewables
+    title: Snow water equivalent for all of Switzerland
+    missing: >-
+      There is no open daily or seasonal series of the water stored in the Swiss snowpack, nationally or per
+      hydropower catchment, although it sets how much water reaches the storage lakes in spring. SLF models it
+      every day (OSHD), but the products are not open data.
+    available: >-
+      Station snow depth and snow days (MeteoSwiss, CC BY); SLF's gridded SPASS reanalysis 1962–2023 (WSL data
+      policy) and OSHD grids for 2016–2022 (terms not stated); one catchment, Wägital, under CC BY since 1943.
+    holder: WSL Institute for Snow and Avalanche Research (SLF); FOEN
+    status: restricted
+    evidence: [slf_snow_water_resource, envidat_spass, envidat_oshd_seasonal, meteodat_waegital_swe]
+    found: 2026-10-22
+
+  - id: glacier_data_licence
+    theme: renewables
+    title: Glacier data under an open licence, and glacier melt as runoff
+    missing: >-
+      GLAMOS measurements may be used only for scientific and non-commercial work, so commercial models need
+      permission. The total ice volume of Swiss glaciers and the glacier melt reaching each hydrological basin
+      are published only as figures.
+    available: Mass balance, length and volume change of individual glaciers as CSV (non-commercial use).
+    holder: GLAMOS (ETH Zurich VAW, University of Fribourg, University of Zurich) on behalf of FOEN, MeteoSwiss and SCNAT
+    status: restricted
+    evidence: [glamos, glamos_bulletin]
+    found: 2026-10-22
+
   - id: solar_market_statistics
     theme: renewables
     title: Solar market statistics as open data

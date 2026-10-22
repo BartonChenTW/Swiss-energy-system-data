@@ -14,6 +14,9 @@ PROCESSED_DIR = ROOT / "data" / "processed"
 SITE_DATA_DIR = ROOT / "docs" / "data"
 
 TIDY_COLUMNS = ["year", "category", "value", "unit"]
+# Sub-annual datasets use `period` instead of `year`: an ISO date (2024-01-08), a month (2024-01)
+# or a week of the year (W02). Periods sort as text, so these formats keep time order.
+PERIOD_PATTERN = r"^(\d{4}-\d{2}(-\d{2})?|W\d{2})$"
 MANIFEST_NAME = "_manifest.json"
 
 # Controlled vocabulary, documented in catalog/README.md
@@ -98,6 +101,8 @@ def catalog_errors(sources: list, datasets: list, references: list) -> list[str]
             errors.append(f"datasets[{d['id']}]: 'region' is required for regional coverage and only then")
         if d.get("palette") not in (None, *PALETTES):
             errors.append(f"datasets[{d['id']}]: unknown palette {d.get('palette')!r}")
+        if d.get("span_gaps") not in (None, True, False):
+            errors.append(f"datasets[{d['id']}]: span_gaps must be true or false")
         if d.get("id", "").split("/")[0] not in THEMES:
             errors.append(f"datasets[{d['id']}]: id must start with a theme folder")
     for r in references:
@@ -199,26 +204,39 @@ def input_record(path: Path) -> dict:
 
 # ---------- tidy data ----------
 
+def x_column(df: pd.DataFrame) -> str:
+    """The time column of a tidy table: `period` for sub-annual data, else `year`."""
+    return "period" if "period" in df.columns else "year"
+
+
+def tidy_columns(df: pd.DataFrame) -> list[str]:
+    return [x_column(df), *TIDY_COLUMNS[1:]]
+
+
 def validate_tidy(df: pd.DataFrame, name: str) -> None:
-    missing = set(TIDY_COLUMNS) - set(df.columns)
+    x = x_column(df)
+    missing = set(tidy_columns(df)) - set(df.columns)
     if missing:
         raise ValueError(f"{name}: missing columns {sorted(missing)}")
-    if not pd.api.types.is_integer_dtype(df["year"]):
+    if x == "year" and not pd.api.types.is_integer_dtype(df["year"]):
         raise ValueError(f"{name}: 'year' must be integer")
+    if x == "period" and not df["period"].astype(str).str.fullmatch(PERIOD_PATTERN).all():
+        raise ValueError(f"{name}: 'period' must look like 2024-01-08, 2024-01 or W02")
     if not pd.api.types.is_numeric_dtype(df["value"]):
         raise ValueError(f"{name}: 'value' must be numeric")
     units = df["unit"].dropna().unique()
     if len(units) != 1:
         raise ValueError(f"{name}: expected exactly one unit, found {list(units)}")
-    dupes = df.duplicated(["year", "category"])
+    dupes = df.duplicated([x, "category"])
     if dupes.any():
-        raise ValueError(f"{name}: duplicate (year, category) rows:\n{df[dupes]}")
+        raise ValueError(f"{name}: duplicate ({x}, category) rows:\n{df[dupes]}")
 
 
 def write_tidy(df: pd.DataFrame, dataset_id: str, inputs: list[Path], processor: str, notes: str | None = None) -> Path:
     """Validate and write data/processed/<dataset_id>.csv plus its .meta.json provenance record."""
-    df = df[TIDY_COLUMNS].reset_index(drop=True)
-    df["year"] = df["year"].astype(int)
+    x = x_column(df)
+    df = df[tidy_columns(df)].reset_index(drop=True)
+    df[x] = df[x].astype(int if x == "year" else str)
     validate_tidy(df, dataset_id)
     path = PROCESSED_DIR / f"{dataset_id}.csv"
     meta_path = path.with_suffix(".meta.json")
@@ -239,11 +257,11 @@ def write_tidy(df: pd.DataFrame, dataset_id: str, inputs: list[Path], processor:
         "processor": processor,
         "generated": now_utc(),
         "rows": len(df),
-        "years": [int(df["year"].min()), int(df["year"].max())],
+        f"{x}s": [int(df[x].min()), int(df[x].max())] if x == "year" else [df[x].min(), df[x].max()],
         "inputs": inputs,
     }
     if notes:
         meta["notes"] = notes
     meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
-    print(f"  wrote {path.relative_to(ROOT)} ({len(df)} rows, {meta['years'][0]}â€“{meta['years'][1]})")
+    print(f"  wrote {path.relative_to(ROOT)} ({len(df)} rows, {meta[f'{x}s'][0]}â€“{meta[f'{x}s'][1]})")
     return path

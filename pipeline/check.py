@@ -24,7 +24,7 @@ def check_processed(datasets: list) -> list[str]:
             errors.append(f"{d['id']}: {csv.relative_to(ROOT)} missing")
             continue
         try:
-            validate_tidy(pd.read_csv(csv), d["id"])
+            validate_tidy(pd.read_csv(csv, dtype={"period": str}), d["id"])
         except ValueError as e:
             errors.append(str(e))
         if d["status"] == "official" and not csv.with_suffix(".meta.json").exists():

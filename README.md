@@ -7,6 +7,9 @@ energy balance, buildings, electricity, renewables and more — visualised on
 Every chart is built from an official source by a script in this repo, and records
 where its data came from and when it was retrieved.
 
+This platform was initiated by [Barton Chen](https://github.com/BartonChenTW) from the
+[Urban Energy Systems Laboratory (UESL)](https://www.empa.ch/web/s313) at [Empa](https://www.empa.ch/).
+
 ## Goals
 
 1. **Collect Swiss energy system modelling data:** open, machine-readable data that energy
@@ -87,13 +90,14 @@ docs/               the website (plain HTML + Chart.js, no build step)
 
 ## Current datasets
 
-40 datasets from 19 sources; the full list with descriptions is in `catalog/datasets.yml`.
+62 datasets from 27 sources; the full list with descriptions is in `catalog/datasets.yml`.
 
 | Page | Datasets | Main sources |
 |---|---|---|
 | National | Final energy by carrier and sector, 1980–2025; greenhouse gas emissions by sector and gas, 1990–2024 | SFOE energy balance, FOEN greenhouse gas inventory |
 | Electricity | Production by technology, 1990–2025 | SFOE electricity statistics |
 | Renewables | Renewable production by source; new-renewable electricity; PV production and capacity; wind generation, capacity and wind farms; biomass capacity | SFOE renewables balance, electricity statistics, plant register |
+| Renewables: hydropower, snow and glaciers | Energy stored in storage lakes (weekly, by region and by week of the year); monthly hydropower production and pumping; snow water equivalent of the Wägital catchment on 1 April; snow days at four stations; glacier mass balance and length change | SFOE storage lake report and monthly electricity balance, Meteodat (Zenodo), MeteoSwiss open data, GLAMOS |
 | Electricity: energy communities | PV installations and capacity by self-consumption type (single site, ZEV, full feed-in) | SFOE survey of grid operators |
 | Mobility | Plug-in share; new cars by propulsion; electric car stock; public charging stations | FSO vehicle register (stats.swiss), SFOE ich-tanke-strom |
 | Mobility: EV profile data study | 43 open (and some restricted) EV charging and driving datasets and generators in CH, Europe and worldwide, from `ev_profile` entries in `references.yml` | Various; see the Library |

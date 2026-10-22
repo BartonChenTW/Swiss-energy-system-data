@@ -1,0 +1,21 @@
+{
+  "dataset": "electricity/reservoir_storage",
+  "processor": "pipeline.process.bfe_reservoirs",
+  "generated": "2026-10-22T14:10:01+00:00",
+  "rows": 5596,
+  "periods": [
+    "2000-01-03",
+    "2026-10-19"
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_reservoirs/ogd17_fuellungsgrad_speicherseen.csv",
+      "url": "https://www.bfe-ogd.ch/ogd17/ogd17_fuellungsgrad_speicherseen.csv",
+      "retrieved": "2026-10-22T14:10:00+00:00",
+      "last_modified": "Wed, 21 Oct 2026 14:57:53 GMT",
+      "sha256": "45907eeaa3e1681ea2b69a55175815b3b5619379a63be95a93e38827f3a8dc81",
+      "bytes": 84168
+    }
+  ],
+  "notes": "Week of 19 Oct 2026: 6.38 TWh stored, 72% of 8.89 TWh capacity."
+}

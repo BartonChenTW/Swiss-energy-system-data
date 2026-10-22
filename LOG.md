@@ -7,6 +7,42 @@ whether the data is enough to train a foundation model for the building domain.
 
 Open work is in [TODO.md](TODO.md). Site releases are in [CHANGELOG.md](CHANGELOG.md).
 
+## 2026-10-22
+
+### Done
+- Renewables: Hydropower, snow and glaciers section with three new sources: `glamos` (glacier mass balance
+  and length change), `meteoswiss_snow` (snow days at four stations) and `meteodat_waegital_swe` (snow water
+  equivalent of a storage lake catchment). Four charts, five references, two gaps.
+- Study table on hydropower, snow and glaciers on the Renewables page, with nine studies in `references.yml`.
+- Optional `span_gaps` field for line charts whose series are not observed every year.
+- Sub-annual data: tidy files may use `period` (date, month or ISO week) instead of `year`; `build_site`,
+  `pipeline.check` and the charts handle both. Activated `bfe_reservoirs` and `bfe_electricity_monthly`: four
+  charts on stored energy in storage lakes and monthly hydropower.
+- Footer and README credit: initiated by Barton Chen (UESL, Empa).
+
+### Decisions
+- Snow and glaciers go under the `renewables` theme, next to hydropower, instead of a new theme.
+- Glacier mass balance shows only the two glaciers measured every year since 1915 (Great Aletsch,
+  Silvretta); Claridenfirn lacks 1994–1995.
+- Snow and glacier charts are tagged regional, since they show selected stations and glaciers.
+
+### Findings on data availability
+- Hydropower data already on the site: annual run-of-river and storage production (1990–2025), hydropower
+  in the renewables and gross energy balances (1980/1990–2025), and winter production from Swissgrid
+  (2016–2026). Reservoir fill levels and WASTA plant statistics are still planned sources.
+- GLAMOS data are free only for scientific and non-commercial use; MeteoSwiss open data are CC BY 4.0.
+- No open national snow water equivalent series: SLF's SPASS (1962–2023) is under the WSL data policy, OSHD
+  grids cover only 2016–2022 with unstated terms. The Wägital series (1943–2026, CC BY) is the exception.
+- Wägital snow on 1 April averages 15.2 million m³ (1943–2026). Snow days fell by 15–30 a year between
+  1961–1990 and 1997–2026 at all four stations. Since 1915 Great Aletsch has lost 66 m w.e. and Silvretta 43 m w.e.
+- Storage lakes: capacity 8.9 TWh (8.5 TWh in 2000, as dams were raised), about 14 % of annual consumption.
+  Spring lows fall in April–May, autumn highs in September–November. Lowest spring level 0.70 TWh (2000);
+  in early 2023 the lakes were 75 % full against a 60 % mean, after the crisis-year savings. Monthly sums of
+  run-of-river and storage production match the annual statistics (2025: 16.3 and 21.2 TWh). Storage plants
+  also peak in June–July, not in winter.
+- Studies: net glacier loss supplied 3–4 % of Swiss hydropower since 1980 (Schaefli 2019). Of the studies, only
+  Haddad et al. 2025 (run-of-river output per plant 1991–2022, Nexus-e) publish their data openly (CC BY 4.0).
+
 ## 2026-10-20
 
 ### Done

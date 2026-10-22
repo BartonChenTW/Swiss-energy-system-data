@@ -13,19 +13,20 @@ from datetime import date
 import pandas as pd
 
 from .changelog import site_version
-from .common import PROCESSED_DIR, ROOT, SITE_DATA_DIR, load_catalog, load_gaps, validate_tidy
+from .common import PROCESSED_DIR, ROOT, SITE_DATA_DIR, load_catalog, load_gaps, validate_tidy, x_column
 
 
-def to_series(df: pd.DataFrame) -> tuple[list[int], list[dict]]:
-    """Pivot tidy rows to one value list per category, aligned to sorted years."""
-    years = sorted(int(y) for y in df["year"].unique())
+def to_series(df: pd.DataFrame) -> tuple[list[int | str], list[dict]]:
+    """Pivot tidy rows to one value list per category, aligned to sorted years (or periods)."""
+    x = x_column(df)
+    periods = sorted(int(y) for y in df[x].unique()) if x == "year" else sorted(str(p) for p in df[x].unique())
     categories = list(dict.fromkeys(df["category"]))  # keep CSV order for legends
-    wide = df.pivot(index="year", columns="category", values="value").reindex(index=years, columns=categories)
+    wide = df.pivot(index=x, columns="category", values="value").reindex(index=periods, columns=categories)
     series = [
         {"name": c, "values": [None if pd.isna(v) else float(v) for v in wide[c]]}
         for c in categories
     ]
-    return years, series
+    return periods, series
 
 
 def provenance(csv) -> dict | None:
@@ -65,16 +66,16 @@ def main() -> None:
         if not csv.exists():
             print(f"  skip {ds['id']}: {csv.relative_to(ROOT)} not found")
             continue
-        df = pd.read_csv(csv)
+        df = pd.read_csv(csv, dtype={"period": str})
         validate_tidy(df, ds["id"])
-        years, series = to_series(df)
+        periods, series = to_series(df)
         src = sources[ds["source"]]
         write_json({
             **ds,
             "unit": df["unit"].iloc[0],
             "source": {k: src.get(k) for k in ("id", "name", "publisher", "url", "terms")},
             "provenance": provenance(csv),
-            "years": years,
+            "periods": periods,
             "series": series,
         }, SITE_DATA_DIR / f"{ds['id']}.json")
         built[ds["id"]] = input_sources(csv)

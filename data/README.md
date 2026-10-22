@@ -19,6 +19,7 @@ what changed and why. The path without `.csv` is the dataset id used in
 | column | type | rule |
 |---|---|---|
 | `year` | int | calendar year; snapshot year for cross-sectional data |
+| or `period` | str | for sub-annual data, instead of `year`: a date `2024-01-08`, a month `2024-01` or a week of the year `W02` (periods sort as text) |
 | `category` | str | series label, in the order it should appear in legends |
 | `value` | float | no thousands separators; empty = missing |
 | `unit` | str | a single unit per file |

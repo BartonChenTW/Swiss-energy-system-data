@@ -302,26 +302,65 @@ sources:
       - url: https://www.bfe-ogd.ch/ogd103_stromverbrauch_swissgrid_lv_und_endv.csv
         filename: ogd103_stromverbrauch_swissgrid_lv_und_endv.csv
 
-  # ---------- planned: identified, not yet downloaded (pipeline.fetch skips these) ----------
-  # Download URLs below were found via the opendata.swiss API on 2026-09-28; the file
-  # contents have not been fully inspected yet. Set `status: active` once approved.
-
-  - id: bfe_electricity_monthly
-    status: planned
-    planned_for: Electricity page – official monthly balance (winter imports, seasonal production by technology), replacing the dashboard-based winter/summer charts
-    name: "ENSTAT: Elektrizitätsbilanz der Schweiz – Monatswerte"
-    publisher: Swiss Federal Office of Energy (SFOE / BFE)
-    theme: electricity
-    url: https://opendata.swiss/de/dataset/enstat-elektrizitatsbilanz-der-schweiz-monatswerte-csv
-    terms: "opendata.swiss: Open use. Must provide the source."
-    frequency: monthly
+  - id: glamos
+    name: Swiss Glacier Mass Balance and Swiss Glacier Length Change (release 2025)
+    publisher: Glacier Monitoring Switzerland (GLAMOS), on behalf of FOEN, MeteoSwiss and SCNAT
+    theme: renewables
+    url: https://www.glamos.ch/en/downloads
+    terms: >-
+      "Freely available and may be used with indication of the source for scientific and non-commercial use."
+      Cite GLAMOS (2025), doi:10.18750/massbalance.2025.r2025 and doi:10.18750/lengthchange.2025.r2025.
+      Not an open licence: commercial reuse needs permission.
+    frequency: annual (new release each autumn)
     downloads:
-      - url: https://www.bfe-ogd.ch/ogd35/ogd35_schweizerische_elektrizitaetsbilanz_monatswerte.csv
-        filename: ogd35_schweizerische_elektrizitaetsbilanz_monatswerte.csv
+      - url: https://doi.glamos.ch/data/massbalance/massbalance_fixdate.csv
+        filename: massbalance_fixdate.csv
+      - url: https://doi.glamos.ch/data/lengthchange/lengthchange.csv
+        filename: lengthchange.csv
+    notes: >-
+      Glaciological mass balance of about 30 glaciers per year (three since 1915), in mm water equivalent per
+      hydrological year (October–September), and length change of about 100 glacier tongues since 1880. Each
+      CSV starts with a licence header and three header rows (names, codes, units); the last column (observer)
+      contains commas. Also on the page: inventories (shapefiles) and geodetic volume change.
+
+  - id: meteoswiss_snow
+    name: "Manual precipitation stations – measurement values (ogd-nime): yearly snow values"
+    publisher: Federal Office of Meteorology and Climatology (MeteoSwiss)
+    theme: renewables
+    url: https://data.geo.admin.ch/api/stac/v1/collections/ch.meteoschweiz.ogd-nime
+    terms: "Creative Commons Attribution 4.0 (CC BY 4.0). Source: MeteoSwiss."
+    frequency: yearly file updated daily
+    downloads:
+      - url: https://data.geo.admin.ch/ch.meteoschweiz.ogd-nime/wfj/ogd-nime_wfj_y.csv
+        filename: ogd-nime_wfj_y.csv
+      - url: https://data.geo.admin.ch/ch.meteoschweiz.ogd-nime/sae/ogd-nime_sae_y.csv
+        filename: ogd-nime_sae_y.csv
+      - url: https://data.geo.admin.ch/ch.meteoschweiz.ogd-nime/sia/ogd-nime_sia_y.csv
+        filename: ogd-nime_sia_y.csv
+      - url: https://data.geo.admin.ch/ch.meteoschweiz.ogd-nime/ein/ogd-nime_ein_y.csv
+        filename: ogd-nime_ein_y.csv
+    notes: >-
+      One file per station, semicolon-separated, Latin-1. Parameters ending in l0 are sums or means over the
+      snow year August–July, stamped with the year it ends. About 270 stations; the four downloaded here
+      (Weissfluhjoch, Säntis, Segl-Maria, Einsiedeln) have long, nearly complete snow series at different
+      altitudes. Daily snow depth and new snow are in the _d_ files of the same collection.
+
+  - id: meteodat_waegital_swe
+    name: Snow water equivalent for reference date April 1 for Wägital catchment, 1943–2026
+    publisher: Meteodat GmbH, with MeteoSwiss (GCOS Switzerland), SLF, University of Zurich, ETH Zurich and AG Kraftwerk Wägital
+    theme: renewables
+    url: https://doi.org/10.5281/zenodo.19589752
+    terms: Creative Commons Attribution 4.0 (CC BY 4.0). Cite Lorenzi et al. (2026), Zenodo.
+    frequency: annual (new Zenodo version each April)
+    downloads:
+      - url: https://zenodo.org/api/records/19589752/files/Waegital_1943-2026.txt/content
+        filename: Waegital_1943-2026.txt
+    notes: >-
+      Water stored in the snow cover on 1 April in the catchment of the Wägitalersee storage lake (canton of
+      Schwyz), in million m³, for 900–1500 and 1500–2300 m. The longest open snow water equivalent series in
+      Switzerland. Each yearly update is a new Zenodo record, so the download URL changes.
 
   - id: bfe_reservoirs
-    status: planned
-    planned_for: Electricity page – fill level of storage lakes (weekly, 2000–today, four regions), a key winter security indicator
     name: "ENSTAT: Füllungsgrad der Speicherseen (Wochenbericht)"
     publisher: Swiss Federal Office of Energy (SFOE / BFE)
     theme: electricity
@@ -331,6 +370,29 @@ sources:
     downloads:
       - url: https://www.bfe-ogd.ch/ogd17/ogd17_fuellungsgrad_speicherseen.csv
         filename: ogd17_fuellungsgrad_speicherseen.csv
+    notes: >-
+      Energy stored in the storage lakes in GWh (the electricity their water could generate) and the maximum
+      storage content, weekly from 2000, for Valais, Graubünden, Ticino and the rest of Switzerland. Dates are
+      Mondays; the measurement is taken on the Sunday before at 24:00.
+
+  - id: bfe_electricity_monthly
+    name: "ENSTAT: Elektrizitätsbilanz der Schweiz – Monatswerte"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    theme: electricity
+    url: https://opendata.swiss/de/dataset/enstat-elektrizitatsbilanz-der-schweiz-monatswerte-csv
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: monthly
+    downloads:
+      - url: https://www.bfe-ogd.ch/ogd35/ogd35_schweizerische_elektrizitaetsbilanz_monatswerte.csv
+        filename: ogd35_schweizerische_elektrizitaetsbilanz_monatswerte.csv
+    notes: >-
+      Monthly electricity balance in GWh from 2000: production by plant type (run-of-river, storage, nuclear,
+      thermal, wind, PV), storage pump consumption, imports, exports and consumption. Recent months are
+      provisional (Definitiv = 0); missing values are written NULL.
+
+  # ---------- planned: identified, not yet downloaded (pipeline.fetch skips these) ----------
+  # Download URLs below were found via the opendata.swiss API on 2026-09-28; the file
+  # contents have not been fully inspected yet. Set `status: active` once approved.
 
   - id: bfe_wasta
     status: planned

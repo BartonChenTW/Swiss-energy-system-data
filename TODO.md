@@ -34,6 +34,9 @@ under `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md).
 
 ### Renewables
 - [ ] Hydropower plants by type and capacity (SFOE WASTA statistics).
+- [x] Snow and glaciers for hydropower: GLAMOS glacier data, MeteoSwiss snow days, Wägital snow water equivalent.
+- [ ] Monthly snow depth or snow water equivalent through the winter (needs sub-annual support).
+- [ ] Ask GLAMOS whether the processed glacier series may be shown under the site's terms beyond non-commercial use (gap `glacier_data_licence`).
 
 ### Emissions
 - [ ] International aviation and the land-use balance as separate series (already in the FOEN download).
@@ -46,8 +49,8 @@ under `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md).
 
 ### Planned sources
 Identified in `catalog/sources.yml` with `status: planned`. Set `status: active` one at a time, inspect the file, write the processor.
-- [ ] `bfe_electricity_monthly`: official monthly balance; replace the dashboard-based winter/summer charts.
-- [ ] `bfe_reservoirs`: weekly fill level of storage lakes.
+- [ ] `bfe_electricity_monthly`: processed for monthly hydropower; still to do: replace the dashboard-based winter/summer charts with it.
+- [x] `bfe_reservoirs`: weekly fill level of storage lakes.
 - [ ] `bfe_wasta`: hydropower plants by type and capacity (the *Renewables* item above).
 - [ ] `bfs_ghg_by_sector`: emissions by source group.
 - [ ] `bfs_population`: per-capita indicators.
@@ -58,7 +61,8 @@ Identified in `catalog/sources.yml` with `status: planned`. Set `status: active`
 - [ ] Pronovo quarter-hourly production by technology: ask Pronovo about the licence first.
 
 ### Site
-- [ ] Support monthly, hourly and 15-minute datasets in the tidy contract and the charts (Swissgrid, Winterthur LEG load profile, EV profiles).
+- [x] Support daily, weekly and monthly datasets in the tidy contract and the charts (`period` column instead of `year`).
+- [ ] Support hourly and 15-minute datasets (Winterthur LEG load profile, EV profiles): `period` with a time, and a lighter chart for tens of thousands of points.
 
 ## b. Identify gaps
 
@@ -98,4 +102,5 @@ Known gaps so far (ticked: on the gaps page):
 - [ ] **New SFOE editions:** pubdb download ids change (e.g. `bfe_self_consumption_survey`, id 12429). Update the URL when a new edition appears.
 - [x] **Before 19 Oct 2026:** bump the actions in both workflows to their Node 24 releases (done 19 Oct 2026).
 - [ ] Check that both workflows still run on the new `ubuntu-latest` after the next push.
+- [ ] **Every April:** a new Wägital snow water equivalent version appears on Zenodo with a new record id and file name. Update `meteodat_waegital_swe` in `catalog/sources.yml` and `FILE` in its processor.
 - [ ] Run `python -m pipeline.check --links` now and then. Some sites (MDPI, National Grid, Mendeley) block scripts and answer 403 although the link works in a browser.
