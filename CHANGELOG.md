@@ -9,6 +9,11 @@ with today's date; `python -m pipeline.build_site` picks up the top released ent
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-10-23
+### Added
+- Renewables: natural inflow into Swiss storage reservoirs, monthly and per year by season, 1991–2022, from ETH Zurich's open HP-CatCH dataset (CC BY 4.0), which links 48 hydropower cascades and 601 run-of-river plants to their catchments.
+- Renewables and Library: the HP-CatCH preprint (Haddad et al. 2026, ESSD) in the hydropower study table.
+
 ## [0.12.0] - 2026-10-22
 ### Added
 - Renewables: a Hydropower, snow and glaciers section with water stored in the snow of the Wägital catchment on 1 April since 1943 (Meteodat, CC BY 4.0), days with snow cover at four MeteoSwiss stations, and the cumulative mass balance and length change of Swiss glaciers (GLAMOS, non-commercial use).

@@ -1,0 +1,20 @@
+{
+  "dataset": "renewables/reservoir_inflows_monthly",
+  "processor": "pipeline.process.hp_catch",
+  "generated": "2026-10-23T14:32:43+00:00",
+  "rows": 384,
+  "periods": [
+    "1991-01",
+    "2022-12"
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/hp_catch/hp_catch_update1.zip",
+      "url": "https://www.research-collection.ethz.ch/server/api/core/bitstreams/992a85b5-1643-4a2f-971d-673bcd0d49cd/content",
+      "retrieved": "2026-10-23T14:32:40+00:00",
+      "last_modified": "Fri, 29 May 2026 06:05:29 GMT",
+      "sha256": "52045aa13bed76482b2f00ec6250eb640c4e6c3d8b8064cb276114be31a48294",
+      "bytes": 214005176
+    }
+  ]
+}

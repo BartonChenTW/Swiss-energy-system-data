@@ -7,6 +7,23 @@ whether the data is enough to train a foundation model for the building domain.
 
 Open work is in [TODO.md](TODO.md). Site releases are in [CHANGELOG.md](CHANGELOG.md).
 
+## 2026-10-23
+
+### Done
+- **0.13.0:** new source `hp_catch` (ETH Zurich, CC BY 4.0, ESSD preprint essd-2026-448): monthly and seasonal
+  natural inflow into 107 storage reservoirs, 1991–2022. The processor reads the Zarr arrays inside the 214 MB
+  zip without extracting it; `zarr` (<3) added to requirements.txt.
+
+### Decisions
+- Only "direct contributors" reservoir inflows are summed: they exclude water from reservoirs upstream, so the
+  total has no double counting. Run-of-river inflows are not summed, since plants on one river share its water.
+
+### Findings on data availability
+- HP-CatCH is the first open dataset linking Swiss reservoirs and run-of-river plants to their catchments; it gives
+  natural inflows, not production or reservoir levels per plant.
+- Natural inflow into storage reservoirs averages 13.2 billion m³ a year (1991–2022), 74 % from April to September;
+  lowest 10.3 (2005), highest 16.9 (1999). The monthly mean peaks in June (about 2.3 billion m³).
+
 ## 2026-10-22
 
 ### Done

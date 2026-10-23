@@ -823,6 +823,21 @@ references:
       step. CC BY-NC-SA.
     checked: 2026-10-22
 
+  - id: haddad_2026_hp_catch
+    type: report
+    title: "HP-CatCH: linking hydropower infrastructure to their hydrological catchments in Switzerland"
+    publisher: Haddad, Raycheva, Savelsberg, Sieber, Gudmundsson, Seneviratne (ETH Zurich), Earth System Science Data Discussions
+    year: 2026
+    url: https://doi.org/10.5194/essd-2026-448
+    themes: [renewables, electricity, scenarios]
+    language: en
+    description: >-
+      Describes the HP-CatCH dataset: 48 hydropower cascades with 106 reservoirs and 601 run-of-river plants linked to
+      their catchments, and their inflows 1991–2022 from simulated runoff. Preprint under review since August 2026.
+      Data CC BY 4.0, code MIT (github.com/yasserhaddad/HP-CatCH).
+    related_sources: [hp_catch]
+    checked: 2026-10-23
+
   - id: hydro_ch2018_synthesis
     type: report
     title: "Hydro-CH2018: Effects of climate change on Swiss water bodies (synthesis report)"

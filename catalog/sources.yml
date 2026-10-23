@@ -390,6 +390,23 @@ sources:
       thermal, wind, PV), storage pump consumption, imports, exports and consumption. Recent months are
       provisional (Definitiv = 0); missing values are written NULL.
 
+  - id: hp_catch
+    name: "HP-CatCH: linking hydropower infrastructure to their hydrological catchments in Switzerland"
+    publisher: Haddad, Raycheva, Savelsberg, Sieber, Gudmundsson, Seneviratne (ETH Zurich), ETH Research Collection
+    theme: renewables
+    url: https://doi.org/10.3929/ethz-c-000800479
+    terms: Creative Commons Attribution 4.0 (CC BY 4.0). Code under the MIT licence (github.com/yasserhaddad/HP-CatCH).
+    frequency: irregular (version update1 of 2026-05-29)
+    downloads:
+      - url: https://www.research-collection.ethz.ch/server/api/core/bitstreams/992a85b5-1643-4a2f-971d-673bcd0d49cd/content
+        filename: hp_catch_update1.zip
+    notes: >-
+      Topology of 48 hydropower cascades (106 reservoirs, about 95 % of Swiss storage and 93 % of pumped-storage
+      capacity) and 601 run-of-river plants, linked to the 2 km² federal sub-basins; shapefiles of reservoirs, intakes,
+      pressure tunnels and plants. Inflows into each reservoir and plant, 1991–2022, from PREVAH daily runoff (Zarr,
+      stored hourly). Described in an ESSD preprint under review (doi:10.5194/essd-2026-448). A 214 MB zip; a new
+      version gets a new download URL.
+
   # ---------- planned: identified, not yet downloaded (pipeline.fetch skips these) ----------
   # Download URLs below were found via the opendata.swiss API on 2026-09-28; the file
   # contents have not been fully inspected yet. Set `status: active` once approved.

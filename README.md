@@ -90,14 +90,14 @@ docs/               the website (plain HTML + Chart.js, no build step)
 
 ## Current datasets
 
-62 datasets from 27 sources; the full list with descriptions is in `catalog/datasets.yml`.
+64 datasets from 28 sources; the full list with descriptions is in `catalog/datasets.yml`.
 
 | Page | Datasets | Main sources |
 |---|---|---|
 | National | Final energy by carrier and sector, 1980–2025; greenhouse gas emissions by sector and gas, 1990–2024 | SFOE energy balance, FOEN greenhouse gas inventory |
 | Electricity | Production by technology, 1990–2025 | SFOE electricity statistics |
 | Renewables | Renewable production by source; new-renewable electricity; PV production and capacity; wind generation, capacity and wind farms; biomass capacity | SFOE renewables balance, electricity statistics, plant register |
-| Renewables: hydropower, snow and glaciers | Energy stored in storage lakes (weekly, by region and by week of the year); monthly hydropower production and pumping; snow water equivalent of the Wägital catchment on 1 April; snow days at four stations; glacier mass balance and length change | SFOE storage lake report and monthly electricity balance, Meteodat (Zenodo), MeteoSwiss open data, GLAMOS |
+| Renewables: hydropower, snow and glaciers | Energy stored in storage lakes (weekly, by region and by week of the year); monthly hydropower production and pumping; snow water equivalent of the Wägital catchment on 1 April; snow days at four stations; glacier mass balance and length change; natural inflow into storage reservoirs, 1991–2022 | SFOE storage lake report and monthly electricity balance, ETH Zurich HP-CatCH, Meteodat (Zenodo), MeteoSwiss open data, GLAMOS |
 | Electricity: energy communities | PV installations and capacity by self-consumption type (single site, ZEV, full feed-in) | SFOE survey of grid operators |
 | Mobility | Plug-in share; new cars by propulsion; electric car stock; public charging stations | FSO vehicle register (stats.swiss), SFOE ich-tanke-strom |
 | Mobility: EV profile data study | 43 open (and some restricted) EV charging and driving datasets and generators in CH, Europe and worldwide, from `ev_profile` entries in `references.yml` | Various; see the Library |

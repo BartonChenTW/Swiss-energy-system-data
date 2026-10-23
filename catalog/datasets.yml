@@ -424,6 +424,27 @@ datasets:
     coverage: regional
     region: Wägital catchment (SZ)
 
+  - id: renewables/reservoir_inflows_monthly
+    title: Natural inflow into storage reservoirs, monthly
+    description: >-
+      Water flowing into Swiss storage reservoirs each month from their own catchments, reconstructed from simulated
+      runoff (PREVAH) for the reservoirs of 48 hydropower cascades. Water passed on from reservoirs upstream is not
+      counted again. Snow and glacier melt bring the June peak; winter inflow is small.
+    source: hp_catch
+    chart: line
+    status: official
+    coverage: national
+
+  - id: renewables/reservoir_inflows_by_season
+    title: Natural inflow into storage reservoirs per year, by season
+    description: >-
+      The same inflow summed per calendar year, split into April–September and the other six months. About three
+      quarters arrive in the summer half-year. The driest years were 2005, 2022, 2017 and 2011.
+    source: hp_catch
+    chart: stacked-bar
+    status: official
+    coverage: national
+
   - id: heat/district_heat_by_sector
     title: District heat consumption by sector
     description: Final consumption of district heat from the national energy balance. Network losses and the plants' own use are not included.
