@@ -21,7 +21,7 @@ MANIFEST_NAME = "_manifest.json"
 
 # Controlled vocabulary, documented in catalog/README.md
 THEMES = {"national", "buildings", "electricity", "renewables", "heat", "mobility",
-          "emissions", "prices", "scenarios", "general"}
+          "emissions", "prices", "scenarios", "supply", "general"}
 REFERENCE_TYPES = {"report", "standard", "website", "dashboard", "tool", "model", "portal"}
 CHART_TYPES = {"line", "stacked-area", "stacked-bar", "hbar"}
 PALETTES = {"sequential"}  # optional; default is the categorical palette

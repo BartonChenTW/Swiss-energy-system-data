@@ -566,3 +566,47 @@ datasets:
     chart: hbar
     status: official
     coverage: national
+
+  - id: supply/oil_stockholding
+    title: Mandatory stocks of fuels
+    description: >-
+      Mandatory stocks (Pflichtlager) of motor petrol, diesel, jet fuel and heating oil, in 1000 m³, on 30 June 2019,
+      31 May 2023 and 31 December 2025. Stocks are set to cover 4.5 months of average demand (jet fuel 3 months).
+      They belong to about 280 companies and are released by the Confederation in a shortage. Heating oil held as
+      natural gas replacement (384,000 m³ until 2023) was folded into ordinary heating oil in December 2024.
+    source: bwl_pflichtlager
+    chart: stacked-bar
+    status: official
+    coverage: national
+
+  - id: supply/oil_stock_change
+    title: Change in oil stocks, yearly
+    description: >-
+      Yearly change in oil stocks (all products) held by wholesalers, which include the mandatory stocks, and by
+      consumers such as households with heating oil tanks. Positive means stocks grew. 2022 was a build-up and
+      2023 a drawdown after the energy crisis.
+    source: bfe_erdoelbilanz
+    chart: line
+    status: official
+    coverage: national
+
+  - id: supply/gas_net_imports_monthly
+    title: Natural gas net imports, monthly
+    description: >-
+      Gas flowing into Switzerland minus gas flowing out, per month since 2000 (provisional). Switzerland has no
+      large gas storage and no domestic production worth mentioning, so winter demand is met by imports and by
+      storage in neighbouring countries.
+    source: bfe_gas_nettoimport
+    chart: line
+    status: official
+    coverage: national
+
+  - id: supply/gas_storage_fill
+    title: Gas storage fill level in the EU and neighbouring countries
+    description: >-
+      Filling of gas storage as a share of capacity, weekly since 2011. Swiss gas companies rely on this storage,
+      which makes the fill level a proxy for winter gas security.
+    source: bfe_gas_storage_eu
+    chart: line
+    status: official
+    coverage: national

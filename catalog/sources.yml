@@ -509,3 +509,83 @@ sources:
       Monthly averages of daily readings of public charging stations reported to
       ich-tanke-strom.ch, from November 2020, nationally and by canton. Only connected
       operators are covered.
+
+  - id: bwl_pflichtlager
+    name: "Berichte zur Vorratshaltung / Aufsicht Pflichtlagerhaltung"
+    publisher: Federal Office for National Economic Supply (FONES / BWL)
+    theme: supply
+    url: https://www.bwl.admin.ch/de/weitere-informationen-pflichtlager
+    terms: "Federal publication, PDF. Open use with source; no open-data licence stated."
+    frequency: annual
+    downloads:
+      - url: https://www.bwl.admin.ch/dam/de/sd-web/G24fIw4gSdRf/Vorratshaltungsbericht_2019_D.pdf
+        filename: Vorratshaltungsbericht_2019_D.pdf
+      - url: https://www.bwl.admin.ch/dam/de/sd-web/i78UZgJeYJdH/Vorratshaltungsbericht_2023_DE.pdf
+        filename: Vorratshaltungsbericht_2023_DE.pdf
+      - url: https://www.bwl.admin.ch/dam/de/sd-web/54cLrsE6htEG/20260228%20NFB-Bericht_VOR%202025.pdf
+        filename: Vorratshaltung_2025.pdf
+    notes: >-
+      Quantities of mandatory stocks (Pflichtlager) of motor petrol, diesel, jet fuel and heating oil, with the
+      target quantity set by the Confederation. The stock is held by about 280 companies and managed by the
+      industry bodies CARBURA (liquid fuels) and Provisiogas (natural gas, stored as heating oil). Only PDF
+      reports exist, no table or API: the values are transcribed in the processor and cite the report page.
+      Reference dates differ: 30 June 2019, 31 May 2023, 31 December 2025. The 2024 report prints its figures
+      in a layout that cannot be read reliably as text, so 2024 is not included. Storage sites are not published.
+
+  - id: bfe_gas_nettoimport
+    name: "energiedashboard.ch: Monatliche Gas Nettoimporte VSG"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE), data from the Swiss Gas Industry Association (VSG)
+    theme: supply
+    url: https://opendata.swiss/de/dataset/energiedashboard-ch-monatliche-gas-nettoimporte-vsg
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: monthly
+    downloads:
+      - url: https://www.bfe-ogd.ch/ogd111/ogd111_gas_nettoimport.csv
+        filename: ogd111_gas_nettoimport.csv
+    notes: >-
+      Provisional monthly net imports of natural gas (inflows minus outflows to neighbouring countries) in GWh
+      (gross calorific value Hs), from 2000. Covers the flows of Swissgas and five regional companies; minor
+      flows that are only reported yearly (about 5 % of the volume in 2021) are missing.
+
+  - id: bfe_gas_storage_eu
+    name: "energiedashboard.ch: Füllstände Gasspeicher EU"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE), data from Gas Infrastructure Europe (AGSI+)
+    theme: supply
+    url: https://opendata.swiss/de/dataset/energiedashboard-ch-fullstande-gasspeicher-eu
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: daily
+    downloads:
+      - url: https://www.bfe-ogd.ch/ogd102_fuellstand_gasspeicher.csv
+        filename: ogd102_fuellstand_gasspeicher.csv
+    notes: >-
+      Daily gas storage level in TWh and as a share of capacity for the EU, Germany, France, Italy and Austria,
+      from 2011. Switzerland has no large gas storage of its own and relies on storage in these countries.
+
+  - id: bfe_gas_flows
+    name: "energiedashboard.ch: Tägliche Flüsse in die und aus der Schweiz (Gas)"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE), data from ENTSO-G, AGGM and SmartGRT-Gaz
+    theme: supply
+    url: https://opendata.swiss/de/dataset/energiedashboard-ch-tagliche-flusse-in-die-und-aus-der-schweiz-gas
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: daily
+    status: planned
+    planned_for: Daily gas imports and exports at the twelve entry points, to show how much arrives via Wallbach (about 80 % of imports).
+    downloads:
+      - url: https://www.bfe-ogd.ch/ogd101_gas_import_export.csv
+        filename: ogd101_gas_import_export.csv
+
+  - id: bfe_erdoelbilanz
+    name: "Schweizerische Gesamtenergiestatistik: Erdölbilanz der Schweiz"
+    publisher: Swiss Federal Office of Energy (SFOE / BFE)
+    theme: supply
+    url: https://opendata.swiss/de/dataset/schweizerische-gesamtenergiestatistik-erdolbilanz-der-schweiz
+    terms: "opendata.swiss: Open use. Must provide the source."
+    frequency: annual
+    downloads:
+      - url: https://www.uvek-gis.admin.ch/BFE/ogd/124/ogd124_erd%C3%B6lbilanz.csv
+        filename: ogd124_erdoelbilanz.csv
+    notes: >-
+      Yearly oil balance in tonnes by product since 1990: imports, exports, refinery output, wholesale sales, end
+      use and the change in stocks held by wholesalers and consumers. It gives stock changes, not the stock
+      level; stock levels are in the FONES stockholding reports (bwl_pflichtlager). Positive stock change means
+      stocks grew.

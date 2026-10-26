@@ -1,0 +1,37 @@
+{
+  "dataset": "supply/oil_stockholding",
+  "processor": "pipeline.process.bwl_pflichtlager",
+  "generated": "2026-10-26T17:06:10+00:00",
+  "rows": 14,
+  "years": [
+    2019,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bwl_pflichtlager/Vorratshaltungsbericht_2019_D.pdf",
+      "url": "https://www.bwl.admin.ch/dam/de/sd-web/G24fIw4gSdRf/Vorratshaltungsbericht_2019_D.pdf",
+      "retrieved": "2026-10-26T15:59:21+00:00",
+      "last_modified": "Wed, 12 Feb 2025 16:08:18 GMT",
+      "sha256": "1b36d630edaa195fec7e4ae4f852e9d1e514b7c7d070151e9007af50262cd17e",
+      "bytes": 1128760
+    },
+    {
+      "file": "data/raw/bwl_pflichtlager/Vorratshaltungsbericht_2023_DE.pdf",
+      "url": "https://www.bwl.admin.ch/dam/de/sd-web/i78UZgJeYJdH/Vorratshaltungsbericht_2023_DE.pdf",
+      "retrieved": "2026-10-26T15:59:21+00:00",
+      "last_modified": "Tue, 12 Nov 2024 08:42:10 GMT",
+      "sha256": "f65d911b6b1d8d79da7847d6b2909d779e56ee132350455d0032103db3c5a200",
+      "bytes": 274836
+    },
+    {
+      "file": "data/raw/bwl_pflichtlager/Vorratshaltung_2025.pdf",
+      "url": "https://www.bwl.admin.ch/dam/de/sd-web/54cLrsE6htEG/20260228%20NFB-Bericht_VOR%202025.pdf",
+      "retrieved": "2026-10-26T15:59:22+00:00",
+      "last_modified": "Wed, 06 May 2026 09:57:46 GMT",
+      "sha256": "044b0d9fd80c3d98de487fee1312d3c768a3c536f087f49db6263dc315498855",
+      "bytes": 513760
+    }
+  ],
+  "notes": "Transcribed from the PDF reports; dates are 30 Jun 2019, 31 May 2023 and 31 Dec 2025."
+}

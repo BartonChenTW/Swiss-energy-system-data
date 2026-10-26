@@ -310,3 +310,40 @@ gaps:
     status: not-published
     evidence: [vse_energiezukunft_2050, elcom_system_adequacy_2025, bfe_system_adequacy_2022, bfe_szenariorahmen_2030_2040, sweet_edge_reo2_2025, eth_psi_nuclear_2026, sweet_cross_scenarios, psi_stem_netzero_2023]
     found: 2026-10-20
+
+  # ---------- supply ----------
+  - id: fuel_stock_time_series
+    theme: supply
+    title: Mandatory fuel stocks as a machine-readable time series
+    missing: >-
+      Stock levels of petrol, diesel, jet fuel and heating oil exist only as numbers inside annual PDF reports,
+      at irregular dates. No monthly or weekly stock series, and no stock in days of consumption.
+    available: >-
+      FONES annual stockholding reports (PDF); SFOE oil balance with yearly stock changes only.
+    holder: FONES (BWL) and CARBURA
+    status: not-machine-readable
+    evidence: [bwl_pflichtlager, bfe_erdoelbilanz]
+    found: 2026-10-26
+
+  - id: stock_locations
+    theme: supply
+    title: Location of mandatory stocks
+    missing: >-
+      Where the stocks are held (tank farms, regions) is not published, so regional supply and logistics cannot be
+      modelled. Contracts name a site for each stock, but the sites are protected information.
+    available: Only the number of stockholders (about 280) and the existence of the CARBURA tank farm company.
+    holder: FONES (BWL), CARBURA
+    status: restricted
+    evidence: [bwl_pflichtlager, carbura]
+    found: 2026-10-26
+
+  - id: nuclear_fuel_stock
+    theme: supply
+    title: Nuclear fuel and gas reserves held by operators
+    missing: >-
+      The mandatory stock of fuel elements (one reload for two reactors) is listed without tonnage, and
+      commercial gas storage contracts of Swiss companies abroad are not published.
+    holder: FONES (BWL), nuclear operators, Swiss gas companies
+    status: not-published
+    evidence: [bwl_pflichtlager]
+    found: 2026-10-26

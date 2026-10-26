@@ -1,0 +1,20 @@
+{
+  "dataset": "supply/gas_net_imports_monthly",
+  "processor": "pipeline.process.bfe_gas_nettoimport",
+  "generated": "2026-10-26T17:06:10+00:00",
+  "rows": 321,
+  "periods": [
+    "2000-01",
+    "2026-09"
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_gas_nettoimport/ogd111_gas_nettoimport.csv",
+      "url": "https://www.bfe-ogd.ch/ogd111/ogd111_gas_nettoimport.csv",
+      "retrieved": "2026-10-26T15:59:21+00:00",
+      "last_modified": "Tue, 20 Oct 2026 12:58:49 GMT",
+      "sha256": "d21c57ad5ac456a505a75fc0232c857db15c14ee94d66cd18adf4b996f08d0e2",
+      "bytes": 5201
+    }
+  ]
+}

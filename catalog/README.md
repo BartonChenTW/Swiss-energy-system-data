@@ -18,7 +18,7 @@ reads or uses it, it goes in `references.yml`.
 
 Used across all four files. `pipeline.check` rejects anything else.
 
-- **theme**: `national`, `buildings`, `electricity`, `renewables`, `heat`, `mobility`, `emissions`, `prices`, `scenarios`, `general`
+- **theme**: `national`, `buildings`, `electricity`, `renewables`, `heat`, `mobility`, `emissions`, `prices`, `scenarios`, `supply` (security of supply: stocks, reserves, import dependence), `general`
 - **reference type**: `report`, `standard` (norms such as SIA, often paid), `website`, `dashboard`, `tool`, `model`, `portal`
 - **dataset chart**: `line`, `stacked-area`, `stacked-bar`, `hbar`
 - **dataset coverage**: `national` (all of Switzerland, including national data broken down by canton) or `regional` (one canton, city or region, named in `region`)

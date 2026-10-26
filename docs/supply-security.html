@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security of supply · Swiss Energy System Data</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/theme.js"></script>
+</head>
+<body>
+  <header id="site-header"></header>
+  <main class="wrap">
+    <h1>Security of supply</h1>
+    <p class="lede">Switzerland imports all its oil and gas. This page shows what is held in reserve (mandatory
+      stocks of fuels), how oil stocks changed, and how gas arrives and is stored abroad. Electricity reserves
+      are on the <a href="electricity.html">Electricity</a> page (storage lakes: <a href="renewables.html#hydro">Renewables</a>).</p>
+    <nav class="toc" aria-label="On this page">
+      <span class="toc-label">On this page:</span>
+      <a href="#oil">Oil and fuels</a><a href="#gas">Gas</a><a href="#where">Where and how much</a><a href="#gaps">Data gaps</a>
+    </nav>
+
+    <h2 id="oil">Oil and fuels</h2>
+    <p class="section-note">The Confederation orders companies to hold mandatory stocks (Pflichtlager): motor petrol,
+      diesel and heating oil for 4.5 months of average demand, jet fuel for 3 months. The stocks belong to about 280
+      companies. The target is the average sales of the last three years. At the end of 2025, heating oil, petrol and
+      diesel were above their targets (1,235, 1,117 and 1,239 thousand m³ against 863, 1,078 and 1,198) and jet fuel was
+      26 % below (368 against 497). Stocks were last released in part in 2022 (the report of 2023 lists 175,000 m³ of
+      diesel and 188,000 m³ of heating oil); in autumn 2026 releases of up to 4 % of diesel and 6.5 % of jet fuel were
+      approved.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="supply/oil_stockholding"></div>
+      <div class="chart" data-dataset="supply/oil_stock_change"></div>
+    </div>
+
+    <h2 id="gas">Natural gas</h2>
+    <p class="section-note">Switzerland has no large gas storage. Mandatory stocks of gas are held as heating oil, which
+      customers with dual-fuel boilers switch to in a shortage. In a gas shortage, the first measure is to cut demand.
+      Winter gas is covered by imports and by storage in neighbouring countries, so the fill level of that storage is a
+      useful indicator.</p>
+    <div class="grid">
+      <div class="chart" data-dataset="supply/gas_net_imports_monthly"></div>
+      <div class="chart" data-dataset="supply/gas_storage_fill"></div>
+    </div>
+
+    <h2 id="where">Where and how much</h2>
+    <div class="card prose">
+      <ul>
+        <li><strong>How much:</strong> the quantities above, in m³ at three report dates. The Confederation also values
+          the compulsory stocks of all kinds at CHF 3.6 billion at the end of 2022, of which energy CHF 2.9 billion.</li>
+        <li><strong>Where:</strong> not published. Each stockholder has a contract that fixes the product, quantity and
+          site, but the sites are not public. CARBURA runs its own tank farm company.</li>
+        <li><strong>Past data:</strong> only in the annual reports of the Federal Office for National Economic Supply
+          (FONES / BWL), as PDF. The 2024 report is not included because its table cannot be read reliably.</li>
+        <li><strong>Electricity:</strong> the storage lakes hold about 8.9 TWh, see
+          <a href="renewables.html#hydro">Renewables</a>. Other reserves (winter hydro reserve, reserve power plant)
+          are planned and not yet in the data.</li>
+      </ul>
+    </div>
+
+    <h2 id="gaps">What is not openly available</h2>
+    <div data-gaps="supply"></div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

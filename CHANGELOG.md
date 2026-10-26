@@ -8,6 +8,10 @@ for fixes, wording and styling. To release, rename `Unreleased` to the new versi
 with today's date; `python -m pipeline.build_site` picks up the top released entry.
 
 ## [Unreleased]
+### Added
+- Security of supply: a new page with the mandatory stocks of petrol, diesel, jet fuel and heating oil (FONES reports, 2019, 2023, 2025), yearly oil stock changes (SFOE oil balance), monthly gas net imports and gas storage fill levels in the EU and neighbouring countries (SFOE energy dashboard).
+- Data gaps: fuel stocks as a time series, storage locations, nuclear fuel and gas reserves; Library: FONES, CARBURA and Provisiogas.
+- New catalogue theme `supply`.
 
 ## [0.13.0] - 2026-10-23
 ### Added

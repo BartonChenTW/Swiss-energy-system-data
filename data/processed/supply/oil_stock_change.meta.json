@@ -1,0 +1,21 @@
+{
+  "dataset": "supply/oil_stock_change",
+  "processor": "pipeline.process.bfe_erdoelbilanz",
+  "generated": "2026-10-26T17:06:10+00:00",
+  "rows": 72,
+  "years": [
+    1990,
+    2025
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_erdoelbilanz/ogd124_erdoelbilanz.csv",
+      "url": "https://www.uvek-gis.admin.ch/BFE/ogd/124/ogd124_erd%C3%B6lbilanz.csv",
+      "retrieved": "2026-10-26T15:59:21+00:00",
+      "last_modified": "Thu, 09 Jul 2026 12:37:16 GMT",
+      "sha256": "4ab38bfe94164a2c84244a01f7a8617f6bf758e1d36833c798b592c02dba88bd",
+      "bytes": 261361
+    }
+  ],
+  "notes": "Positive = stocks grew. Stock levels are not part of the SFOE oil balance."
+}

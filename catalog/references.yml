@@ -1866,3 +1866,47 @@ references:
     language: en
     description: Survey of EV charging load modelling methods published 2020–2024.
     checked: 2026-09-29
+
+  - id: bwl_pflichtlagersystem
+    type: report
+    title: Das Schweizer Pflichtlagersystem im Überblick (Faktenblatt)
+    publisher: Federal Office for National Economic Supply (FONES / BWL)
+    year: 2026
+    url: https://www.bwl.admin.ch/de/pflichtlager
+    themes: [supply]
+    language: de/fr/it/en
+    description: How mandatory stocks work. Who holds them, target quantities from three-year average sales, release by ordinance, and up to 20 % released by the delegate alone. Also lists current releases.
+    related_sources: [bwl_pflichtlager]
+    checked: 2026-10-26
+
+  - id: carbura
+    type: website
+    title: CARBURA, Swiss stockholding organisation for liquid fuels
+    publisher: CARBURA
+    url: https://www.carbura.ch/
+    themes: [supply]
+    language: de/fr/it/en
+    description: Manages the guarantee fund for mandatory stocks of petrol, diesel, jet fuel and heating oil; annual reports.
+    related_sources: [bwl_pflichtlager]
+    checked: 2026-10-26
+
+  - id: provisiogas
+    type: website
+    title: Provisiogas, stockholding organisation for natural gas
+    publisher: Provisiogas
+    url: https://www.provisiogas.ch/pflichtlager/
+    themes: [supply]
+    language: de/fr
+    description: Gas is not stored in Switzerland; the mandatory stock is held as heating oil that dual-fuel gas customers switch to in a shortage.
+    related_sources: [bwl_pflichtlager]
+    checked: 2026-10-26
+
+  - id: bwl_gas_mangellage
+    type: report
+    title: Faktenblatt Gasmangellage and Erdgasmonitoring
+    publisher: Federal Office for National Economic Supply (FONES / BWL)
+    url: https://www.bwl.admin.ch/de/erdgas
+    themes: [supply]
+    language: de
+    description: Measures in a gas shortage (demand reduction first), the crisis organisation KIO Gas and the gas monitoring system, in place since 2025, with a 14-day outlook for all regions.
+    checked: 2026-10-26
