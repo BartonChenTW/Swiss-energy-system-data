@@ -68,15 +68,18 @@ def main() -> None:
             continue
         df = pd.read_csv(csv, dtype={"period": str})
         validate_tidy(df, ds["id"])
-        periods, series = to_series(df)
+        if ds["chart"] == "map":  # one marker per row
+            values = {"rows": df.rename(columns={"category": "name"}).drop(columns=["unit"]).to_dict("records")}
+        else:
+            periods, series = to_series(df)
+            values = {"periods": periods, "series": series}
         src = sources[ds["source"]]
         write_json({
             **ds,
             "unit": df["unit"].iloc[0],
             "source": {k: src.get(k) for k in ("id", "name", "publisher", "url", "terms")},
             "provenance": provenance(csv),
-            "periods": periods,
-            "series": series,
+            **values,
         }, SITE_DATA_DIR / f"{ds['id']}.json")
         built[ds["id"]] = input_sources(csv)
         print(f"  built {ds['id']}")

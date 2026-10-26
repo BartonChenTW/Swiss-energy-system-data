@@ -106,6 +106,8 @@ a.tile:hover { border-color: var(--accent); }
 }
 .tag-regional { border-color: var(--accent); color: var(--accent); }
 .tag-national { border-color: var(--tag-national); color: var(--tag-national); }
+.view-switches { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+.view-switches .view-switch { margin: 0; }
 .view-switch { display: inline-flex; margin: 0 0 8px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-size: 13px; }
 .view-switch button {
   font: inherit; padding: 3px 10px; border: 0; cursor: pointer; color: var(--text-secondary); background: transparent;
@@ -114,6 +116,21 @@ a.tile:hover { border-color: var(--accent); }
 .view-switch button[aria-pressed="true"] { color: var(--text-primary); background: var(--page); font-weight: 600; }
 .view-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .canvas-box { position: relative; height: 300px; }
+.map-box { height: 460px; border-radius: 8px; overflow: hidden; background: var(--page); z-index: 0; }
+.map-box .leaflet-tooltip { font: 13px/1.4 var(--font); }
+.map-site { stroke: var(--surface); fill-opacity: 0.9; }
+.map-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 8px 0 0; font-size: 13px; color: var(--text-secondary); }
+.map-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.map-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.map-site.kind-1 { fill: var(--series-1); } .map-dot.kind-1 { background: var(--series-1); }
+.map-site.kind-2 { fill: var(--series-3); } .map-dot.kind-2 { background: var(--series-3); }
+.map-site.kind-3 { fill: var(--series-2); } .map-dot.kind-3 { background: var(--series-2); }
+.map-site.kind-4 { fill: var(--text-muted); } .map-dot.kind-4 { background: var(--text-muted); }
+/* OpenStreetMap tiles are light only: darken them in dark mode */
+:root[data-theme="dark"] .map-box .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .map-box .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9); }
+}
 .card-foot { margin: 12px 0 0; font-size: 13px; color: var(--text-muted); }
 details { margin-top: 12px; font-size: 14px; }
 summary { cursor: pointer; color: var(--text-secondary); }

@@ -337,6 +337,23 @@ gaps:
     evidence: [bwl_pflichtlager, carbura]
     found: 2026-10-26
 
+  - id: gas_storage_sites
+    theme: supply
+    title: Gas storage sites with location and capacity
+    missing: >-
+      No open table gives each gas storage site in the neighbouring countries with its coordinates, capacity
+      and fill level. AGSI+ names the sites but not where they are, reports many sites only as pools, and four
+      German pools (EWE Zone L, EWE H-Gas Zone, RWE INNEXPOOL, VNG VTP Storage) name no site at all. Which
+      sites and how much capacity Swiss companies have booked is not published.
+    available: >-
+      AGSI+ facility names and types (open), daily data per facility or pool with a free API key, a yearly
+      PDF of German storage sites with working gas volume from the Lower Saxony mining authority (LBEG), and
+      fill levels per country on the SFOE energy dashboard.
+    holder: GIE and storage operators; LBEG for Germany; Swiss gas companies for their bookings
+    status: incomplete
+    evidence: [gie_agsi_facilities, bfe_gas_storage_eu]
+    found: 2026-10-26
+
   - id: nuclear_fuel_stock
     theme: supply
     title: Nuclear fuel and gas reserves held by operators

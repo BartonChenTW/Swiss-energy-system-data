@@ -1,0 +1,21 @@
+{
+  "dataset": "supply/gas_storage_sites",
+  "processor": "pipeline.process.gie_agsi_facilities",
+  "generated": "2026-10-26T17:52:01+00:00",
+  "rows": 61,
+  "years": [
+    2026,
+    2026
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/gie_agsi_facilities/agsi_facilities.json",
+      "url": "https://agsi.gie.eu/api/about?show=listing",
+      "retrieved": "2026-10-26T17:48:35+00:00",
+      "last_modified": null,
+      "sha256": "21deae80635ae5a3dda605fca363f6cd2f42bb6cb9a78a3650658aba38bc2678",
+      "bytes": 53975
+    }
+  ],
+  "notes": "61 sites. Current AGSI+ entries that name no site: UGS EWE-Zone L (EWE Gasspeicher); EWE H-Gas Zone (EWE Gasspeicher); INNEXPOOL-RWEGSW (RWE Gas Storage West); VGS VTP Storage GPL (VNG Gasspeicher GmbH)."
+}

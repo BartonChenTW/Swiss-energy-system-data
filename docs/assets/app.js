@@ -250,33 +250,92 @@ const charts = [];
 // which makes each series' trend easier to read.
 const switchable = (type, ds) => (type === "stacked-area" || type === "stacked-bar") && ds.series.length > 1;
 
+// Map cards (chart: map) put each row at its lat/lon on an OpenStreetMap base map (Leaflet, loaded by the page).
+// Marker colours come from CSS (.kind-1 …), so they follow the theme without redrawing.
+const MAP_KINDS = ["depleted field", "aquifer", "salt cavern"];  // any other kind uses the fourth colour
+const kindClass = (kind) => `kind-${MAP_KINDS.includes(kind) ? MAP_KINDS.indexOf(kind) + 1 : 4}`;
+
+function renderMap(el, ds) {
+  const kinds = [...new Set(ds.rows.map((r) => r.kind))].sort((a, b) => kindClass(a).localeCompare(kindClass(b)));
+  const rows = [...ds.rows].sort((a, b) => a.country.localeCompare(b.country) || a.name.localeCompare(b.name));
+  el.innerHTML = `
+    <div class="card-head"><h3>${esc(ds.title)}</h3><span class="tags-head">${coverageTag(ds)}</span></div>
+    <p class="card-sub">${esc(ds.description)}</p>
+    <div class="map-box" role="img" aria-label="Map: ${esc(ds.title)}"></div>
+    <p class="map-legend">${kinds.map((k) => `<span><i class="map-dot ${kindClass(k)}"></i>${esc(k)}</span>`).join("")}</p>
+    <details><summary>Data table</summary><div class="table-scroll table-tall"><table>
+      <thead><tr><th>Site</th><th>Country</th><th>Type</th><th>Operators reporting it</th></tr></thead>
+      <tbody>${rows.map((r) => `<tr><td>${esc(r.name)}</td><td>${esc(r.country)}</td><td>${esc(r.kind)}</td><td>${esc(r.detail)}</td></tr>`).join("")}</tbody>
+    </table></div></details>
+    <p class="card-foot">Source: <a href="${esc(ds.source.url)}">${esc(ds.source.name)}</a>, ${esc(ds.source.publisher)}.
+      ${ds.provenance?.retrieved ? `Retrieved ${fmtDate(ds.provenance.retrieved)}.` : ""}
+      ${ds.provenance?.notes ? `<br>${esc(ds.provenance.notes)}` : ""}</p>`;
+  if (!window.L) {
+    el.querySelector(".map-box").innerHTML = '<p class="error">The map library did not load; the sites are in the data table.</p>';
+    return;
+  }
+  const map = L.map(el.querySelector(".map-box"), { scrollWheelZoom: false });
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 10, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+  const markers = rows.map((r) => L.circleMarker([r.lat, r.lon], { radius: 6, weight: 1.5, className: `map-site ${kindClass(r.kind)}` })
+    .bindTooltip(`<strong>${esc(r.name)}</strong> (${esc(r.country)})<br>${esc(r.kind)} · ${esc(r.detail)}`)
+    .addTo(map));
+  map.fitBounds(L.featureGroup(markers).getBounds(), { padding: [16, 16] });
+}
+
+// A card can name a second dataset with the same series in another unit (data-alt, e.g. TWh next to
+// % of capacity); a switch then shows one or the other.
 async function renderCard(el) {
   const id = el.dataset.dataset;
   el.classList.add("card");
   try {
-    const ds = await loadJSON(`data/${id}.json`);
+    const views = await Promise.all([id, el.dataset.alt].filter(Boolean).map((i) => loadJSON(`data/${i}.json`)));
+    const ds = views[0];
     const type = el.dataset.chart || ds.chart || "line";
+    if (type === "map") return renderMap(el, ds);
     el.innerHTML = `
-      <div class="card-head"><h3>${esc(ds.title)}</h3><span class="tags-head">${coverageTag(ds)}${ds.status === "sample" ? '<span class="badge" title="Placeholder values — not official statistics">Sample data</span>' : ""}</span></div>
-      <p class="card-sub">${esc(ds.description)} <span>(${esc(ds.unit)})</span></p>
-      ${switchable(type, ds) ? `<div class="view-switch" role="group" aria-label="Chart view">
-        <button type="button" data-view="${type}" aria-pressed="true">Stacked</button><button type="button" data-view="line" aria-pressed="false">Lines</button>
+      <div class="card-head"><h3 data-title></h3><span class="tags-head">${coverageTag(ds)}${ds.status === "sample" ? '<span class="badge" title="Placeholder values — not official statistics">Sample data</span>' : ""}</span></div>
+      <p class="card-sub" data-sub></p>
+      ${views.length > 1 || switchable(type, ds) ? `<div class="view-switches">
+        ${views.length > 1 ? `<div class="view-switch" role="group" aria-label="Unit">
+          ${views.map((v, i) => `<button type="button" data-unit="${i}" aria-pressed="${i === 0}">${esc(v.unit)}</button>`).join("")}
+        </div>` : ""}
+        ${switchable(type, ds) ? `<div class="view-switch" role="group" aria-label="Chart view">
+          <button type="button" data-view="${type}" aria-pressed="true">Stacked</button><button type="button" data-view="line" aria-pressed="false">Lines</button>
+        </div>` : ""}
       </div>` : ""}
-      <div class="canvas-box"><canvas role="img" aria-label="${esc(ds.title)}, ${esc(ds.unit)}"></canvas></div>
-      <details><summary>Data table</summary>${dataTable(ds)}</details>
+      <div class="canvas-box"><canvas role="img"></canvas></div>
+      <details><summary>Data table</summary><div data-table></div></details>
       <p class="card-foot">Source: <a href="${esc(ds.source.url)}">${esc(ds.source.name)}</a>, ${esc(ds.source.publisher)}.
         ${ds.provenance?.retrieved ? `Retrieved ${fmtDate(ds.provenance.retrieved)}.` : ""}
         ${ds.provenance?.notes ? `<br>${esc(ds.provenance.notes)}` : ""}</p>`;
     const canvas = el.querySelector("canvas");
     if (type === "hbar") el.querySelector(".canvas-box").style.height = `${Math.max(300, ds.series.length * 30 + 70)}px`;
-    const entry = { canvas, ds, type, chart: new Chart(canvas, chartConfig(ds, type)) };
+    const entry = { canvas, ds, type, chart: null };
+    const draw = () => {
+      const d = entry.ds;
+      el.querySelector("[data-title]").textContent = d.title;
+      el.querySelector("[data-sub]").innerHTML = `${esc(d.description)} <span>(${esc(d.unit)})</span>`;
+      el.querySelector("[data-table]").innerHTML = dataTable(d);
+      canvas.setAttribute("aria-label", `${d.title}, ${d.unit}`);
+      entry.chart?.destroy();
+      entry.chart = new Chart(canvas, chartConfig(d, entry.type));
+    };
+    draw();
     charts.push(entry);
+    const pick = (attr, button, apply) => {
+      el.querySelectorAll(`[${attr}]`).forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+      apply();
+      draw();
+    };
+    el.querySelectorAll("[data-unit]").forEach((button) => button.addEventListener("click", () => {
+      if (entry.ds === views[button.dataset.unit]) return;
+      pick("data-unit", button, () => { entry.ds = views[button.dataset.unit]; });
+    }));
     el.querySelectorAll("[data-view]").forEach((button) => button.addEventListener("click", () => {
       if (entry.type === button.dataset.view) return;
-      entry.type = button.dataset.view;
-      el.querySelectorAll("[data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
-      entry.chart.destroy();
-      entry.chart = new Chart(canvas, chartConfig(ds, entry.type));
+      pick("data-view", button, () => { entry.type = button.dataset.view; });
     }));
   } catch (err) {
     el.innerHTML = `<p class="error">Could not load <code>${esc(id)}</code> (${esc(err.message)}). Run <code>python -m pipeline.build_site</code> first.</p>`;

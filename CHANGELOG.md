@@ -8,6 +8,11 @@ for fixes, wording and styling. To release, rename `Unreleased` to the new versi
 with today's date; `python -m pipeline.build_site` picks up the top released entry.
 
 ## [Unreleased]
+### Added
+- Security of supply: the gas storage chart can show the gas stored in TWh as well as the fill level in % of capacity (new dataset `supply/gas_storage_level`).
+- Chart cards can switch between two datasets in different units (`data-alt` on the card).
+- Security of supply: map of 61 gas storage sites in Germany, France, Italy and Austria from the GIE AGSI+ facility listing, placed by hand at the nearest town, with what is known and unknown about them. New data gap on site-level storage data and Swiss storage bookings abroad.
+- Map datasets (`chart: map`, with `lat` and `lon` columns), drawn with Leaflet on OpenStreetMap.
 
 ## [0.14.0] - 2026-10-26
 ### Added

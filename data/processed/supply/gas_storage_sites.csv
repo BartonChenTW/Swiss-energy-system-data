@@ -1,0 +1,62 @@
+year,category,value,unit,lat,lon,country,kind,detail
+2026,Rehden,1,operators,52.6,8.5,Germany,depleted field,SEFE Storage (Germany)
+2026,Jemgum,2,operators,53.3,7.4,Germany,salt cavern,"EWE Gasspeicher, SEFE Storage (Germany)"
+2026,Nüttermoor,1,operators,53.2,7.4,Germany,salt cavern,EWE Gasspeicher
+2026,Etzel,8,operators,53.5,7.8,Germany,salt cavern,"EDF Gas Deutschland, EKB, EnBW Etzel Speicher, Equinor Storage Deutschland, MET Speicher, OMV Gas Storage Germany, Uniper Energy Storage, VNG Gasspeicher GmbH"
+2026,Epe,6,operators,52.2,7.0,Germany,salt cavern,"Eneco Gasspeicher, MET Epe Speicher, NUON Epe Gasspeicher, RWE Gas Storage West, Trianel Gasspeicher Epe, Uniper Energy Storage"
+2026,Uelsen,1,operators,52.5,6.9,Germany,depleted field,Storengy Deutschland
+2026,Harsefeld,1,operators,53.5,9.5,Germany,salt cavern,Storengy Deutschland
+2026,Lesum,1,operators,53.2,8.7,Germany,salt cavern,Storengy Deutschland
+2026,Kiel-Rönne,1,operators,54.3,10.1,Germany,salt cavern,SWKiel Speicher
+2026,Kraak,1,operators,53.5,11.3,Germany,salt cavern,Energiespeicher Kraak
+2026,Ronnenberg-Empelde,1,operators,52.3,9.7,Germany,salt cavern,enercity
+2026,Peckensen,1,operators,52.8,11.1,Germany,salt cavern,Storengy Deutschland
+2026,Rüdersdorf,1,operators,52.5,13.8,Germany,salt cavern,EWE Gasspeicher
+2026,Staßfurt,1,operators,51.9,11.6,Germany,salt cavern,RWE Gas Storage West
+2026,Bernburg,1,operators,51.8,11.7,Germany,not given,VNG Gasspeicher GmbH
+2026,Katharina,1,operators,51.7,11.9,Germany,not given,VNG Gasspeicher GmbH
+2026,Bad Lauchstädt,1,operators,51.4,11.9,Germany,not given,VNG Gasspeicher GmbH
+2026,Allmenhausen,1,operators,51.3,10.7,Germany,depleted field,TEP
+2026,Kirchheiligen,1,operators,51.2,10.6,Germany,depleted field,TEP
+2026,Reckrod,1,operators,50.8,9.8,Germany,salt cavern,MET Speicher
+2026,Hähnlein,1,operators,49.7,8.6,Germany,aquifer,MND Energy Storage Germany
+2026,Stockstadt,1,operators,49.8,8.5,Germany,aquifer,MND Energy Storage Germany
+2026,Frankenthal,1,operators,49.5,8.4,Germany,aquifer,Enovos Storage
+2026,Wolfersberg,1,operators,48.1,11.9,Germany,depleted field,bayernugs
+2026,Bierwang,1,operators,48.1,12.2,Germany,depleted field,Uniper Energy Storage
+2026,Schmidhausen,1,operators,47.9,12.0,Germany,depleted field,Storengy Deutschland
+2026,Inzenham-West,1,operators,47.8,12.1,Germany,depleted field,NAFTA Speicher Inzenham
+2026,Breitbrunn,1,operators,47.9,12.4,Germany,depleted field,Uniper Energy Storage
+2026,Saint-Clair-sur-Epte,1,operators,49.2,1.7,France,aquifer,Storengy
+2026,Saint-Illiers,1,operators,49.0,1.5,France,aquifer,Storengy
+2026,Beynes,1,operators,48.9,1.9,France,aquifer,Storengy
+2026,Gournay-sur-Aronde,1,operators,49.5,2.7,France,aquifer,Storengy
+2026,Germigny-sous-Coulombs,1,operators,49.1,3.2,France,aquifer,Storengy
+2026,Trois-Fontaines-l'Abbaye,1,operators,48.7,5.0,France,aquifer,Storengy
+2026,Cerville,1,operators,48.7,6.3,France,aquifer,Storengy
+2026,Chémery,1,operators,47.35,1.45,France,aquifer,Storengy
+2026,Soings-en-Sologne,1,operators,47.45,1.55,France,aquifer,Storengy
+2026,Céré-la-Ronde,1,operators,47.3,1.2,France,aquifer,Storengy
+2026,Étrez,1,operators,46.3,5.2,France,salt cavern,Storengy
+2026,Tersanne,1,operators,45.2,5.0,France,salt cavern,Storengy
+2026,Manosque,1,operators,43.8,5.8,France,salt cavern,Storengy
+2026,Lussagnet,1,operators,43.8,-0.2,France,aquifer,Teréga
+2026,Collalto,1,operators,45.9,12.2,Italy,not given,Snam Stoccaggio
+2026,Brugherio,1,operators,45.6,9.3,Italy,depleted field,Snam Stoccaggio
+2026,Settala,1,operators,45.5,9.4,Italy,depleted field,Snam Stoccaggio
+2026,Sergnano,1,operators,45.4,9.7,Italy,depleted field,Snam Stoccaggio
+2026,Ripalta,1,operators,45.3,9.7,Italy,depleted field,Snam Stoccaggio
+2026,Cornegliano,1,operators,45.3,9.5,Italy,depleted field,IGS
+2026,Bordolano,1,operators,45.3,10.0,Italy,depleted field,Snam Stoccaggio
+2026,Cortemaggiore,1,operators,45.0,9.9,Italy,depleted field,Snam Stoccaggio
+2026,Sabbioncello,1,operators,44.9,11.8,Italy,depleted field,Snam Stoccaggio
+2026,Minerbio,1,operators,44.6,11.5,Italy,depleted field,Snam Stoccaggio
+2026,San Potito and Cotignola,1,operators,44.4,11.9,Italy,not given,Snam Stoccaggio
+2026,Cellino,1,operators,42.6,14.0,Italy,not given,Snam Stoccaggio
+2026,Fiume Treste,1,operators,42.1,14.6,Italy,depleted field,Snam Stoccaggio
+2026,Haidach,2,operators,48.0,13.2,Austria,depleted field,"RAG Energy Storage, SEFE Storage"
+2026,7Fields,2,operators,48.1,13.1,Austria,depleted field,"RAG Energy Storage, Uniper Energy Storage (AT)"
+2026,Puchkirchen / Haag,1,operators,48.0,13.6,Austria,depleted field,RAG Energy Storage
+2026,Aigelsbrunn,1,operators,48.2,13.6,Austria,depleted field,RAG Energy Storage
+2026,Schönkirchen-Reyersdorf,1,operators,48.4,16.6,Austria,depleted field,OMV Gas Storage
+2026,Tallesbrunn,1,operators,48.4,16.8,Austria,depleted field,OMV Gas Storage

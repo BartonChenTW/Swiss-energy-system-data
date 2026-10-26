@@ -14,6 +14,8 @@ PROCESSED_DIR = ROOT / "data" / "processed"
 SITE_DATA_DIR = ROOT / "docs" / "data"
 
 TIDY_COLUMNS = ["year", "category", "value", "unit"]
+# Map datasets (chart: map) add a location and details to each row; `category` is the place name.
+MAP_COLUMNS = ["lat", "lon", "country", "kind", "detail"]
 # Sub-annual datasets use `period` instead of `year`: an ISO date (2024-01-08), a month (2024-01)
 # or a week of the year (W02). Periods sort as text, so these formats keep time order.
 PERIOD_PATTERN = r"^(\d{4}-\d{2}(-\d{2})?|W\d{2})$"
@@ -23,7 +25,7 @@ MANIFEST_NAME = "_manifest.json"
 THEMES = {"national", "buildings", "electricity", "renewables", "heat", "mobility",
           "emissions", "prices", "scenarios", "supply", "general"}
 REFERENCE_TYPES = {"report", "standard", "website", "dashboard", "tool", "model", "portal"}
-CHART_TYPES = {"line", "stacked-area", "stacked-bar", "hbar"}
+CHART_TYPES = {"line", "stacked-area", "stacked-bar", "hbar", "map"}
 PALETTES = {"sequential"}  # optional; default is the categorical palette
 STATUSES = {"official", "sample"}
 COVERAGES = {"national", "regional"}  # regional datasets also name their `region`
@@ -210,7 +212,7 @@ def x_column(df: pd.DataFrame) -> str:
 
 
 def tidy_columns(df: pd.DataFrame) -> list[str]:
-    return [x_column(df), *TIDY_COLUMNS[1:]]
+    return [x_column(df), *TIDY_COLUMNS[1:], *[c for c in MAP_COLUMNS if c in df.columns]]
 
 
 def validate_tidy(df: pd.DataFrame, name: str) -> None:
@@ -224,6 +226,9 @@ def validate_tidy(df: pd.DataFrame, name: str) -> None:
         raise ValueError(f"{name}: 'period' must look like 2024-01-08, 2024-01 or W02")
     if not pd.api.types.is_numeric_dtype(df["value"]):
         raise ValueError(f"{name}: 'value' must be numeric")
+    if ("lat" in df.columns or "lon" in df.columns) and not all(
+            c in df.columns and pd.api.types.is_numeric_dtype(df[c]) and df[c].notna().all() for c in ("lat", "lon")):
+        raise ValueError(f"{name}: 'lat' and 'lon' must both be given and numeric")
     units = df["unit"].dropna().unique()
     if len(units) != 1:
         raise ValueError(f"{name}: expected exactly one unit, found {list(units)}")

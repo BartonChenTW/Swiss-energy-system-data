@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Security of supply · Swiss Energy System Data</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/theme.js"></script>
 </head>
@@ -16,7 +17,7 @@
       are on the <a href="electricity.html">Electricity</a> page (storage lakes: <a href="renewables.html#hydro">Renewables</a>).</p>
     <nav class="toc" aria-label="On this page">
       <span class="toc-label">On this page:</span>
-      <a href="#oil">Oil and fuels</a><a href="#gas">Gas</a><a href="#where">Where and how much</a><a href="#gaps">Data gaps</a>
+      <a href="#oil">Oil and fuels</a><a href="#gas">Gas</a><a href="#gas-sites">Gas storage sites</a><a href="#where">Where and how much</a><a href="#gaps">Data gaps</a>
     </nav>
 
     <h2 id="oil">Oil and fuels</h2>
@@ -39,7 +40,29 @@
       useful indicator.</p>
     <div class="grid">
       <div class="chart" data-dataset="supply/gas_net_imports_monthly"></div>
-      <div class="chart" data-dataset="supply/gas_storage_fill"></div>
+      <div class="chart" data-dataset="supply/gas_storage_fill" data-alt="supply/gas_storage_level"></div>
+    </div>
+
+    <h3 id="gas-sites">Where the gas is stored</h3>
+    <p class="section-note">The storage in the four neighbouring countries sits in old gas fields, porous rock
+      (aquifers) and salt caverns. Most of it is far from Switzerland: the large German sites (Rehden, Etzel, Epe)
+      are in the north-west, and the French aquifers are around Paris and in the Loire valley. Closest to Switzerland
+      are Étrez near Geneva (salt caverns), the Bavarian fields south-east of Munich, Haidach and 7Fields near
+      Salzburg, and the fields of the Po valley.</p>
+    <div class="chart" data-dataset="supply/gas_storage_sites"></div>
+    <div class="card prose">
+      <ul>
+        <li><strong>Known:</strong> the fill level and the gas stored per country (chart above, weekly); the name, operator and type of each site reported to AGSI+; the total capacity per country
+          (about 250 TWh in Germany, 200 TWh in Italy, 125 TWh in France, 100 TWh in Austria).</li>
+        <li><strong>Approximate:</strong> the positions on the map. AGSI+ gives no coordinates, so each site is placed
+          at the nearby town by hand.</li>
+        <li><strong>Not on this page:</strong> capacity and fill level per site. AGSI+ publishes them per facility or
+          pool, but only through an API that needs a free personal key; Germany's mining authority (LBEG) lists the
+          working gas volume of each German site in a yearly PDF.</li>
+        <li><strong>Unknown:</strong> which sites four German pools cover (they name no site), and which storage Swiss
+          companies have booked and how much. From winter 2022/23 the Confederation required the Swiss gas industry to
+          hold a gas reserve in storage abroad; the contracts and sites are not published.</li>
+      </ul>
     </div>
 
     <h2 id="where">Where and how much</h2>
@@ -62,6 +85,7 @@
   </main>
   <footer id="site-footer"></footer>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="assets/app.js"></script>
 </body>
 </html>

@@ -561,6 +561,22 @@ sources:
       Daily gas storage level in TWh and as a share of capacity for the EU, Germany, France, Italy and Austria,
       from 2011. Switzerland has no large gas storage of its own and relies on storage in these countries.
 
+  - id: gie_agsi_facilities
+    name: "AGSI+ storage facility listing"
+    publisher: Gas Infrastructure Europe (GIE)
+    theme: supply
+    url: https://agsi.gie.eu/
+    terms: "Free to use or repackage; GIE / AGSI+ must be named as the source."
+    frequency: as facilities change
+    downloads:
+      - url: https://agsi.gie.eu/api/about?show=listing
+        filename: agsi_facilities.json
+    notes: >-
+      Every storage operator reporting to AGSI+ with its facilities: name, type (depleted field, aquifer, salt
+      cavern), EIC code and reporting period. No locations and no capacities; the daily data per facility
+      (stock, working gas volume, injection and withdrawal) need a free personal API key. Many entries are pools
+      of several sites, and a few pools do not name their sites.
+
   - id: bfe_gas_flows
     name: "energiedashboard.ch: Tägliche Flüsse in die und aus der Schweiz (Gas)"
     publisher: Swiss Federal Office of Energy (SFOE / BFE), data from ENTSO-G, AGGM and SmartGRT-Gaz

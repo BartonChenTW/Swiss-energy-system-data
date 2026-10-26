@@ -610,3 +610,23 @@ datasets:
     chart: line
     status: official
     coverage: national
+
+  - id: supply/gas_storage_level
+    title: Gas stored in the EU and neighbouring countries
+    description: >-
+      Energy content of the gas in storage, weekly since 2011. Capacity is roughly 1,130 TWh in the EU, 250 TWh in
+      Germany, 200 TWh in Italy, 125 TWh in France and 100 TWh in Austria; Switzerland uses about 30 TWh of gas a year.
+    source: bfe_gas_storage_eu
+    chart: line
+    status: official
+    coverage: national
+
+  - id: supply/gas_storage_sites
+    title: Gas storage sites in Germany, France, Italy and Austria
+    description: >-
+      Storage sites reported to AGSI+, placed by hand at the nearby town (accurate to about 10–20 km). Types are
+      as reported to AGSI+. The listing gives no capacity per site.
+    source: gie_agsi_facilities
+    chart: map
+    status: official
+    coverage: national

@@ -1,0 +1,21 @@
+{
+  "dataset": "supply/gas_storage_level",
+  "processor": "pipeline.process.bfe_gas_storage_eu",
+  "generated": "2026-10-26T17:28:16+00:00",
+  "rows": 4125,
+  "periods": [
+    "2011-01-03",
+    "2026-10-19"
+  ],
+  "inputs": [
+    {
+      "file": "data/raw/bfe_gas_storage_eu/ogd102_fuellstand_gasspeicher.csv",
+      "url": "https://www.bfe-ogd.ch/ogd102_fuellstand_gasspeicher.csv",
+      "retrieved": "2026-10-26T15:59:21+00:00",
+      "last_modified": "Mon, 26 Oct 2026 09:00:19 GMT",
+      "sha256": "eeed79f0e40059869c8855a27a6e7e772478ebf3703de3ae40274083a9193f61",
+      "bytes": 807501
+    }
+  ],
+  "notes": "Last Monday in the file: 19 Oct 2026."
+}

@@ -2,7 +2,8 @@
 
 Input : data/raw/bfe_gas_storage_eu/ogd102_fuellstand_gasspeicher.csv
         (Datum daily, Speicherregion, Speicherstand_TWh, Lagerkapazitaet_prozent)
-Output: supply/gas_storage_fill   (% of capacity, weekly on Mondays, EU and the countries around Switzerland)
+Output: supply/gas_storage_fill    (% of capacity, weekly on Mondays, EU and the countries around Switzerland)
+        supply/gas_storage_level   (TWh stored, same points)
 
 Switzerland has no large gas storage, so the filling of the storage in its neighbours is what matters for winter.
 """
@@ -21,11 +22,15 @@ def run() -> None:
         return
     d = pd.read_csv(path, parse_dates=["Datum"]).dropna(subset=["Lagerkapazitaet_prozent"])
     d = d[d["Datum"].dt.dayofweek == 0]  # weekly points keep the file small
-    tidy = pd.DataFrame({
-        "period": d["Datum"].dt.strftime("%Y-%m-%d"),
-        "category": d["Speicherregion"],
-        "value": d["Lagerkapazitaet_prozent"].round(1),
-        "unit": "% of capacity",
-    })
-    last = d["Datum"].max()
-    write_tidy(tidy, "supply/gas_storage_fill", [path], __name__, notes=f"Last Monday in the file: {last:%d %b %Y}.")
+    notes = f"Last Monday in the file: {d['Datum'].max():%d %b %Y}."
+    for dataset_id, column, unit in [
+        ("supply/gas_storage_fill", "Lagerkapazitaet_prozent", "% of capacity"),
+        ("supply/gas_storage_level", "Speicherstand_TWh", "TWh"),
+    ]:
+        tidy = pd.DataFrame({
+            "period": d["Datum"].dt.strftime("%Y-%m-%d"),
+            "category": d["Speicherregion"],
+            "value": d[column].round(1),
+            "unit": unit,
+        })
+        write_tidy(tidy, dataset_id, [path], __name__, notes=notes)
